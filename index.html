@@ -151,7 +151,11 @@
             const lettresList = document.getElementById('lettres-list');
             siteData.lettres.forEach(l => {
                 const li = document.createElement('li');
-                li.innerHTML = `<strong>${l.sigle} :</strong> ${l.texte}`;
+                let html = `<strong>${l.sigle} :</strong> ${l.texte}`;
+                if(l.image) {
+                    html += `<br><img src="${l.image}" alt="${l.sigle}" class="h-12 object-contain my-2 rounded">`;
+                }
+                li.innerHTML = html;
                 lettresList.appendChild(li);
             });
 
