@@ -14,7 +14,8 @@ const siteData = {
         {
             nom: "Clivis",
             categorie: "simples",
-            description: "Neume descendant de deux notes : une note haute suivie d'une note basse.",
+            description: `2 notes. Ce neume représente deux notes, la seconde étant plus basse (plus grave)
+            mais on ne sait pas de combien elle est plus basse (une tierce ? quarte ? octave ? rien ne l'indique)`,
             image: "images/clivis.png",
             image: "images/clivis_episeme.png"
         },
