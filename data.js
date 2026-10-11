@@ -19,8 +19,8 @@ const siteData = {
             dans sa graphie. Vous pouvez voir dans la seconde image, sa forme épisémée qui revient très souvent. Le petit
             chapeau posé sur le neume indique que la première note est plus longue que la seconde.`,
             images: [
-                {image: "images/clivis.png"},
-                {image: "images/clivis_episeme.png"}
+                {image: "images/clivis.png",
+                {image: "images/clivis_episeme.png"
             ]
         },
         {
@@ -31,8 +31,8 @@ const siteData = {
             dans sa graphie). La première image est sa graphie standard, les trois autres images représentent ses graphies épisémées : la seconde image
             montre la version "court-long", la troisième "long-court, la quatrième "long-long".`,
             images: [
-                {image: "images/pes.png"},
-                {image: "images/pes_episeme1.png"}
+                {image: "images/pes.png",
+                {image: "images/pes_episeme1.png"
             ]
         },
         {
