@@ -11,7 +11,7 @@ const siteData = {
             nom: "Clivis",
             categorie: "simples",
             description: "Neume descendant de deux notes : une note haute suivie d'une note basse.",
-            image: "images/clivis.png"
+            image: "clivis.png"
         },
         {
             nom: "Podatus / Pes",
