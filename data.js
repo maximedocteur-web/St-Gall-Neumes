@@ -2,19 +2,19 @@ const siteData = {
     // Neumes (simples ou ornementaux)
     neumes: [
         {
-            nom: "Punctumanus (Le point)",
+            nom: "Punctum",
             categorie: "simples",
             description: "Indique un son plus grave ou une note plus légère, exécutée simplement sans forcer.",
             image: "images/punctum.png"
         },
         {
-            nom: "Clivis (La pente)",
+            nom: "Clivis",
             categorie: "simples",
             description: "Neume descendant de deux notes : une note haute suivie d'une note basse.",
             image: "images/clivis.png"
         },
         {
-            nom: "Podatus / Pes (Le pied)",
+            nom: "Podatus / Pes",
             categorie: "simples",
             description: "Neume ascendant de deux notes : une note basse suivie d'une note haute.",
             image: "images/podatus.png"
