@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chant Grégorien & Neumes de Saint-Gall</title>
+    <!-- Tailwind CSS pour un design propre et responsive -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+    </style>
+</head>
+<body class="bg-stone-50 text-stone-800 font-sans leading-relaxed">
+
+    <!-- En-tête -->
+    <header class="bg-stone-900 text-stone-100 py-8 shadow-md">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <h1 class="text-3xl md:text-4xl font-serif font-bold tracking-wide">Pédagogie du Chant Grégorien</h1>
+            <p class="text-stone-300 mt-2 text-sm md:text-base">Apprentissage de la notation neumatique de Saint-Gall</p>
+        </div>
+    </header>
+
+    <!-- Navigation principale -->
+    <nav class="bg-white border-b border-stone-200 sticky top-0 z-50 shadow-sm">
+        <div class="max-w-5xl mx-auto px-6 flex justify-center space-x-6 md:space-x-12 py-4 text-sm md:text-base font-medium">
+            <a href="#notation" class="hover:text-amber-700 transition">Notation</a>
+            <a href="#analyse" class="hover:text-amber-700 transition">Lecture Guidée (Chant)</a>
+            <a href="#quiz" class="hover:text-amber-700 transition">Quiz d'entraînement</a>
+        </div>
+    </nav>
+
+    <main class="max-w-5xl mx-auto px-6 py-10 space-y-16">
+
+        <!-- SECTION 1 : LA NOTATION -->
+        <section id="notation" class="scroll-mt-20">
+            <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2 mb-6">1. La Notation de Saint-Gall</h2>
+            <p class="text-stone-600 mb-6">Explorez les différents types de signes paléographiques qui composent la notation adiastématique de Saint-Gall.</p>
+
+            <!-- Onglets -->
+            <div class="flex flex-wrap gap-2 mb-6 border-b border-stone-200 pb-4">
+                <button onclick="switchTab('simples')" id="btn-simples" class="px-4 py-2 bg-amber-700 text-white rounded-md font-medium text-sm transition">Neumes simples</button>
+                <button onclick="switchTab('ornementaux')" id="btn-ornementaux" class="px-4 py-2 bg-stone-200 text-stone-700 rounded-md font-medium text-sm transition hover:bg-stone-300">Neumes ornementaux</button>
+                <button onclick="switchTab('lettres')" id="btn-lettres" class="px-4 py-2 bg-stone-200 text-stone-700 rounded-md font-medium text-sm transition hover:bg-stone-300">Lettres significatives</button>
+            </div>
+
+            <!-- Contenu Neumes Simples -->
+            <div id="tab-simples" class="tab-content active space-y-4">
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-stone-200">
+                        <h3 class="font-bold text-lg text-amber-800">Virga (La verge)</h3>
+                        <p class="text-sm text-stone-600 mt-2">Indique un son plus aigu ou un appui mélodique vertical. Son tracé vertical s'élève.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-stone-200">
+                        <h3 class="font-bold text-lg text-amber-800">Punctum (Le point)</h3>
+                        <p class="text-sm text-stone-600 mt-2">Indique un son plus grave ou une note plus légère, exécutée simplement sans forcer.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-stone-200">
+                        <h3 class="font-bold text-lg text-amber-800">Clivis (La pente)</h3>
+                        <p class="text-sm text-stone-600 mt-2">Neume descendant de deux notes : une note haute suivie d'une note basse.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-stone-200">
+                        <h3 class="font-bold text-lg text-amber-800">Podatus / Pes (Le pied)</h3>
+                        <p class="text-sm text-stone-600 mt-2">Neume ascendant de deux notes : une note basse suivie d'une note haute.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contenu Neumes Ornementaux -->
+            <div id="tab-ornementaux" class="tab-content space-y-4">
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-stone-200">
+                        <h3 class="font-bold text-lg text-amber-800">Quilisma</h3>
+                        <p class="text-sm text-stone-600 mt-2">Neume dentelé en forme de crémaillère. Il indique une vocalise légère, un passage frémissant entre deux notes.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-stone-200">
+                        <h3 class="font-bold text-lg text-amber-800">Salicus</h3>
+                        <p class="text-sm text-stone-600 mt-2">Ascension de trois notes ou plus, comportant une pression (souvent un episème ou une verticale) sur l'avant-dernière note.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-stone-200">
+                        <h3 class="font-bold text-lg text-amber-800">Strophicus (Distropha / Tristropha)</h3>
+                        <p class="text-sm text-stone-600 mt-2">Répétition de deux ou trois notes unies sur la même hauteur, avec une vibration délicate.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-stone-200">
+                        <h3 class="font-bold text-lg text-amber-800">Pressus</h3>
+                        <p class="text-sm text-stone-600 mt-2">Fusion de deux sons identiques provenant de neumes différents, créant un appui rythmique fort.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contenu Lettres Significatives -->
+            <div id="tab-lettres" class="tab-content space-y-4">
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-stone-200 space-y-4">
+                    <p class="text-stone-600">Ajoutées au-dessus ou en-dessous des neumes par les scribes de Saint-Gall, elles modifient la rapidité ou l'expression :</p>
+                    <ul class="list-disc list-inside space-y-2 text-stone-700">
+                        <li><strong>c (Celeriter) :</strong> Rapidité, exécuter le neume plus vite.</li>
+                        <li><strong>t (Tarditer) :</strong> Lenteur, allonger la durée du neume.</li>
+                        <li><strong>m (Mediocriter) :</strong> Nuance modérée.</li>
+                        <li><strong>e (Equaliter) :</strong> Égalité stricte des notes.</li>
+                        <li><strong>f (Frangere) :</strong> Articuler / rompre le son.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2 : EXEMPLES DE CHANT (ANALYSE DETAILLEE) -->
+        <section id="analyse" class="scroll-mt-20">
+            <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2 mb-6">2. Lecture Guidée : Analyse d'un Chant</h2>
+            <p class="text-stone-600 mb-6">Pour habituer l'œil à l'enchaînement des signes, voici le décorticage progressif d'une phrase type du répertoire.</p>
+
+            <div class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 space-y-6">
+                <div class="bg-amber-50 border-l-4 border-amber-700 p-4 rounded-r-lg">
+                    <h3 class="font-bold text-amber-900">Extrait analysé : Incipit d'antienne</h3>
+                    <p class="text-sm text-amber-800 mt-1">Observez la succession des signes de gauche à droite, comme l'œil doit le faire en lisant le manuscrit.</p>
+                </div>
+
+                <div class="space-y-4 divide-y divide-stone-100">
+                    <div class="pt-4 flex flex-col md:flex-row justify-between items-start md:items-center">
+                        <div class="font-mono bg-stone-100 px-3 py-1 rounded text-amber-900 font-bold mb-2 md:mb-0">1. Virga + Punctum</div>
+                        <p class="text-sm text-stone-600 md:w-2/3">Le chant s'ouvre sur un élan vers le haut (Virga) immédiatement stabilisé par un point de repos (Punctum).</p>
+                    </div>
+                    <div class="pt-4 flex flex-col md:flex-row justify-between items-start md:items-center">
+                        <div class="font-mono bg-stone-100 px-3 py-1 rounded text-amber-900 font-bold mb-2 md:mb-0">2. Clivis avec lettre 't'</div>
+                        <p class="text-sm text-stone-600 md:w-2/3">Descente mélodique ralentie par la lettre significative <em>tarditer</em> pour marquer une inflexion textuelle.</p>
+                    </div>
+                    <div class="pt-4 flex flex-col md:flex-row justify-between items-start md:items-center">
+                        <div class="font-mono bg-stone-100 px-3 py-1 rounded text-amber-900 font-bold mb-2 md:mb-0">3. Quilisma + Podatus</div>
+                        <p class="text-sm text-stone-600 md:w-2/3">Frémissement ascendant du quilisma qui débouche sur un saut net vers l'aigu avec le podatus.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3 : QUIZ -->
+        <section id="quiz" class="scroll-mt-20">
+            <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2 mb-6">3. Quiz de Reconnaissance</h2>
+            <div class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 space-y-6">
+                <div id="quiz-container">
+                    <p class="font-medium text-stone-800 mb-4">Question : Que signifie la lettre significative « c » (Celeriter) placée au-dessus d'un neume ?</p>
+                    <div class="space-y-2">
+                        <label class="block p-3 rounded border border-stone-200 hover:bg-stone-50 cursor-pointer">
+                            <input type="radio" name="q1" value="wrong" class="mr-2"> De manière lourde et appuyée
+                        </label>
+                        <label class="block p-3 rounded border border-stone-200 hover:bg-stone-50 cursor-pointer">
+                            <input type="radio" name="q1" value="correct" class="mr-2"> Plus rapidement / avec légèreté
+                        </label>
+                        <label class="block p-3 rounded border border-stone-200 hover:bg-stone-50 cursor-pointer">
+                            <input type="radio" name="q1" value="wrong" class="mr-2"> En maintenant la note à l'unisson
+                        </label>
+                    </div>
+                </div>
+                <button onclick="checkQuiz()" class="mt-4 bg-amber-700 text-white px-6 py-2 rounded-md font-medium hover:bg-amber-800 transition">Vérifier ma réponse</button>
+                <p id="quiz-result" class="font-medium mt-2"></p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Pied de page -->
+    <footer class="bg-stone-900 text-stone-400 py-6 mt-16 text-center text-sm">
+        <p>Espace pédagogique de chant grégorien — Destiné aux étudiants.</p>
+    </footer>
+
+    <!-- Script JavaScript pour l'interactivité -->
+    <script>
+        function switchTab(category) {
+            // Masquer tous les contenus
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+            // Réinitialiser les boutons
+            ['simples', 'ornementaux', 'lettres'].forEach(cat => {
+                const btn = document.getElementById('btn-' + cat);
+                btn.className = "px-4 py-2 bg-stone-200 text-stone-700 rounded-md font-medium text-sm transition hover:bg-stone-300";
+            });
+            // Afficher le contenu actif et activer le bouton
+            document.getElementById('tab-' + category).classList.add('active');
+            const activeBtn = document.getElementById('btn-' + category);
+            activeBtn.className = "px-4 py-2 bg-amber-700 text-white rounded-md font-medium text-sm transition";
+        }
+
+        function checkQuiz() {
+            const selected = document.querySelector('input[name="q1"]:checked');
+            const resultEl = document.getElementById('quiz-result');
+            if (!selected) {
+                resultEl.textContent = "Veuillez sélectionner une réponse.";
+                resultEl.className = "text-amber-600 font-medium mt-2";
+                return;
+            }
+            if (selected.value === "correct") {
+                resultEl.textContent = "Bravo ! C'est exact (« c » pour Celeriter indique la rapidité).";
+                resultEl.className = "text-emerald-700 font-medium mt-2";
+            } else {
+                resultEl.textContent = "Incorrect. Essayez encore !";
+                resultEl.className = "text-rose-700 font-medium mt-2";
+            }
+        }
+    </script>
+</body>
+</html>
