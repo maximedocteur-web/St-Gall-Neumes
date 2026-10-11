@@ -2,7 +2,7 @@ const siteData = {
     // Neumes (simples ou ornementaux)
     neumes: [
         {
-            nom: "Punctum",
+            nom: "Punctumata",
             categorie: "simples",
             description: "Indique un son plus grave ou une note plus légère, exécutée simplement sans forcer.",
             image: "images/punctum.png"
