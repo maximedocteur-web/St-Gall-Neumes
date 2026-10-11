@@ -30,7 +30,10 @@ const siteData = {
             mais on ne sait pas de combien elle est plus élevée (une tierce ? une quarte ? une octave ? rien ne l'indique 
             dans sa graphie). La première image est sa graphie standard, les trois autres images représentent ses graphies épisémées : la seconde image
             montre la version "court-long", la troisième "long-court, la quatrième "long-long".`,
-            image: "images/podatus.png"
+            [
+                {image: "images/pes.png"},
+                {image: "images/pes_episeme1.png"}
+            ]
         },
         {
             nom: "torculus",
