@@ -2,9 +2,13 @@ const siteData = {
     // Neumes (simples ou ornementaux)
     neumes: [
         {
-            nom: "Punctumata",
+            nom: "Punctum",
             categorie: "simples",
-            description: "Indique un son plus grave ou une note plus légère, exécutée simplement sans forcer.",
+            description: `Ce neume ne présente qu'une seule note. Il est normalement employé en composition,
+            c'est-à-dire qu'on le trouve dans d'autres neumes plus complexes. Il n'est, me semble-t-il jamais utilisé seul, 
+            c'est à dire que l'on est sensé le trouver uniquement dans d'autres neumes mais jamais tout seul, 
+            il n'a pas d'autonomie en tant que neume. Il ne possède pas de forme avec épisème car en cas d'alongement
+            de la note dans un neume en composition, on lui préférera le tractulus, voire le tractulus épisémé.`,
             image: "images/punctum.png"
         },
         {
