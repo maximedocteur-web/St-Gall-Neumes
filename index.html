@@ -1,108 +1,126 @@
 <!DOCTYPE html>
-<html lang="fr" class="scroll-smooth">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Neumes de St-Gall</title>
+    <title>Pédagogie du Chant Grégorien</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        .tab-content { display: none; }
-        .tab-content.active { display: block; }
+        .page-section { display: none; }
+        .page-section.active { display: block; }
     </style>
 </head>
-<body class="bg-stone-50 text-stone-800 font-sans leading-relaxed">
+<body class="bg-stone-50 text-stone-800 font-sans min-h-screen flex flex-col justify-between">
 
-    <!-- En-tête -->
-    <header class="bg-stone-900 text-stone-100 py-8 shadow-md">
-        <div class="max-w-5xl mx-auto px-6 text-center">
-            <h1 class="text-3xl md:text-4xl font-serif font-bold tracking-wide">Pédagogie du Chant Grégorien</h1>
-            <p class="text-stone-300 mt-2 text-sm md:text-base">Apprentissage de la notation neumatique de Saint-Gall</p>
-        </div>
-    </header>
-
-    <!-- Navigation -->
-    <nav class="bg-white border-b border-stone-200 sticky top-0 z-50 shadow-sm">
-        <div class="max-w-5xl mx-auto px-6 flex justify-center space-x-6 md:space-x-12 py-4 text-sm md:text-base font-medium">
-            <a href="#recherche-rapide" class="hover:text-amber-700 transition">Recherche</a>
-            <a href="#notation" class="hover:text-amber-700 transition">Notation</a>
-            <a href="#analyse" class="hover:text-amber-700 transition">Lecture Guidée</a>
-            <a href="#quiz" class="hover:text-amber-700 transition">Quiz</a>
-        </div>
-    </nav>
-
-    <main class="max-w-5xl mx-auto px-6 py-10 space-y-16">
-
-        <!-- SECTION RECHERCHE RAPIDE & REPERTOIRE VISUEL -->
-        <section id="recherche-rapide" class="scroll-mt-20 bg-white p-6 rounded-lg border border-stone-200 shadow-sm space-y-6">
-            <h2 class="text-xl font-serif font-bold text-stone-900 border-b border-amber-700 pb-2">Rechercher un neume</h2>
-            
-            <!-- 1. Recherche par Nom -->
-            <div>
-                <label for="search-input" class="block text-sm font-medium text-stone-700 mb-1">Recherche par nom (ex: pes, clivis, torculus...) :</label>
-                <input type="text" id="search-input" onkeyup="filterNeumes()" placeholder="Tapez le nom d'un neume..." class="w-full md:w-1/2 p-2.5 border border-stone-300 rounded-md focus:ring-2 focus:ring-amber-700 focus:outline-none text-sm">
+    <div>
+        <!-- En-tête -->
+        <header class="bg-stone-900 text-stone-100 py-8 shadow-md">
+            <div class="max-w-5xl mx-auto px-6 text-center">
+                <h1 class="text-3xl md:text-4xl font-serif font-bold tracking-wide">Pédagogie du Chant Grégorien</h1>
+                <p class="text-stone-300 mt-2 text-sm md:text-base">Apprentissage de la notation neumatique de Saint-Gall</p>
             </div>
+        </header>
 
-            <!-- 2. Répertoire Visuel (Cliquer sur un signe pour le trouver) -->
-            <div>
-                <p class="text-sm font-medium text-stone-700 mb-3">Ou cliquez sur un neume ci-dessous pour voir sa fiche :</p>
-                <div id="visual-grid" class="flex flex-wrap gap-3">
-                    <!-- Généré automatiquement depuis data.js -->
+        <!-- Barre de navigation (Agit comme un changement de page) -->
+        <nav class="bg-white border-b border-stone-200 sticky top-0 z-50 shadow-sm">
+            <div class="max-w-5xl mx-auto px-6 flex justify-center space-x-4 md:space-x-8 py-4 text-sm md:text-base font-medium">
+                <button onclick="showPage('accueil')" id="nav-accueil" class="px-3 py-1.5 rounded-md transition bg-amber-700 text-white">Accueil</button>
+                <button onclick="showPage('neumes')" id="nav-neumes" class="px-3 py-1.5 rounded-md transition text-stone-700 hover:bg-stone-100">Les Neumes</button>
+                <button onclick="showPage('lettres')" id="nav-lettres" class="px-3 py-1.5 rounded-md transition text-stone-700 hover:bg-stone-100">Lettres significatives</button>
+                <button onclick="showPage('analyse')" id="nav-analyse" class="px-3 py-1.5 rounded-md transition text-stone-700 hover:bg-stone-100">Lecture Guidée</button>
+                <button onclick="showPage('quiz')" id="nav-quiz" class="px-3 py-1.5 rounded-md transition text-stone-700 hover:bg-stone-100">Quiz</button>
+            </div>
+        </nav>
+
+        <main class="max-w-5xl mx-auto px-6 py-10">
+
+            <!-- PAGE ACCUEIL -->
+            <section id="page-accueil" class="page-section active space-y-6">
+                <div class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 space-y-4">
+                    <h2 class="text-2xl font-serif font-bold text-stone-900">Bienvenue sur l'espace pédagogique</h2>
+                    <p class="text-stone-600">Cet outil est conçu pour vous accompagner dans l'apprentissage de la notation neumatique de Saint-Gall. Utilisez le menu ci-dessus pour naviguer entre les différentes sections du cours :</p>
+                    <ul class="list-disc list-inside space-y-2 text-stone-700 font-medium">
+                        <li><strong>Les Neumes :</strong> Catalogue interactif et recherche par nom ou par image.</li>
+                        <li><strong>Lettres significatives :</strong> Comprendre les indications de nuances et de tempo.</li>
+                        <li><strong>Lecture Guidée :</strong> Analyse pas à pas d'un extrait de chant.</li>
+                        <li><strong>Quiz :</strong> Testez vos connaissances.</li>
+                    </ul>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- SECTION NOTATION (FICHES DETAILLEES) -->
-        <section id="notation" class="scroll-mt-20">
-            <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2 mb-6">1. La Notation de Saint-Gall</h2>
-            
-            <div class="flex flex-wrap gap-2 mb-6 border-b border-stone-200 pb-4">
-                <button onclick="switchTab('simples')" id="btn-simples" class="px-4 py-2 bg-amber-700 text-white rounded-md font-medium text-sm transition">Neumes simples</button>
-                <button onclick="switchTab('ornementaux')" id="btn-ornementaux" class="px-4 py-2 bg-stone-200 text-stone-700 rounded-md font-medium text-sm transition hover:bg-stone-300">Neumes ornementaux</button>
-                <button onclick="switchTab('lettres')" id="btn-lettres" class="px-4 py-2 bg-stone-200 text-stone-700 rounded-md font-medium text-sm transition hover:bg-stone-300">Lettres significatives</button>
-            </div>
-
-            <div id="tab-simples" class="tab-content active grid md:grid-cols-2 gap-6"></div>
-            <div id="tab-ornementaux" class="tab-content grid md:grid-cols-2 gap-6"></div>
-            <div id="tab-lettres" class="tab-content bg-white p-6 rounded-lg shadow-sm border border-stone-200">
-                <ul id="lettres-list" class="list-disc list-inside space-y-2 text-stone-700"></ul>
-            </div>
-        </section>
-
-        <!-- LECTURE GUIDEE -->
-        <section id="analyse" class="scroll-mt-20">
-            <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2 mb-6">2. Lecture Guidée : Analyse d'un Chant</h2>
-            <div class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 space-y-6">
-                <div class="bg-amber-50 border-l-4 border-amber-700 p-4 rounded-r-lg">
-                    <h3 id="analyse-titre" class="font-bold text-amber-900"></h3>
-                    <p id="analyse-desc" class="text-sm text-amber-800 mt-1"></p>
+            <!-- PAGE NEUMES -->
+            <section id="page-neumes" class="page-section space-y-6">
+                <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Catalogue des Neumes</h2>
+                
+                <!-- Recherche -->
+                <div class="bg-white p-6 rounded-lg border border-stone-200 shadow-sm space-y-4">
+                    <div>
+                        <label for="search-input" class="block text-sm font-medium text-stone-700 mb-1">Recherche par nom (ex: pes, clivis, torculus...) :</label>
+                        <input type="text" id="search-input" onkeyup="filterNeumes()" placeholder="Tapez le nom d'un neume..." class="w-full md:w-1/2 p-2.5 border border-stone-300 rounded-md focus:ring-2 focus:ring-amber-700 focus:outline-none text-sm">
+                    </div>
+                    <div>
+                        <p class="text-sm font-medium text-stone-700 mb-2">Ou cliquez sur un neume pour voir sa fiche :</p>
+                        <div id="visual-grid" class="flex flex-wrap gap-3"></div>
+                    </div>
                 </div>
 
-                <div id="audio-container" class="hidden">
-                    <p class="text-sm font-medium text-stone-700 mb-2">Écouter l'extrait :</p>
-                    <audio id="audio-player" controls class="w-full"></audio>
+                <!-- Onglets Simples / Ornementaux -->
+                <div class="flex gap-2 border-b border-stone-200 pb-4">
+                    <button onclick="switchNeumeTab('simples')" id="btn-simples" class="px-4 py-2 bg-amber-700 text-white rounded-md font-medium text-sm transition">Neumes simples</button>
+                    <button onclick="switchNeumeTab('ornementaux')" id="btn-ornementaux" class="px-4 py-2 bg-stone-200 text-stone-700 rounded-md font-medium text-sm transition hover:bg-stone-300">Neumes ornementaux</button>
                 </div>
 
-                <div id="image-container" class="hidden text-center">
-                    <img id="manuscrit-img" src="" alt="Extrait de manuscrit" class="mx-auto rounded-lg shadow-sm max-h-96 object-contain border border-stone-200">
+                <div id="tab-simples" class="neume-tab-content grid md:grid-cols-2 gap-6"></div>
+                <div id="tab-ornementaux" class="neume-tab-content grid md:grid-cols-2 gap-6 hidden"></div>
+            </section>
+
+            <!-- PAGE LETTRES SIGNIFICATIVES -->
+            <section id="page-lettres" class="page-section space-y-6">
+                <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Les Lettres Significatives</h2>
+                <div class="bg-white p-8 rounded-lg shadow-sm border border-stone-200">
+                    <div id="lettres-container" class="space-y-6">
+                        <!-- Généré dynamiquement depuis data.js -->
+                    </div>
                 </div>
+            </section>
 
-                <div id="etapes-list" class="space-y-4 divide-y divide-stone-100"></div>
-            </div>
-        </section>
+            <!-- PAGE LECTURE GUIDEE -->
+            <section id="page-analyse" class="page-section space-y-6">
+                <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Lecture Guidée : Analyse d'un Chant</h2>
+                <div class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 space-y-6">
+                    <div class="bg-amber-50 border-l-4 border-amber-700 p-4 rounded-r-lg">
+                        <h3 id="analyse-titre" class="font-bold text-amber-900"></h3>
+                        <p id="analyse-desc" class="text-sm text-amber-800 mt-1"></p>
+                    </div>
 
-        <!-- QUIZ -->
-        <section id="quiz" class="scroll-mt-20">
-            <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2 mb-6">3. Quiz de Reconnaissance</h2>
-            <div class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 space-y-6" id="quiz-box"></div>
-        </section>
+                    <div id="audio-container" class="hidden">
+                        <p class="text-sm font-medium text-stone-700 mb-2">Écouter l'extrait :</p>
+                        <audio id="audio-player" controls class="w-full"></audio>
+                    </div>
 
-    </main>
+                    <div id="image-container" class="hidden text-center">
+                        <img id="manuscrit-img" src="" alt="Extrait de manuscrit" class="mx-auto rounded-lg shadow-sm max-h-96 object-contain">
+                    </div>
 
+                    <div id="etapes-list" class="space-y-4 divide-y divide-stone-100"></div>
+                </div>
+            </section>
+
+            <!-- PAGE QUIZ -->
+            <section id="page-quiz" class="page-section space-y-6">
+                <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Quiz de Reconnaissance</h2>
+                <div class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 space-y-6" id="quiz-box"></div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Pied de page -->
     <footer class="bg-stone-900 text-stone-400 py-6 mt-16 text-center text-sm">
         <p>Espace pédagogique de chant grégorien — Destiné aux étudiants.</p>
     </footer>
 
-    <!-- Fichier de données -->
+    <!-- Script de chargement -->
     <script src="data.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
@@ -110,56 +128,72 @@
             const ornementauxContainer = document.getElementById('tab-ornementaux');
             const visualGrid = document.getElementById('visual-grid');
 
+            // 1. Neumes
             siteData.neumes.forEach((n, index) => {
                 const neumeId = 'neume-' + index;
 
-                // 1. Génération de la grille visuelle / recherche rapide
+                // Miniature visuelle
                 const badge = document.createElement('div');
                 badge.className = "flex items-center space-x-2 p-2 border border-stone-200 bg-stone-50 rounded hover:bg-amber-100 cursor-pointer transition text-xs font-medium text-stone-700";
-                badge.onclick = () => scrollToNeume(neumeId, n.categorie);
+                badge.onclick = () => {
+                    showPage('neumes');
+                    switchNeumeTab(n.categorie);
+                    setTimeout(() => {
+                        const el = document.getElementById(neumeId);
+                        if(el) {
+                            el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                            el.classList.add('ring-2', 'ring-amber-700', 'bg-amber-50');
+                            setTimeout(() => el.classList.remove('ring-2', 'ring-amber-700', 'bg-amber-50'), 2500);
+                        }
+                    }, 100);
+                };
                 
-                let badgeImg = n.image ? `<img src="${n.image}" alt="${n.nom}" class="h-6 w-6 object-contain">` : '';
+                let badgeImg = '';
+                if(n.images && n.images.length > 0) badgeImg = `<img src="${n.images[0]}" alt="${n.nom}" class="h-6 w-6 object-contain">`;
+                else if(n.image) badgeImg = `<img src="${n.image}" alt="${n.nom}" class="h-6 w-6 object-contain">`;
+                
                 badge.innerHTML = `${badgeImg}<span>${n.nom}</span>`;
                 visualGrid.appendChild(badge);
 
-                // 2. Génération des fiches détaillées
+                // Carte détaillée
                 const card = document.createElement('div');
                 card.id = neumeId;
                 card.className = "neume-card bg-white p-6 rounded-lg shadow-sm border border-stone-200 space-y-3 transition duration-300";
                 
                 let html = `<h3 class="font-bold text-lg text-amber-800">${n.nom}</h3>`;
-   
+                
                 if(n.images && Array.isArray(n.images)) {
                     html += `<div class="flex flex-wrap gap-2 my-2">`;
                     n.images.forEach(img => {
                         html += `<img src="${img}" alt="${n.nom}" class="h-20 object-contain rounded">`;
                     });
                     html += `</div>`;
-                } 
-                else if(n.image) {
+                } else if(n.image) {
                     html += `<img src="${n.image}" alt="${n.nom}" class="h-24 object-contain my-2 rounded">`;
                 }
 
-   html += `<p class="text-sm text-stone-600">${n.description}</p>`;
+                html += `<p class="text-sm text-stone-600 whitespace-pre-line">${n.description}</p>`;
                 card.innerHTML = html;
 
                 if(n.categorie === 'simples') simplesContainer.appendChild(card);
                 if(n.categorie === 'ornementaux') ornementauxContainer.appendChild(card);
             });
 
-            // Lettres
-            const lettresList = document.getElementById('lettres-list');
+            // 2. Lettres significatives (Page dédiée)
+            const lettresContainer = document.getElementById('lettres-container');
             siteData.lettres.forEach(l => {
-                const li = document.createElement('li');
-                let html = `<strong>${l.sigle} :</strong> ${l.texte}`;
+                const div = document.createElement('div');
+                div.className = "border-b border-stone-100 pb-4 last:border-0";
+                let lHtml = `<h3 class="font-bold text-amber-800 text-lg mb-1">${l.sigle}</h3>`;
+                lHtml += `<p class="text-stone-600 text-sm mb-2">${l.texte}</p>`;
                 if(l.image) {
-                    html += `<br><img src="${l.image}" alt="${l.sigle}" class="h-12 object-contain my-2 rounded">`;
+                    lHtml += `<img src="${l.image}" alt="${l.sigle}" class="h-16 object-contain rounded my-2">`;
                 }
-                li.innerHTML = html;
-                lettresList.appendChild(li);
+                div.innerHTML = lHtml;
+                lettresContainer.appendChild(div);
             });
 
-            // Analyse
+            // 3. Analyse Chant
             document.getElementById('analyse-titre').textContent = siteData.analyseChant.titre;
             document.getElementById('analyse-desc').textContent = siteData.analyseChant.description;
             if(siteData.analyseChant.audioGlobal) {
@@ -181,7 +215,7 @@
                 etapesList.appendChild(row);
             });
 
-            // Quiz
+            // 4. Quiz
             const quizBox = document.getElementById('quiz-box');
             if(siteData.quiz.length > 0) {
                 const q = siteData.quiz[0];
@@ -198,18 +232,38 @@
             }
         });
 
-        // Navigation automatique vers un neume précis
-        function scrollToNeume(id, cat) {
-            switchTab(cat);
-            const el = document.getElementById(id);
-            if(el) {
-                el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                el.classList.add('ring-2', 'ring-amber-700', 'bg-amber-50');
-                setTimeout(() => el.classList.remove('ring-2', 'ring-amber-700', 'bg-amber-50'), 2500);
-            }
+        // Gestion de la navigation par "pages"
+        function showPage(pageName) {
+            document.querySelectorAll('.page-section').forEach(el => el.classList.remove('active'));
+            document.getElementById('page-' + pageName).classList.add('active');
+
+            ['accueil', 'neumes', 'lettres', 'analyse', 'quiz'].forEach(p => {
+                const btn = document.getElementById('nav-' + p);
+                if(p === pageName) {
+                    btn.className = "px-3 py-1.5 rounded-md transition bg-amber-700 text-white font-medium";
+                } else {
+                    btn.className = "px-3 py-1.5 rounded-md transition text-stone-700 hover:bg-stone-100";
+                }
+            });
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        // Filtre de recherche dynamique
+        // Gestion des sous-onglets neumes
+        function switchNeumeTab(category) {
+            document.querySelectorAll('.neume-tab-content').forEach(el => el.classList.add('hidden'));
+            document.getElementById('tab-' + category).classList.remove('hidden');
+
+            ['simples', 'ornementaux'].forEach(cat => {
+                const btn = document.getElementById('btn-' + cat);
+                if(cat === category) {
+                    btn.className = "px-4 py-2 bg-amber-700 text-white rounded-md font-medium text-sm transition";
+                } else {
+                    btn.className = "px-4 py-2 bg-stone-200 text-stone-700 rounded-md font-medium text-sm transition hover:bg-stone-300";
+                }
+            });
+        }
+
+        // Filtre de recherche
         function filterNeumes() {
             const query = document.getElementById('search-input').value.toLowerCase();
             const cards = document.querySelectorAll('.neume-card');
@@ -219,18 +273,7 @@
             });
         }
 
-        // Onglets
-        function switchTab(category) {
-            document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
-            ['simples', 'ornementaux', 'lettres'].forEach(cat => {
-                const btn = document.getElementById('btn-' + cat);
-                if(btn) btn.className = "px-4 py-2 bg-stone-200 text-stone-700 rounded-md font-medium text-sm transition hover:bg-stone-300";
-            });
-            document.getElementById('tab-' + category).classList.add('active');
-            const activeBtn = document.getElementById('btn-' + category);
-            if(activeBtn) activeBtn.className = "px-4 py-2 bg-amber-700 text-white rounded-md font-medium text-sm transition";
-        }
-
+        // Vérification quiz
         function checkQuiz() {
             const selected = document.querySelector('input[name="quiz-q"]:checked');
             const resultEl = document.getElementById('quiz-result');
