@@ -17,18 +17,36 @@ const siteData = {
             description: `2 notes, mouvement : descendant. Ce neume représente deux notes, la seconde étant plus basse (plus grave) que la première
             mais on ne sait pas de combien elle est plus basse (une tierce ? une quarte ? une octave ? rien ne l'indique)
             dans sa graphie. Vous pouvez voir dans la seconde image, sa forme épisémée qui revient très souvent. Le petit
-            chapeau posé sur le neume indique que la première note est plus longue (pas la seconde)`,
+            chapeau posé sur le neume indique que la première note est plus longue que la seconde.`,
             [
                 {image: "images/clivis.png"},
                 {image: "images/clivis_episeme.png"}
             ]
         },
         {
-            nom: "Podatus / Pes",
+            nom: "Pes",
             categorie: "simples",
             description: `2 notes, mouvement : ascendant. Ce neume représente deux notes, la seconde étant plus élevée (plus aigue) que la première
-            mais on ne sait pas de combien elle est plus élevée (une tierce ? une quarte ? une octave ? rien ne l'indique)
-            dans sa graphie. La première image est sa graphie standard, les trois autres images représentent ses graphies épisémées : la seconde image
+            mais on ne sait pas de combien elle est plus élevée (une tierce ? une quarte ? une octave ? rien ne l'indique 
+            dans sa graphie). La première image est sa graphie standard, les trois autres images représentent ses graphies épisémées : la seconde image
+            montre la version "court-long", la troisième "long-court, la quatrième "long-long".`,
+            image: "images/podatus.png"
+        },
+        {
+            nom: "torculus",
+            categorie: "simples",
+            description: `3 notes, mouvement : ascendant/descendant. Ce neume représente trois notes, la deuxième étant plus élevée (plus aigue) que la première
+            et la troisième plus basse (grave) que la deuxième mais on ne sait pas de combien elles sont plus élevées/basses (une tierce ? une quarte ? une octave ? rien ne l'indique 
+            dans sa graphie). La première image est sa graphie standard, les trois autres images représentent ses graphies épisémées : la seconde image
+            montre la version "court-long", la troisième "long-court, la quatrième "long-long".`,
+            image: "images/podatus.png"
+        },
+        {
+            nom: "porrectus",
+            categorie: "simples",
+            description: `3 notes, mouvement : descendant/ascendant. Ce neume représente trois notes, la seconde étant plus basse (plus grave) que la première
+            et la troisième plus elevée (plus aigue) que la deuxième mais on ne sait pas de combien elle est plus élevée (une tierce ? une quarte ? une octave ? rien ne l'indique 
+            dans sa graphie). La première image est sa graphie standard, les trois autres images représentent ses graphies épisémées : la seconde image
             montre la version "court-long", la troisième "long-court, la quatrième "long-long".`,
             image: "images/podatus.png"
         },
