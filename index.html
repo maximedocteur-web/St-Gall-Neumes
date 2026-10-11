@@ -129,18 +129,16 @@
                 
                 let html = `<h3 class="font-bold text-lg text-amber-800">${n.nom}</h3>`;
    
-                // Si on a plusieurs images (sous forme de liste)
-               if(n.images && Array.isArray(n.images)) {
-                   html += `<div class="flex flex-wrap gap-2 my-2">`;
-                   n.images.forEach(img => {
-                       html += `<img src="${img}" alt="${n.nom}" class="h-20 object-contain border border-stone-100 rounded bg-stone-50 p-1">`;
-                   });
-                   html += `</div>`;
-               } 
-               // Si on a une seule image (ancienne méthode)
-               else if(n.image) {
-                   html += `<img src="${n.image}" alt="${n.nom}" class="h-24 object-contain my-2 border border-stone-100 rounded">`;
-               }
+                if(n.images && Array.isArray(n.images)) {
+                    html += `<div class="flex flex-wrap gap-2 my-2">`;
+                    n.images.forEach(img => {
+                        html += `<img src="${img}" alt="${n.nom}" class="h-20 object-contain rounded">`;
+                    });
+                    html += `</div>`;
+                } 
+                else if(n.image) {
+                    html += `<img src="${n.image}" alt="${n.nom}" class="h-24 object-contain my-2 rounded">`;
+                }
 
    html += `<p class="text-sm text-stone-600">${n.description}</p>`;
                 card.innerHTML = html;
