@@ -14,8 +14,10 @@ const siteData = {
         {
             nom: "Clivis",
             categorie: "simples",
-            description: `2 notes. Ce neume représente deux notes, la seconde étant plus basse (plus grave)
-            mais on ne sait pas de combien elle est plus basse (une tierce ? quarte ? octave ? rien ne l'indique)`,
+            description: `2 notes. Ce neume représente deux notes, la seconde étant plus basse (plus grave) que la première
+            mais on ne sait pas de combien elle est plus basse (une tierce ? une quarte ? une octave ? rien ne l'indique)
+            dans sa graphie. Vous pouvez voir dans la seconde image, sa forme épisémée qui revient très souvent. Le petit
+            chapeau posé sur le neume indique que la première note est plus longue (pas la seconde)`,
             image: "images/clivis.png",
             image: "images/clivis_episeme.png"
         },
