@@ -2,12 +2,6 @@ const siteData = {
     // Neumes (simples ou ornementaux)
     neumes: [
         {
-            nom: "Virga (La verge)",
-            categorie: "simples",
-            description: "Indique un son plus aigu ou un appui mélodique vertical. Son tracé s'élève.",
-            image: "images/virga.png"
-        },
-        {
             nom: "Punctumanus (Le point)",
             categorie: "simples",
             description: "Indique un son plus grave ou une note plus légère, exécutée simplement sans forcer.",
