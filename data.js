@@ -8,7 +8,7 @@ const siteData = {
             image: "images/virga.png"
         },
         {
-            nom: "Punctum (Le point)",
+            nom: "Punctumanus (Le point)",
             categorie: "simples",
             description: "Indique un son plus grave ou une note plus légère, exécutée simplement sans forcer.",
             image: "images/punctum.png"
