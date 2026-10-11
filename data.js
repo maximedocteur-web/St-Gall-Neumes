@@ -77,8 +77,8 @@ const siteData = {
     analyseChant: {
         titre: "Incipit d'antienne type",
         description: "Observez la succession des signes de gauche à droite, comme l'œil doit le faire en lisant le manuscrit.",
-        imageGlobale: "images/chant-exemple.png", // Mets ton image globale de partition ici si tu en as une
-        audioGlobal: "audio/chant-exemple.mp3",   // Mets ton fichier audio global ici si tu en as un
+        imageGlobale: "images/si_ambulem.png", // Mets ton image globale de partition ici si tu en as une
+        audioGlobal: "audio/si_ambulem.mp3",   // Mets ton fichier audio global ici si tu en as un
         etapes: [
             { signe: "1. Virga + Punctum", explications: "Le chant s'ouvre sur un élan vers le haut (Virga) immédiatement stabilisé par un point de repos (Punctum)." },
             { signe: "2. Clivis avec lettre 't'", explications: "Descente mélodique ralentie par la lettre significative tarditer pour marquer une inflexion." },
