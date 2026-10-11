@@ -14,17 +14,21 @@ const siteData = {
         {
             nom: "Clivis",
             categorie: "simples",
-            description: `2 notes. Ce neume représente deux notes, la seconde étant plus basse (plus grave) que la première
+            description: `2 notes, mouvement : descendant. Ce neume représente deux notes, la seconde étant plus basse (plus grave) que la première
             mais on ne sait pas de combien elle est plus basse (une tierce ? une quarte ? une octave ? rien ne l'indique)
             dans sa graphie. Vous pouvez voir dans la seconde image, sa forme épisémée qui revient très souvent. Le petit
             chapeau posé sur le neume indique que la première note est plus longue (pas la seconde)`,
-            image: "images/clivis.png",
-            image: "images/clivis_episeme.png"
+            [{image: "images/clivis.png"},
+            {image: "images/clivis_episeme.png"}
+            ]
         },
         {
             nom: "Podatus / Pes",
             categorie: "simples",
-            description: "Neume ascendant de deux notes : une note basse suivie d'une note haute.",
+            description: `2 notes, mouvement : ascendant. Ce neume représente deux notes, la seconde étant plus élevée (plus aigue) que la première
+            mais on ne sait pas de combien elle est plus élevée (une tierce ? une quarte ? une octave ? rien ne l'indique)
+            dans sa graphie. La première image est sa graphie standard, les trois autres images représentent ses graphies épisémées : la seconde image
+            montre la version "court-long", la troisième "long-court, la quatrième "long-long".`,
             image: "images/podatus.png"
         },
         {
