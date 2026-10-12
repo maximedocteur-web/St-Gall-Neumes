@@ -108,34 +108,8 @@
                     <button onclick="showPage('lettres-hub')" class="text-sm text-amber-700 hover:underline font-medium">&larr; Retour au choix</button>
                 </div>
 
-                <div class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 space-y-6 text-stone-700 text-justify leading-relaxed">
-                    <div class="bg-amber-50 border-l-4 border-amber-700 p-4 rounded-r-lg text-sm text-amber-900">
-                        En plus des neumes, les premiers manuscrits musicaux de St-Gall contiennent aussi des lettres ajoutées autour des neumes. Ces lettres expriment des nuances dont l'exécution est nécessaire dans le chant. Malheureusement, à part une ou deux lettres, la majorité des significations qu'elles apportent restent opaques.
-                    </div>
-
-                    <p>
-                        Pourtant, Notker "le bègue" (ca.840 - 912), moine de St-Gall, nous explique ligne après ligne les fonctions de ces lettres. Il crée donc pour chaque lettre une phrase sensée "expliquer" sa fonction. Or, en dehors d'une compréhension sémantique des mots qu'il utilise, il rédige ces notices sous forme poétique avec des allitérations et des consonances en rapport avec la lettre qu'elles illustrent (ex: <strong>M.</strong> <strong>m</strong>ediocriter <strong>m</strong>elodia<strong>m</strong> <strong>m</strong>oderari <strong>m</strong>endicando <strong>m</strong>e<strong>m</strong>orat).
-                    </p>
-
-                    <!-- Image doublée en largeur (w-full md:w-[700px]) -->
-                    <div class="my-6 text-center">
-                        <img src="images/lettre_exemple1.png" alt="Illustration manuscrite 1" class="w-full md:w-[700px] h-auto object-contain mx-auto rounded shadow-sm border border-stone-200 bg-stone-50 p-2">
-                        <p class="text-xs text-stone-500 mt-2 italic">Exemple de lettrage dans un manuscrit de Saint-Gall.</p>
-                    </div>
-
-                    <p>
-                        Il faut donc aujourd'hui essayer de comprendre quel geste vocal Notker a voulu transcrire par ces phrases si ce n'est hermétiques, au moins mystérieuses. La tradition monastique nous transmet une grille de lecture progressive, mais de nombreuses zones d'ombre subsistent quant au phrasé exact et à l'articulation vocale recherchée au IXe siècle.
-                    </p>
-
-                    <!-- Image doublée en largeur (w-full md:w-[700px]) -->
-                    <div class="my-6 text-center">
-                        <img src="images/lettre_exemple2.png" alt="Illustration manuscrite 2" class="w-full md:w-[700px] h-auto object-contain mx-auto rounded shadow-sm border border-stone-200 bg-stone-50 p-2">
-                        <p class="text-xs text-stone-500 mt-2 italic">Détail d'une notation neumatique enrichie de lettres.</p>
-                    </div>
-
-                    <p>
-                        L'analyse croisée des différents manuscrits concordants permet peu à peu de dégager des constantes stylistiques. C'est tout l'objet de notre catalogue que de répertorier ces sigles pour affiner l'exécution musicale moderne.
-                    </p>
+                <!-- Le conteneur vide que JavaScript va remplir -->
+                <div id="lettres-apprendre-contenu" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 text-stone-700 text-justify leading-relaxed">
                 </div>
             </section>
 
@@ -359,6 +333,40 @@
                 qHtml += `</div><button onclick="checkQuiz()" class="mt-4 bg-amber-700 text-white px-6 py-2 rounded-md font-medium hover:bg-amber-800 transition">Vérifier ma réponse</button>
                           <p id="quiz-result" class="font-medium mt-2"></p>`;
                 quizBox.innerHTML = qHtml;
+            }
+            // 5. Page "En apprendre plus" (Génération dynamique & Superposition d'images)
+            const apprendreContainer = document.getElementById('lettres-apprendre-contenu');
+            if (apprendreContainer && siteData.lettresApprendre) {
+                siteData.lettresApprendre.forEach((bloc, index) => {
+                    
+                    if (bloc.type === 'text') {
+                        // Le premier texte garde le style spécifique de l'encadré orange
+                        if (index === 0) {
+                            apprendreContainer.innerHTML += `<div class="bg-amber-50 border-l-4 border-amber-700 p-4 rounded-r-lg text-sm text-amber-900 mb-6">${bloc.content}</div>`;
+                        } else {
+                            apprendreContainer.innerHTML += `<p class="mb-6">${bloc.content}</p>`;
+                        }
+                    } 
+                    
+                    else if (bloc.type === 'imageCompare') {
+                        // C'est ici que la magie de la superposition s'opère
+                        apprendreContainer.innerHTML += `
+                            <div class="my-6 text-center">
+                                <!-- Conteneur parent avec la classe 'group' -->
+                                <div class="relative w-full md:w-[700px] mx-auto rounded shadow-sm border border-stone-200 bg-stone-50 p-2 group cursor-pointer">
+                                    
+                                    <!-- IMAGE DU DESSOUS (Annotée) : placée en absolute -->
+                                    <img src="${bloc.annotee}" alt="Manuscrit annoté" class="absolute top-2 left-2 right-2 bottom-2 w-[calc(100%-1rem)] h-[calc(100%-1rem)] object-contain rounded">
+                                    
+                                    <!-- IMAGE DU DESSUS (Originale) : disparait grâce à group-hover:opacity-0 -->
+                                    <img src="${bloc.original}" alt="Manuscrit original" class="relative z-10 w-full h-auto object-contain rounded bg-stone-50 transition-opacity duration-500 group-hover:opacity-0">
+                                
+                                </div>
+                                <p class="text-xs text-stone-500 mt-2 italic">${bloc.legende}</p>
+                            </div>
+                        `;
+                    }
+                });
             }
         });
 
