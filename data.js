@@ -66,7 +66,7 @@ const siteData = {
             description: `3 notes, mouvement : ascendant/descendant. Ce neume représente trois notes, la deuxième étant plus élevée (plus aigue) que la première
             et la troisième plus basse (grave) que la deuxième mais on ne sait pas de combien elles sont plus élevées/basses (une tierce ? une quarte ? une octave ? rien ne l'indique 
             dans sa graphie). La première image est sa graphie standard,`,
-            image: [
+            images: [
                 "images/torculus.png",
                 "images/torculus_episeme.png"
                 ]
@@ -93,7 +93,7 @@ const siteData = {
             description: `3 notes, mouvement : descendant/ascendant. Ce neume représente trois notes, la seconde étant plus basse (plus grave) que la première
             et la troisième plus elevée (plus aigue) que la deuxième mais on ne sait pas de combien elle est plus élevée (une tierce ? une quarte ? une octave ? rien ne l'indique 
             dans sa graphie). La première image est sa graphie standard,`,
-            image: [
+            images: [
                 "images/climacus_2p.png",
                 "images/climacus_3p.png",
                 "images/climacus_episeme1.png"
@@ -145,7 +145,7 @@ const siteData = {
             nom: "Pressus",
             categorie: "ornementaux",
             description: "Ascension de trois notes ou plus, comportant une pression sur l'avant-dernière note.",
-            image: [
+            images: [
                 "images/pressus_minor.png",
                 "images/pressus_maior.png"
                 ]
