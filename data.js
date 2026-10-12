@@ -87,7 +87,27 @@ const siteData = {
         { 
             sigle: "e (Equaliter)",
             texte: "Égalité stricte des notes." 
-        }
+        },
+        { 
+            sigle: "st (Statim)",
+            texte: "???.",
+            image: "images/st.png"
+        },
+        { 
+            sigle: "i (Inferius)",
+            texte: "???.",
+            image: "images/i.png"
+        },
+        { 
+            sigle: "s (Sursum)",
+            texte: "???.",
+            image: "images/s.png"
+        },
+        { 
+            sigle: "x ((e)Xpectare)",
+            texte: "???.",
+            image: "images/x.png"
+        },
     ],
 
     // Analyse d'un chant complet
