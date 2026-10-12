@@ -165,7 +165,7 @@ const siteData = {
     lettres: [
         { 
             sigle: "c (Celeriter)", 
-            texte: `<strong>"C. Ut cito vel celeriter dicatur certificat.</strong>"
+            texte: `<strong>"C. Ut cito vel celeriter dicatur certificat.</strong>"<br>
                     Rapidité, exécuter le neume plus vite.`,
             image: "images/c.png"
         },
