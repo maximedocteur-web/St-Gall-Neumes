@@ -339,13 +339,9 @@
             if (apprendreContainer && siteData.lettresApprendre) {
                 siteData.lettresApprendre.forEach((bloc, index) => {
                     
+                    // Si c'est du TEXTE
                     if (bloc.type === 'text') {
-                        // Le premier texte garde le style spécifique de l'encadré orange
-                        if (index === 0) {
-                            apprendreContainer.innerHTML += `<div class="bg-amber-50 border-l-4 border-amber-700 p-4 rounded-r-lg text-sm text-amber-900 mb-6">${bloc.content}</div>`;
-                        } else {
-                            apprendreContainer.innerHTML += `<p class="mb-6">${bloc.content}</p>`;
-                        }
+                        apprendreContainer.innerHTML += `<p class="mb-6">${bloc.content}</p>`;
                     } 
                     
                     else if (bloc.type === 'imageCompare') {
