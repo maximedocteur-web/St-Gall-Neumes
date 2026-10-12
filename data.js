@@ -86,7 +86,9 @@ const siteData = {
         },
         { 
             sigle: "e (Equaliter)",
-            texte: "Égalité stricte des notes." 
+            texte: `La note sur laquelle est posée cette lettre est à la même hauteur que la précédente.
+            Exemple : si la note précédente est un Ré, cette note sera aussi un Ré, si la note
+            précédente ést un La, cette note sera aussi un La.` 
         },
         { 
             sigle: "st (Statim)",
