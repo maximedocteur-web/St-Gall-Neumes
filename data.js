@@ -1,6 +1,8 @@
 //pour mettre en gras c'est "<strong>texte</strong>
 //pour mettre en italique c'est <em>texte</em>
 //pour les deux en mm temps c'est <strong><em>texte</em></strong>
+//pour metrte des caractères en couleur c'est <span style="color: #eeb354;">le texte à coloriser</span> (#eeb354 c'est la couleur en hexadécimal)
+//et pour mettre en plus en gras c'est <strong><span style="color: #eeb354;">le texte à coloriser</span></strong>
 const siteData = {
     // Neumes (simples ou ornementaux)
     neumes: [
