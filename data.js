@@ -66,7 +66,10 @@ const siteData = {
             description: `3 notes, mouvement : ascendant/descendant. Ce neume représente trois notes, la deuxième étant plus élevée (plus aigue) que la première
             et la troisième plus basse (grave) que la deuxième mais on ne sait pas de combien elles sont plus élevées/basses (une tierce ? une quarte ? une octave ? rien ne l'indique 
             dans sa graphie). La première image est sa graphie standard,`,
-            image: "images/torculus.png"
+            image: [
+                "images/torculus.png",
+                "images/torculus_episeme.png"
+            ]
         },
         {
             nom: "Porrectus",
