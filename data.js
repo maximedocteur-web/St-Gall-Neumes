@@ -33,6 +33,8 @@ const siteData = {
             images: [
                 "images/pes.png",
                 "images/pes_episeme1.png"
+                "images/pes_episeme2.png"
+                "images/pes_episeme3.png"
             ]
         },
         {
