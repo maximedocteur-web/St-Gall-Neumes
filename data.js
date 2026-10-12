@@ -7,21 +7,21 @@ const siteData = {
         {
             nom: "Punctum",
             categorie: "simples",
-            description: `1 note. Il est normalement employé en composition,
-            c'est-à-dire qu'on le trouve dans d'autres neumes plus complexes. Il n'est, me semble-t-il jamais utilisé seul, 
-            c'est à dire que l'on est sensé le trouver uniquement dans d'autres neumes mais jamais tout seul, 
-            il n'a pas d'autonomie en tant que neume. Il ne possède pas de forme avec épisème car en cas d'alongement
-            de la note dans un neume en composition, on lui préférera le tractulus, voire le tractulus épisémé.`,
+            description: "1 note. Il est normalement employé en composition,"+
+            "c'est-à-dire qu'on le trouve dans d'autres neumes plus complexes. Il n'est, me semble-t-il jamais utilisé seul,"+ 
+            "c'est à dire que l'on est sensé le trouver uniquement dans d'autres neumes mais jamais tout seul,"+ 
+            "il n'a pas d'autonomie en tant que neume. Il ne possède pas de forme avec épisème car en cas d'alongement"+
+            "de la note dans un neume en composition, on lui préférera le tractulus, voire le tractulus épisémé.",
             image: "images/punctum.png"
         },
         {
             nom: "Tractulus",
             categorie: "simples",
-            description: `1 note. Il est normalement employé en composition,
-            c'est-à-dire qu'on le trouve dans d'autres neumes plus complexes. Il n'est, me semble-t-il jamais utilisé seul, 
-            c'est à dire que l'on est sensé le trouver uniquement dans d'autres neumes mais jamais tout seul, 
-            il n'a pas d'autonomie en tant que neume. Il ne possède pas de forme avec épisème car en cas d'alongement
-            de la note dans un neume en composition, on lui préférera le tractulus, voire le tractulus épisémé.`,
+            description: "1 note. Il est normalement employé en composition,"+
+            "c'est-à-dire qu'on le trouve dans d'autres neumes plus complexes. Il n'est, me semble-t-il jamais utilisé seul,"+ 
+            "c'est à dire que l'on est sensé le trouver uniquement dans d'autres neumes mais jamais tout seul,"+ 
+            "il n'a pas d'autonomie en tant que neume. Il ne possède pas de forme avec épisème car en cas d'alongement"+
+            "de la note dans un neume en composition, on lui préférera le tractulus, voire le tractulus épisémé.",
             images: [
                 "images/tractulus.png",
                 "images/tractulus_episeme.png"
@@ -30,20 +30,20 @@ const siteData = {
         {
             nom: "Virga",
             categorie: "simples",
-            description: `1 note. Il est normalement employé en composition,
-            c'est-à-dire qu'on le trouve dans d'autres neumes plus complexes. Il n'est, me semble-t-il jamais utilisé seul, 
-            c'est à dire que l'on est sensé le trouver uniquement dans d'autres neumes mais jamais tout seul, 
-            il n'a pas d'autonomie en tant que neume. Il ne possède pas de forme avec épisème car en cas d'alongement
-            de la note dans un neume en composition, on lui préférera le tractulus, voire le tractulus épisémé.`,
+            description: "1 note. Il est normalement employé en composition,"+
+            "c'est-à-dire qu'on le trouve dans d'autres neumes plus complexes. Il n'est, me semble-t-il jamais utilisé seul,"+ 
+            "c'est à dire que l'on est sensé le trouver uniquement dans d'autres neumes mais jamais tout seul,"+ 
+            "il n'a pas d'autonomie en tant que neume. Il ne possède pas de forme avec épisème car en cas d'alongement"+
+            "de la note dans un neume en composition, on lui préférera le tractulus, voire le tractulus épisémé.",
             image: "images/punctum.png"
         },
         {
             nom: "Clivis",
             categorie: "simples",
-            description: `2 notes, mouvement : descendant. Ce neume représente deux notes, la seconde étant plus basse (plus grave) que la première
-            mais on ne sait pas de combien elle est plus basse (une tierce ? une quarte ? une octave ? rien ne l'indique)
-            dans sa graphie. Vous pouvez voir dans la seconde image, sa forme épisémée qui revient très souvent. Le petit
-            chapeau posé sur le neume indique que la première note est plus longue que la seconde.`,
+            description: "2 notes, mouvement : descendant. Ce neume représente deux notes, la seconde étant plus basse (plus grave) que la première"+
+            "mais on ne sait pas de combien elle est plus basse (une tierce ? une quarte ? une octave ? rien ne l'indique)"+
+            "dans sa graphie. Vous pouvez voir dans la seconde image, sa forme épisémée qui revient très souvent. Le petit"+
+            "chapeau posé sur le neume indique que la première note est plus longue que la seconde.",
             images: [
                 "images/clivis.png",
                 "images/clivis_episeme.png"
