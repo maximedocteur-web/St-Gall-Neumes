@@ -7,7 +7,7 @@ const siteData = {
         {
             nom: "Punctum",
             categorie: "simples",
-            description: "1 note. Il est normalement employé en composition,"+
+            description: "<strong>1 note</strong>. Il est normalement employé en composition,"+
             "c'est-à-dire qu'on le trouve dans d'autres neumes plus complexes. Il n'est, me semble-t-il jamais utilisé seul,"+ 
             "c'est à dire que l'on est sensé le trouver uniquement dans d'autres neumes mais jamais tout seul,"+ 
             "il n'a pas d'autonomie en tant que neume. Il ne possède pas de forme avec épisème car en cas d'alongement"+
@@ -17,7 +17,7 @@ const siteData = {
         {
             nom: "Tractulus",
             categorie: "simples",
-            description: "1 note. Il est normalement employé en composition,"+
+            description: "<strong>1 note</strong>. Il est normalement employé en composition,"+
             "c'est-à-dire qu'on le trouve dans d'autres neumes plus complexes. Il n'est, me semble-t-il jamais utilisé seul,"+ 
             "c'est à dire que l'on est sensé le trouver uniquement dans d'autres neumes mais jamais tout seul,"+ 
             "il n'a pas d'autonomie en tant que neume. Il ne possède pas de forme avec épisème car en cas d'alongement"+
@@ -30,7 +30,7 @@ const siteData = {
         {
             nom: "Virga",
             categorie: "simples",
-            description: "1 note. Il est normalement employé en composition,"+
+            description: "<strong>1 note</strong>. Il est normalement employé en composition,"+
             "c'est-à-dire qu'on le trouve dans d'autres neumes plus complexes. Il n'est, me semble-t-il jamais utilisé seul,"+ 
             "c'est à dire que l'on est sensé le trouver uniquement dans d'autres neumes mais jamais tout seul,"+ 
             "il n'a pas d'autonomie en tant que neume. Il ne possède pas de forme avec épisème car en cas d'alongement"+
@@ -40,7 +40,7 @@ const siteData = {
         {
             nom: "Clivis",
             categorie: "simples",
-            description: "2 notes, mouvement : descendant. Ce neume représente deux notes, la seconde étant plus basse (plus grave) que la première"+
+            description: "<strong>2 notes</strong>, mouvement : descendant. Ce neume représente deux notes, la seconde étant plus basse (plus grave) que la première"+
             "mais on ne sait pas de combien elle est plus basse (une tierce ? une quarte ? une octave ? rien ne l'indique)"+
             "dans sa graphie. Vous pouvez voir dans la seconde image, sa forme épisémée qui revient très souvent. Le petit"+
             "chapeau posé sur le neume indique que la première note est plus longue que la seconde.",
@@ -52,7 +52,7 @@ const siteData = {
         {
             nom: "Pes",
             categorie: "simples",
-            description: `2 notes, mouvement : ascendant. Ce neume représente deux notes, la seconde étant plus élevée (plus aigue) que la première
+            description: `<strong>2 notes</strong>, mouvement : ascendant. Ce neume représente deux notes, la seconde étant plus élevée (plus aigue) que la première
             mais on ne sait pas de combien elle est plus élevée (une tierce ? une quarte ? une octave ? rien ne l'indique 
             dans sa graphie). La première image est sa graphie standard, les trois autres images représentent ses graphies épisémées : la seconde image
             montre la version "long-court", la troisième "court-long", la quatrième "long-long".`,
@@ -66,7 +66,7 @@ const siteData = {
         {
             nom: "Torculus",
             categorie: "simples",
-            description: `3 notes, mouvement : ascendant/descendant. Ce neume représente trois notes, la deuxième étant plus élevée (plus aigue) que la première
+            description: `<strong>3 notes</strong>, mouvement : ascendant/descendant. Ce neume représente trois notes, la deuxième étant plus élevée (plus aigue) que la première
             et la troisième plus basse (grave) que la deuxième mais on ne sait pas de combien elles sont plus élevées/basses (une tierce ? une quarte ? une octave ? rien ne l'indique 
             dans sa graphie). La première image est sa graphie standard,`,
             images: [
@@ -77,7 +77,7 @@ const siteData = {
         {
             nom: "Porrectus",
             categorie: "simples",
-            description: `3 notes, mouvement : descendant/ascendant. Ce neume représente trois notes, la seconde étant plus basse (plus grave) que la première
+            description: `<strong>3 notes</strong>, mouvement : descendant/ascendant. Ce neume représente trois notes, la seconde étant plus basse (plus grave) que la première
             et la troisième plus elevée (plus aigue) que la deuxième mais on ne sait pas de combien elle est plus élevée (une tierce ? une quarte ? une octave ? rien ne l'indique 
             dans sa graphie). La première image est sa graphie standard,`,
             image: "images/porrectus.png"
@@ -85,7 +85,7 @@ const siteData = {
         {
             nom: "Scandicus",
             categorie: "simples",
-            description: `3 notes, mouvement : descendant/ascendant. Ce neume représente trois notes, la seconde étant plus basse (plus grave) que la première
+            description: `<strong>3 notes</strong>, mouvement : descendant/ascendant. Ce neume représente trois notes, la seconde étant plus basse (plus grave) que la première
             et la troisième plus elevée (plus aigue) que la deuxième mais on ne sait pas de combien elle est plus élevée (une tierce ? une quarte ? une octave ? rien ne l'indique 
             dans sa graphie). La première image est sa graphie standard,`,
             image: "images/scandicus.png"
@@ -93,7 +93,7 @@ const siteData = {
         {
             nom: "Climacus",
             categorie: "simples",
-            description: `3 notes, mouvement : descendant/ascendant. Ce neume représente trois notes, la seconde étant plus basse (plus grave) que la première
+            description: `<strong>3 notes</strong>, mouvement : descendant/ascendant. Ce neume représente trois notes, la seconde étant plus basse (plus grave) que la première
             et la troisième plus elevée (plus aigue) que la deuxième mais on ne sait pas de combien elle est plus élevée (une tierce ? une quarte ? une octave ? rien ne l'indique 
             dans sa graphie). La première image est sa graphie standard,`,
             images: [
@@ -105,25 +105,25 @@ const siteData = {
         {
             nom: "Torculus resupinus",
             categorie: "simples",
-            description: `4 notes, mouvement : descendant/ascendant. Ce neume représente quatre notes, `,
+            description: `<strong>4 notes</strong>, mouvement : descendant/ascendant. Ce neume représente quatre notes, `,
             image: "images/torculus_resupinus.png"
         },
         {
             nom: "Porrectus flexus",
             categorie: "simples",
-            description: `4 notes, mouvement : descendant/ascendant. Ce neume représente quatre notes, `,
+            description: `<strong>4 notes</strong>, mouvement : descendant/ascendant. Ce neume représente quatre notes, `,
             image: "images/porrectus_flexus.png"
         },
         {
             nom: "Pes sub-bipunctis",
             categorie: "simples",
-            description: `4 notes, mouvement : descendant/ascendant. Ce neume représente quatre notes, `,
+            description: `<strong>4 notes</strong>, mouvement : descendant/ascendant. Ce neume représente quatre notes, `,
             image: "images/pes_sub_bipunctis.png"
         },
         {
             nom: "Scandicus flexus",
             categorie: "simples",
-            description: `4 notes, mouvement : descendant/ascendant. Ce neume représente quatre notes, `,
+            description: `<strong>4 notes</strong>, mouvement : descendant/ascendant. Ce neume représente quatre notes, `,
             image: "images/scandicus_flexus.png"
         },
         {
