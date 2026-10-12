@@ -133,6 +133,20 @@ const siteData = {
             categorie: "ornementaux",
             description: "Ascension de trois notes ou plus, comportant une pression sur l'avant-dernière note.",
             image: "images/pes_quassus.png"
+        },
+        {
+            nom: "Pressus",
+            categorie: "ornementaux",
+            description: "Ascension de trois notes ou plus, comportant une pression sur l'avant-dernière note.",
+            image: [
+                "images/pressus_minor.png",
+                "images/pressus_maior.png"
+        },
+        {
+            nom: "Virga strata",
+            categorie: "ornementaux",
+            description: "Ascension de trois notes ou plus, comportant une pression sur l'avant-dernière note.",
+            image: "images/virga_strata.png"
         }
     ],
 
