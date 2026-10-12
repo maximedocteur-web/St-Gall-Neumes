@@ -107,7 +107,7 @@ const siteData = {
             sigle: "x ((e)Xpectare)",
             texte: "???.",
             image: "images/x.png"
-        },
+        }
     ],
 
     // Analyse d'un chant complet
