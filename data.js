@@ -1,7 +1,7 @@
 //pour mettre en gras c'est "<strong>texte</strong>
 //pour mettre en italique c'est <em>texte</em>
 //pour les deux en mm temps c'est <strong><em>texte</em></strong>
-//pour metrte des caractères en couleur c'est <span style="color: #eeb354;">le texte à coloriser</span> (#eeb354 c'est la couleur en hexadécimal)
+//pour metrte des caractères en couleur c'est <span style="color: #eeb354;">le texte à coloriser</span> (#eeb354 c'est la couleur en hexadécimal qu'on a choisie)
 //et pour mettre en plus en gras c'est <strong><span style="color: #eeb354;">le texte à coloriser</span></strong>
 const siteData = {
     // Neumes (simples ou ornementaux)
@@ -54,10 +54,10 @@ const siteData = {
         {
             nom: "Pes",
             categorie: "simples",
-            description: `<strong>2 notes</strong>, mouvement : ascendant. Ce neume représente deux notes, la seconde étant plus élevée (plus aigue) que la première
-            mais on ne sait pas de combien elle est plus élevée (une tierce ? une quarte ? une octave ? rien ne l'indique 
-            dans sa graphie). La première image est sa graphie standard, les trois autres images représentent ses graphies épisémées : la seconde image
-            montre la version "long-court", la troisième "court-long", la quatrième "long-long".`,
+            description: "<strong>2 notes</strong>, mouvement : ascendant. Ce neume représente deux notes, la seconde étant plus élevée (plus aigue) que la première"+
+            "mais on ne sait pas de combien elle est plus élevée (une tierce ? une quarte ? une octave ? rien ne l'indique"+
+            "dans sa graphie). La première image est sa graphie standard, les trois autres images représentent ses graphies épisémées : la seconde image"+
+            "montre la version (long-court), la troisième (court-long), la quatrième (long-long).",
             images: [
                 "images/pes.png",
                 "images/pes_episeme1.png",
@@ -239,7 +239,19 @@ const siteData = {
     lettresApprendre: [
         {
             type: "text",
-            content: `Pourtant, Notker "le bègue" (ca.840 - 912), moine de St-Gall, nous explique ligne après ligne les fonctions de ces lettres. Il crée donc pour chaque lettre une phrase sensée "expliquer" sa fonction. Or, en dehors d'une compréhension sémantique des mots qu'il utilise, il rédige ces notices sous forme poétique avec des allitérations et des consonances en rapport avec la lettre qu'elles illustrent (ex: <strong><span style="color: #eeb354;">M.</span></strong> <strong><span style="color: #eeb354;">m</span></strong>ediocriter <strong><span style="color: #eeb354;">m</span></strong>elodia<strong><span style="color: #eeb354;">m</span></strong> <strong><span style="color: #eeb354;">m</span></strong>oderari <strong><span style="color: #eeb354;">m</span></strong>endicando <strong><span style="color: #eeb354;">m</span></strong>e<strong><span style="color: #eeb354;">m</span></strong>orat).`
+            content: `En plus des neumes, les premiers manuscrits musicaux de St-Gall contiennent
+            aussi des lettres ajoutées autour des neumes. Ces lettres expriment des nuances dont
+            l'exécution est nécessaire dans le chant. Malheureusement, à part une ou deux lettres,
+            la majorité des significations qu'elles apportent restent opaques. Pourtant, Notker (le
+            bègue) (ca.840 - 912), moine de St-Gall, nous explique ligne après ligne les fonctions
+            de ces lettres. Il crée donc pour chaque lettre une phrase sensée "expliquer" sa fonction.
+            Or, en dehors d'une compréhension sémantique des mots qu'il utilise, il rédige ces notices
+            sous forme poétique avec des allitérations et des consonances en rapport avec la lettre
+            qu'elles illustrent (ex: <strong><span style="color: #eeb354;">M.</span></strong>
+            <strong><span style="color: #eeb354;">m</span></strong>ediocriter <strong><span style="color: #eeb354;">m</span></strong>
+            elodia<strong><span style="color: #eeb354;">m</span></strong> <strong><span style="color: #eeb354;">m</span></strong>
+            oderari <strong><span style="color: #eeb354;">m</span></strong>endicando <strong><span style="color: #eeb354;">m</span></strong>
+            e<strong><span style="color: #eeb354;">m</span></strong>orat).`
         },
         // Exemple d'image comparative gérée directement ici :
         {
@@ -250,7 +262,10 @@ const siteData = {
         },
         {
             type: "text",
-            content: `Il faut donc aujourd'hui essayer de comprendre quel geste vocal Notker a voulu transcrire par ces phrases si ce n'est hermétiques, au moins mystérieuses. La tradition monastique nous transmet une grille de lecture progressive, mais de nombreuses zones d'ombre subsistent quant au phrasé exact et à l'articulation vocale recherchée au IXe siècle.`
+            content: `Il faut donc aujourd'hui essayer de comprendre quel geste vocal Notker a voulu
+            transcrire par ces phrases si ce n'est hermétiques, au moins mystérieuses. La tradition
+            monastique nous transmet une grille de lecture progressive, mais de nombreuses zones d'ombre
+            subsistent quant au phrasé exact et à l'articulation vocale recherchée au IXe siècle.`
         }
     ]
 };
