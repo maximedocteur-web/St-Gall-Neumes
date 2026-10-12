@@ -69,10 +69,25 @@ const siteData = {
 
     // Lettres significatives
     lettres: [
-        { sigle: "c (Celeriter)", texte: "Rapidité, exécuter le neume plus vite." },
-        { sigle: "t (Tarditer)", texte: "Lenteur, allonger la durée du neume." },
-        { sigle: "m (Mediocriter)", texte: "Nuance modérée." },
-        { sigle: "e (Equaliter)", texte: "Égalité stricte des notes." }
+        { 
+            sigle: "c (Celeriter)", 
+            texte: "Rapidité, exécuter le neume plus vite.",
+            image: "images/c.png"
+        },
+        { 
+            sigle: "t (Tarditer)",
+            texte: "Lenteur, allonger la durée du neume.",
+            image: "images/t.png"
+        },
+        { 
+            sigle: "m (Mediocriter)",
+            texte: "Nuance modérée.",
+            image: "images/m.png"
+        },
+        { 
+            sigle: "e (Equaliter)",
+            texte: "Égalité stricte des notes." 
+        }
     ],
 
     // Analyse d'un chant complet
