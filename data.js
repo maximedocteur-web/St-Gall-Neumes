@@ -38,7 +38,7 @@ const siteData = {
             ]
         },
         {
-            nom: "torculus",
+            nom: "Torculus",
             categorie: "simples",
             description: `3 notes, mouvement : ascendant/descendant. Ce neume représente trois notes, la deuxième étant plus élevée (plus aigue) que la première
             et la troisième plus basse (grave) que la deuxième mais on ne sait pas de combien elles sont plus élevées/basses (une tierce ? une quarte ? une octave ? rien ne l'indique 
@@ -46,12 +46,12 @@ const siteData = {
             image: "images/torculus.png"
         },
         {
-            nom: "porrectus",
+            nom: "Porrectus",
             categorie: "simples",
             description: `3 notes, mouvement : descendant/ascendant. Ce neume représente trois notes, la seconde étant plus basse (plus grave) que la première
             et la troisième plus elevée (plus aigue) que la deuxième mais on ne sait pas de combien elle est plus élevée (une tierce ? une quarte ? une octave ? rien ne l'indique 
             dans sa graphie). La première image est sa graphie standard,`,
-            image: "images/podatus.png"
+            image: "images/porrectus.png"
         },
         {
             nom: "Quilisma",
@@ -64,6 +64,12 @@ const siteData = {
             categorie: "ornementaux",
             description: "Ascension de trois notes ou plus, comportant une pression sur l'avant-dernière note.",
             image: "images/salicus.png"
+        },
+        {
+            nom: "Pes quassus",
+            categorie: "ornementaux",
+            description: "Ascension de trois notes ou plus, comportant une pression sur l'avant-dernière note.",
+            image: "images/pes_quassus.png"
         }
     ],
 
