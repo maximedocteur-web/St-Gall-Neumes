@@ -232,5 +232,27 @@ const siteData = {
                 { texte: "En maintenant la note à l'unisson", correct: false }
             ]
         }
+    ],
+    // Section "En apprendre plus sur les lettres significatives" (dynamique)
+    lettresApprendre: [
+        {
+            type: "text",
+            content: `En plus des neumes, les premiers manuscrits musicaux de St-Gall contiennent aussi des lettres ajoutées autour des neumes. Ces lettres expriment des nuances dont l'exécution est nécessaire dans le chant. Malheureusement, à part une ou deux lettres, la majorité des significations qu'elles apportent restent opaques.`
+        },
+        {
+            type: "text",
+            content: `Pourtant, Notker "le bègue" (ca.840 - 912), moine de St-Gall, nous explique ligne après ligne les fonctions de ces lettres. Il crée donc pour chaque lettre une phrase sensée "expliquer" sa fonction. Or, en dehors d'une compréhension sémantique des mots qu'il utilise, il rédige ces notices sous forme poétique avec des allitérations et des consonances en rapport avec la lettre qu'elles illustrent (ex: <strong>M.</strong> <strong>m</strong>ediocriter <strong>m</strong>elodia<strong>m</strong> <strong>m</strong>oderari <strong>m</strong>endicando <strong>m</strong>e<strong>m</strong>orat).`
+        },
+        // Exemple d'image comparative gérée directement ici :
+        {
+            type: "imageCompare",
+            original: "images/lettre_exemple1_original.png",
+            annotee: "images/lettre_exemple1_annote.png",
+            legende: "Survolez ou maintenez le clic pour afficher les annotations sur le manuscrit."
+        },
+        {
+            type: "text",
+            content: `Il faut donc aujourd'hui essayer de comprendre quel geste vocal Notker a voulu transcrire par ces phrases si ce n'est hermétiques, au moins mystérieuses. La tradition monastique nous transmet une grille de lecture progressive, mais de nombreuses zones d'ombre subsistent quant au phrasé exact et à l'articulation vocale recherchée au IXe siècle.`
+        }
     ]
 };
