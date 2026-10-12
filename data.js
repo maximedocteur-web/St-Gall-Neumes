@@ -256,7 +256,7 @@ const siteData = {
         {
             type: "image",
             src: "images/Notkerlettre.png",
-            legende: "les instructions de Notker. Les lettres <span style="color: #e60004;">a</span>,<span style="color: #e60004;">b</span>,<span style="color: #e60004;">c</span>,<span style="color: #e60004;">d</span> à gauche et leur descriptif ensuite"
+            legende: `les instructions de Notker. Les lettres <span style="color: #e60004;">a</span>,<span style="color: #e60004;">b</span>,<span style="color: #e60004;">c</span>,<span style="color: #e60004;">d</span> à gauche et leur descriptif ensuite"`
         },
         // Exemple d'image comparative gérée directement ici :
         {
