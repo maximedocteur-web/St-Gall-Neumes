@@ -237,7 +237,7 @@ const siteData = {
     lettresApprendre: [
         {
             type: "text",
-            content: `Pourtant, Notker "le bègue" (ca.840 - 912), moine de St-Gall, nous explique ligne après ligne les fonctions de ces lettres. Il crée donc pour chaque lettre une phrase sensée "expliquer" sa fonction. Or, en dehors d'une compréhension sémantique des mots qu'il utilise, il rédige ces notices sous forme poétique avec des allitérations et des consonances en rapport avec la lettre qu'elles illustrent (ex: <strong>M.</strong> <strong>m</strong>ediocriter <strong>m</strong>elodia<strong>m</strong> <strong>m</strong>oderari <strong>m</strong>endicando <strong>m</strong>e<strong>m</strong>orat).`
+            content: `Pourtant, Notker "le bègue" (ca.840 - 912), moine de St-Gall, nous explique ligne après ligne les fonctions de ces lettres. Il crée donc pour chaque lettre une phrase sensée "expliquer" sa fonction. Or, en dehors d'une compréhension sémantique des mots qu'il utilise, il rédige ces notices sous forme poétique avec des allitérations et des consonances en rapport avec la lettre qu'elles illustrent (ex: <strong><span style="color: #eeb354;">M.</span></strong> <strong><span style="color: #eeb354;">m</span></strong>ediocriter <strong><span style="color: #eeb354;">m</span></strong>elodia<strong><span style="color: #eeb354;">m</span></strong> <strong><span style="color: #eeb354;">m</span></strong>oderari <strong><span style="color: #eeb354;">m</span></strong>endicando <strong><span style="color: #eeb354;">m</span></strong>e<strong><span style="color: #eeb354;">m</span></strong>orat).`
         },
         // Exemple d'image comparative gérée directement ici :
         {
