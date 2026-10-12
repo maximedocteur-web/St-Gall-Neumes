@@ -342,7 +342,16 @@
                     // Si c'est du TEXTE
                     if (bloc.type === 'text') {
                         apprendreContainer.innerHTML += `<p class="mb-6">${bloc.content}</p>`;
-                    } 
+                    }
+                    // -> ICI : Si c'est une IMAGE SIMPLE <-
+                    else if (bloc.type === 'image') {
+                        apprendreContainer.innerHTML += `
+                            <div class="my-6 text-center">
+                                <img src="${bloc.src}" alt="Illustration" class="w-full md:w-[700px] h-auto object-contain mx-auto rounded shadow-sm border border-stone-200 bg-stone-50 p-2">
+                                <p class="text-xs text-stone-500 mt-2 italic">${bloc.legende}</p>
+                            </div>
+                        `;
+                    }
                     
                     else if (bloc.type === 'imageCompare') {
                         // C'est ici que la magie de la superposition s'opère
