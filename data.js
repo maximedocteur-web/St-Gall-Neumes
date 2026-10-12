@@ -144,7 +144,7 @@ const siteData = {
             image: "images/c.png"
         },
         { 
-            sigle: "t (Tarditer)",
+            sigle: "t (Tenete)",
             texte: "Lenteur, allonger la durée du neume.",
             image: "images/t.png"
         },
