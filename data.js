@@ -121,14 +121,14 @@ const siteData = {
 
     // Analyse d'un chant complet
     analyseChant: {
-        titre: "Incipit d'antienne type",
+        titre: "Graduel. Si ambulem (messe des morts)",
         description: "Observez la succession des signes de gauche à droite, comme l'œil doit le faire en lisant le manuscrit.",
         imageGlobale: "images/si_ambulem.png", // Mets ton image globale de partition ici si tu en as une
         audioGlobal: "audio/si_ambulem.mp3",   // Mets ton fichier audio global ici si tu en as un
         etapes: [
-            { signe: "1. Virga + Punctum", explications: "Le chant s'ouvre sur un élan vers le haut (Virga) immédiatement stabilisé par un point de repos (Punctum)." },
-            { signe: "2. Clivis avec lettre 't'", explications: "Descente mélodique ralentie par la lettre significative tarditer pour marquer une inflexion." },
-            { signe: "3. Quilisma + Podatus", explications: "Frémissement ascendant du quilisma qui débouche sur un saut net vers l'aigu avec le podatus." }
+            { signe: "Virga + Punctum", explications: "Le chant s'ouvre sur un élan vers le haut (Virga) immédiatement stabilisé par un point de repos (Punctum)." },
+            { signe: "Clivis avec lettre 't'", explications: "Descente mélodique ralentie par la lettre significative tarditer pour marquer une inflexion." },
+            { signe: "Quilisma + Podatus", explications: "Frémissement ascendant du quilisma qui débouche sur un saut net vers l'aigu avec le podatus." }
         ]
     },
 
