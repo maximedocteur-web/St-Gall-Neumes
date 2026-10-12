@@ -263,7 +263,7 @@ const siteData = {
             type: "imageCompare",
             original: "images/test_lettre1.png",
             annotee: "images/test_lettre2.png",
-            legende: "Survolez ou maintenez le clic pour afficher l'emplacement des lettres significatives."
+            legende: "Survolez l'image avec votre souris pour afficher l'emplacement des lettres significatives."
         },
         {
             type: "text",
