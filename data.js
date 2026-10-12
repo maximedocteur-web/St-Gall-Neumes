@@ -1,3 +1,6 @@
+//pour mettre en gras c'est "<strong>texte</strong>
+//pour mettre en italique c'est <em>texte</em>
+//pour les deux en mm temps c'est <strong><em>texte</em></strong>
 const siteData = {
     // Neumes (simples ou ornementaux)
     neumes: [
