@@ -22,7 +22,7 @@ const siteData = {
             images: [
                 "images/tractulus.png",
                 "images/tractulus_episeme.png"
-            ]
+                ]
         },
         {
             nom: "Virga",
@@ -44,7 +44,7 @@ const siteData = {
             images: [
                 "images/clivis.png",
                 "images/clivis_episeme.png"
-            ]
+                ]
         },
         {
             nom: "Pes",
@@ -58,7 +58,7 @@ const siteData = {
                 "images/pes_episeme1.png",
                 "images/pes_episeme2.png",
                 "images/pes_episeme3.png"
-            ]
+                ]
         },
         {
             nom: "Torculus",
@@ -69,7 +69,7 @@ const siteData = {
             image: [
                 "images/torculus.png",
                 "images/torculus_episeme.png"
-            ]
+                ]
         },
         {
             nom: "Porrectus",
@@ -97,7 +97,7 @@ const siteData = {
                 "images/climacus_2p.png",
                 "images/climacus_3p.png",
                 "images/climacus_episeme1.png"
-            ]
+                ]
         },
         {
             nom: "Torculus resupinus",
@@ -148,7 +148,7 @@ const siteData = {
             image: [
                 "images/pressus_minor.png",
                 "images/pressus_maior.png"
-            ]
+                ]
         },
         {
             nom: "Virga strata",
