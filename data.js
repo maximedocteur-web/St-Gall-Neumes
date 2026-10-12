@@ -9,21 +9,21 @@ const siteData = {
         {
             nom: "Punctum",
             categorie: "simples",
-            description: "<strong>1 note</strong>. Il est normalement employé en composition,"+
-            "c'est-à-dire qu'on le trouve dans d'autres neumes plus complexes. Il n'est, me semble-t-il jamais utilisé seul,"+ 
-            "c'est à dire que l'on est sensé le trouver uniquement dans d'autres neumes mais jamais tout seul,"+ 
-            "il n'a pas d'autonomie en tant que neume. Il ne possède pas de forme avec épisème car en cas d'alongement"+
-            "de la note dans un neume en composition, on lui préférera le tractulus, voire le tractulus épisémé.",
+            description: `<strong>1 note</strong>. Il est normalement employé en composition,
+            c'est-à-dire qu'on le trouve dans d'autres neumes plus complexes. Il n'est, me semble-t-il jamais utilisé seul,
+            c'est à dire que l'on est sensé le trouver uniquement dans d'autres neumes mais jamais tout seul,
+            il n'a pas d'autonomie en tant que neume. Il ne possède pas de forme avec épisème car en cas d'alongement
+            de la note dans un neume en composition, on lui préférera le tractulus, voire le tractulus épisémé.`,
             image: "images/punctum.png"
         },
         {
             nom: "Tractulus",
             categorie: "simples",
-            description: "<strong>1 note</strong>. Il est normalement employé en composition,"+
-            "c'est-à-dire qu'on le trouve dans d'autres neumes plus complexes. Il n'est, me semble-t-il jamais utilisé seul,"+ 
-            "c'est à dire que l'on est sensé le trouver uniquement dans d'autres neumes mais jamais tout seul,"+ 
-            "il n'a pas d'autonomie en tant que neume. Il ne possède pas de forme avec épisème car en cas d'alongement"+
-            "de la note dans un neume en composition, on lui préférera le tractulus, voire le tractulus épisémé.",
+            description: `<strong>1 note</strong>. Il est normalement employé en composition,
+            c'est-à-dire qu'on le trouve dans d'autres neumes plus complexes. Il n'est, me semble-t-il jamais utilisé seul, 
+            c'est à dire que l'on est sensé le trouver uniquement dans d'autres neumes mais jamais tout seul, 
+            il n'a pas d'autonomie en tant que neume. Il ne possède pas de forme avec épisème car en cas d'alongement
+            de la note dans un neume en composition, on lui préférera le tractulus, voire le tractulus épisémé.`,
             images: [
                 "images/tractulus.png",
                 "images/tractulus_episeme.png"
