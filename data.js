@@ -54,6 +54,46 @@ const siteData = {
             image: "images/porrectus.png"
         },
         {
+            nom: "Scandicus",
+            categorie: "simples",
+            description: `3 notes, mouvement : descendant/ascendant. Ce neume représente trois notes, la seconde étant plus basse (plus grave) que la première
+            et la troisième plus elevée (plus aigue) que la deuxième mais on ne sait pas de combien elle est plus élevée (une tierce ? une quarte ? une octave ? rien ne l'indique 
+            dans sa graphie). La première image est sa graphie standard,`,
+            image: "images/porrectus.png"
+        },
+        {
+            nom: "Climacus",
+            categorie: "simples",
+            description: `3 notes, mouvement : descendant/ascendant. Ce neume représente trois notes, la seconde étant plus basse (plus grave) que la première
+            et la troisième plus elevée (plus aigue) que la deuxième mais on ne sait pas de combien elle est plus élevée (une tierce ? une quarte ? une octave ? rien ne l'indique 
+            dans sa graphie). La première image est sa graphie standard,`,
+            image: "images/porrectus.png"
+        },
+        {
+            nom: "Torculus resupinus",
+            categorie: "simples",
+            description: `4 notes, mouvement : descendant/ascendant. Ce neume représente quatre notes, `,
+            image: "images/torculus_resupinus.png"
+        },
+        {
+            nom: "Porrectus flexus",
+            categorie: "simples",
+            description: `4 notes, mouvement : descendant/ascendant. Ce neume représente quatre notes, `,
+            image: "images/porrectus_flexus.png"
+        },
+        {
+            nom: "Pes sub-bipunctis",
+            categorie: "simples",
+            description: `4 notes, mouvement : descendant/ascendant. Ce neume représente quatre notes, `,
+            image: "images/pes_sub_bipunctis.png"
+        },
+        {
+            nom: "Scandicus flexus",
+            categorie: "simples",
+            description: `4 notes, mouvement : descendant/ascendant. Ce neume représente quatre notes, `,
+            image: "images/scandicus_flexus.png"
+        },
+        {
             nom: "Quilisma",
             categorie: "ornementaux",
             description: "Neume dentelé en forme de crémaillère. Indique une vocalise légère, un frémissement.",
