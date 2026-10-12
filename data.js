@@ -141,6 +141,7 @@ const siteData = {
             image: [
                 "images/pressus_minor.png",
                 "images/pressus_maior.png"
+                ]
         },
         {
             nom: "Virga strata",
