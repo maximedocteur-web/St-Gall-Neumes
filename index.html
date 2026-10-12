@@ -184,8 +184,8 @@
             siteData.lettres.forEach(l => {
                 const div = document.createElement('div');
                 div.className = "border-b border-stone-100 pb-4 last:border-0";
-                let lHtml = `<h3 class="font-bold text-amber-800 text-lg mb-1">${l.sigle}</h3>`;
-                lHtml += `<p class="text-stone-600 text-sm mb-2 tex-justify">${l.texte}</p>`;
+                let lHtml = `<h3 class="font-bold text-amber-800 text-lg mb-1" text-justify>${l.sigle}</h3>`;
+                lHtml += `<p class="text-stone-600 text-sm mb-2 text-justify">${l.texte}</p>`;
                 if(l.image) {
                     lHtml += `<img src="${l.image}" alt="${l.sigle}" class="h-16 object-contain rounded my-2">`;
                 }
