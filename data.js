@@ -88,7 +88,8 @@ const siteData = {
             sigle: "e (Equaliter)",
             texte: `La note sur laquelle est posée cette lettre est à la même hauteur que la précédente.
             Exemple : si la note précédente est un Ré, cette note sera aussi un Ré, si la note
-            précédente ést un La, cette note sera aussi un La.` 
+            précédente ést un La, cette note sera aussi un La.`
+            image: "images/e.png"
         },
         { 
             sigle: "st (Statim)",
