@@ -172,7 +172,7 @@
                     html += `<img src="${n.image}" alt="${n.nom}" class="h-24 object-contain my-2 rounded">`;
                 }
 
-                html += `<p class="text-sm text-stone-600 whitespace-pre-line">${n.description}</p>`;
+                html += `<p class="text-sm text-stone-600 whitespace-pre-line text-justify">${n.description}</p>`;
                 card.innerHTML = html;
 
                 if(n.categorie === 'simples') simplesContainer.appendChild(card);
@@ -185,7 +185,7 @@
                 const div = document.createElement('div');
                 div.className = "border-b border-stone-100 pb-4 last:border-0";
                 let lHtml = `<h3 class="font-bold text-amber-800 text-lg mb-1">${l.sigle}</h3>`;
-                lHtml += `<p class="text-stone-600 text-sm mb-2">${l.texte}</p>`;
+                lHtml += `<p class="text-stone-600 text-sm mb-2 tex-justify">${l.texte}</p>`;
                 if(l.image) {
                     lHtml += `<img src="${l.image}" alt="${l.sigle}" class="h-16 object-contain rounded my-2">`;
                 }
@@ -222,7 +222,7 @@
                 let qHtml = `<p class="font-medium text-stone-800 mb-4">Question : ${q.question}</p><div class="space-y-2">`;
                 q.options.forEach((opt) => {
                     qHtml += `
-                        <label class="block p-3 rounded border border-stone-200 hover:bg-stone-50 cursor-pointer">
+                        <label class="block p-3 rounded border border-stone-200 hover:bg-stone-50 cursor-pointer text-justify">
                             <input type="radio" name="quiz-q" value="${opt.correct}" class="mr-2"> ${opt.texte}
                         </label>`;
                 });
