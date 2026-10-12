@@ -90,7 +90,11 @@ const siteData = {
             description: `3 notes, mouvement : descendant/ascendant. Ce neume représente trois notes, la seconde étant plus basse (plus grave) que la première
             et la troisième plus elevée (plus aigue) que la deuxième mais on ne sait pas de combien elle est plus élevée (une tierce ? une quarte ? une octave ? rien ne l'indique 
             dans sa graphie). La première image est sa graphie standard,`,
-            image: "images/porrectus.png"
+            image: [
+                "images/climacus_2p.png",
+                "images/climacus_3p.png",
+                "images/climacus_episeme1.png"
+            ]
         },
         {
             nom: "Torculus resupinus",
@@ -141,7 +145,7 @@ const siteData = {
             image: [
                 "images/pressus_minor.png",
                 "images/pressus_maior.png"
-                ]
+            ]
         },
         {
             nom: "Virga strata",
