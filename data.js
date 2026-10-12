@@ -32,8 +32,8 @@ const siteData = {
             montre la version "court-long", la troisième "long-court, la quatrième "long-long".`,
             images: [
                 "images/pes.png",
-                "images/pes_episeme1.png"
-                "images/pes_episeme2.png"
+                "images/pes_episeme1.png",
+                "images/pes_episeme2.png",
                 "images/pes_episeme3.png"
             ]
         },
