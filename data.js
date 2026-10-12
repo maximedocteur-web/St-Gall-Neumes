@@ -261,9 +261,9 @@ const siteData = {
         // Exemple d'image comparative gérée directement ici :
         {
             type: "imageCompare",
-            original: "images/lettre_exemple1_original.png",
-            annotee: "images/lettre_exemple1_annote.png",
-            legende: "Survolez ou maintenez le clic pour afficher les annotations sur le manuscrit."
+            original: "images/test_lettre1.png",
+            annotee: "images/test_lettre2.png",
+            legende: "Survolez ou maintenez le clic pour afficher l'emplacement des lettres significatives."
         },
         {
             type: "text",
