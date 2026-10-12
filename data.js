@@ -12,6 +12,29 @@ const siteData = {
             image: "images/punctum.png"
         },
         {
+            nom: "Tractulus",
+            categorie: "simples",
+            description: `1 note. Il est normalement employé en composition,
+            c'est-à-dire qu'on le trouve dans d'autres neumes plus complexes. Il n'est, me semble-t-il jamais utilisé seul, 
+            c'est à dire que l'on est sensé le trouver uniquement dans d'autres neumes mais jamais tout seul, 
+            il n'a pas d'autonomie en tant que neume. Il ne possède pas de forme avec épisème car en cas d'alongement
+            de la note dans un neume en composition, on lui préférera le tractulus, voire le tractulus épisémé.`,
+            images: [
+                "images/tractulus.png",
+                "images/tractulus_episeme.png"
+            ]
+        },
+        {
+            nom: "Virga",
+            categorie: "simples",
+            description: `1 note. Il est normalement employé en composition,
+            c'est-à-dire qu'on le trouve dans d'autres neumes plus complexes. Il n'est, me semble-t-il jamais utilisé seul, 
+            c'est à dire que l'on est sensé le trouver uniquement dans d'autres neumes mais jamais tout seul, 
+            il n'a pas d'autonomie en tant que neume. Il ne possède pas de forme avec épisème car en cas d'alongement
+            de la note dans un neume en composition, on lui préférera le tractulus, voire le tractulus épisémé.`,
+            image: "images/punctum.png"
+        },
+        {
             nom: "Clivis",
             categorie: "simples",
             description: `2 notes, mouvement : descendant. Ce neume représente deux notes, la seconde étant plus basse (plus grave) que la première
