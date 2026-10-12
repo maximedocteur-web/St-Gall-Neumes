@@ -21,12 +21,14 @@
             </div>
         </header>
 
-        <!-- Barre de navigation (Agit comme un changement de page) -->
+        <!-- Barre de navigation -->
         <nav class="bg-white border-b border-stone-200 sticky top-0 z-50 shadow-sm">
-            <div class="max-w-5xl mx-auto px-6 flex justify-center space-x-4 md:space-x-8 py-4 text-sm md:text-base font-medium">
+            <div class="max-w-5xl mx-auto px-4 flex flex-wrap justify-center gap-2 md:gap-4 py-3 text-sm md:text-base font-medium">
                 <button onclick="showPage('accueil')" id="nav-accueil" class="px-3 py-1.5 rounded-md transition bg-amber-700 text-white">Accueil</button>
                 <button onclick="showPage('neumes')" id="nav-neumes" class="px-3 py-1.5 rounded-md transition text-stone-700 hover:bg-stone-100">Les Neumes</button>
-                <button onclick="showPage('lettres')" id="nav-lettres" class="px-3 py-1.5 rounded-md transition text-stone-700 hover:bg-stone-100">Lettres significatives</button>
+                <button onclick="showPage('lettres-hub')" id="nav-lettres" class="px-3 py-1.5 rounded-md transition text-stone-700 hover:bg-stone-100">Lettres significatives</button>
+                <button onclick="showPage('historique')" id="nav-historique" class="px-3 py-1.5 rounded-md transition text-stone-700 hover:bg-stone-100">Historique</button>
+                <button onclick="showPage('manuscrits')" id="nav-manuscrits" class="px-3 py-1.5 rounded-md transition text-stone-700 hover:bg-stone-100">Se repérer</button>
                 <button onclick="showPage('analyse')" id="nav-analyse" class="px-3 py-1.5 rounded-md transition text-stone-700 hover:bg-stone-100">Lecture Guidée</button>
                 <button onclick="showPage('quiz')" id="nav-quiz" class="px-3 py-1.5 rounded-md transition text-stone-700 hover:bg-stone-100">Quiz</button>
             </div>
@@ -41,7 +43,9 @@
                     <p class="text-stone-600">Cet outil est conçu pour vous accompagner dans l'apprentissage de la notation neumatique de Saint-Gall. Utilisez le menu ci-dessus pour naviguer entre les différentes sections du cours :</p>
                     <ul class="list-disc list-inside space-y-2 text-stone-700 font-medium">
                         <li><strong>Les Neumes :</strong> Catalogue interactif et recherche par nom ou par image.</li>
-                        <li><strong>Lettres significatives :</strong> Comprendre les indications de nuances et de tempo.</li>
+                        <li><strong>Lettres significatives :</strong> Comprendre les indications de nuances, d'interprétation et consulter le catalogue.</li>
+                        <li><strong>Historique :</strong> Découvrir les origines de cette notation monastique.</li>
+                        <li><strong>Se repérer dans les manuscrits :</strong> Apprendre à lire la structure des pages et les rubriques.</li>
                         <li><strong>Lecture Guidée :</strong> Analyse pas à pas d'un extrait de chant.</li>
                         <li><strong>Quiz :</strong> Testez vos connaissances.</li>
                     </ul>
@@ -74,27 +78,113 @@
                 <div id="tab-ornementaux" class="neume-tab-content grid md:grid-cols-2 gap-6 hidden"></div>
             </section>
 
-            <!-- PAGE LETTRES SIGNIFICATIVES -->
-            <section id="page-lettres" class="page-section space-y-6">
+            <!-- PAGE LETTRES SIGNIFICATIVES - HUB -->
+            <section id="page-lettres-hub" class="page-section space-y-6">
                 <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Les Lettres Significatives</h2>
+                <p class="text-stone-600">Choisissez l'une des sections ci-dessous pour approfondir votre étude des lettres significatives de Saint-Gall :</p>
                 
-                <!-- TON TEXTE D'INTRODUCTION ICI -->
-                <div class="bg-amber-50 border-l-4 border-amber-700 p-4 rounded-r-lg text-sm text-amber-900 text-justify">
-                    En plus des neumes, les premiers manuscrits musicaux de St-Gall contiennent aussi des lettres ajoutées
-                    autour des neumes. Ces lettres expriment des nuances dont l'exécution est nécessaire dans le chant.
-                    Malheureusement, à part une ou deux lettres, la majorité des significations qu'elles apportent restent opaques.
-                    Pourtant, Notker "le bègue" (ca.840 - 912), moine de St-Gall, nous explique ligne après ligne les fonctions
-                    de ces lettres. Il crée donc pour chaque lettre une phrase sensée "expliquer" sa fonction. Or, en dehors
-                    d'une compréhension sémantique des mots qu'il utilise, il rédige ces notices sous forme poétique avec des allitérations
-                    et des consonances en rapport avec la lettre qu'elles illustrent (<strong>M.</strong> <strong>m</strong>ediocriter <strong>m</strong>elodia<strong>m</strong> <strong>m</strong>oderari <strong>m</strong>endicando <strong>m</strong>e<strong>m</strong>orat). 
-                    Il faut donc aujourd'hui essayer de comprendre quel geste vocal a-t-il voulu transcrire par ces phrases si ce 
-                    n'est hermétique, au moins mystérieuses.
+                <div class="grid md:grid-cols-2 gap-6 pt-4">
+                    <!-- Bouton / Carte 1 : En apprendre plus -->
+                    <div onclick="showPage('lettres-apprendre')" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 hover:border-amber-700 cursor-pointer transition space-y-3 text-center group">
+                        <div class="w-12 h-12 bg-amber-50 text-amber-800 rounded-full flex items-center justify-center mx-auto group-hover:bg-amber-700 group-hover:text-white transition font-serif font-bold text-lg">?</div>
+                        <h3 class="text-xl font-serif font-bold text-stone-900 group-hover:text-amber-800 transition">En apprendre plus sur les lettres significatives</h3>
+                        <p class="text-sm text-stone-600">Découvrez l'origine de ces lettres, les notices poétiques de Notker et l'interprétation vocale sous-jacente.</p>
+                    </div>
+
+                    <!-- Bouton / Carte 2 : Catalogue -->
+                    <div onclick="showPage('lettres-catalogue')" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 hover:border-amber-700 cursor-pointer transition space-y-3 text-center group">
+                        <div class="w-12 h-12 bg-amber-50 text-amber-800 rounded-full flex items-center justify-center mx-auto group-hover:bg-amber-700 group-hover:text-white transition font-serif font-bold text-lg">📖</div>
+                        <h3 class="text-xl font-serif font-bold text-stone-900 group-hover:text-amber-800 transition">Catalogue des lettres significatives</h3>
+                        <p class="text-sm text-stone-600">Consultez la liste exhaustive de chaque sigle et sa description musicale associée.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PAGE LETTRES - EN APPRENDRE PLUS -->
+            <section id="page-lettres-apprendre" class="page-section space-y-6">
+                <div class="flex items-center justify-between border-b-2 border-amber-700 pb-2">
+                    <h2 class="text-2xl font-serif font-bold text-stone-900">En apprendre plus sur les Lettres Significatives</h2>
+                    <button onclick="showPage('lettres-hub')" class="text-sm text-amber-700 hover:underline font-medium">&larr; Retour au choix</button>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 space-y-6 text-stone-700 text-justify leading-relaxed">
+                    <div class="bg-amber-50 border-l-4 border-amber-700 p-4 rounded-r-lg text-sm text-amber-900">
+                        En plus des neumes, les premiers manuscrits musicaux de St-Gall contiennent aussi des lettres ajoutées autour des neumes. Ces lettres expriment des nuances dont l'exécution est nécessaire dans le chant. Malheureusement, à part une ou deux lettres, la majorité des significations qu'elles apportent restent opaques.
+                    </div>
+
+                    <p>
+                        Purtant, Notker "le bègue" (ca.840 - 912), moine de St-Gall, nous explique ligne après ligne les fonctions de ces lettres. Il crée donc pour chaque lettre une phrase sensée "expliquer" sa fonction. Or, en dehors d'une compréhension sémantique des mots qu'il utilise, il rédige ces notices sous forme poétique avec des allitérations et des consonances en rapport avec la lettre qu'elles illustrent (ex: <strong>M.</strong> <strong>m</strong>ediocriter <strong>m</strong>elodia<strong>m</strong> <strong>m</strong>oderari <strong>m</strong>endicando <strong>m</strong>e<strong>m</strong>orat).
+                    </p>
+
+                    <!-- Image uniforme -->
+                    <div class="my-6 text-center">
+                        <img src="images/lettre_exemple1.png" alt="Illustration manuscrite 1" class="w-72 md:w-96 h-auto object-contain mx-auto rounded shadow-sm border border-stone-200 bg-stone-50 p-2">
+                        <p class="text-xs text-stone-500 mt-2 italic">Exemple de lettrage dans un manuscrit de Saint-Gall.</p>
+                    </div>
+
+                    <p>
+                        Il faut donc aujourd'hui essayer de comprendre quel geste vocal Notker a voulu transcrire par ces phrases si ce n'est hermétiques, au moins mystérieuses. La tradition monastique nous transmet une grille de lecture progressive, mais de nombreuses zones d'ombre subsistent quant au phrasé exact et à l'articulation vocale recherchée au IXe siècle.
+                    </p>
+
+                    <!-- Image uniforme -->
+                    <div class="my-6 text-center">
+                        <img src="images/lettre_exemple2.png" alt="Illustration manuscrite 2" class="w-72 md:w-96 h-auto object-contain mx-auto rounded shadow-sm border border-stone-200 bg-stone-50 p-2">
+                        <p class="text-xs text-stone-500 mt-2 italic">Détail d'une notation neumatique enrichie de lettres.</p>
+                    </div>
+
+                    <p>
+                        L'analyse croisée des différents manuscrits concordants permet peu à peu de dégager des constantes stylistiques. C'est tout l'objet de notre catalogue que de répertorier ces sigles pour affiner l'exécution musicale moderne.
+                    </p>
+                </div>
+            </section>
+
+            <!-- PAGE LETTRES - CATALOGUE -->
+            <section id="page-lettres-catalogue" class="page-section space-y-6">
+                <div class="flex items-center justify-between border-b-2 border-amber-700 pb-2">
+                    <h2 class="text-2xl font-serif font-bold text-stone-900">Catalogue des Lettres Significatives</h2>
+                    <button onclick="showPage('lettres-hub')" class="text-sm text-amber-700 hover:underline font-medium">&larr; Retour au choix</button>
                 </div>
 
                 <div class="bg-white p-8 rounded-lg shadow-sm border border-stone-200">
                     <div id="lettres-container" class="space-y-6">
                         <!-- Généré dynamiquement depuis data.js -->
                     </div>
+                </div>
+            </section>
+
+            <!-- PAGE HISTORIQUE -->
+            <section id="page-historique" class="page-section space-y-6">
+                <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Historique de la Notation de Saint-Gall</h2>
+                <div class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 space-y-6 text-stone-700 text-justify leading-relaxed">
+                    <p>
+                        L'abbaye de Saint-Gall, située dans l'actuelle Suisse, a été l'un des foyers culturels et musicaux les plus importants de l'Europe carolingienne au IXe et Xe siècle. C'est dans ce monastère qu'est née l'une des graphies musicales les plus remarquables de l'histoire : la notation neumatique dite "de Saint-Gall".
+                    </p>
+                    <h3 class="text-xl font-serif font-bold text-stone-900 mt-4">De la mémoire orale à la graphie</h3>
+                    <p>
+                        À l'origine, le chant grégorien se transmettait exclusivement par voie orale. Pour aider les chantres à se souvenir des mélodies qu'ils avaient apprises, des signes graphiques appelés <strong>neumes</strong> (du grec <em>neuma</em>, le signe ou le geste) ont commencé à être tracés au-dessus des textes liturgiques dès le VIIIe siècle. Ces signes ne donnaient pas la hauteur absolue des notes (il n'y avait pas encore de portée à lignes), mais figuraient la courbe mélodique ainsi que des indications fines de rythme et d'expression.
+                    </p>
+                    <h3 class="text-xl font-serif font-bold text-stone-900 mt-4">L'âge d'or de Saint-Gall</h3>
+                    <p>
+                        Les manuscrits de Saint-Gall (tels que le fameux <em>Codex Sangallensis 359</em>) se distinguent par leur extraordinaire précision graphique et leur calligraphie aérienne. Les scribes ont développé un système de codification très poussé, associant aux neumes de base des lettres modificatrices (les lettres significatives) et des nuances subtiles d'exécution.
+                    </p>
+                </div>
+            </section>
+
+            <!-- PAGE SE REPÉRER DANS LES MANUSCRITS -->
+            <section id="page-manuscrits" class="page-section space-y-6">
+                <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Se repérer dans les Manuscrits</h2>
+                <div class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 space-y-6 text-stone-700 text-justify leading-relaxed">
+                    <p>
+                        Aborder un manuscrit médiéval de chant grégorien nécessite de comprendre sa structure physique et l'organisation visuelle de sa page. Contrairement aux partitions modernes, la page du manuscrit est avant tout un livre liturgique richement agencé.
+                    </p>
+                    <h3 class="text-xl font-serif font-bold text-stone-900 mt-4">Les Rubriques et l'encre rouge</h3>
+                    <p>
+                        Le terme <em>rubrique</em> vient du latin <em>rubricare</em> (rougir). Dans les manuscrits de Saint-Gall, l'encre rouge était utilisée pour les titres, les incipits liturgiques, et les indications importantes du déroulement de la messe ou de l'office. Ces repères visuels permettaient au chantre de repérer immédiatement la structure du chant à venir.
+                    </p>
+                    <h3 class="text-xl font-serif font-bold text-stone-900 mt-4">La disposition des textes et des neumes (Adiastématisme)</h3>
+                    <p>
+                        Les neumes de Saint-Gall sont dits <strong>adiastématiques</strong> : ils ne reposent pas sur une portée musicale fixe avec des hauteurs de notes mesurables géométriquement. Le scribe plaçait les neumes de manière plus ou moins haute ou basse au-dessus du texte, formant une courbe expressive. Le lecteur doit donc combiner la lecture du texte latin, la forme du neume, et sa connaissance intime du répertoire pour restituer la mélodie juste.
+                    </p>
                 </div>
             </section>
 
@@ -146,7 +236,6 @@
             siteData.neumes.forEach((n, index) => {
                 const neumeId = 'neume-' + index;
 
-                // Miniature visuelle
                 const badge = document.createElement('div');
                 badge.className = "flex items-center space-x-2 p-2 border border-stone-200 bg-stone-50 rounded hover:bg-amber-100 cursor-pointer transition text-xs font-medium text-stone-700";
                 badge.onclick = () => {
@@ -169,7 +258,6 @@
                 badge.innerHTML = `${badgeImg}<span>${n.nom}</span>`;
                 visualGrid.appendChild(badge);
 
-                // Carte détaillée
                 const card = document.createElement('div');
                 card.id = neumeId;
                 card.className = "neume-card bg-white p-6 rounded-lg shadow-sm border border-stone-200 space-y-3 transition duration-300";
@@ -193,12 +281,12 @@
                 if(n.categorie === 'ornementaux') ornementauxContainer.appendChild(card);
             });
 
-            // 2. Lettres significatives (Page dédiée)
+            // 2. Lettres significatives (Catalogue)
             const lettresContainer = document.getElementById('lettres-container');
             siteData.lettres.forEach(l => {
                 const div = document.createElement('div');
                 div.className = "border-b border-stone-100 pb-4 last:border-0";
-                let lHtml = `<h3 class="font-bold text-amber-800 text-lg mb-1" text-justify>${l.sigle}</h3>`;
+                let lHtml = `<h3 class="font-bold text-amber-800 text-lg mb-1">${l.sigle}</h3>`;
                 lHtml += `<p class="text-stone-600 text-sm mb-2 text-justify">${l.texte}</p>`;
                 if(l.image) {
                     lHtml += `<img src="${l.image}" alt="${l.sigle}" class="h-16 object-contain rounded my-2">`;
@@ -246,14 +334,33 @@
             }
         });
 
-        // Gestion de la navigation par "pages"
+        // Gestion de la navigation par pages
         function showPage(pageName) {
             document.querySelectorAll('.page-section').forEach(el => el.classList.remove('active'));
-            document.getElementById('page-' + pageName).classList.add('active');
 
-            ['accueil', 'neumes', 'lettres', 'analyse', 'quiz'].forEach(p => {
+            let targetPage = pageName;
+            // Gestion des sous-pages de lettres
+            if (pageName === 'lettres-apprendre' || pageName === 'lettres-catalogue') {
+                targetPage = pageName;
+            } else if (pageName === 'lettres-hub') {
+                targetPage = 'lettres-hub';
+            }
+
+            document.getElementById('page-' + targetPage).classList.add('active');
+
+            // Gestion de l'état actif de la barre de navigation
+            ['accueil', 'neumes', 'lettres', 'historique', 'manuscrits', 'analyse', 'quiz'].forEach(p => {
                 const btn = document.getElementById('nav-' + p);
-                if(p === pageName) {
+                if(!btn) return;
+
+                let isActive = false;
+                if (p === pageName) {
+                    isActive = true;
+                } else if (p === 'lettres' && (pageName === 'lettres-hub' || pageName === 'lettres-apprendre' || pageName === 'lettres-catalogue')) {
+                    isActive = true;
+                }
+
+                if (isActive) {
                     btn.className = "px-3 py-1.5 rounded-md transition bg-amber-700 text-white font-medium";
                 } else {
                     btn.className = "px-3 py-1.5 rounded-md transition text-stone-700 hover:bg-stone-100";
