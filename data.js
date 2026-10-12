@@ -122,7 +122,7 @@ const siteData = {
     // Analyse d'un chant complet
     analyseChant: {
         titre: "Graduel. Si ambulem (messe des morts)",
-        description: "Observez la succession des signes de gauche à droite, comme l'œil doit le faire en lisant le manuscrit.",
+        description: "TRADUCTION : Même si je marche au milieu de l'ombre de la mort, je ne craindrai aucun mal, car tu es avec moi, Seigneur.",
         imageGlobale: "images/si_ambulem.png", // Mets ton image globale de partition ici si tu en as une
         audioGlobal: "audio/si_ambulem.mp3",   // Mets ton fichier audio global ici si tu en as un
         etapes: [
