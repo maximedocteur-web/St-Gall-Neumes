@@ -122,7 +122,8 @@ const siteData = {
     // Analyse d'un chant complet
     analyseChant: {
         titre: "Graduel. Si ambulem (messe des morts)",
-        description: "TRADUCTION : Même si je marche au milieu de l'ombre de la mort, je ne craindrai aucun mal, car tu es avec moi, Seigneur.",
+        texte: `Si ambulem in medio umbrae mortis non timebo mala quoniam tu mecum es domine`,
+        texte: `TRADUCTION : Même si je marche au milieu de l'ombre de la mort, je ne craindrai aucun mal, car tu es avec moi, Seigneur.`,
         imageGlobale: "images/si_ambulem.png", // Mets ton image globale de partition ici si tu en as une
         audioGlobal: "audio/si_ambulem.mp3",   // Mets ton fichier audio global ici si tu en as un
         etapes: [
