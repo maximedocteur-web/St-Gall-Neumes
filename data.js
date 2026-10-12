@@ -187,7 +187,7 @@ const siteData = {
             image: "images/e.png"
         },
         { 
-            sigle: "st (Statim)",
+            sigle: "st (STatim)",
             texte: "???.",
             image: "images/st.png"
         },
