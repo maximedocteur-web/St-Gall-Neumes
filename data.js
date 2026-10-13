@@ -260,7 +260,7 @@ const siteData = {
         {
             type: "text",
             content: `Ce qui donne pour toutes les lettres significatives :<br>
-                    <span style="color: #e60004;">a</span>. <strong>Ut altius elevatur admonet.</strong><br>
+                    <span style="color: #e60004;">a</span>. <strong>Ut altius elevetur admonet.</strong><br>
                     <span style="color: #e60004;">b</span>. <strong>Sedem litteras quibus adiungitur ut bene idest multum extollatur vel gravetur sive teneatur belgicat.</strong><br>
                     <span style="color: #e60004;">c</span>. <strong>Ut cito vel celeriter dicatur certificat.</strong><br>
                     <span style="color: #e60004;">d</span>. <strong>Ut deprimatur demonstrat.</strong><br>
