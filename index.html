@@ -448,16 +448,26 @@
             // =========================================================
             // 5. FONCTION UNIVERSELLE POUR GÉNÉRER LES PAGES DYNAMIQUES
             // =========================================================
+            
+            // Petite fonction magique pour transformer [p.52] en lien e-codices
+            function formaterLiensEcodices(texte) {
+                if (!texte) return "";
+                // Cherche [p.XXX] et le remplace par le beau lien cliquable
+                // Le "ml-2" ajoute l'espace que tu as demandé, et on le souligne.
+                return texte.replace(/\[p\.([^\]]+)\]/g, '<a href="https://www.e-codices.unifr.ch/fr/sbe/0121/\$1/0/" target="_blank" class="ml-2 text-sm text-amber-700 hover:text-amber-900 underline font-medium">p.\$1</a>');
+            }
+
             function genererPageDynamique(containerId, donneesArray) {
                 const container = document.getElementById(containerId);
                 if (!container || !donneesArray) return; 
 
                 donneesArray.forEach((bloc) => {
                     if (bloc.type === 'text') {
-                        container.innerHTML += `<p class="mb-6">${bloc.content}</p>`;
+                        // On passe le texte dans la fonction magique avant de l'afficher
+                        container.innerHTML += `<p class="mb-6">${formaterLiensEcodices(bloc.content)}</p>`;
                     }
                     else if (bloc.type === 'titre') {
-                        container.innerHTML += `<h3 class="text-xl font-serif font-bold text-stone-900 mt-8 mb-4">${bloc.content}</h3>`;
+                        container.innerHTML += `<h3 class="text-xl font-serif font-bold text-stone-900 mt-8 mb-4">${formaterLiensEcodices(bloc.content)}</h3>`;
                     }
                     else if (bloc.type === 'image') {
                         container.innerHTML += `
@@ -478,13 +488,13 @@
                             </div>
                         `;
                     }
-                    // -> Si c'est un ACCORDÉON (Tiroir déroulant) <-
                     else if (bloc.type === 'accordeon') {
                         const couleurTitre = bloc.couleurTitre ? bloc.couleurTitre : '#d97706';
-                        
-                        // Si une traduction existe, on prépare le petit texte en dessous (plus petit, pas en gras)
                         const htmlTraduction = bloc.traduction ? `<div class="text-sm md:text-base font-normal mt-1 opacity-90">${bloc.traduction}</div>` : '';
                         
+                        // On passe le contenu de l'accordéon dans la fonction magique
+                        const contenuFormate = formaterLiensEcodices(bloc.contenu);
+
                         container.innerHTML += `
                             <details class="group mb-4 bg-white rounded-lg shadow-sm border border-stone-200">
                                 <summary class="list-none cursor-pointer p-4 font-serif hover:bg-stone-50 transition flex justify-between items-center outline-none [&::-webkit-details-marker]:hidden" style="color: ${couleurTitre};">
@@ -495,11 +505,13 @@
                                     <span class="text-stone-400 group-open:rotate-180 transition-transform duration-300 text-xl ml-4">▼</span>
                                 </summary>
                                 <div class="p-6 border-t border-stone-100 text-stone-700 leading-relaxed bg-stone-50/50">
-                                    ${bloc.contenu}
+                                    ${contenuFormate}
                                 </div>
                             </details>
                         `;
                     }
+                });
+            }
                 });
             }
 
