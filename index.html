@@ -478,6 +478,23 @@
                             </div>
                         `;
                     }
+                    // -> NOUVEAU : Si c'est un ACCORDÉON (Tiroir déroulant) <-
+                    else if (bloc.type === 'accordeon') {
+                        // Si tu oublies de mettre une couleur dans data.js, on met un orange par défaut
+                        const couleurTitre = bloc.couleurTitre ? bloc.couleurTitre : '#d97706';
+                        
+                        container.innerHTML += `
+                            <details class="group mb-4 bg-white rounded-lg shadow-sm border border-stone-200">
+                                <summary class="list-none cursor-pointer p-4 font-serif font-bold text-xl md:text-2xl hover:bg-stone-50 transition flex justify-between items-center outline-none [&::-webkit-details-marker]:hidden" style="color: ${couleurTitre};">
+                                    <span>${bloc.titre}</span>
+                                    <span class="text-stone-400 group-open:rotate-180 transition-transform duration-300">▼</span>
+                                </summary>
+                                <div class="p-6 border-t border-stone-100 text-stone-700 leading-relaxed bg-stone-50/50">
+                                    ${bloc.contenu}
+                                </div>
+                            </details>
+                        `;
+                    }
                 });
             }
 
