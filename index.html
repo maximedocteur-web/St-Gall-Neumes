@@ -453,7 +453,6 @@
             function formaterLiensEcodices(texte) {
                 if (!texte) return "";
                 // Cherche [p.XXX] et le remplace par le beau lien cliquable
-                // Le "ml-2" ajoute l'espace que tu as demandé, et on le souligne.
                 return texte.replace(/\[p\.([^\]]+)\]/g, '<a href="https://www.e-codices.unifr.ch/fr/sbe/0121/\$1/0/" target="_blank" class="ml-2 text-sm text-amber-700 hover:text-amber-900 underline font-medium">p.\$1</a>');
             }
 
@@ -512,12 +511,8 @@
                     }
                 });
             }
-                });
-            }
 
             // --- APPEL DE LA FONCTION POUR TOUTES TES PAGES ---
-            // Le petit "||" (OU) permet d'attraper ta variable JS même si tu as écrit "siteData.types_de_pieces" au lieu de "siteData.typesPieces"
-            
             genererPageDynamique('lettres-apprendre-contenu', siteData.lettresApprendre || siteData.en_apprendre_plus);
             genererPageDynamique('historique-contenu', siteData.historique);
             genererPageDynamique('manuscrits-contenu', siteData.se_reperer || siteData.seReperer);
