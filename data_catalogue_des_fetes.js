@@ -26,11 +26,10 @@ siteData.catalogue_des_fetes = [
         couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
         traduction: "Troisième dimanche avant la Nativité",
         contenu: `
-            <strong>Introït :</strong> Resurrexi et adhuc tecum sum<br><br>
-            <strong>Graduel :</strong> Haec dies quam fecit Dominus<br><br>
-            <strong>Alléluia :</strong> Pascha nostrum immolatus est Christus<br><br>
-            <strong>Séquence :</strong> Victimae paschali laudes<br><br>
-            <strong>Offertoire :</strong> Terra tremuit et quievit<br><br>
+            <strong>Introït :</strong> Populus sion ecce Dominus [p.2]<br><br>
+            <strong>Graduel :</strong> Ex sion species [p.3]<br><br>
+            <strong>Alléluia :</strong> Laetatus sum in his que [p.3]<br><br>
+            <strong>Offertoire :</strong> Deus tu convertens vivificabis [p.3]<br><br>
             <strong>Communion :</strong> Pascha nostrum
         `
     },
