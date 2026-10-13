@@ -238,6 +238,10 @@ const siteData = {
     // Section "En apprendre plus sur les lettres significatives" (dynamique)
     lettresApprendre: [
         {
+            type: "titre",
+            content: "Des lettres significatives?"
+        },
+        {
             type: "text",
             content: `En plus des neumes, les premiers manuscrits musicaux de St-Gall contiennent
             aussi des lettres ajoutées autour des neumes. Ces lettres expriment des nuances dont
