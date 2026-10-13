@@ -321,8 +321,16 @@
         <p>Fait par Maxime Docteur, dotorant à Montpellier (France)</p>
     </footer>
 
-    <!-- Script de chargement -->
-    <script src="data.js"></script>
+    <!-- 1. ON CRÉE UN "SAC" GLOBAL VIDE -->
+    <script>
+        const siteData = {};
+    </script>
+
+    <!-- 2. ON CHARGE TOUS TES PETITS FICHIERS -->
+    <script src="data_neumes.js"></script>
+    <script src="data_lettres.js"></script>
+    <script src="data_pratique.js"></script>
+    <!-- Quand tu créeras tes autres pages (modes, notations...), tu ajouteras simplement une ligne ici -->
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const simplesContainer = document.getElementById('tab-simples');
