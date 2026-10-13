@@ -247,7 +247,7 @@ const siteData = {
             de ces lettres. Il crée donc pour chaque lettre une phrase sensée "expliquer" sa fonction.
             Or, en dehors d'une compréhension sémantique des mots qu'il utilise, il rédige ces notices
             sous forme poétique avec des allitérations et des consonances en rapport avec la lettre
-            qu'elles illustrent (ex: <strong><span style="color: #eeb354;">M.</span></strong>
+            qu'elles illustrent (ex: <strong><span style="color: #eeb354;">M</span></strong>.
             <strong><span style="color: #eeb354;">m</span></strong>ediocriter <strong><span style="color: #eeb354;">m</span></strong>elodia
             <strong><span style="color: #eeb354;">m</span></strong> <strong><span style="color: #eeb354;">m</span></strong>oderari 
             <strong><span style="color: #eeb354;">m</span></strong>endicando <strong><span style="color: #eeb354;">m</span></strong>e<strong><span style="color: #eeb354;">m</span></strong>orat).`
