@@ -32,7 +32,6 @@
                 <!-- 2. Historique -->
                 <div class="group relative">
                     <button class="px-3 py-1.5 rounded-md transition text-stone-700 hover:bg-stone-100 cursor-default">Historique ▾</button>
-                    <!-- Le sous-menu caché qui s'affiche au survol -->
                     <div class="hidden group-hover:block absolute left-0 mt-0 pt-2 w-48 z-50">
                         <div class="bg-white border border-stone-200 rounded-md shadow-lg overflow-hidden py-1">
                             <a onclick="showPage('historique')" class="block cursor-pointer px-4 py-2 text-sm text-stone-700 hover:bg-amber-50 hover:text-amber-800">L'Historique</a>
@@ -151,7 +150,6 @@
             <section id="page-neumes" class="page-section space-y-6">
                 <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Catalogue des Neumes</h2>
                 
-                <!-- Recherche -->
                 <div class="bg-white p-6 rounded-lg border border-stone-200 shadow-sm space-y-4">
                     <div>
                         <label for="search-input" class="block text-sm font-medium text-stone-700 mb-1">Recherche par nom (ex: pes, clivis, torculus...) :</label>
@@ -163,7 +161,6 @@
                     </div>
                 </div>
 
-                <!-- Onglets Simples / Ornementaux -->
                 <div class="flex gap-2 border-b border-stone-200 pb-4">
                     <button onclick="switchNeumeTab('simples')" id="btn-simples" class="px-4 py-2 bg-amber-700 text-white rounded-md font-medium text-sm transition">Neumes simples</button>
                     <button onclick="switchNeumeTab('ornementaux')" id="btn-ornementaux" class="px-4 py-2 bg-stone-200 text-stone-700 rounded-md font-medium text-sm transition hover:bg-stone-300">Neumes ornementaux</button>
@@ -179,14 +176,12 @@
                 <p class="text-stone-600">Choisissez l'une des sections ci-dessous pour approfondir votre étude des lettres significatives de Saint-Gall :</p>
                 
                 <div class="grid md:grid-cols-2 gap-6 pt-4">
-                    <!-- Bouton / Carte 1 : En apprendre plus -->
                     <div onclick="showPage('lettres-apprendre')" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 hover:border-amber-700 cursor-pointer transition space-y-3 text-center group">
                         <div class="w-12 h-12 bg-amber-50 text-amber-800 rounded-full flex items-center justify-center mx-auto group-hover:bg-amber-700 group-hover:text-white transition font-serif font-bold text-lg">?</div>
                         <h3 class="text-xl font-serif font-bold text-stone-900 group-hover:text-amber-800 transition">En apprendre plus sur les lettres significatives</h3>
                         <p class="text-sm text-stone-600">Découvrez l'origine de ces lettres, les notices poétiques de Notker et l'interprétation vocale sous-jacente.</p>
                     </div>
 
-                    <!-- Bouton / Carte 2 : Catalogue -->
                     <div onclick="showPage('lettres-catalogue')" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 hover:border-amber-700 cursor-pointer transition space-y-3 text-center group">
                         <div class="w-12 h-12 bg-amber-50 text-amber-800 rounded-full flex items-center justify-center mx-auto group-hover:bg-amber-700 group-hover:text-white transition font-serif font-bold text-lg">📖</div>
                         <h3 class="text-xl font-serif font-bold text-stone-900 group-hover:text-amber-800 transition">Catalogue des lettres significatives</h3>
@@ -201,10 +196,7 @@
                     <h2 class="text-2xl font-serif font-bold text-stone-900">En apprendre plus sur les Lettres Significatives</h2>
                     <button onclick="showPage('lettres-hub')" class="text-sm text-amber-700 hover:underline font-medium">&larr; Retour au choix</button>
                 </div>
-
-                <!-- Le conteneur vide que JavaScript va remplir -->
-                <div id="lettres-apprendre-contenu" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 text-stone-700 text-justify leading-relaxed">
-                </div>
+                <div id="lettres-apprendre-contenu" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 text-stone-700 text-justify leading-relaxed"></div>
             </section>
 
             <!-- PAGE LETTRES - CATALOGUE -->
@@ -213,67 +205,72 @@
                     <h2 class="text-2xl font-serif font-bold text-stone-900">Catalogue des Lettres Significatives</h2>
                     <button onclick="showPage('lettres-hub')" class="text-sm text-amber-700 hover:underline font-medium">&larr; Retour au choix</button>
                 </div>
-
                 <div class="bg-white p-8 rounded-lg shadow-sm border border-stone-200">
-                    <div id="lettres-container" class="space-y-6">
-                        <!-- Généré dynamiquement depuis data.js -->
-                    </div>
+                    <div id="lettres-container" class="space-y-6"></div>
                 </div>
             </section>
 
+            <!-- ============================================== -->
+            <!-- TOUS LES NOUVEAUX "MOULES" VIDES SONT ICI      -->
+            <!-- ============================================== -->
+
             <!-- PAGE HISTORIQUE -->
             <section id="page-historique" class="page-section space-y-6">
-                <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Historique de la Notation de Saint-Gall</h2>
-                
-                <!-- Le conteneur vide que JavaScript va remplir -->
-                <div id="historique-contenu" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 text-stone-700 text-justify leading-relaxed">
-                </div>
+                <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">L'Historique</h2>
+                <div id="historique-contenu" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 text-stone-700 text-justify leading-relaxed"></div>
             </section>
 
             <!-- PAGE SE REPÉRER DANS LES MANUSCRITS -->
             <section id="page-manuscrits" class="page-section space-y-6">
                 <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Se repérer dans les Manuscrits</h2>
-                <div class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 space-y-6 text-stone-700 text-justify leading-relaxed">
-                    <p>
-                        Aborder un manuscrit médiéval de chant grégorien nécessite de comprendre sa structure physique et l'organisation visuelle de sa page. Contrairement aux partitions modernes, la page du manuscrit est avant tout un livre liturgique richement agencé.
-                    </p>
-                    
-                    <h3 class="text-xl font-serif font-bold text-stone-900 mt-4">Les Rubriques et l'encre rouge</h3>
-                    <p>
-                        Le terme <em>rubrique</em> vient du latin <em>rubricare</em> (rougir). Dans les manuscrits de Saint-Gall, l'encre rouge était utilisée pour les titres, les incipits liturgiques, et les indications importantes du déroulement de la messe ou de l'office. Ces repères visuels permettaient au chantre de repérer immédiatement la structure du chant à venir.
-                    </p>
-
-                    <!-- Exemples de lettres en plus grand et en orange -->
-                    <div class="bg-amber-50/60 p-6 rounded-lg border border-amber-200 my-4 space-y-4">
-                        <h4 class="font-serif font-bold text-stone-900 text-lg border-b border-amber-200 pb-2">Exemples d'abréviations et lettres rubriquées :</h4>
-                        
-                        <div class="grid md:grid-cols-3 gap-4 text-center">
-                            <div class="bg-white p-4 rounded border border-stone-200">
-                                <span class="text-orange-custom text-4xl font-serif font-bold block mb-1">R</span>
-                                <span class="text-xs text-stone-600 font-medium">Répons (Responsorium)</span>
-                            </div>
-                            <div class="bg-white p-4 rounded border border-stone-200">
-                                <span class="text-orange-custom text-4xl font-serif font-bold block mb-1">V</span>
-                                <span class="text-xs text-stone-600 font-medium">Verset (Versiculus)</span>
-                            </div>
-                            <div class="bg-white p-4 rounded border border-stone-200">
-                                <span class="text-orange-custom text-4xl font-serif font-bold block mb-1">A</span>
-                                <span class="text-xs text-stone-600 font-medium">Antienne (Antiphona)</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <p>
-                        <span class="text-5xl text-orange-custom font-serif font-bold float-left mr-3 leading-none"></span>
-                        Les lettrines initiales (comme la lettre orange ci-contre) marquent le début de chaque pièce principale d'un chant. Plus la pièce est solennelle dans la liturgie, plus la lettrine est grande et ornée dans le manuscrit original.
-                    </p>
-
-                    <h3 class="text-xl font-serif font-bold text-stone-900 mt-4">La disposition des textes et des neumes (Adiastématisme)</h3>
-                    <p>
-                        Les neumes de Saint-Gall sont dits <strong>adiastématiques</strong> : ils ne reposent pas sur une portée musicale fixe avec des hauteurs de notes mesurables géométriquement. Le scribe plaçait les neumes de manière plus ou moins haute ou basse au-dessus du texte, formant une courbe expressive. Le lecteur doit donc combiner la lecture du texte latin, la forme du neume, et sa connaissance intime du répertoire pour restituer la mélodie juste.
-                    </p>
-                </div>
+                <div id="manuscrits-contenu" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 text-stone-700 text-justify leading-relaxed"></div>
             </section>
+
+            <!-- PAGE TYPES DE PIÈCES -->
+            <section id="page-types-pieces" class="page-section space-y-6">
+                <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Types de Pièces</h2>
+                <div id="types-pieces-contenu" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 text-stone-700 text-justify leading-relaxed"></div>
+            </section>
+
+            <!-- PAGE LES NOTATIONS -->
+            <section id="page-notations" class="page-section space-y-6">
+                <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Les Notations</h2>
+                <div id="notations-contenu" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 text-stone-700 text-justify leading-relaxed"></div>
+            </section>
+
+            <!-- PAGE LES MODES -->
+            <section id="page-modes" class="page-section space-y-6">
+                <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Les Modes</h2>
+                <div id="modes-contenu" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 text-stone-700 text-justify leading-relaxed"></div>
+            </section>
+
+            <!-- PAGE LES PSALMODIES -->
+            <section id="page-psalmodies" class="page-section space-y-6">
+                <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Les Psalmodies</h2>
+                <div id="psalmodies-contenu" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 text-stone-700 text-justify leading-relaxed"></div>
+            </section>
+
+            <!-- PAGE LE MONOCORDE -->
+            <section id="page-monocorde" class="page-section space-y-6">
+                <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Le Monocorde</h2>
+                <div id="monocorde-contenu" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 text-stone-700 text-justify leading-relaxed"></div>
+            </section>
+
+            <!-- PAGE CATALOGUE DES FÊTES -->
+            <section id="page-catalogue-fetes" class="page-section space-y-6">
+                <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Catalogue des Fêtes</h2>
+                <div id="catalogue-fetes-contenu" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 text-stone-700 text-justify leading-relaxed"></div>
+            </section>
+
+            <!-- PAGE TRIER PAR CATÉGORIES -->
+            <section id="page-trier-categories" class="page-section space-y-6">
+                <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Trier selon les Catégories</h2>
+                <div id="trier-categories-contenu" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 text-stone-700 text-justify leading-relaxed"></div>
+            </section>
+
+            <!-- ============================================== -->
+            <!-- FIN DES MOULES                                 -->
+            <!-- ============================================== -->
 
             <!-- PAGE LECTURE GUIDEE -->
             <section id="page-analyse" class="page-section space-y-6">
@@ -283,16 +280,13 @@
                         <h3 id="analyse-titre" class="font-bold text-amber-900"></h3>
                         <p id="analyse-desc" class="text-sm text-amber-800 mt-1"></p>
                     </div>
-
                     <div id="audio-container" class="hidden">
                         <p class="text-sm font-medium text-stone-700 mb-2">Écouter l'extrait :</p>
                         <audio id="audio-player" controls class="w-full"></audio>
                     </div>
-
                     <div id="image-container" class="hidden text-center">
                         <img id="manuscrit-img" src="" alt="Extrait de manuscrit" class="mx-auto rounded-lg shadow-sm max-h-96 object-contain">
                     </div>
-
                     <div id="etapes-list" class="space-y-4 divide-y divide-stone-100"></div>
                 </div>
             </section>
@@ -308,7 +302,7 @@
 
     <!-- Pied de page -->
     <footer class="bg-stone-900 text-stone-400 py-6 mt-16 text-center text-sm">
-        <p>Fait par Maxime Docteur, dotorant à Montpellier (France)</p>
+        <p>Fait par Maxime Docteur, doctorant à Montpellier (France)</p>
     </footer>
 
     <!-- 1. ON CRÉE UN "SAC" GLOBAL VIDE -->
@@ -316,22 +310,23 @@
         const siteData = {};
     </script>
 
-    <!-- 2. ON CHARGE TOUS TES PETITS FICHIERS -->
-    <script src="data_neumes.js"></script>
-    <script src="data_lettres_significatives.js"></script>
-    <script src="data_se-reperer.js"></script>
-    <script src="data_historique.js"></script>
-    <script src="data_types_de_pieces.js"></script>
-    <script src="data_notations.js"></script>
-    <script src="data_modes.js"></script>
-    <script src="data_psalmodie.js"></script>
-    <script src="data_monocorde.js"></script>
+    <!-- 2. ON CHARGE TOUS TES 14 FICHIERS EXACTEMENT COMME DEMANDÉ -->
     <script src="data_catalogue_des_fetes.js"></script>
-    <script src="data_trier_par_categories.js"></script>
-    <script src="data_lecture_guidee.js"></script>
-    <script src="data_quizz.js"></script>
     <script src="data_en_apprendre_plus.js"></script>
-    <!-- Quand tu créeras tes autres pages (modes, notations...), tu ajouteras simplement une ligne ici -->
+    <script src="data_historique.js"></script>
+    <script src="data_lecture_guidee.js"></script>
+    <script src="data_lettres_significatives.js"></script>
+    <script src="data_modes.js"></script>
+    <script src="data_monocorde.js"></script>
+    <script src="data_neumes.js"></script>
+    <script src="data_notations.js"></script>
+    <script src="data_psalmodies.js"></script>
+    <script src="data_quizz.js"></script>
+    <script src="data_se_reperer.js"></script>
+    <script src="data_trier_par_categories.js"></script>
+    <script src="data_types_de_pieces.js"></script>
+
+    <!-- Script principal -->
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const simplesContainer = document.getElementById('tab-simples');
@@ -486,9 +481,20 @@
                 });
             }
 
-            // --- APPEL DE LA FONCTION POUR CHAQUE PAGE ---
-            genererPageDynamique('lettres-apprendre-contenu', siteData.lettresApprendre);
+            // --- APPEL DE LA FONCTION POUR TOUTES TES PAGES ---
+            // Le petit "||" (OU) permet d'attraper ta variable JS même si tu as écrit "siteData.types_de_pieces" au lieu de "siteData.typesPieces"
+            
+            genererPageDynamique('lettres-apprendre-contenu', siteData.lettresApprendre || siteData.en_apprendre_plus);
             genererPageDynamique('historique-contenu', siteData.historique);
+            genererPageDynamique('manuscrits-contenu', siteData.se_reperer || siteData.seReperer);
+            genererPageDynamique('types-pieces-contenu', siteData.types_de_pieces || siteData.typesPieces);
+            genererPageDynamique('notations-contenu', siteData.notations);
+            genererPageDynamique('modes-contenu', siteData.modes);
+            genererPageDynamique('psalmodies-contenu', siteData.psalmodies);
+            genererPageDynamique('monocorde-contenu', siteData.monocorde);
+            genererPageDynamique('catalogue-fetes-contenu', siteData.catalogue_des_fetes || siteData.catalogueFetes);
+            genererPageDynamique('trier-categories-contenu', siteData.trier_par_categories || siteData.trierCategories);
+            
         });
 
         // Gestion de la navigation par pages (Sécurisé)
