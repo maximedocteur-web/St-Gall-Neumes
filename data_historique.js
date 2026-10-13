@@ -25,7 +25,7 @@ siteData.historique = [
     type : "text",
     content: `Les manuscrits de Saint-Gall (tels que le fameux Codex Sangallensis 359) se distinguent par leur extraordinaire
     précision graphique et leur calligraphie aérienne. Les scribes ont développé un système de codification très poussé,
-    associant aux neumes de base des lettres modificatrices (les lettres significatives) et des nuances subtiles d'exécution.``
+    associant aux neumes de base des lettres modificatrices (les lettres significatives) et des nuances subtiles d'exécution.`
   }
 ]
 
