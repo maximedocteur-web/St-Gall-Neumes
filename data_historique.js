@@ -27,7 +27,4 @@ siteData.historique = [
     précision graphique et leur calligraphie aérienne. Les scribes ont développé un système de codification très poussé,
     associant aux neumes de base des lettres modificatrices (les lettres significatives) et des nuances subtiles d'exécution.`
   }
-]
-
-
-  
+];
