@@ -343,6 +343,10 @@
                     if (bloc.type === 'text') {
                         apprendreContainer.innerHTML += `<p class="mb-6">${bloc.content}</p>`;
                     }
+                    // -> NOUVEAU : Si c'est un TITRE <-
+                    else if (bloc.type === 'titre') {
+                        apprendreContainer.innerHTML += `<h3 class="text-xl font-serif font-bold text-stone-900 mt-8 mb-4">${bloc.content}</h3>`;
+                    }
                     // -> ICI : Si c'est une IMAGE SIMPLE <-
                     else if (bloc.type === 'image') {
                         apprendreContainer.innerHTML += `
