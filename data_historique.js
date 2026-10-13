@@ -15,7 +15,7 @@ siteData.historique = [
     à se souvenir des mélodies qu'ils avaient apprises, des signes graphiques appelés neumes (du grec neuma, le 
     signe ou le geste) ont commencé à être tracés au-dessus des textes liturgiques dès le VIIIe siècle. Ces signes ne 
     donnaient pas la hauteur absolue des notes (il n'y avait pas encore de portée à lignes), mais figuraient la courbe
-    mélodique ainsi que des indications fines de rythme et d'expression.`
+    mélodique ainsi que des indications fines de rythme et d'expression. <strong>ABABABABABA</strong>`
   },
   {
     type: "titre",
