@@ -65,4 +65,4 @@
             monastique nous transmet une grille de lecture progressive, mais de nombreuses zones d'ombre
             subsistent quant au phrasé exact et à l'articulation vocale recherchée au IXe siècle.`
         }
-    ]
+    ];
