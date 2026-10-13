@@ -11,8 +11,7 @@ siteData.catalogue_des_fetes = [
         type: "accordeon",
         titre: "Domin. IIII. ante Nat.",
         couleurTitre: "#b91c1c", // Un beau rouge foncé par exemple !
-        type: "text",
-        content:`(Quatrième dimanche avant la Nativité)`,
+        traduction: "Quatrième dimanche avant la Nativité",
         contenu: `
             <strong>Introït :</strong> Resurrexi et adhuc tecum sum<br><br>
             <strong>Graduel :</strong> Haec dies quam fecit Dominus<br><br>
