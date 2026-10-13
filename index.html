@@ -437,43 +437,39 @@
                 qHtml += `</div><button onclick="checkQuiz()" class="mt-4 bg-amber-700 text-white px-6 py-2 rounded-md font-medium hover:bg-amber-800 transition">Vérifier ma réponse</button>
                           <p id="quiz-result" class="font-medium mt-2"></p>`;
                 quizBox.innerHTML = qHtml;
-            }
-            // 5. Page "En apprendre plus" (Génération dynamique & Superposition d'images)
-            const apprendreContainer = document.getElementById('lettres-apprendre-contenu');
-            if (apprendreContainer && siteData.lettresApprendre) {
-                siteData.lettresApprendre.forEach((bloc, index) => {
-                    
+            // =========================================================
+            // 5. FONCTION UNIVERSELLE POUR GÉNÉRER LES PAGES DYNAMIQUES
+            // =========================================================
+            function genererPageDynamique(containerId, donneesArray) {
+                const container = document.getElementById(containerId);
+                // Si la page ou les données n'existent pas encore, on annule
+                if (!container || !donneesArray) return; 
+
+                donneesArray.forEach((bloc) => {
                     // Si c'est du TEXTE
                     if (bloc.type === 'text') {
-                        apprendreContainer.innerHTML += `<p class="mb-6">${bloc.content}</p>`;
+                        container.innerHTML += `<p class="mb-6">${bloc.content}</p>`;
                     }
-                    // -> NOUVEAU : Si c'est un TITRE <-
+                    // Si c'est un TITRE
                     else if (bloc.type === 'titre') {
-                        apprendreContainer.innerHTML += `<h3 class="text-xl font-serif font-bold text-stone-900 mt-8 mb-4">${bloc.content}</h3>`;
+                        container.innerHTML += `<h3 class="text-xl font-serif font-bold text-stone-900 mt-8 mb-4">${bloc.content}</h3>`;
                     }
-                    // -> ICI : Si c'est une IMAGE SIMPLE <-
+                    // Si c'est une IMAGE SIMPLE
                     else if (bloc.type === 'image') {
-                        apprendreContainer.innerHTML += `
+                        container.innerHTML += `
                             <div class="my-6 text-center">
                                 <img src="${bloc.src}" alt="Illustration" class="w-full md:w-[700px] h-auto object-contain mx-auto rounded shadow-sm border border-stone-200 bg-stone-50 p-2">
                                 <p class="text-xs text-stone-500 mt-2 italic">${bloc.legende}</p>
                             </div>
                         `;
                     }
-                    
+                    // Si c'est une IMAGE SUPERPOSÉE
                     else if (bloc.type === 'imageCompare') {
-                        // C'est ici que la magie de la superposition s'opère
-                        apprendreContainer.innerHTML += `
+                        container.innerHTML += `
                             <div class="my-6 text-center">
-                                <!-- Conteneur parent avec la classe 'group' -->
                                 <div class="relative w-full md:w-[700px] mx-auto rounded shadow-sm border border-stone-200 bg-stone-50 p-2 group cursor-pointer">
-                                    
-                                    <!-- IMAGE DU DESSOUS (Annotée) : placée en absolute -->
                                     <img src="${bloc.annotee}" alt="Manuscrit annoté" class="absolute top-2 left-2 right-2 bottom-2 w-[calc(100%-1rem)] h-[calc(100%-1rem)] object-contain rounded">
-                                    
-                                    <!-- IMAGE DU DESSUS (Originale) : disparait grâce à group-hover:opacity-0 -->
                                     <img src="${bloc.original}" alt="Manuscrit original" class="relative z-10 w-full h-auto object-contain rounded bg-stone-50 transition-opacity duration-500 group-hover:opacity-0">
-                                
                                 </div>
                                 <p class="text-xs text-stone-500 mt-2 italic">${bloc.legende}</p>
                             </div>
@@ -481,6 +477,17 @@
                     }
                 });
             }
+
+            // --- APPEL DE LA FONCTION POUR CHAQUE PAGE ---
+            
+            // On remplit la page "En apprendre plus" :
+            genererPageDynamique('lettres-apprendre-contenu', siteData.lettresApprendre);
+            
+            // On remplit la page "Historique" :
+            genererPageDynamique('historique-contenu', siteData.historique);
+            
+            // Plus tard, quand tu feras la page des modes, tu ajouteras juste une ligne ici !
+            // genererPageDynamique('modes-contenu', siteData.modes);
         });
 
         // Gestion de la navigation par pages
