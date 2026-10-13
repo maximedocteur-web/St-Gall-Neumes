@@ -257,7 +257,33 @@ const siteData = {
             src: "images/Notkerlettre.png",
             legende: `les instructions de Notker. Les lettres <span style="color: #e60004;">a</span>,<span style="color: #e60004;">b</span>,<span style="color: #e60004;">c</span>,<span style="color: #e60004;">d</span> à gauche et leur descriptif ensuite`
         },
-        // Exemple d'image comparative gérée directement ici :
+        {
+            type: "text",
+            content: `Ce qui donne pour toutes les lettres significatives :<br>
+                    <span style="color: #e60004;">a</span>. <strong>Ut altius elevatur admonet.</strong><br>
+                    <span style="color: #e60004;">b</span>. <strong>Sedem litteras quibus adiungitur ut bene idest multum extollatur vel gravetur sive teneatur belgicat.</strong><br>
+                    <span style="color: #e60004;">c</span>. <strong>Ut cito vel celeriter dicatur certificat.</strong><br>
+                    <span style="color: #e60004;">d</span>. <strong>Ut deprimatur demonstrat.</strong><br>
+                    <span style="color: #e60004;">e</span>. <strong>Ut equaliter sonetur eloquitur.</strong><br>
+                    <span style="color: #e60004;">f</span>. <strong>Ut cum fragore seu frendore feriatur efflagitat.</strong><br>
+                    <span style="color: #e60004;">g</span>. <strong>Ut in gutture gradatim garruletur genuine gratulatur.</strong><br>
+                    <span style="color: #e60004;">h</span>. <strong>Ut tantum in scriptura aspirat. Ita et in nota idipsum habitat.</strong><br>
+                    <span style="color: #e60004;">i</span>. <strong>Iusum vel inferius insinuat, gravitudinemque pro g. interdum indicat.</strong><br>
+                    <span style="color: #e60004;">k</span>. <strong>Licet apud latinos nihil valeat, apud nos tamen alemannos pro. x. greca positum, chlenche id est clange clamitat.</strong><br>
+                    <span style="color: #e60004;">l</span>. <strong>Levare laetatur.</strong><br>
+                    <span style="color: #e60004;">m</span>. <strong>Mediocriter melodiam moderari mendicando memorat.</strong><br>
+                    <span style="color: #e60004;">n</span>. <strong>Notare hoc est noscitare notificat.</strong><br>
+                    <span style="color: #e60004;">o</span>. <strong>Figuram sui Inore cantantis ordinat.</strong><br>
+                    <span style="color: #e60004;">p</span>. <strong>Pressionem vel prensionem predicat.</strong><br>
+                    <span style="color: #e60004;">q</span>. <strong>Insignificationibus notarum cur queratur ? Cum etiam in verbis ad nihil aliud scribatur nisi ut sequens .v. vim suam amittere queritur.</strong><br>
+                    <span style="color: #e60004;">r</span>. <strong>Rectitudinem vel rasuram non abolitionis sed crispationis rogitat.</strong><br>
+                    <span style="color: #e60004;">s</span>. <strong>Susum vel sursum scandere sibilat.</strong><br>
+                    <span style="color: #e60004;">t</span>. <strong>Trahere vel tenere debere testatur.</strong><br>
+                    <span style="color: #e60004;">u</span>. <strong>Licet amissa visua valde veluti vau greca vel hebrea velificat.</strong><br>
+                    <span style="color: #e60004;">x</span>. <strong>Quamvis latina perse verba non inchoet, tamen expectare expetit.</strong><br>
+                    <span style="color: #e60004;">y</span>. <strong>Apud latinos nihil ymnizat.</strong><br>
+                    <span style="color: #e60004;">z</span>. <strong>Vero licet et ipsa mere greca, et ob id haut necessaria romanis, propter predictam tamen r. litter(a)e occupationem ad alia requirere in sua lingua "zitise". Ubicumque autem due vel tres aut plures littere ponuntur in uno loco, ex superiori interpretatione, maximeque illa quam de .b. dixi, quid sibi velint facile poterit adverti. Salutant te ellinici fratres, monentes sollicitum te fieri deratione embolismi triennis, ut absque errore gnarus esse valeas biennis, contempto precio divitiarum xerxis.</strong>`
+        },
         {
             type: "imageCompare",
             original: "images/test_lettre1.png",
