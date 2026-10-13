@@ -23,13 +23,297 @@ siteData.catalogue_des_fetes = [
     },
     {
         type: "accordeon",
-        titre: "2. Ascension du Seigneur",
-        couleurTitre: "#b91c1c",
+        titre: "Domin. III. ante Nat.",
+        couleurTitre: "#b91c1c", // Un beau rouge foncé par exemple !
+        traduction: "Quatrième dimanche avant la Nativité",
         contenu: `
-            <strong>Introït :</strong> Viri Galilaei<br><br>
-            <strong>Alléluia 1 :</strong> Ascendit Deus in jubilatione<br><br>
-            <strong>Alléluia 2 :</strong> Dominus in Sina in sancto
+            <strong>Introït :</strong> Resurrexi et adhuc tecum sum<br><br>
+            <strong>Graduel :</strong> Haec dies quam fecit Dominus<br><br>
+            <strong>Alléluia :</strong> Pascha nostrum immolatus est Christus<br><br>
+            <strong>Séquence :</strong> Victimae paschali laudes<br><br>
+            <strong>Offertoire :</strong> Terra tremuit et quievit<br><br>
+            <strong>Communion :</strong> Pascha nostrum
         `
-    }
+    },
+    {
+        type: "accordeon",
+        titre: "Nat. Scae Luciae",
+        couleurTitre: "#b91c1c", // Un beau rouge foncé par exemple !
+        traduction: "Naissance de sainte Lucie",
+        contenu: `
+            <strong>Introït :</strong> Resurrexi et adhuc tecum sum<br><br>
+            <strong>Graduel :</strong> Haec dies quam fecit Dominus<br><br>
+            <strong>Alléluia :</strong> Pascha nostrum immolatus est Christus<br><br>
+            <strong>Séquence :</strong> Victimae paschali laudes<br><br>
+            <strong>Offertoire :</strong> Terra tremuit et quievit<br><br>
+            <strong>Communion :</strong> Pascha nostrum
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "Domin. IIII. ante Nat.",
+        couleurTitre: "#b91c1c", // Un beau rouge foncé par exemple !
+        traduction: "Quatrième dimanche avant la Nativité",
+        contenu: `
+            <strong>Introït :</strong> Resurrexi et adhuc tecum sum<br><br>
+            <strong>Graduel :</strong> Haec dies quam fecit Dominus<br><br>
+            <strong>Alléluia :</strong> Pascha nostrum immolatus est Christus<br><br>
+            <strong>Séquence :</strong> Victimae paschali laudes<br><br>
+            <strong>Offertoire :</strong> Terra tremuit et quievit<br><br>
+            <strong>Communion :</strong> Pascha nostrum
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "Domin. IIII. ante Nat.",
+        couleurTitre: "#b91c1c", // Un beau rouge foncé par exemple !
+        traduction: "Quatrième dimanche avant la Nativité",
+        contenu: `
+            <strong>Introït :</strong> Resurrexi et adhuc tecum sum<br><br>
+            <strong>Graduel :</strong> Haec dies quam fecit Dominus<br><br>
+            <strong>Alléluia :</strong> Pascha nostrum immolatus est Christus<br><br>
+            <strong>Séquence :</strong> Victimae paschali laudes<br><br>
+            <strong>Offertoire :</strong> Terra tremuit et quievit<br><br>
+            <strong>Communion :</strong> Pascha nostrum
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "Domin. IIII. ante Nat.",
+        couleurTitre: "#b91c1c", // Un beau rouge foncé par exemple !
+        traduction: "Quatrième dimanche avant la Nativité",
+        contenu: `
+            <strong>Introït :</strong> Resurrexi et adhuc tecum sum<br><br>
+            <strong>Graduel :</strong> Haec dies quam fecit Dominus<br><br>
+            <strong>Alléluia :</strong> Pascha nostrum immolatus est Christus<br><br>
+            <strong>Séquence :</strong> Victimae paschali laudes<br><br>
+            <strong>Offertoire :</strong> Terra tremuit et quievit<br><br>
+            <strong>Communion :</strong> Pascha nostrum
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "Domin. IIII. ante Nat.",
+        couleurTitre: "#b91c1c", // Un beau rouge foncé par exemple !
+        traduction: "Quatrième dimanche avant la Nativité",
+        contenu: `
+            <strong>Introït :</strong> Resurrexi et adhuc tecum sum<br><br>
+            <strong>Graduel :</strong> Haec dies quam fecit Dominus<br><br>
+            <strong>Alléluia :</strong> Pascha nostrum immolatus est Christus<br><br>
+            <strong>Séquence :</strong> Victimae paschali laudes<br><br>
+            <strong>Offertoire :</strong> Terra tremuit et quievit<br><br>
+            <strong>Communion :</strong> Pascha nostrum
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "Domin. IIII. ante Nat.",
+        couleurTitre: "#b91c1c", // Un beau rouge foncé par exemple !
+        traduction: "Quatrième dimanche avant la Nativité",
+        contenu: `
+            <strong>Introït :</strong> Resurrexi et adhuc tecum sum<br><br>
+            <strong>Graduel :</strong> Haec dies quam fecit Dominus<br><br>
+            <strong>Alléluia :</strong> Pascha nostrum immolatus est Christus<br><br>
+            <strong>Séquence :</strong> Victimae paschali laudes<br><br>
+            <strong>Offertoire :</strong> Terra tremuit et quievit<br><br>
+            <strong>Communion :</strong> Pascha nostrum
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "Domin. IIII. ante Nat.",
+        couleurTitre: "#b91c1c", // Un beau rouge foncé par exemple !
+        traduction: "Quatrième dimanche avant la Nativité",
+        contenu: `
+            <strong>Introït :</strong> Resurrexi et adhuc tecum sum<br><br>
+            <strong>Graduel :</strong> Haec dies quam fecit Dominus<br><br>
+            <strong>Alléluia :</strong> Pascha nostrum immolatus est Christus<br><br>
+            <strong>Séquence :</strong> Victimae paschali laudes<br><br>
+            <strong>Offertoire :</strong> Terra tremuit et quievit<br><br>
+            <strong>Communion :</strong> Pascha nostrum
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "Domin. IIII. ante Nat.",
+        couleurTitre: "#b91c1c", // Un beau rouge foncé par exemple !
+        traduction: "Quatrième dimanche avant la Nativité",
+        contenu: `
+            <strong>Introït :</strong> Resurrexi et adhuc tecum sum<br><br>
+            <strong>Graduel :</strong> Haec dies quam fecit Dominus<br><br>
+            <strong>Alléluia :</strong> Pascha nostrum immolatus est Christus<br><br>
+            <strong>Séquence :</strong> Victimae paschali laudes<br><br>
+            <strong>Offertoire :</strong> Terra tremuit et quievit<br><br>
+            <strong>Communion :</strong> Pascha nostrum
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "Domin. IIII. ante Nat.",
+        couleurTitre: "#b91c1c", // Un beau rouge foncé par exemple !
+        traduction: "Quatrième dimanche avant la Nativité",
+        contenu: `
+            <strong>Introït :</strong> Resurrexi et adhuc tecum sum<br><br>
+            <strong>Graduel :</strong> Haec dies quam fecit Dominus<br><br>
+            <strong>Alléluia :</strong> Pascha nostrum immolatus est Christus<br><br>
+            <strong>Séquence :</strong> Victimae paschali laudes<br><br>
+            <strong>Offertoire :</strong> Terra tremuit et quievit<br><br>
+            <strong>Communion :</strong> Pascha nostrum
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "Domin. IIII. ante Nat.",
+        couleurTitre: "#b91c1c", // Un beau rouge foncé par exemple !
+        traduction: "Quatrième dimanche avant la Nativité",
+        contenu: `
+            <strong>Introït :</strong> Resurrexi et adhuc tecum sum<br><br>
+            <strong>Graduel :</strong> Haec dies quam fecit Dominus<br><br>
+            <strong>Alléluia :</strong> Pascha nostrum immolatus est Christus<br><br>
+            <strong>Séquence :</strong> Victimae paschali laudes<br><br>
+            <strong>Offertoire :</strong> Terra tremuit et quievit<br><br>
+            <strong>Communion :</strong> Pascha nostrum
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "Domin. IIII. ante Nat.",
+        couleurTitre: "#b91c1c", // Un beau rouge foncé par exemple !
+        traduction: "Quatrième dimanche avant la Nativité",
+        contenu: `
+            <strong>Introït :</strong> Resurrexi et adhuc tecum sum<br><br>
+            <strong>Graduel :</strong> Haec dies quam fecit Dominus<br><br>
+            <strong>Alléluia :</strong> Pascha nostrum immolatus est Christus<br><br>
+            <strong>Séquence :</strong> Victimae paschali laudes<br><br>
+            <strong>Offertoire :</strong> Terra tremuit et quievit<br><br>
+            <strong>Communion :</strong> Pascha nostrum
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "Domin. IIII. ante Nat.",
+        couleurTitre: "#b91c1c", // Un beau rouge foncé par exemple !
+        traduction: "Quatrième dimanche avant la Nativité",
+        contenu: `
+            <strong>Introït :</strong> Resurrexi et adhuc tecum sum<br><br>
+            <strong>Graduel :</strong> Haec dies quam fecit Dominus<br><br>
+            <strong>Alléluia :</strong> Pascha nostrum immolatus est Christus<br><br>
+            <strong>Séquence :</strong> Victimae paschali laudes<br><br>
+            <strong>Offertoire :</strong> Terra tremuit et quievit<br><br>
+            <strong>Communion :</strong> Pascha nostrum
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "Domin. IIII. ante Nat.",
+        couleurTitre: "#b91c1c", // Un beau rouge foncé par exemple !
+        traduction: "Quatrième dimanche avant la Nativité",
+        contenu: `
+            <strong>Introït :</strong> Resurrexi et adhuc tecum sum<br><br>
+            <strong>Graduel :</strong> Haec dies quam fecit Dominus<br><br>
+            <strong>Alléluia :</strong> Pascha nostrum immolatus est Christus<br><br>
+            <strong>Séquence :</strong> Victimae paschali laudes<br><br>
+            <strong>Offertoire :</strong> Terra tremuit et quievit<br><br>
+            <strong>Communion :</strong> Pascha nostrum
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "Domin. IIII. ante Nat.",
+        couleurTitre: "#b91c1c", // Un beau rouge foncé par exemple !
+        traduction: "Quatrième dimanche avant la Nativité",
+        contenu: `
+            <strong>Introït :</strong> Resurrexi et adhuc tecum sum<br><br>
+            <strong>Graduel :</strong> Haec dies quam fecit Dominus<br><br>
+            <strong>Alléluia :</strong> Pascha nostrum immolatus est Christus<br><br>
+            <strong>Séquence :</strong> Victimae paschali laudes<br><br>
+            <strong>Offertoire :</strong> Terra tremuit et quievit<br><br>
+            <strong>Communion :</strong> Pascha nostrum
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "Domin. IIII. ante Nat.",
+        couleurTitre: "#b91c1c", // Un beau rouge foncé par exemple !
+        traduction: "Quatrième dimanche avant la Nativité",
+        contenu: `
+            <strong>Introït :</strong> Resurrexi et adhuc tecum sum<br><br>
+            <strong>Graduel :</strong> Haec dies quam fecit Dominus<br><br>
+            <strong>Alléluia :</strong> Pascha nostrum immolatus est Christus<br><br>
+            <strong>Séquence :</strong> Victimae paschali laudes<br><br>
+            <strong>Offertoire :</strong> Terra tremuit et quievit<br><br>
+            <strong>Communion :</strong> Pascha nostrum
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "Domin. IIII. ante Nat.",
+        couleurTitre: "#b91c1c", // Un beau rouge foncé par exemple !
+        traduction: "Quatrième dimanche avant la Nativité",
+        contenu: `
+            <strong>Introït :</strong> Resurrexi et adhuc tecum sum<br><br>
+            <strong>Graduel :</strong> Haec dies quam fecit Dominus<br><br>
+            <strong>Alléluia :</strong> Pascha nostrum immolatus est Christus<br><br>
+            <strong>Séquence :</strong> Victimae paschali laudes<br><br>
+            <strong>Offertoire :</strong> Terra tremuit et quievit<br><br>
+            <strong>Communion :</strong> Pascha nostrum
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "Domin. IIII. ante Nat.",
+        couleurTitre: "#b91c1c", // Un beau rouge foncé par exemple !
+        traduction: "Quatrième dimanche avant la Nativité",
+        contenu: `
+            <strong>Introït :</strong> Resurrexi et adhuc tecum sum<br><br>
+            <strong>Graduel :</strong> Haec dies quam fecit Dominus<br><br>
+            <strong>Alléluia :</strong> Pascha nostrum immolatus est Christus<br><br>
+            <strong>Séquence :</strong> Victimae paschali laudes<br><br>
+            <strong>Offertoire :</strong> Terra tremuit et quievit<br><br>
+            <strong>Communion :</strong> Pascha nostrum
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "Domin. IIII. ante Nat.",
+        couleurTitre: "#b91c1c", // Un beau rouge foncé par exemple !
+        traduction: "Quatrième dimanche avant la Nativité",
+        contenu: `
+            <strong>Introït :</strong> Resurrexi et adhuc tecum sum<br><br>
+            <strong>Graduel :</strong> Haec dies quam fecit Dominus<br><br>
+            <strong>Alléluia :</strong> Pascha nostrum immolatus est Christus<br><br>
+            <strong>Séquence :</strong> Victimae paschali laudes<br><br>
+            <strong>Offertoire :</strong> Terra tremuit et quievit<br><br>
+            <strong>Communion :</strong> Pascha nostrum
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "Domin. IIII. ante Nat.",
+        couleurTitre: "#b91c1c", // Un beau rouge foncé par exemple !
+        traduction: "Quatrième dimanche avant la Nativité",
+        contenu: `
+            <strong>Introït :</strong> Resurrexi et adhuc tecum sum<br><br>
+            <strong>Graduel :</strong> Haec dies quam fecit Dominus<br><br>
+            <strong>Alléluia :</strong> Pascha nostrum immolatus est Christus<br><br>
+            <strong>Séquence :</strong> Victimae paschali laudes<br><br>
+            <strong>Offertoire :</strong> Terra tremuit et quievit<br><br>
+            <strong>Communion :</strong> Pascha nostrum
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "Domin. IIII. ante Nat.",
+        couleurTitre: "#b91c1c", // Un beau rouge foncé par exemple !
+        traduction: "Quatrième dimanche avant la Nativité",
+        contenu: `
+            <strong>Introït :</strong> Resurrexi et adhuc tecum sum<br><br>
+            <strong>Graduel :</strong> Haec dies quam fecit Dominus<br><br>
+            <strong>Alléluia :</strong> Pascha nostrum immolatus est Christus<br><br>
+            <strong>Séquence :</strong> Victimae paschali laudes<br><br>
+            <strong>Offertoire :</strong> Terra tremuit et quievit<br><br>
+            <strong>Communion :</strong> Pascha nostrum
+        `
+    },
 ];
   
