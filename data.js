@@ -242,7 +242,8 @@ const siteData = {
             content: `En plus des neumes, les premiers manuscrits musicaux de St-Gall contiennent
             aussi des lettres ajoutées autour des neumes. Ces lettres expriment des nuances dont
             l'exécution est nécessaire dans le chant. Malheureusement, à part une ou deux lettres,
-            la majorité de leurs significations vocales restent opaques. Pourtant, Notker "le
+            la majorité de leurs significations vocales restent opaques. Pourtant, dans le <a href="https://www.e-codices.unifr.ch/de/csg/0381/6" target="_blank" class="underline text-amber-700 hover:text-amber-900">codex 381</a> de
+            l'Abbaye de St-Gall, Notker "le
             bègue" (ca.840 - 912), moine de St-Gall, nous explique ligne après ligne les fonctions
             de ces lettres. Il crée donc pour chaque lettre une phrase sensée "expliquer" sa fonction.
             Or, en dehors d'une compréhension sémantique des mots qu'il utilise, il rédige ces notices
