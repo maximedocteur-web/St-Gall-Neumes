@@ -338,94 +338,105 @@
             const ornementauxContainer = document.getElementById('tab-ornementaux');
             const visualGrid = document.getElementById('visual-grid');
 
-            // 1. Neumes
-            siteData.neumes.forEach((n, index) => {
-                const neumeId = 'neume-' + index;
+            // 1. Neumes (Sécurisé)
+            if (siteData.neumes) {
+                siteData.neumes.forEach((n, index) => {
+                    const neumeId = 'neume-' + index;
 
-                const badge = document.createElement('div');
-                badge.className = "flex items-center space-x-2 p-2 border border-stone-200 bg-stone-50 rounded hover:bg-amber-100 cursor-pointer transition text-xs font-medium text-stone-700";
-                badge.onclick = () => {
-                    showPage('neumes');
-                    switchNeumeTab(n.categorie);
-                    setTimeout(() => {
-                        const el = document.getElementById(neumeId);
-                        if(el) {
-                            el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                            el.classList.add('ring-2', 'ring-amber-700', 'bg-amber-50');
-                            setTimeout(() => el.classList.remove('ring-2', 'ring-amber-700', 'bg-amber-50'), 2500);
-                        }
-                    }, 100);
-                };
-                
-                let badgeImg = '';
-                if(n.images && n.images.length > 0) badgeImg = `<img src="${n.images[0]}" alt="${n.nom}" class="h-6 w-6 object-contain">`;
-                else if(n.image) badgeImg = `<img src="${n.image}" alt="${n.nom}" class="h-6 w-6 object-contain">`;
-                
-                badge.innerHTML = `${badgeImg}<span>${n.nom}</span>`;
-                visualGrid.appendChild(badge);
+                    const badge = document.createElement('div');
+                    badge.className = "flex items-center space-x-2 p-2 border border-stone-200 bg-stone-50 rounded hover:bg-amber-100 cursor-pointer transition text-xs font-medium text-stone-700";
+                    badge.onclick = () => {
+                        showPage('neumes');
+                        switchNeumeTab(n.categorie);
+                        setTimeout(() => {
+                            const el = document.getElementById(neumeId);
+                            if(el) {
+                                el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                                el.classList.add('ring-2', 'ring-amber-700', 'bg-amber-50');
+                                setTimeout(() => el.classList.remove('ring-2', 'ring-amber-700', 'bg-amber-50'), 2500);
+                            }
+                        }, 100);
+                    };
+                    
+                    let badgeImg = '';
+                    if(n.images && n.images.length > 0) badgeImg = `<img src="${n.images[0]}" alt="${n.nom}" class="h-6 w-6 object-contain">`;
+                    else if(n.image) badgeImg = `<img src="${n.image}" alt="${n.nom}" class="h-6 w-6 object-contain">`;
+                    
+                    badge.innerHTML = `${badgeImg}<span>${n.nom}</span>`;
+                    if (visualGrid) visualGrid.appendChild(badge);
 
-                const card = document.createElement('div');
-                card.id = neumeId;
-                card.className = "neume-card bg-white p-6 rounded-lg shadow-sm border border-stone-200 space-y-3 transition duration-300";
-                
-                let html = `<h3 class="font-bold text-lg text-amber-800">${n.nom}</h3>`;
-                
-                if(n.images && Array.isArray(n.images)) {
-                    html += `<div class="flex flex-wrap gap-2 my-2">`;
-                    n.images.forEach(img => {
-                        html += `<img src="${img}" alt="${n.nom}" class="h-20 object-contain rounded">`;
-                    });
-                    html += `</div>`;
-                } else if(n.image) {
-                    html += `<img src="${n.image}" alt="${n.nom}" class="h-24 object-contain my-2 rounded">`;
-                }
+                    const card = document.createElement('div');
+                    card.id = neumeId;
+                    card.className = "neume-card bg-white p-6 rounded-lg shadow-sm border border-stone-200 space-y-3 transition duration-300";
+                    
+                    let html = `<h3 class="font-bold text-lg text-amber-800">${n.nom}</h3>`;
+                    
+                    if(n.images && Array.isArray(n.images)) {
+                        html += `<div class="flex flex-wrap gap-2 my-2">`;
+                        n.images.forEach(img => {
+                            html += `<img src="${img}" alt="${n.nom}" class="h-20 object-contain rounded">`;
+                        });
+                        html += `</div>`;
+                    } else if(n.image) {
+                        html += `<img src="${n.image}" alt="${n.nom}" class="h-24 object-contain my-2 rounded">`;
+                    }
 
-                html += `<p class="text-sm text-stone-600 whitespace-pre-line text-justify">${n.description}</p>`;
-                card.innerHTML = html;
+                    html += `<p class="text-sm text-stone-600 whitespace-pre-line text-justify">${n.description}</p>`;
+                    card.innerHTML = html;
 
-                if(n.categorie === 'simples') simplesContainer.appendChild(card);
-                if(n.categorie === 'ornementaux') ornementauxContainer.appendChild(card);
-            });
+                    if(n.categorie === 'simples' && simplesContainer) simplesContainer.appendChild(card);
+                    if(n.categorie === 'ornementaux' && ornementauxContainer) ornementauxContainer.appendChild(card);
+                });
+            }
 
-            // 2. Lettres significatives (Catalogue)
+            // 2. Lettres significatives (Sécurisé)
             const lettresContainer = document.getElementById('lettres-container');
-            siteData.lettres.forEach(l => {
-                const div = document.createElement('div');
-                div.className = "border-b border-stone-100 pb-4 last:border-0";
-                let lHtml = `<h3 class="font-bold text-amber-800 text-lg mb-1">${l.sigle}</h3>`;
-                lHtml += `<p class="text-stone-600 text-sm mb-2 text-justify">${l.texte}</p>`;
-                if(l.image) {
-                    lHtml += `<img src="${l.image}" alt="${l.sigle}" class="h-16 object-contain rounded my-2">`;
+            if (siteData.lettres && lettresContainer) {
+                siteData.lettres.forEach(l => {
+                    const div = document.createElement('div');
+                    div.className = "border-b border-stone-100 pb-4 last:border-0";
+                    let lHtml = `<h3 class="font-bold text-amber-800 text-lg mb-1">${l.sigle}</h3>`;
+                    lHtml += `<p class="text-stone-600 text-sm mb-2 text-justify">${l.texte}</p>`;
+                    if(l.image) {
+                        lHtml += `<img src="${l.image}" alt="${l.sigle}" class="h-16 object-contain rounded my-2">`;
+                    }
+                    div.innerHTML = lHtml;
+                    lettresContainer.appendChild(div);
+                });
+            }
+
+            // 3. Analyse Chant (Sécurisé)
+            if (siteData.analyseChant) {
+                const titreEl = document.getElementById('analyse-titre');
+                const descEl = document.getElementById('analyse-desc');
+                if (titreEl) titreEl.textContent = siteData.analyseChant.titre;
+                if (descEl) descEl.textContent = siteData.analyseChant.description;
+                
+                if(siteData.analyseChant.audioGlobal) {
+                    document.getElementById('audio-container').classList.remove('hidden');
+                    document.getElementById('audio-player').src = siteData.analyseChant.audioGlobal;
                 }
-                div.innerHTML = lHtml;
-                lettresContainer.appendChild(div);
-            });
-
-            // 3. Analyse Chant
-            document.getElementById('analyse-titre').textContent = siteData.analyseChant.titre;
-            document.getElementById('analyse-desc').textContent = siteData.analyseChant.description;
-            if(siteData.analyseChant.audioGlobal) {
-                document.getElementById('audio-container').classList.remove('hidden');
-                document.getElementById('audio-player').src = siteData.analyseChant.audioGlobal;
+                if(siteData.analyseChant.imageGlobale) {
+                    document.getElementById('image-container').classList.remove('hidden');
+                    document.getElementById('manuscrit-img').src = siteData.analyseChant.imageGlobale;
+                }
+                const etapesList = document.getElementById('etapes-list');
+                if (etapesList && siteData.analyseChant.etapes) {
+                    siteData.analyseChant.etapes.forEach(e => {
+                        const row = document.createElement('div');
+                        row.className = "pt-4 flex flex-col md:flex-row justify-between items-start md:items-center";
+                        row.innerHTML = `
+                            <div class="font-mono bg-stone-100 px-3 py-1 rounded text-amber-900 font-bold mb-2 md:mb-0">${e.signe}</div>
+                            <p class="text-sm text-stone-600 md:w-2/3">${e.explications}</p>
+                        `;
+                        etapesList.appendChild(row);
+                    });
+                }
             }
-            if(siteData.analyseChant.imageGlobale) {
-                document.getElementById('image-container').classList.remove('hidden');
-                document.getElementById('manuscrit-img').src = siteData.analyseChant.imageGlobale;
-            }
-            const etapesList = document.getElementById('etapes-list');
-            siteData.analyseChant.etapes.forEach(e => {
-                const row = document.createElement('div');
-                row.className = "pt-4 flex flex-col md:flex-row justify-between items-start md:items-center";
-                row.innerHTML = `
-                    <div class="font-mono bg-stone-100 px-3 py-1 rounded text-amber-900 font-bold mb-2 md:mb-0">${e.signe}</div>
-                    <p class="text-sm text-stone-600 md:w-2/3">${e.explications}</p>
-                `;
-                etapesList.appendChild(row);
-            });
 
-            // 4. Quiz
+            // 4. Quiz (Sécurisé)
             const quizBox = document.getElementById('quiz-box');
-            if(siteData.quiz.length > 0) {
+            if(siteData.quiz && siteData.quiz.length > 0 && quizBox) {
                 const q = siteData.quiz[0];
                 let qHtml = `<p class="font-medium text-stone-800 mb-4">Question : ${q.question}</p><div class="space-y-2">`;
                 q.options.forEach((opt) => {
@@ -437,24 +448,22 @@
                 qHtml += `</div><button onclick="checkQuiz()" class="mt-4 bg-amber-700 text-white px-6 py-2 rounded-md font-medium hover:bg-amber-800 transition">Vérifier ma réponse</button>
                           <p id="quiz-result" class="font-medium mt-2"></p>`;
                 quizBox.innerHTML = qHtml;
+            }
+
             // =========================================================
             // 5. FONCTION UNIVERSELLE POUR GÉNÉRER LES PAGES DYNAMIQUES
             // =========================================================
             function genererPageDynamique(containerId, donneesArray) {
                 const container = document.getElementById(containerId);
-                // Si la page ou les données n'existent pas encore, on annule
                 if (!container || !donneesArray) return; 
 
                 donneesArray.forEach((bloc) => {
-                    // Si c'est du TEXTE
                     if (bloc.type === 'text') {
                         container.innerHTML += `<p class="mb-6">${bloc.content}</p>`;
                     }
-                    // Si c'est un TITRE
                     else if (bloc.type === 'titre') {
                         container.innerHTML += `<h3 class="text-xl font-serif font-bold text-stone-900 mt-8 mb-4">${bloc.content}</h3>`;
                     }
-                    // Si c'est une IMAGE SIMPLE
                     else if (bloc.type === 'image') {
                         container.innerHTML += `
                             <div class="my-6 text-center">
@@ -463,7 +472,6 @@
                             </div>
                         `;
                     }
-                    // Si c'est une IMAGE SUPERPOSÉE
                     else if (bloc.type === 'imageCompare') {
                         container.innerHTML += `
                             <div class="my-6 text-center">
@@ -479,18 +487,11 @@
             }
 
             // --- APPEL DE LA FONCTION POUR CHAQUE PAGE ---
-            
-            // On remplit la page "En apprendre plus" :
             genererPageDynamique('lettres-apprendre-contenu', siteData.lettresApprendre);
-            
-            // On remplit la page "Historique" :
             genererPageDynamique('historique-contenu', siteData.historique);
-            
-            // Plus tard, quand tu feras la page des modes, tu ajouteras juste une ligne ici !
-            // genererPageDynamique('modes-contenu', siteData.modes);
         });
 
-        // Gestion de la navigation par pages
+        // Gestion de la navigation par pages (Sécurisé)
         function showPage(pageName) {
             document.querySelectorAll('.page-section').forEach(el => el.classList.remove('active'));
 
@@ -501,25 +502,25 @@
                 targetPage = 'lettres-hub';
             }
 
-            document.getElementById('page-' + targetPage).classList.add('active');
+            const targetSection = document.getElementById('page-' + targetPage);
+            
+            // Si la section HTML existe, on l'affiche. Sinon, on ne fait rien !
+            if (targetSection) {
+                targetSection.classList.add('active');
+            } else {
+                console.warn("Attention: La page HTML pour '" + targetPage + "' n'existe pas encore !");
+            }
 
-            ['accueil', 'neumes', 'lettres', 'historique', 'manuscrits', 'analyse', 'quiz'].forEach(p => {
-                const btn = document.getElementById('nav-' + p);
-                if(!btn) return;
-
-                let isActive = false;
-                if (p === pageName) {
-                    isActive = true;
-                } else if (p === 'lettres' && (pageName === 'lettres-hub' || pageName === 'lettres-apprendre' || pageName === 'lettres-catalogue')) {
-                    isActive = true;
-                }
-
-                if (isActive) {
-                    btn.className = "px-3 py-1.5 rounded-md transition bg-amber-700 text-white font-medium";
+            // Gère la surbrillance de l'accueil
+            const btnAccueil = document.getElementById('nav-accueil');
+            if(btnAccueil) {
+                if (pageName === 'accueil') {
+                    btnAccueil.className = "px-3 py-1.5 rounded-md transition bg-amber-700 text-white font-medium";
                 } else {
-                    btn.className = "px-3 py-1.5 rounded-md transition text-stone-700 hover:bg-stone-100";
+                    btnAccueil.className = "px-3 py-1.5 rounded-md transition text-stone-700 hover:bg-stone-100";
                 }
-            });
+            }
+            
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
@@ -530,10 +531,12 @@
 
             ['simples', 'ornementaux'].forEach(cat => {
                 const btn = document.getElementById('btn-' + cat);
-                if(cat === category) {
-                    btn.className = "px-4 py-2 bg-amber-700 text-white rounded-md font-medium text-sm transition";
-                } else {
-                    btn.className = "px-4 py-2 bg-stone-200 text-stone-700 rounded-md font-medium text-sm transition hover:bg-stone-300";
+                if(btn) {
+                    if(cat === category) {
+                        btn.className = "px-4 py-2 bg-amber-700 text-white rounded-md font-medium text-sm transition";
+                    } else {
+                        btn.className = "px-4 py-2 bg-stone-200 text-stone-700 rounded-md font-medium text-sm transition hover:bg-stone-300";
+                    }
                 }
             });
         }
