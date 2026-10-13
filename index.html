@@ -21,35 +21,130 @@
                 <p class="text-stone-300 mt-2 text-sm md:text-base">Étude des neumes de St-Gall</p>
             </div>
         </header>
-
+        
         <!-- Barre de navigation -->
         <nav class="bg-white border-b border-stone-200 sticky top-0 z-50 shadow-sm">
-            <div class="max-w-5xl mx-auto px-4 flex flex-wrap justify-center gap-2 md:gap-4 py-3 text-sm md:text-base font-medium">
+            <div class="max-w-5xl mx-auto px-4 flex flex-wrap justify-center gap-2 md:gap-6 py-3 text-sm md:text-base font-medium">
+
+                <!-- 1. Accueil -->
                 <button onclick="showPage('accueil')" id="nav-accueil" class="px-3 py-1.5 rounded-md transition bg-amber-700 text-white">Accueil</button>
-                <button onclick="showPage('neumes')" id="nav-neumes" class="px-3 py-1.5 rounded-md transition text-stone-700 hover:bg-stone-100">Les Neumes</button>
-                <button onclick="showPage('lettres-hub')" id="nav-lettres" class="px-3 py-1.5 rounded-md transition text-stone-700 hover:bg-stone-100">Lettres significatives</button>
-                <button onclick="showPage('historique')" id="nav-historique" class="px-3 py-1.5 rounded-md transition text-stone-700 hover:bg-stone-100">Historique</button>
-                <button onclick="showPage('manuscrits')" id="nav-manuscrits" class="px-3 py-1.5 rounded-md transition text-stone-700 hover:bg-stone-100">Se repérer</button>
-                <button onclick="showPage('analyse')" id="nav-analyse" class="px-3 py-1.5 rounded-md transition text-stone-700 hover:bg-stone-100">Lecture Guidée</button>
-                <button onclick="showPage('quiz')" id="nav-quiz" class="px-3 py-1.5 rounded-md transition text-stone-700 hover:bg-stone-100">Quiz</button>
+
+                <!-- 2. Historique -->
+                <div class="group relative">
+                    <button class="px-3 py-1.5 rounded-md transition text-stone-700 hover:bg-stone-100 cursor-default">Historique ▾</button>
+                    <!-- Le sous-menu caché qui s'affiche au survol -->
+                    <div class="hidden group-hover:block absolute left-0 mt-0 pt-2 w-48 z-50">
+                        <div class="bg-white border border-stone-200 rounded-md shadow-lg overflow-hidden py-1">
+                            <a onclick="showPage('historique')" class="block cursor-pointer px-4 py-2 text-sm text-stone-700 hover:bg-amber-50 hover:text-amber-800">L'Historique</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Manuscrits -->
+                <div class="group relative">
+                    <button class="px-3 py-1.5 rounded-md transition text-stone-700 hover:bg-stone-100 cursor-default">Manuscrits ▾</button>
+                    <div class="hidden group-hover:block absolute left-0 mt-0 pt-2 w-56 z-50">
+                        <div class="bg-white border border-stone-200 rounded-md shadow-lg overflow-hidden py-1">
+                            <a onclick="showPage('manuscrits')" class="block cursor-pointer px-4 py-2 text-sm text-stone-700 hover:bg-amber-50 hover:text-amber-800">Se repérer</a>
+                            <a onclick="showPage('types-pieces')" class="block cursor-pointer px-4 py-2 text-sm text-stone-700 hover:bg-amber-50 hover:text-amber-800">Types de pièces</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Sémiologie -->
+                <div class="group relative">
+                    <button class="px-3 py-1.5 rounded-md transition text-stone-700 hover:bg-stone-100 cursor-default">Sémiologie ▾</button>
+                    <div class="hidden group-hover:block absolute left-0 mt-0 pt-2 w-64 z-50">
+                        <div class="bg-white border border-stone-200 rounded-md shadow-lg overflow-hidden py-1">
+                            <a onclick="showPage('notations')" class="block cursor-pointer px-4 py-2 text-sm text-stone-700 hover:bg-amber-50 hover:text-amber-800">Les notations</a>
+                            <a onclick="showPage('neumes')" class="block cursor-pointer px-4 py-2 text-sm text-stone-700 hover:bg-amber-50 hover:text-amber-800">Les Neumes</a>
+                            <a onclick="showPage('lettres-hub')" class="block cursor-pointer px-4 py-2 text-sm text-stone-700 hover:bg-amber-50 hover:text-amber-800">Lettres significatives</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. Théorie musicale -->
+                <div class="group relative">
+                    <button class="px-3 py-1.5 rounded-md transition text-stone-700 hover:bg-stone-100 cursor-default">Théorie musicale ▾</button>
+                    <div class="hidden group-hover:block absolute left-0 mt-0 pt-2 w-56 z-50">
+                        <div class="bg-white border border-stone-200 rounded-md shadow-lg overflow-hidden py-1">
+                            <a onclick="showPage('modes')" class="block cursor-pointer px-4 py-2 text-sm text-stone-700 hover:bg-amber-50 hover:text-amber-800">Les modes</a>
+                            <a onclick="showPage('psalmodies')" class="block cursor-pointer px-4 py-2 text-sm text-stone-700 hover:bg-amber-50 hover:text-amber-800">Les psalmodies</a>
+                            <a onclick="showPage('monocorde')" class="block cursor-pointer px-4 py-2 text-sm text-stone-700 hover:bg-amber-50 hover:text-amber-800">Le monocorde</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. Répertoire -->
+                <div class="group relative">
+                    <button class="px-3 py-1.5 rounded-md transition text-stone-700 hover:bg-stone-100 cursor-default">Répertoire ▾</button>
+                    <div class="hidden group-hover:block absolute left-0 mt-0 pt-2 w-64 z-50">
+                        <div class="bg-white border border-stone-200 rounded-md shadow-lg overflow-hidden py-1">
+                            <a onclick="showPage('catalogue-fetes')" class="block cursor-pointer px-4 py-2 text-sm text-stone-700 hover:bg-amber-50 hover:text-amber-800">Catalogue des fêtes</a>
+                            <a onclick="showPage('trier-categories')" class="block cursor-pointer px-4 py-2 text-sm text-stone-700 hover:bg-amber-50 hover:text-amber-800">Trier selon les catégories</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. Pratique -->
+                <div class="group relative">
+                    <button class="px-3 py-1.5 rounded-md transition text-stone-700 hover:bg-stone-100 cursor-default">Pratique ▾</button>
+                    <div class="hidden group-hover:block absolute left-0 mt-0 pt-2 w-48 z-50">
+                        <div class="bg-white border border-stone-200 rounded-md shadow-lg overflow-hidden py-1">
+                            <a onclick="showPage('analyse')" class="block cursor-pointer px-4 py-2 text-sm text-stone-700 hover:bg-amber-50 hover:text-amber-800">Lecture Guidée</a>
+                            <a onclick="showPage('quiz')" class="block cursor-pointer px-4 py-2 text-sm text-stone-700 hover:bg-amber-50 hover:text-amber-800">Quiz</a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </nav>
 
         <main class="max-w-5xl mx-auto px-6 py-10">
 
-            <!-- PAGE ACCUEIL -->
-            <section id="page-accueil" class="page-section active space-y-6">
-                <div class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 space-y-4">
-                    <h2 class="text-2xl font-serif font-bold text-stone-900">Bienvenue sur l'espace pédagogique</h2>
-                    <p class="text-stone-600">Cet outil est conçu pour vous accompagner dans l'apprentissage de la notation neumatique de Saint-Gall. Utilisez le menu ci-dessus pour naviguer entre les différentes sections du cours :</p>
-                    <ul class="list-disc list-inside space-y-2 text-stone-700 font-medium">
-                        <li><strong>Les Neumes :</strong> Catalogue interactif et recherche par nom ou par image.</li>
-                        <li><strong>Lettres significatives :</strong> Comprendre les indications de nuances, d'interprétation et consulter le catalogue.</li>
-                        <li><strong>Historique :</strong> Découvrir les origines de cette notation monastique.</li>
-                        <li><strong>Se repérer dans les manuscrits :</strong> Apprendre à lire la structure des pages et les rubriques.</li>
-                        <li><strong>Lecture Guidée :</strong> Analyse pas à pas d'un extrait de chant.</li>
-                        <li><strong>Quiz :</strong> Testez vos connaissances.</li>
-                    </ul>
+            <!-- PAGE ACCUEIL (Tableau de Bord) -->
+            <section id="page-accueil" class="page-section active space-y-8">
+                <div class="text-center space-y-3 mb-8">
+                    <h2 class="text-3xl md:text-4xl font-serif font-bold text-stone-900">Accueil et Orientation</h2>
+                    <p class="text-stone-600 max-w-2xl mx-auto">Sélectionnez un module ci-dessous pour commencer votre exploration du chant grégorien.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Carte 1 -->
+                    <div onclick="showPage('historique')" class="bg-white p-6 rounded-lg shadow-sm border border-stone-200 hover:border-amber-700 cursor-pointer transition group">
+                        <h3 class="text-xl font-serif font-bold text-stone-900 group-hover:text-amber-800 transition mb-2">📜 Historique</h3>
+                        <p class="text-sm text-stone-600">Découvrez les origines de la notation monastique et l'âge d'or de Saint-Gall.</p>
+                    </div>
+
+                    <!-- Carte 2 -->
+                    <div onclick="showPage('manuscrits')" class="bg-white p-6 rounded-lg shadow-sm border border-stone-200 hover:border-amber-700 cursor-pointer transition group">
+                        <h3 class="text-xl font-serif font-bold text-stone-900 group-hover:text-amber-800 transition mb-2">📖 Manuscrits</h3>
+                        <p class="text-sm text-stone-600">Apprenez à vous repérer sur une page et explorez les différents types de pièces.</p>
+                    </div>
+
+                    <!-- Carte 3 -->
+                    <div onclick="showPage('neumes')" class="bg-white p-6 rounded-lg shadow-sm border border-stone-200 hover:border-amber-700 cursor-pointer transition group">
+                        <h3 class="text-xl font-serif font-bold text-stone-900 group-hover:text-amber-800 transition mb-2">✍️ Sémiologie</h3>
+                        <p class="text-sm text-stone-600">Étude détaillée des notations, catalogue interactif des neumes et lettres significatives.</p>
+                    </div>
+
+                    <!-- Carte 4 -->
+                    <div onclick="showPage('modes')" class="bg-white p-6 rounded-lg shadow-sm border border-stone-200 hover:border-amber-700 cursor-pointer transition group">
+                        <h3 class="text-xl font-serif font-bold text-stone-900 group-hover:text-amber-800 transition mb-2">🎵 Théorie musicale</h3>
+                        <p class="text-sm text-stone-600">Comprendre les modes de l'octoéchos, les psalmodies et l'étude du monocorde.</p>
+                    </div>
+
+                    <!-- Carte 5 -->
+                    <div onclick="showPage('catalogue-fetes')" class="bg-white p-6 rounded-lg shadow-sm border border-stone-200 hover:border-amber-700 cursor-pointer transition group">
+                        <h3 class="text-xl font-serif font-bold text-stone-900 group-hover:text-amber-800 transition mb-2">🗂️ Répertoire</h3>
+                        <p class="text-sm text-stone-600">Explorez le catalogue des fêtes et triez les chants selon leurs catégories liturgiques.</p>
+                    </div>
+
+                    <!-- Carte 6 -->
+                    <div onclick="showPage('analyse')" class="bg-white p-6 rounded-lg shadow-sm border border-stone-200 hover:border-amber-700 cursor-pointer transition group">
+                        <h3 class="text-xl font-serif font-bold text-stone-900 group-hover:text-amber-800 transition mb-2">🔍 Pratique</h3>
+                        <p class="text-sm text-stone-600">Exercez-vous avec nos lectures guidées pas à pas et testez-vous via les quiz.</p>
+                    </div>
                 </div>
             </section>
 
