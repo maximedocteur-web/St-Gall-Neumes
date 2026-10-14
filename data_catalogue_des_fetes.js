@@ -13,8 +13,8 @@ siteData.catalogue_des_fetes = [
         couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
         traduction: "Quatrième dimanche avant la Nativité",
         contenu: `
-            <strong>Introït :</strong> XXX<br><br>
-            <strong>Graduel :</strong> XXX<br><br>
+            ATTENTION ! Pas d'introït ici.<br><br>
+            ATTENTION ! Pas de graduel ici.<br><br>
             <strong>Alléluia :</strong> Ostende nobis Domine [p.1]<br><br>
             <strong>Offertoire :</strong> Ad te Domine levavi [p.1]<br>V. Dirige me in veritate<br>V. Respice in me<br><br>
             <strong>Communion :</strong> Dominus dabit benignitatem [p.2]
@@ -68,9 +68,10 @@ siteData.catalogue_des_fetes = [
         contenu: `
             <strong>Introït :</strong> Rorate caeli de super [p.9]<br><br>
             <strong>Graduel :</strong> Tollite portas principes vestras [p.10]<br><br>
-            ATTENTION ! GRADUEL ICI AUSSI (pas d'alleluia). <strong>Graduel :</strong> Prope est Dominus omnibus[p.10]<br><br>
+            ATTENTION ! Un aute graduel. <strong>Graduel :</strong> Prope est Dominus omnibus[p.10]<br><br>
+            ATTENTION ! Pas d'alleluia ici.<br><br>
             <strong>Offertoire :</strong> Confortamini et iam nolite [p.11]<br>V. Tunc aperientur oculi<br>V. Audite itaque domus David<br><br>
-            ATTENTION ! UN AUTRE OFFERTOIRE. <strong>Offertoire :</strong> Ave Maria gratia plena [p.12]<br>V. Quo modo in me fiet<br>V. Ideoque quod nascetur<br><br>
+            ATTENTION ! Un autre offertoire. <strong>Offertoire :</strong> Ave Maria gratia plena [p.12]<br>V. Quo modo in me fiet<br>V. Ideoque quod nascetur<br><br>
             <strong>Communion :</strong> Ecce virgo concipiet [p.13]
         `
     },
@@ -95,11 +96,12 @@ siteData.catalogue_des_fetes = [
         contenu: `
             <strong>Introït :</strong> Veniet ostende nobis faciem [p.14]<br><br>
             <strong>Graduel :</strong> A summo caelo egressio eius [p.15]<br><br>
-            ATTENTION ! GRADUEL ICI AUSSI (pas d'alleluia).<strong> Graduel :</strong> In sole posuit tabernaculum [p.15]<br><br>
-            ATTENTION ! GRADUEL ICI AUSSI (pas d'alleluia).<strong> Graduel :</strong> Domine Deus virtutum [p.15]<br><br>
-            ATTENTION ! GRADUEL ICI AUSSI (pas d'alleluia).<strong> Graduel :</strong> Excita Domine potentiam tuam [p.16]<br><br>
-            pas d'Offertoire<br><br>
-            pas de Communion
+            ATTENTION ! Un autre graduel.<strong> Graduel :</strong> In sole posuit tabernaculum [p.15]<br><br>
+            ATTENTION ! Un autre graduel.<strong> Graduel :</strong> Domine Deus virtutum [p.15]<br><br>
+            ATTENTION ! Un autre graduel.<strong> Graduel :</strong> Excita Domine potentiam tuam [p.16]<br><br>
+            ATTENTION ! Pas d'alleluia ici.<br><br>
+            ATTENTION ! Pas d'offertoire ici.<br><br>
+            ATTENTION ! Pas de Communion ici.
         `
     },
     {
@@ -242,7 +244,7 @@ siteData.catalogue_des_fetes = [
         contenu: `
             <strong>Introït :</strong> Vultum tuum deprecabuntur [p.46]<br><br>
             <strong>Graduel :</strong> Diffusa est gratia [p.46]<br><br>
-            TTENTION ! Pas d'alleluia ici.<br><br>
+            ATTENTION ! Pas d'alleluia ici.<br><br>
             <strong>Offertoire :</strong> Offerentur regi virgines [p.47]<br>V. Eructuavit cor meum<br>(un seul verset noté ici)<br><br>
             <strong>Communion :</strong> Simile est regnum caelorum [p.48]
         `
@@ -288,106 +290,106 @@ siteData.catalogue_des_fetes = [
     },
     {
         type: "accordeon",
-        titre: "",
+        titre: "In Nat. S. Felicis.",
         couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
-        traduction: "",
+        traduction: "À la naissance de (de sainte Félicité ?)",
         contenu: `
-            <strong>Introït :</strong> [p.]<br><br>
-            <strong>Graduel :</strong> [p.]<br><br>
-            <strong>Alléluia :</strong> [p.]<br><br>
-            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
-            <strong>Communion :</strong> [p.]
+            <strong>Introït :</strong> Os iusti meditabitur sapientiam [p.55]<br><br>
+            <strong>Graduel :</strong> Juravit Dominus et non [p.56]<br><br>
+            ATTENTION ! Il n'y a pas d'alleluia ici. <br><br>
+            <strong>Offertoire :</strong> Gloria et honore [p.56] <br>V. XXX <br>V. XXX<br> ATTENTION ! Il n'est noté ici que par son incipit, pour voir la pièce entière rdv [p.38]<br><br>
+            <strong>Communion :</strong> Posuisiti Domine in capite [p.56]
         `
     },
     {
         type: "accordeon",
-        titre: "",
+        titre: "Dominica tertia post Nat. Dni.",
         couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
-        traduction: "",
+        traduction: "Le troisième dimanche après la naissance du Seigneur.",
         contenu: `
-            <strong>Introït :</strong> [p.]<br><br>
-            <strong>Graduel :</strong> [p.]<br><br>
-            <strong>Alléluia :</strong> [p.]<br><br>
-            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
-            <strong>Communion :</strong> [p.]
+            <strong>Introït :</strong> Omnis terra adoret te [p.57]<br><br>
+            <strong>Graduel :</strong> Missit Dominus verbum [p.57]<br><br>
+            <strong>Alléluia :</strong> Laudate Dominum [p.57]<br>ATTENTION ! Il n'est noté ici que par son incipit, pour voir la pièce entière rdv p.?<br><br>
+            <strong>Offertoire :</strong> Iubilate Deo universa terra [p.57]<br>V. Reddam tibi vota mea<br>V. Locutum est os meum<br><br>
+            <strong>Communion :</strong> Dicit Dominus implete ydrias [p.59]
         `
     },
     {
         type: "accordeon",
-        titre: "",
+        titre: "In nat. S. Marcelli",
         couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
-        traduction: "",
+        traduction: "À la naissance de Saint Marcellin",
         contenu: `
-            <strong>Introït :</strong> [p.]<br><br>
-            <strong>Graduel :</strong> [p.]<br><br>
-            <strong>Alléluia :</strong> [p.]<br><br>
-            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
-            <strong>Communion :</strong> [p.]
+            <strong>Introït :</strong> Statuit ei Dominus [p.59]<br><br>
+            <strong>Graduel :</strong> In veni David servum [p.60]<br><br>
+            ATTENTION ! Pas d'alleluia ici.<br><br>
+            <strong>Offertoire :</strong> Veritas mea et misericordia [p.60]<br>V. Posui adiutorium<br>V. Misericordiam meam<br><br>
+            <strong>Communion :</strong> Domine quinque talenta [p.61]
         `
     },
     {
         type: "accordeon",
-        titre: "",
+        titre: "In Nat. Sce. Priscae",
         couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
-        traduction: "",
+        traduction: "À la naissance de sainte Prisca",
         contenu: `
-            <strong>Introït :</strong> [p.]<br><br>
-            <strong>Graduel :</strong> [p.]<br><br>
-            <strong>Alléluia :</strong> [p.]<br><br>
-            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
-            <strong>Communion :</strong> [p.]
+            <strong>Introït :</strong> Loquebar de testimoniis [p.62]<br><br>
+            <strong>Graduel :</strong> Species tua et pulchritudine [p.62]<br><br>
+            ATTENTION ! Pas d'alleluia ici. <br><br>
+            <strong>Offertoire :</strong> Filiae regum in honore [p.62]<br>V. Eructuavit cor meum<br>V. Virga recta est<br><br>
+            <strong>Communion :</strong> Feci iudicium et iustitiam [p.63]
         `
     },
     {
         type: "accordeon",
-        titre: "",
+        titre: "In Nat. S. Fabiani et Sebast.",
         couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
-        traduction: "",
+        traduction: "À la naissance des saints Fabien et Sebastien",
         contenu: `
-            <strong>Introït :</strong> [p.]<br><br>
-            <strong>Graduel :</strong> [p.]<br><br>
-            <strong>Alléluia :</strong> [p.]<br><br>
-            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
-            <strong>Communion :</strong> [p.]
+            <strong>Introït :</strong> Intret in conspectu tuo [p.63]<br><br>
+            <strong>Graduel :</strong> Gloriosus Deus in sanctis [p.64]<br><br>
+            ATTENTION ! Pas d'alleluia ici<br><br>
+            <strong>Offertoire :</strong> Laetamini in Domino [p.64]<br>V. Beati quorum remisse<br>V. Pro hac oravit ad te<br><br>
+            <strong>Communion :</strong> Multitudo languentium [p.65]
         `
     },
     {
         type: "accordeon",
-        titre: "",
+        titre: "In Nat. S. Agnetis",
         couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
-        traduction: "",
+        traduction: "À la naissance de sainte Agnès",
         contenu: `
-            <strong>Introït :</strong> [p.]<br><br>
-            <strong>Graduel :</strong> [p.]<br><br>
-            <strong>Alléluia :</strong> [p.]<br><br>
-            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
-            <strong>Communion :</strong> [p.]
+            <strong>Introït :</strong> Me expectaverunt peccatores [p.66]<br><br>
+            <strong>Graduel :</strong> Diffusa est gratia [p.66]<br><br>ATTENTION ! Il n'est noté ici que par son incipit, pour voir la pièce entière rdv [p.46]
+            ATTENTION ! Pas d'alleluia ici. <br><br>
+            <strong>Offertoire :</strong> Offerentur [p.66]<br>V. XXX<br>V. XXX<br><br>ATTENTION ! Il n'est noté ici que par son incipit, pour voir la pièce entière rdv [p.47]
+            <strong>Communion :</strong> Quinque prudentes virgines [p.66]
         `
     },
     {
         type: "accordeon",
-        titre: "",
+        titre: "Dom. .III. P. Theoph.",
         couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
-        traduction: "",
+        traduction: "Le troisième dimanche après la Théophanie (l'Épiphanie)",
         contenu: `
-            <strong>Introït :</strong> [p.]<br><br>
-            <strong>Graduel :</strong> [p.]<br><br>
-            <strong>Alléluia :</strong> [p.]<br><br>
-            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
-            <strong>Communion :</strong> [p.]
+            <strong>Introït :</strong> Adorate Deum omnes angeli [p.67]<br><br>
+            <strong>Graduel :</strong> Timebunt gentes nomen tuum [p.67]<br><br>
+            <strong>Alléluia :</strong> Dominus regnavit exultet [p.68]<br><br>
+            <strong>Offertoire :</strong> Dextera Domini fecit virtutem [p.68]<br>V. In trubulatione<br>V. Impulsus versatus sum<br><br>
+            <strong>Communion :</strong> Mirabantur omnes [p.69]
         `
     },
     {
         type: "accordeon",
-        titre: "",
+        titre: "In Nat. Sci. Vincentii",
         couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
-        traduction: "",
+        traduction: "À la naissance de saint Vincent",
         contenu: `
-            <strong>Introït :</strong> [p.]<br><br>
-            <strong>Graduel :</strong> [p.]<br><br>
-            <strong>Alléluia :</strong> [p.]<br><br>
-            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
-            <strong>Communion :</strong> [p.]
+            <strong>Introït :</strong> Laetabitur iustus in Domino [p.69]<br><br>
+            <strong>Graduel :</strong> Posuisti Domine super caput [p.69]<br><br>
+            ATTENTION ! Pas d'alleluia ici.<br><br>
+            <strong>Offertoire :</strong> Gloria et honore [p.70]<br>V. XXX<br>V. XXX<br>ATTENTION ! Il n'est noté ici que par son incipit, pour voir la pièce entière rdv [p.38]<br><br>
+            <strong>Communion :</strong> Qui vult venire post me [p.70]
         `
     },
     {
