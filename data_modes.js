@@ -53,5 +53,13 @@ siteData.modes = [
     <strong>M.</strong> : Retien bien cette définition : <strong>le mode, c'est l'art et la manière de se mouvoir sur l'échelle</strong>. Pour synthétiser mon propos, nous avons d'abord
     tout un paquet de notes à notre disposition. Ensuite, on mets ces notes bout-à-bout pour créer des échelles, or, le chant grégorien à conserver quatre de celles-ci. Enfin,
     nous avons les modes, qui sont basés sur échelles mais qui nous apportent la manière d'aller et venir, de bas en haut et de haut en bas, sur ces quatre échelles.`
+  },
+  {
+    type:"titre",
+    content:"Les modes de Ré"
+  },
+  {
+    type:"youtube",
+    id:"qkArD_FgRRs&list=PLdSKNXwhLABigyzo8X-EBIU_ork4Te6k0&index=7"
   }
 ]
