@@ -9,9 +9,22 @@
         .page-section { display: none; }
         .page-section.active { display: block; }
         .text-orange-custom { color: #ff4f15; }
+        
+        /* Animations d'apparition de l'accueil */
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-up { animation: fadeUp 0.6s ease-out forwards; opacity: 0; }
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+        .delay-400 { animation-delay: 400ms; }
+        .delay-500 { animation-delay: 500ms; }
+        .delay-600 { animation-delay: 600ms; }
     </style>
 </head>
-<body class="bg-stone-50 text-stone-800 font-sans min-h-screen flex flex-col justify-between">
+<body class="bg-stone-50 text-stone-800 font-sans min-h-screen flex flex-col justify-between relative">
     <div>
         <!-- En-tête -->
         <header class="bg-stone-900 text-stone-100 py-8 shadow-md">
@@ -122,6 +135,7 @@
                 <!-- DÉCORS LATÉRAUX AGRANDIS (Plaqués sur les bords) -->
                 <img src="images/decor_gauche.png" alt="" class="fixed left-0 top-1/2 -translate-y-1/2 w-48 xl:w-72 2xl:w-80 pointer-events-none hidden lg:block z-0">
                 <img src="images/decor_droit.png" alt="" class="fixed right-0 top-1/2 -translate-y-1/2 w-48 xl:w-72 2xl:w-80 pointer-events-none hidden lg:block z-0">
+                
                 <!-- CONTENEUR CENTRAL RÉDUIT (max-w-3xl au lieu de 5xl) -->
                 <div class="max-w-3xl mx-auto relative z-10 space-y-8 pb-10">
                     
@@ -136,7 +150,6 @@
                     </div>
 
                     <!-- GRILLE DES CARTES (Plus compacte) -->
-                    <!-- L'espacement (gap-4) et le padding (p-5 au lieu de p-6) ont été réduits -->
                     <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-5">
                         
                         <!-- Carte 1 -->
@@ -179,7 +192,7 @@
             </section>
 
             <!-- PAGE NEUMES -->
-            <section id="page-neumes" class="page-section space-y-6">
+            <section id="page-neumes" class="page-section space-y-6 relative z-10">
                 <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Catalogue des Neumes</h2>
                 
                 <div class="bg-white p-6 rounded-lg border border-stone-200 shadow-sm space-y-4">
@@ -203,7 +216,7 @@
             </section>
 
             <!-- PAGE LETTRES SIGNIFICATIVES - HUB -->
-            <section id="page-lettres-hub" class="page-section space-y-6">
+            <section id="page-lettres-hub" class="page-section space-y-6 relative z-10">
                 <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Les Lettres Significatives</h2>
                 <p class="text-stone-600">Choisissez l'une des sections ci-dessous pour approfondir votre étude des lettres significatives de Saint-Gall :</p>
                 
@@ -223,7 +236,7 @@
             </section>
 
             <!-- PAGE LETTRES - EN APPRENDRE PLUS -->
-            <section id="page-lettres-apprendre" class="page-section space-y-6">
+            <section id="page-lettres-apprendre" class="page-section space-y-6 relative z-10">
                 <div class="flex items-center justify-between border-b-2 border-amber-700 pb-2">
                     <h2 class="text-2xl font-serif font-bold text-stone-900">En apprendre plus sur les Lettres Significatives</h2>
                     <button onclick="showPage('lettres-hub')" class="text-sm text-amber-700 hover:underline font-medium">&larr; Retour au choix</button>
@@ -232,7 +245,7 @@
             </section>
 
             <!-- PAGE LETTRES - CATALOGUE -->
-            <section id="page-lettres-catalogue" class="page-section space-y-6">
+            <section id="page-lettres-catalogue" class="page-section space-y-6 relative z-10">
                 <div class="flex items-center justify-between border-b-2 border-amber-700 pb-2">
                     <h2 class="text-2xl font-serif font-bold text-stone-900">Catalogue des Lettres Significatives</h2>
                     <button onclick="showPage('lettres-hub')" class="text-sm text-amber-700 hover:underline font-medium">&larr; Retour au choix</button>
@@ -246,85 +259,72 @@
             <!-- TOUS LES NOUVEAUX "MOULES" VIDES SONT ICI      -->
             <!-- ============================================== -->
 
-            <!-- PAGE HISTORIQUE -->
-            <section id="page-historique" class="page-section space-y-6">
+            <section id="page-historique" class="page-section space-y-6 relative z-10">
                 <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">L'Historique</h2>
                 <div id="historique-contenu" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 text-stone-700 text-justify leading-relaxed"></div>
             </section>
 
-            <!-- PAGE SE REPÉRER DANS LES MANUSCRITS -->
-            <section id="page-manuscrits" class="page-section space-y-6">
+            <section id="page-manuscrits" class="page-section space-y-6 relative z-10">
                 <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Se repérer dans les Manuscrits</h2>
                 <div id="manuscrits-contenu" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 text-stone-700 text-justify leading-relaxed"></div>
             </section>
 
-            <!-- PAGE TYPES DE PIÈCES -->
-            <section id="page-types-pieces" class="page-section space-y-6">
+            <section id="page-types-pieces" class="page-section space-y-6 relative z-10">
                 <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Types de Pièces</h2>
                 <div id="types-pieces-contenu" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 text-stone-700 text-justify leading-relaxed"></div>
             </section>
 
-            <!-- PAGE LES NOTATIONS -->
-            <section id="page-notations" class="page-section space-y-6">
+            <section id="page-notations" class="page-section space-y-6 relative z-10">
                 <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Les Notations</h2>
                 <div id="notations-contenu" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 text-stone-700 text-justify leading-relaxed"></div>
             </section>
 
-            <!-- PAGE JE DÉBUTE -->
-            <section id="page-je-debute" class="page-section space-y-6">
+            <section id="page-je-debute" class="page-section space-y-6 relative z-10">
                 <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Je débute</h2>
                 <div id="je-debute-contenu" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 text-stone-700 text-justify leading-relaxed"></div>
             </section>
 
-            <!-- PAGE LES MODES -->
-            <section id="page-modes" class="page-section space-y-6">
+            <section id="page-modes" class="page-section space-y-6 relative z-10">
                 <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Les Modes</h2>
                 <div id="modes-contenu" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 text-stone-700 text-justify leading-relaxed"></div>
             </section>
 
-            <!-- PAGE LES PSALMODIES -->
-            <section id="page-psalmodies" class="page-section space-y-6">
+            <section id="page-psalmodies" class="page-section space-y-6 relative z-10">
                 <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Les Psalmodies</h2>
                 <div id="psalmodies-contenu" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 text-stone-700 text-justify leading-relaxed"></div>
             </section>
 
-            <!-- PAGE LE MONOCORDE -->
-            <section id="page-monocorde" class="page-section space-y-6">
+            <section id="page-monocorde" class="page-section space-y-6 relative z-10">
                 <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Le Monocorde</h2>
                 <div id="monocorde-contenu" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 text-stone-700 text-justify leading-relaxed"></div>
             </section>
 
-            <!-- PAGE CATALOGUE DES FÊTES -->
-            <section id="page-catalogue-fetes" class="page-section space-y-6">
+            <section id="page-catalogue-fetes" class="page-section space-y-6 relative z-10">
                 <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Catalogue des Fêtes</h2>
                 <div id="catalogue-fetes-contenu" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 text-stone-700 text-justify leading-relaxed"></div>
             </section>
 
-            <!-- PAGE TRIER PAR CATÉGORIES -->
-            <section id="page-trier-categories" class="page-section space-y-6">
+            <section id="page-trier-categories" class="page-section space-y-6 relative z-10">
                 <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Trier selon les Catégories</h2>
                 <div id="trier-categories-contenu" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 text-stone-700 text-justify leading-relaxed"></div>
             </section>
-            <!-- PAGE BIBLIOGRAPHIE -->
-            <section id="page-bibliographie" class="page-section space-y-6">
+
+            <section id="page-bibliographie" class="page-section space-y-6 relative z-10">
                 <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Bibliographie</h2>
                 <div id="bibliographie-contenu" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 text-stone-700 text-justify leading-relaxed"></div>
             </section>
 
-            <!-- PAGE SITOGRAPHIE -->
-            <section id="page-sitographie" class="page-section space-y-6">
+            <section id="page-sitographie" class="page-section space-y-6 relative z-10">
                 <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Sitographie</h2>
                 <div id="sitographie-contenu" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 text-stone-700 text-justify leading-relaxed"></div>
             </section>
 
-            <!-- PAGE MANUSCRIT VERS CARRÉ -->
-            <section id="page-manuscrit-carre" class="page-section space-y-6">
+            <section id="page-manuscrit-carre" class="page-section space-y-6 relative z-10">
                 <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Manuscrit → Carré</h2>
                 <div id="manuscrit-carre-contenu" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 text-stone-700 text-justify leading-relaxed"></div>
             </section>
 
-            <!-- PAGE CARRÉ VERS MANUSCRIT -->
-            <section id="page-carre-manuscrit" class="page-section space-y-6">
+            <section id="page-carre-manuscrit" class="page-section space-y-6 relative z-10">
                 <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Carré → Manuscrit</h2>
                 <div id="carre-manuscrit-contenu" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 text-stone-700 text-justify leading-relaxed"></div>
             </section>
@@ -334,7 +334,7 @@
             <!-- ============================================== -->
 
             <!-- PAGE LECTURE GUIDEE -->
-            <section id="page-analyse" class="page-section space-y-6">
+            <section id="page-analyse" class="page-section space-y-6 relative z-10">
                 <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Lecture Guidée : Analyse d'un Chant</h2>
                 <div class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 space-y-6">
                     <div class="bg-amber-50 border-l-4 border-amber-700 p-4 rounded-r-lg">
@@ -353,7 +353,7 @@
             </section>
 
             <!-- PAGE QUIZ -->
-            <section id="page-quiz" class="page-section space-y-6">
+            <section id="page-quiz" class="page-section space-y-6 relative z-10">
                 <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Quiz de Reconnaissance</h2>
                 <div class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 space-y-6" id="quiz-box"></div>
             </section>
@@ -362,7 +362,7 @@
     </div>
 
     <!-- Pied de page -->
-    <footer class="bg-stone-900 text-stone-400 py-6 mt-16 text-center text-sm">
+    <footer class="bg-stone-900 text-stone-400 py-6 mt-16 text-center text-sm relative z-10">
         <p>Fait par Maxime Docteur, doctorant à Montpellier (France)</p>
     </footer>
 
@@ -530,6 +530,7 @@
                     let res = texte.replace(/\[p\.([^\]]+)\]/g, '<a href="https://www.e-codices.unifr.ch/fr/sbe/0121/\$1/0/" target="_blank" class="ml-2 text-sm text-amber-700 hover:text-amber-900 underline font-medium">p.\$1</a>');
                     
                     // 2. Les Notes en BULLE INTERACTIVE (Tooltip)
+                    // Note technique : Il faut bien "échapper" les crochets dans la formule /[note]/
                     res = res.replace(/[note]([\s\S]*?)\[\/note\]/g, (match, noteTexte) => {
                         const num = compteurNotes++;
                         return `<span class="group relative inline-block cursor-help text-amber-700 font-bold">
@@ -546,13 +547,10 @@
                     return res;
                 }
 
-                // Construction de la page (on ne touche pas à cette partie)
-                donneesArray.forEach((bloc) => {
-
                 // Construction de la page
                 donneesArray.forEach((bloc) => {
                     if (bloc.type === 'text') {
-                        // On passe le texte dans la fonction magique
+                        // On passe le texte dans la fonction magique avant de l'afficher
                         container.innerHTML += `<p class="mb-6">${formaterTexte(bloc.content)}</p>`;
                     }
                     else if (bloc.type === 'titre') {
@@ -659,7 +657,8 @@
             }
             
             window.scrollTo({ top: 0, behavior: 'smooth' });
-            // --- NOUVEAU : Changement de forme du menu ---
+
+            // --- Changement de forme du menu ---
             const navContainer = document.getElementById('nav-container');
             const mainNav = document.getElementById('main-nav');
             
