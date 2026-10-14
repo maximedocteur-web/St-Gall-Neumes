@@ -1,4 +1,4 @@
-siteData.lecture_guidee = [
+siteData.je_debute = [
   {
     type:"text",
     content:`<strong>Discipulis (l'élève)</strong> : Bonjour Magister, je viens pour ma première leçon de chant grégorien."<br>
