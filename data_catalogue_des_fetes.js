@@ -109,7 +109,7 @@ siteData.catalogue_des_fetes = [
         traduction: "Le dernier dimanche",
         contenu: `
             <strong>Introït :</strong> Memento nostri Domine [p.21]<br><br>
-            <strong>Graduel :</strong> Prope est Dominus [p.]<br><br>
+            <strong>Graduel :</strong> Prope est Dominus [p.22]<br><br>ATTENTION ! Il n'est noté ici que par son incipit, pour voir la pièce entière rdv [p.10]<br><br>
             <strong>Alléluia :</strong> Veni Domine et noli [p.22]<br><br>
             <strong>Offertoire :</strong> Ave Maria gratia [p.22]<br>V. XXX <br>V. XXX<br>ATTENTION ! Il n'est noté ici que par son incipit, pour voir la pièce entière rdv [p.12]<br><br>
             <strong>Communion :</strong> Ecce Virgo [p.22]<br>ATTENTION ! Elle n'est notée ici que par son incipit, pour voir la pièce entière rdv [p.13]
