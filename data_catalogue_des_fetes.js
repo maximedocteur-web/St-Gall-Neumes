@@ -278,11 +278,11 @@ siteData.catalogue_des_fetes = [
         couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
         traduction: "Le deuxième dimanche après la naissance du Seigneur",
         contenu: `
-            <strong>Introït :</strong> [p.]<br><br>
-            <strong>Graduel :</strong> [p.]<br><br>
-            <strong>Alléluia :</strong> [p.]<br><br>
-            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
-            <strong>Communion :</strong> [p.]
+            <strong>Introït :</strong> In excelso trono [p.53]<br><br>
+            <strong>Graduel :</strong> Benedictus Dominus Deus Israhel [p.53]<br><br>
+            <strong>Alléluia :</strong> Iubilate Deo omnis terra [p.54]<br><br>
+            <strong>Offertoire :</strong> Iubilate Deo omnis terra [p.54]<br>V. Ipse fecit nos<br>V. Laudate nomen eius<br><br>
+            <strong>Communion :</strong> Fili quid fecisti nobis [p.55]
         `
     },
     {
