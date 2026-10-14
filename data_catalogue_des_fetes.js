@@ -176,7 +176,7 @@ siteData.catalogue_des_fetes = [
             <strong>Introït :</strong> Et enim sederunt [p.33]<br><br>
             <strong>Graduel :</strong> Sederunt principes et ad versum [p.34]<br><br>
             <strong>Alléluia :</strong> Video caelos apertos [p.34]<br><br>
-            <strong>Offertoire :</strong> In virtute tua Domine [p.34]<br>V. Vitam peciit et tribuisti<br>V. Magna est gloria eiusbr><br>
+            <strong>Offertoire :</strong> In virtute tua Domine [p.34]<br>V. Vitam peciit et tribuisti<br>V. Magna est gloria eius<br><br>
             ATTENTION ! Un autre offertoire.<br><strong>Offertoire :</strong> Elegerunt apostoli Stephanum [p.35]<br>V. Viderunt faciem eius<br>V. Positis autem genibus<br><br>
             ATTENTION ! Pas d'alleluia ici.<br><br>
             <strong>Communion :</strong> Video caelos apertos [p.36]
