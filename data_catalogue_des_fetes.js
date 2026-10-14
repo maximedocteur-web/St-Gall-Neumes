@@ -111,8 +111,8 @@ siteData.catalogue_des_fetes = [
             <strong>Introït :</strong> Memento nostri Domine[p.21]<br><br>
             <strong>Graduel :</strong> Prope est Dominus[p.]<br><br>
             <strong>Alléluia :</strong> [p.]<br><br>
-            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
-            <strong>Communion :</strong> [p.]
+            ATTENTION ! Il n'est noté ici que par son incipit, pour voir la pièce entière rdv [p.12] <strong>Offertoire :</strong> Ave Maria gratia[p.22]<br>V. XXX <br>V. XXX<br><br>
+            ATTENTION ! Elle n'est notée ici que par son incipit, pour voir la pièce entière rdv [p.13]<strong>Communion :</strong> Ecce Virgo[p.22]
         `
     },
     {
