@@ -60,6 +60,6 @@ siteData.modes = [
   },
   {
     type:"youtube",
-    id:"qkArD_FgRRs&list=PLdSKNXwhLABigyzo8X-EBIU_ork4Te6k0&index=7"
+    id:"qkArD_FgRRs"
   }
 ]
