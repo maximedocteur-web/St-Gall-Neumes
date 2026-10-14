@@ -52,7 +52,12 @@ siteData.modes = [
     <strong>D.</strong> : Ha, alors les notes j'ai compris, les échelles aussi, mais pour les modes il va me falloir un peu plus d'explications...<br><br>
     <strong>M.</strong> : Retien bien cette définition : <strong>le mode, c'est l'art et la manière de se mouvoir sur l'échelle</strong>. Pour synthétiser mon propos, nous avons d'abord
     tout un paquet de notes à notre disposition. Ensuite, on mets ces notes bout-à-bout pour créer des échelles, or, le chant grégorien à conserver quatre de celles-ci. Enfin,
-    nous avons les modes, qui sont basés sur échelles mais qui nous apportent la manière d'aller et venir, de bas en haut et de haut en bas, sur ces quatre échelles.`
+    nous avons les modes, qui sont basés sur échelles mais qui nous apportent la manière d'aller et venir, de bas en haut et de haut en bas, sur ces quatre échelles. Toute l'essence du mode
+    repose sur les relations qu'entretiennent `
+  },
+  {
+    type:"text",
+    content:``
   },
   {
     type:"titre",
