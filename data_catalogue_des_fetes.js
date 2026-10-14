@@ -151,7 +151,7 @@ siteData.catalogue_des_fetes = [
             <strong>Graduel :</strong> Benedictus qui venit in nomine [p.27]<br><br>
             <strong>Alléluia :</strong> Dominus regnavit decorem [p.27]<br><br>
             <strong>Offertoire :</strong> Deus enim firmavit [p.28]<br>V. Dominus regnavit decorem<br>V. Mirabilis in excelsis Dominus<br><br>
-            <strong>Communion :</strong> Exulta filia Sion [p.]
+            <strong>Communion :</strong> Exulta filia Sion [p.29]
         `
     },
     {
