@@ -542,6 +542,14 @@
                             </div>
                         `;
                     }
+                    // -> NOUVEAU : Si c'est une VIDÉO YOUTUBE <-
+                    else if (bloc.type === 'youtube') {
+                        container.innerHTML += `
+                            <div class="my-8 max-w-3xl mx-auto shadow-md rounded-lg overflow-hidden border border-stone-200">
+                                <iframe class="w-full aspect-video" src="https://www.youtube.com/embed/${bloc.id}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            </div>
+                        `;
+                    }
                     else if (bloc.type === 'imageCompare') {
                         container.innerHTML += `
                             <div class="my-6 text-center">
