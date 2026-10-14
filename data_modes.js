@@ -14,7 +14,9 @@ siteData.modes = [
     voix de l'enfant.`
   },
   {
-    image : "images/grave_aigu.png"
+    type: "image",
+    src: "images/grave_aigu.png",
+    legende: `La suite des notes du grave à l'aigu.`
   },
   {
     type:"text",
