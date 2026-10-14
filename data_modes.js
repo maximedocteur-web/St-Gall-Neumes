@@ -20,7 +20,7 @@ siteData.modes = [
   },
   {
     type:"text",
-    content:`À partir de ces notes, on va former des <strong>échelles</strong>. C'est un nom parfaitement choisi puisqu'à l'image d'une echelle,
+    content:`À partir de ces notes, on va former des <strong>échelles</strong>. C'est un nom parfaitement choisi puisqu'à l'image d'une échelle,
     on va disposer nos notes par échellons, les unes à la suite des autres. Le chant grégorien fonctionne sur <strong>quatre échelles</strong> : 
     <strong>une échelle de Ré</strong>, <strong>une échelle de Mi</strong>, <strong>une échelle de Fa</strong>, <strong>une échelle de Sol</strong> 
     et chaque échelle possède un nombre fini de notes.<br>`
