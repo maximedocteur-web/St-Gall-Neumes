@@ -6,7 +6,7 @@ siteData.modes = [
   {
     type:"text",
     content:`<strong>Discipulis</strong> : Maître, qu'est ce qu'un mode ?<br><br>
-    <trong>Magister</strong> : Un mode, c'est une manière de se déplacer sur une échelle. Mais laisse moi reprendre depuis le début.<br><br>
+    <strong>Magister</strong> : Un mode, c'est une manière de se déplacer sur une échelle. Mais laisse moi reprendre depuis le début.<br><br>
     Tout d'abord, il y a des notes. Imagine une droite sur laquelle on a réparti les notes depuis les graves, jusqu'aux aigues en gardant
     l'ordre dans lequel elles se suivent, c'eqt-à-dire : Sol-La-Si-Do-Ré-Mi-Fa-Sol-La-Si-Do-Ré(etc.).<br><br>
     Au début de la droite, voilà les notes les plus graves, c'est la voix de l'ogre, extrêment grave et si on monte un peu sur cette
@@ -20,8 +20,16 @@ siteData.modes = [
   },
   {
     type:"text",
-    content:`À partir de ces notes, on va former des échelles. C'est un nom parfaitement choisi puisqu'à l'image d'une echelle,
-    on va disposer nos notes par échellons, les unes à la suite des autres. Le chant grégorien fonctionne sur quatre échelles : 
-    Une échelle de Ré, une échelle de Mi, une échelle de Fa, une échelle de Sol.<br><br> Par exemple, pour l'échelle de Ré`
+    content:`À partir de ces notes, on va former des <strong>échelles</strong>. C'est un nom parfaitement choisi puisqu'à l'image d'une echelle,
+    on va disposer nos notes par échellons, les unes à la suite des autres. Le chant grégorien fonctionne sur <strong>quatre échelles</strong> : 
+    <strong>Une échelle de Ré</strong>, <strong>une échelle de Mi</strong>, <strong>une échelle de Fa</strong>, <strong>une échelle de Sol</strong> 
+    et chaque échelle possède un nombre fini de notes. <br><br> Pour l'échelle de Ré,
+    on cosidère que pour faire simple, l'échelle va du Ré, jusqu'au Ré plus aigu, donc Ré-Mi-Fa-Sol-La-Si-Do-Ré, pour l'échelle de Mi, ça va de Mi 
+    jusqu'au Mi plus aigu et ainsi de suite pour les quatre échelles. Donc, pour résumé, nous nous retrouvons avec :<br><br>
+    échelle de Ré : Ré-Mi-Fa-Sol-La-Si-Do-Ré<br>
+    échelle de Mi : Mi-Fa-Sol-La-Si-Do-Ré-Mi<br>
+    échelle de Fa : Fa-Sol-La-Si-Do-Ré-Mi-Fa<br>
+    échelle de Sol : Sol-La-Si-Do-Ré-Mi-Fa-Sol<br><br>
+    `
   }
 ]
