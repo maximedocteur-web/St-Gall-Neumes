@@ -68,9 +68,9 @@ siteData.catalogue_des_fetes = [
         contenu: `
             <strong>Introït :</strong> Rorate caeli de super [p.9]<br><br>
             <strong>Graduel :</strong> Tollite portas principes vestras [p.10]<br><br>
-            <strong>ATTENTION ! GRADUEL ICI AUSSI (pas d'alleluia) [p.10]:</strong> Prope est Dominus omnibus[p.]<br><br>
+            ATTENTION ! GRADUEL ICI AUSSI (pas d'alleluia). <strong>Graduel :</strong> Prope est Dominus omnibus[p.10]<br><br>
             <strong>Offertoire :</strong> Confortamini et iam nolite [p.11]<br>V. Tunc aperientur oculi<br>V. Audite itaque domus David<br><br>
-            <strong>ATTENTION ! UN AUTRE OFFERTOIRE :</strong> Ave Maria gratia plena [p.12]<br>V. Quo modo in me fiet<br>V. Ideoque quod nascetur<br><br>
+            ATTENTION ! UN AUTRE OFFERTOIRE. <strong>Offertoire :</strong> Ave Maria gratia plena [p.12]<br>V. Quo modo in me fiet<br>V. Ideoque quod nascetur<br><br>
             <strong>Communion :</strong> Ecce virgo concipiet [p.13]
         `
     },
@@ -95,11 +95,11 @@ siteData.catalogue_des_fetes = [
         contenu: `
             <strong>Introït :</strong> Veniet ostende nobis faciem [p.14]<br><br>
             <strong>Graduel :</strong> A summo caelo egressio eius [p.15]<br><br>
-            <strong>ATTENTION ! GRADUEL ICI AUSSI (pas d'alleluia) :</strong> In sole posuit tabernaculum [p.15]<br><br>
-            <strong>ATTENTION ! GRADUEL ICI AUSSI (pas d'alleluia) :</strong> Domine Deus virtutum [p.15]<br><br>
-            <strong>ATTENTION ! GRADUEL ICI AUSSI (pas d'alleluia) :</strong> Excita Domine potentiam tuam [p.16]<br><br>
-            <strong>pas d'Offertoire<br><br>
-            <strong>pas de Communion
+            ATTENTION ! GRADUEL ICI AUSSI (pas d'alleluia).<strong> Graduel :</strong> In sole posuit tabernaculum [p.15]<br><br>
+            ATTENTION ! GRADUEL ICI AUSSI (pas d'alleluia).<strong> Graduel :</strong> Domine Deus virtutum [p.15]<br><br>
+            ATTENTION ! GRADUEL ICI AUSSI (pas d'alleluia).<strong> Graduel :</strong> Excita Domine potentiam tuam [p.16]<br><br>
+            pas d'Offertoire<br><br>
+            pas de Communion
         `
     },
     {
@@ -111,8 +111,8 @@ siteData.catalogue_des_fetes = [
             <strong>Introït :</strong> Memento nostri Domine [p.21]<br><br>
             <strong>Graduel :</strong> Prope est Dominus [p.]<br><br>
             <strong>Alléluia :</strong> Veni Domine et noli [p.22]<br><br>
-            ATTENTION ! Il n'est noté ici que par son incipit, pour voir la pièce entière rdv [p.12] <strong>Offertoire :</strong> Ave Maria gratia [p.22]<br>V. XXX <br>V. XXX<br><br>
-            ATTENTION ! Elle n'est notée ici que par son incipit, pour voir la pièce entière rdv [p.13]<strong>Communion :</strong> Ecce Virgo [p.22]
+            <strong>Offertoire :</strong> Ave Maria gratia [p.22]<br>V. XXX <br>V. XXX<br>ATTENTION ! Il n'est noté ici que par son incipit, pour voir la pièce entière rdv [p.12]<br><br>
+            <strong>Communion :</strong> Ecce Virgo [p.22]<br>ATTENTION ! Elle n'est notée ici que par son incipit, pour voir la pièce entière rdv [p.13]
         `
     },
     {
@@ -123,7 +123,7 @@ siteData.catalogue_des_fetes = [
         contenu: `
             <strong>Introït :</strong> Hodie scietis quia veni [p.22]<br><br>
             <strong>Graduel :</strong> Hodie scietis quia veni [p.23]<br><br>
-            ATTENTION ! Il n'est noté ici que par son incipit, pour voir la pièce entière rdv [p.22]<strong>Alléluia :</strong> Veni Domine [p.23]<br><br>
+            <strong>Alléluia :</strong> Veni Domine [p.23]<br>ATTENTION ! Il n'est noté ici que par son incipit, pour voir la pièce entière rdv [p.22]<br><br>
             <strong>Offertoire :</strong> Tollite portas principes [p.23]<br>V. Domini est terra<br>V. Ipse super Maria<br><br>
             <strong>Communion :</strong> Revelabitur gloria Domine [p.24]
         `
