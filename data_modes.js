@@ -23,7 +23,7 @@ siteData.modes = [
     content:`À partir de ces notes, on va former des <strong>échelles</strong>. C'est un nom parfaitement choisi puisqu'à l'image d'une echelle,
     on va disposer nos notes par échellons, les unes à la suite des autres. Le chant grégorien fonctionne sur <strong>quatre échelles</strong> : 
     <strong>une échelle de Ré</strong>, <strong>une échelle de Mi</strong>, <strong>une échelle de Fa</strong>, <strong>une échelle de Sol</strong> 
-    et chaque échelle possède un nombre fini de notes.<br><br>`
+    et chaque échelle possède un nombre fini de notes.<br>`
   },
   {
     type: "image",
@@ -38,11 +38,20 @@ siteData.modes = [
     échelle de Ré : Ré-Mi-Fa-Sol-La-Si-Do-Ré<br>
     échelle de Mi : Mi-Fa-Sol-La-Si-Do-Ré-Mi<br>
     échelle de Fa : Fa-Sol-La-Si-Do-Ré-Mi-Fa<br>
-    échelle de Sol : Sol-La-Si-Do-Ré-Mi-Fa-Sol<br><br>`
+    échelle de Sol : Sol-La-Si-Do-Ré-Mi-Fa-Sol<br>`
   },
   {
     type: "image",
     src: "images/modes_3.png",
     legende: `Les échellons sur chaque échelle.`
+  },
+  {
+    type:"text",
+    content:`Voici donc les échelles qui sont utilisées dans le chant grégorien, mais ces échelles ne sont pas encore des modes... Un mode, c'est l'art et la manière
+    de se mouvoir sur cette échelle.<br><br>
+    <strong>D.</strong> : Ha, alors les notes j'ai compris, les échelles aussi, mais pour les modes il va me falloir un peu plus d'explications...<br><br>
+    <strong>M.</strong> : Retien bien cette définition : <strong>le mode, c'est l'art et la manière de se mouvoir sur l'échelle</strong>. Pour synthétiser mon propos, nous avons d'abord
+    tout un paquet de notes à notre disposition. Ensuite, on mets ces notes bout-à-bout pour créer des échelles, or, le chant grégorien à conserver quatre de celles-ci. Enfin,
+    nous avons les modes, qui sont basés sur échelles mais qui nous apportent la manière d'aller et venir, de bas en haut et de haut en bas, sur ces quatre échelles.`
   }
 ]
