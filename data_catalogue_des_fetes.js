@@ -66,11 +66,12 @@ siteData.catalogue_des_fetes = [
         couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
         traduction: "Quatrième jour (mercredi)",
         contenu: `
-            <strong>Introït :</strong> [p.]<br><br>
-            <strong>Graduel :</strong> [p.]<br><br>
-            <strong>Alléluia :</strong> [p.]<br><br>
-            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
-            <strong>Communion :</strong> [p.]
+            <strong>Introït :</strong> Rorate caeli de super[p.9]<br><br>
+            <strong>Graduel :</strong> Tollite portas principes vestras[p.10]<br><br>
+            <strong>ATTENTION ! GRADUEL ICI AUSSI (pas d'alleluia) [p.10]:</strong> Prope est Dominus omnibus[p.]<br><br>
+            <strong>Offertoire :</strong> Confortamini et iam nolite[p.11]<br>V. Tunc aperientur oculi<br>V. Audite itaque domus David<br><br>
+            <strong>ATTENTION ! UN AUTRE OFFERTOIRE :</strong> Ave Maria gratia plena[p.12]<br>V. Quo modo in me fiet<br>V. Ideoque quod nascetur<br><br>
+            <strong>Communion :</strong> Ecce virgo concipiet[p.13]
         `
     },
     {
@@ -79,11 +80,11 @@ siteData.catalogue_des_fetes = [
         couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
         traduction: "Sixième jour (vendredi)",
         contenu: `
-            <strong>Introït :</strong> [p.]<br><br>
-            <strong>Graduel :</strong> [p.]<br><br>
-            <strong>Alléluia :</strong> [p.]<br><br>
-            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
-            <strong>Communion :</strong> [p.]
+            <strong>Introït :</strong> Prope esto Domine[p.13]<br><br>
+            <strong>Graduel :</strong> Ostende nobis Domine[p.13]<br><br>
+            <strong>ATTENTION ! Pas d'Alleluia ici<br><br>
+            <strong>ATTENTION ! Il n'est noté ici que par son incipit, pour voir la pièce entière rdv [p.14]<br>Offertoire :</strong> Os tu convertens[p.]<br>V. XXX <br>V. XXX<br><br>
+            <strong>Communion :</strong> Ecce Dominus veniet[p.14]
         `
     },
     {
