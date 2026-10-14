@@ -83,7 +83,7 @@ siteData.catalogue_des_fetes = [
             <strong>Introït :</strong> Prope esto Domine [p.13]<br><br>
             <strong>Graduel :</strong> Ostende nobis Domine [p.13]<br><br>
             ATTENTION ! Pas d'Alleluia ici<br><br>
-            ATTENTION ! Il n'est noté ici que par son incipit, pour voir la pièce entière rdv [p.3]<br><strong>Offertoire :</strong> Deus tu convertens [p.14]<br>V. XXX <br>V. XXX<br><br>
+            <strong>Offertoire :</strong> Deus tu convertens [p.14]<br>V. XXX <br>V. XXX<br>ATTENTION ! Il n'est noté ici que par son incipit, pour voir la pièce entière rdv [p.3]<br><br>
             <strong>Communion :</strong> Ecce Dominus veniet [p.14]
         `
     },
