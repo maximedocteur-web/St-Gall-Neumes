@@ -187,11 +187,11 @@ siteData.catalogue_des_fetes = [
         couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
         traduction: "À la première messe, saint Jean apôtre",
         contenu: `
-            <strong>Introït :</strong> [p.]<br><br>
-            <strong>Graduel :</strong> [p.]<br><br>
-            <strong>Alléluia :</strong> [p.]<br><br>
-            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
-            <strong>Communion :</strong> [p.]
+            <strong>Introït :</strong> Ego autem sicut oliva [p.37]<br><br>
+            <strong>Graduel :</strong> Justus ut palma florebunt [p.37]<br><br>
+            ATTENTION ! pas d'alleluia ici <strong>Alléluia :</strong> XXX<br><br>
+            <strong>Offertoire :</strong> Gloria et honore coronasti [p.38]<br>V. Domine Dominus noster<br>V. Quid est homo quod<br><br>
+            <strong>Communion :</strong> Magna est gloria eius [p.39]
         `
     },
     {
@@ -200,24 +200,11 @@ siteData.catalogue_des_fetes = [
         couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
         traduction: "À la naissance de saint Jean",
         contenu: `
-            <strong>Introït :</strong> [p.]<br><br>
-            <strong>Graduel :</strong> [p.]<br><br>
-            <strong>Alléluia :</strong> [p.]<br><br>
-            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
-            <strong>Communion :</strong> [p.]
-        `
-    },
-    {
-        type: "accordeon",
-        titre: "Domin. IIII. ante Nat.",
-        couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
-        traduction: "Quatrième dimanche avant la Nativité",
-        contenu: `
-            <strong>Introït :</strong> [p.]<br><br>
-            <strong>Graduel :</strong> [p.]<br><br>
-            <strong>Alléluia :</strong> [p.]<br><br>
-            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
-            <strong>Communion :</strong> [p.]
+            <strong>Introït :</strong> In medio ecclesie aperuit [p.39]<br><br>
+            <strong>Graduel :</strong> Exiit sermo inter fratres [p.39]<br><br>
+            <strong>Alléluia :</strong> Hic est discipulus ille [p.40]<br><br>
+            <strong>Offertoire :</strong> Iustus ut palma florebunt [p.40]<br>V. Bonum est confiteri <br>V. Ad anunciandum mane<br><br>
+            <strong>Communion :</strong> Exiit sermo inter fratres [p.41]
         `
     },
     {
@@ -226,11 +213,11 @@ siteData.catalogue_des_fetes = [
         couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
         traduction: "À la naissance des saints innocents",
         contenu: `
-            <strong>Introït :</strong> [p.]<br><br>
-            <strong>Graduel :</strong> [p.]<br><br>
-            <strong>Alléluia :</strong> [p.]<br><br>
-            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
-            <strong>Communion :</strong> [p.]
+            <strong>Introït :</strong> Exore infantium Deus [p.41]<br><br>
+            <strong>Graduel :</strong> Anima nostra sicut passer [p.42]<br><br>
+            ATTENTION ! Pas d'alleluia ici <strong>Alléluia :</strong> XXX<br><br>
+            <strong>Offertoire :</strong> Anima nostra sicut passer [p.42]<br>V. Nisi quod Dominus erat<br>V. Torrentem pertransivit<br><br>
+            <strong>Communion :</strong> Vox in rama audita est ploratus [p.43]
         `
     },
     {
@@ -239,11 +226,11 @@ siteData.catalogue_des_fetes = [
         couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
         traduction: "À la naissance de saint Sylvestre",
         contenu: `
-            <strong>Introït :</strong> [p.]<br><br>
-            <strong>Graduel :</strong> [p.]<br><br>
-            <strong>Alléluia :</strong> [p.]<br><br>
-            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
-            <strong>Communion :</strong> [p.]
+            <strong>Introït :</strong> Sacerdotes tui Domine [p.44]<br><br>
+            <strong>Graduel :</strong> Ecce sacerdos magnus [p.44]<br><br>
+            ATTENTION ! Pas d'alleluia ici <strong>Alléluia :</strong> XXX<br><br>
+            <strong>Offertoire :</strong> In veni David servum [p.44]<br>V. Potens es Domine et veritas<br>V. Veritas mea et misericordia<br><br>
+            <strong>Communion :</strong> Beatus servus quem [p.46]
         `
     },
     {
@@ -252,11 +239,11 @@ siteData.catalogue_des_fetes = [
         couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
         traduction: "À la naissance de Marie",
         contenu: `
-            <strong>Introït :</strong> [p.]<br><br>
-            <strong>Graduel :</strong> [p.]<br><br>
-            <strong>Alléluia :</strong> [p.]<br><br>
-            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
-            <strong>Communion :</strong> [p.]
+            <strong>Introït :</strong> Vultum tuum deprecabuntur [p.46]<br><br>
+            <strong>Graduel :</strong> Diffusa est gratia [p.46]<br><br>
+            TTENTION ! Pas d'alleluia ici <strong>Alléluia :</strong> XXX<br><br>
+            <strong>Offertoire :</strong> Offerentur regi virgines [p.47]<br>V. Eructuavit cor meum<br>(un seul verset noté ici)<br><br>
+            <strong>Communion :</strong> Simile est regnum caelorum [p.48]
         `
     },
     {
@@ -265,11 +252,11 @@ siteData.catalogue_des_fetes = [
         couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
         traduction: "Le premier dimanche après la naissance du Seigneur",
         contenu: `
-            <strong>Introït :</strong> [p.]<br><br>
-            <strong>Graduel :</strong> [p.]<br><br>
-            <strong>Alléluia :</strong> [p.]<br><br>
-            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
-            <strong>Communion :</strong> [p.]
+            <strong>Introït :</strong> Dum medium silentium tenerent[p.48]<br><br>
+            <strong>Graduel :</strong> Speciosus forma praefiliis [p.49]<br><br>
+            ATTENTION ! Il n'est noté ici que par son incipit, pour voir la pièce entière rdv [p.27] <strong>Alléluia :</strong> Dominus regnavit [p.49]<br><br>
+            ATTENTION ! Il n'est noté ici que par son incipit, pour voir la pièce entière rdv [p.28] <strong>Offertoire :</strong> Deus enim frimavit [p.49]<br>V. XXX <br>V. XXX<br><br>
+            <strong>Communion :</strong> Tolle puerum et matrem eius [p.49]
         `
     },
     {
@@ -278,11 +265,11 @@ siteData.catalogue_des_fetes = [
         couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
         traduction: "À l'Epiphanie",
         contenu: `
-            <strong>Introït :</strong> [p.]<br><br>
-            <strong>Graduel :</strong> [p.]<br><br>
-            <strong>Alléluia :</strong> [p.]<br><br>
-            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
-            <strong>Communion :</strong> [p.]
+            <strong>Introït :</strong> Ecce advenit Dominator [p.50]<br><br>
+            <strong>Graduel :</strong> Omnes de Saba venient [p.50]<br><br>
+            <strong>Alléluia :</strong> Vidimus stellam eius [p.51]<br><br>
+            <strong>Offertoire :</strong> Reges tharsis et insulae [p.51]<br>V. Deus iuditium tuum<br>V. Suscipiant montes pacem<br>V. Orietur in diebus eius<br><br>
+            <strong>Communion :</strong> Vidimus stellam in oriente [p.52]
         `
     },
     {
