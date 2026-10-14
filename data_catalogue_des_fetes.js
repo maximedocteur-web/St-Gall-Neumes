@@ -39,11 +39,11 @@ siteData.catalogue_des_fetes = [
         couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
         traduction: "Naissance de sainte Lucie",
         contenu: `
-            <strong>Introït :</strong> Dilexisti iustitiam[p.5]<br><br>
-            <strong>Graduel :</strong> Dilexisti iustitiam[p.5]<br><br>
-            <strong>Alléluia :</strong> Diffusa est gratia[p.5]<br><br>
-            <strong>Offertoire :</strong> Offerentur regi virgines[p.6]<br>V. Eructuavit cor meum<br>V. Adducentur in laetitia<br><br>
-            <strong>Communion :</strong> Diffusa est gratia[p.6]
+            <strong>Introït :</strong> Dilexisti iustitiam [p.5]<br><br>
+            <strong>Graduel :</strong> Dilexisti iustitiam [p.5]<br><br>
+            <strong>Alléluia :</strong> Diffusa est gratia [p.5]<br><br>
+            <strong>Offertoire :</strong> Offerentur regi virgines [p.6]<br>V. Eructuavit cor meum<br>V. Adducentur in laetitia<br><br>
+            <strong>Communion :</strong> Diffusa est gratia [p.6]
         `
     },
     {
@@ -52,12 +52,12 @@ siteData.catalogue_des_fetes = [
         couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
         traduction: "Deuxième dimanche avant la naissance du Seigneur",
         contenu: `
-            <strong>Introït :</strong> Gaudete in Domino[p.7]<br><br>
-            <strong>Graduel :</strong> Qui sedes Domine[p.7]<br><br>
-            <strong>Alléluia :</strong> Excita Domine potentiam tuam[p.8]<br><br>
-            <strong>(autre) Alléluia :</strong> Deus a Libano veniet[p.8]<br><br>
-            <strong>Offertoire :</strong> Benedixisti Domine terram[p.8]<br>V. Operuisti omnia<br>V. Ostende nobis Domine<br><br>
-            <strong>Communion :</strong> Dicite pusillanimis confortamini[p.9]
+            <strong>Introït :</strong> Gaudete in Domino [p.7]<br><br>
+            <strong>Graduel :</strong> Qui sedes Domine [p.7]<br><br>
+            <strong>Alléluia :</strong> Excita Domine potentiam tuam [p.8]<br><br>
+            <strong>(autre) Alléluia :</strong> Deus a Libano veniet [p.8]<br><br>
+            <strong>Offertoire :</strong> Benedixisti Domine terram [p.8]<br>V. Operuisti omnia<br>V. Ostende nobis Domine<br><br>
+            <strong>Communion :</strong> Dicite pusillanimis confortamini [p.9]
         `
     },
     {
@@ -66,12 +66,12 @@ siteData.catalogue_des_fetes = [
         couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
         traduction: "Quatrième jour (mercredi)",
         contenu: `
-            <strong>Introït :</strong> Rorate caeli de super[p.9]<br><br>
-            <strong>Graduel :</strong> Tollite portas principes vestras[p.10]<br><br>
+            <strong>Introït :</strong> Rorate caeli de super [p.9]<br><br>
+            <strong>Graduel :</strong> Tollite portas principes vestras [p.10]<br><br>
             <strong>ATTENTION ! GRADUEL ICI AUSSI (pas d'alleluia) [p.10]:</strong> Prope est Dominus omnibus[p.]<br><br>
-            <strong>Offertoire :</strong> Confortamini et iam nolite[p.11]<br>V. Tunc aperientur oculi<br>V. Audite itaque domus David<br><br>
-            <strong>ATTENTION ! UN AUTRE OFFERTOIRE :</strong> Ave Maria gratia plena[p.12]<br>V. Quo modo in me fiet<br>V. Ideoque quod nascetur<br><br>
-            <strong>Communion :</strong> Ecce virgo concipiet[p.13]
+            <strong>Offertoire :</strong> Confortamini et iam nolite [p.11]<br>V. Tunc aperientur oculi<br>V. Audite itaque domus David<br><br>
+            <strong>ATTENTION ! UN AUTRE OFFERTOIRE :</strong> Ave Maria gratia plena [p.12]<br>V. Quo modo in me fiet<br>V. Ideoque quod nascetur<br><br>
+            <strong>Communion :</strong> Ecce virgo concipiet [p.13]
         `
     },
     {
@@ -80,11 +80,11 @@ siteData.catalogue_des_fetes = [
         couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
         traduction: "Sixième jour (vendredi)",
         contenu: `
-            <strong>Introït :</strong> Prope esto Domine[p.13]<br><br>
-            <strong>Graduel :</strong> Ostende nobis Domine[p.13]<br><br>
+            <strong>Introït :</strong> Prope esto Domine [p.13]<br><br>
+            <strong>Graduel :</strong> Ostende nobis Domine [p.13]<br><br>
             ATTENTION ! Pas d'Alleluia ici<br><br>
-            ATTENTION ! Il n'est noté ici que par son incipit, pour voir la pièce entière rdv [p.3]<br><strong>Offertoire :</strong> Deus tu convertens[p.14]<br>V. XXX <br>V. XXX<br><br>
-            <strong>Communion :</strong> Ecce Dominus veniet[p.14]
+            ATTENTION ! Il n'est noté ici que par son incipit, pour voir la pièce entière rdv [p.3]<br><strong>Offertoire :</strong> Deus tu convertens [p.14]<br>V. XXX <br>V. XXX<br><br>
+            <strong>Communion :</strong> Ecce Dominus veniet [p.14]
         `
     },
     {
@@ -93,11 +93,11 @@ siteData.catalogue_des_fetes = [
         couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
         traduction: "Samedi à la 12e lecture",
         contenu: `
-            <strong>Introït :</strong> Veniet ostende nobis faciem[p.14]<br><br>
-            <strong>Graduel :</strong> A summo caelo egressio eius[p.15]<br><br>
-            <strong>ATTENTION ! GRADUEL ICI AUSSI (pas d'alleluia) :</strong> In sole posuit tabernaculum[p.15]<br><br>
-            <strong>ATTENTION ! GRADUEL ICI AUSSI (pas d'alleluia) :</strong> Domine Deus virtutum[p.15]<br><br>
-            <strong>ATTENTION ! GRADUEL ICI AUSSI (pas d'alleluia) :</strong> Excita Domine potentiam tuam[p.16]<br><br>
+            <strong>Introït :</strong> Veniet ostende nobis faciem [p.14]<br><br>
+            <strong>Graduel :</strong> A summo caelo egressio eius [p.15]<br><br>
+            <strong>ATTENTION ! GRADUEL ICI AUSSI (pas d'alleluia) :</strong> In sole posuit tabernaculum [p.15]<br><br>
+            <strong>ATTENTION ! GRADUEL ICI AUSSI (pas d'alleluia) :</strong> Domine Deus virtutum [p.15]<br><br>
+            <strong>ATTENTION ! GRADUEL ICI AUSSI (pas d'alleluia) :</strong> Excita Domine potentiam tuam [p.16]<br><br>
             <strong>pas d'Offertoire<br><br>
             <strong>pas de Communion
         `
@@ -108,11 +108,11 @@ siteData.catalogue_des_fetes = [
         couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
         traduction: "Le dernier dimanche",
         contenu: `
-            <strong>Introït :</strong> Memento nostri Domine[p.21]<br><br>
-            <strong>Graduel :</strong> Prope est Dominus[p.]<br><br>
-            <strong>Alléluia :</strong> [p.]<br><br>
-            ATTENTION ! Il n'est noté ici que par son incipit, pour voir la pièce entière rdv [p.12] <strong>Offertoire :</strong> Ave Maria gratia[p.22]<br>V. XXX <br>V. XXX<br><br>
-            ATTENTION ! Elle n'est notée ici que par son incipit, pour voir la pièce entière rdv [p.13]<strong>Communion :</strong> Ecce Virgo[p.22]
+            <strong>Introït :</strong> Memento nostri Domine [p.21]<br><br>
+            <strong>Graduel :</strong> Prope est Dominus [p.]<br><br>
+            <strong>Alléluia :</strong> Veni Domine et noli [p.22]<br><br>
+            ATTENTION ! Il n'est noté ici que par son incipit, pour voir la pièce entière rdv [p.12] <strong>Offertoire :</strong> Ave Maria gratia [p.22]<br>V. XXX <br>V. XXX<br><br>
+            ATTENTION ! Elle n'est notée ici que par son incipit, pour voir la pièce entière rdv [p.13]<strong>Communion :</strong> Ecce Virgo [p.22]
         `
     },
     {
@@ -121,11 +121,11 @@ siteData.catalogue_des_fetes = [
         couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
         traduction: "À la Nativité du Seigneur, vigiles<br>(messe des vigiles de Noël)",
         contenu: `
-            <strong>Introït :</strong> [p.]<br><br>
-            <strong>Graduel :</strong> [p.]<br><br>
-            <strong>Alléluia :</strong> [p.]<br><br>
-            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
-            <strong>Communion :</strong> [p.]
+            <strong>Introït :</strong> Hodie scietis quia veni [p.22]<br><br>
+            <strong>Graduel :</strong> Hodie scietis quia veni [p.23]<br><br>
+            ATTENTION ! Il n'est noté ici que par son incipit, pour voir la pièce entière rdv [p.22]<strong>Alléluia :</strong> Veni Domine [p.23]<br><br>
+            <strong>Offertoire :</strong> Tollite portas principes [p.23]<br>V. Domini est terra<br>V. Ipse super Maria<br><br>
+            <strong>Communion :</strong> Revelabitur gloria Domine [p.24]
         `
     },
     {
@@ -134,11 +134,11 @@ siteData.catalogue_des_fetes = [
         couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
         traduction: `Au premier chant du coq<br>(2e messe/messe de la nuit)`,
         contenu: `
-            <strong>Introït :</strong> [p.]<br><br>
-            <strong>Graduel :</strong> [p.]<br><br>
-            <strong>Alléluia :</strong> [p.]<br><br>
-            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
-            <strong>Communion :</strong> [p.]
+            <strong>Introït :</strong> Dominus dixit ad me [p.24]<br><br>
+            <strong>Graduel :</strong> Tecum principium [p.25]<br><br>
+            <strong>Alléluia :</strong> Dominus dixit ad me [p.25]<br><br>
+            <strong>Offertoire :</strong> Laetentur caeli et exultet [p.25]<br>V. Cantate Domino canticum<br>V. Cantate Domino benedicite<br><br>
+            <strong>Communion :</strong> In splendoribus sanctorum [p.26]
         `
     },
     {
@@ -147,11 +147,11 @@ siteData.catalogue_des_fetes = [
         couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
         traduction: "Aux premières lueurs<br>(messe de l'aurore)",
         contenu: `
-            <strong>Introït :</strong> [p.]<br><br>
-            <strong>Graduel :</strong> [p.]<br><br>
-            <strong>Alléluia :</strong> [p.]<br><br>
-            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
-            <strong>Communion :</strong> [p.]
+            <strong>Introït :</strong> Lux fulgebit hodie [p.26]<br><br>
+            <strong>Graduel :</strong> Benedictus qui venit in nomine [p.27]<br><br>
+            <strong>Alléluia :</strong> Dominus regnavit decorem [p.27]<br><br>
+            <strong>Offertoire :</strong> Deus enim firmavit [p.28]<br>V. Dominus regnavit decorem<br>V. Mirabilis in excelsis Dominus<br><br>
+            <strong>Communion :</strong> Exulta filia Sion [p.]
         `
     },
     {
@@ -160,11 +160,11 @@ siteData.catalogue_des_fetes = [
         couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
         traduction: "Au jour à la messe<br>(la 4e messe de Noël)",
         contenu: `
-            <strong>Introït :</strong> [p.]<br><br>
-            <strong>Graduel :</strong> [p.]<br><br>
-            <strong>Alléluia :</strong> [p.]<br><br>
-            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
-            <strong>Communion :</strong> [p.]
+            <strong>Introït :</strong> Puer natus est nobis [p.30]<br><br>
+            <strong>Graduel :</strong> Viderunt omnes fines [p.30]<br><br>
+            <strong>Alléluia :</strong> Dies sanctificatus in luxit [p.31]<br><br>
+            <strong>Offertoire :</strong> Tui sunt caeli et tua [p.31]<br>V. Magnus et metuendus<br>V. Misericordia et veritas<br><br> V.Tu humiliasti sicut<br><br>
+            <strong>Communion :</strong> Viderunt omnes fines [p.33]
         `
     },
     {
@@ -173,11 +173,12 @@ siteData.catalogue_des_fetes = [
         couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
         traduction: "À la naissance de saint Etienne",
         contenu: `
-            <strong>Introït :</strong> [p.]<br><br>
-            <strong>Graduel :</strong> [p.]<br><br>
-            <strong>Alléluia :</strong> [p.]<br><br>
-            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
-            <strong>Communion :</strong> [p.]
+            <strong>Introït :</strong> Et enim sederunt [p.33]<br><br>
+            <strong>Graduel :</strong> Sederunt principes et ad versum [p.34]<br><br>
+            <strong>Alléluia :</strong> Video caelos apertos [p.34]<br><br>
+            <strong>Offertoire :</strong> In virtute tua Domine [p.34]<br>V. Vitam peciit et tribuisti<br>V. Magna est gloria eiusbr><br>
+            ATTENTION ! Un autre offertoire. <strong>Offertoire :</strong> Elegerunt apostoli Stephanum [p.35]<br>V. Viderunt faciem eius<br>V. Positis autem genibus<br><br>
+            <strong>Communion :</strong> Video caelos apertos [p.36]
         `
     },
     {
