@@ -58,10 +58,6 @@ siteData.modes = [
     origines à nos jours, deuxième édition, Paris, Eyrolles, 2017, p.91[/note].`
   },
   {
-    type:"text",
-    content:``
-  },
-  {
     type:"titre",
     content:"Les modes de Ré"
   },
