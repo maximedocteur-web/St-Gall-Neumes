@@ -515,38 +515,58 @@
             // 5. FONCTION UNIVERSELLE POUR GÉNÉRER LES PAGES DYNAMIQUES
             // =========================================================
             
-            // Petite fonction magique pour transformer [p.52] en lien e-codices
-            function formaterLiensEcodices(texte) {
-                if (!texte) return "";
-                // Cherche [p.XXX] et le remplace par le beau lien cliquable
-                return texte.replace(/\[p\.([^\]]+)\]/g, '<a href="https://www.e-codices.unifr.ch/fr/sbe/0121/\$1/0/" target="_blank" class="ml-2 text-sm text-amber-700 hover:text-amber-900 underline font-medium">p.\$1</a>');
-            }
-
             function genererPageDynamique(containerId, donneesArray) {
                 const container = document.getElementById(containerId);
                 if (!container || !donneesArray) return; 
 
+                // Le compteur de notes, qui repart à 1 à chaque nouvelle page !
+                let compteurNotes = 1;
+
+                // Fonction magique qui gère TOUS tes raccourcis : [p.XX] et [note]...[/note]
+                function formaterTexte(texte) {
+                    if (!texte) return "";
+                    
+                    // 1. Les liens E-codices
+                    let res = texte.replace(/\[p\.([^\]]+)\]/g, '<a href="https://www.e-codices.unifr.ch/fr/sbe/0121/\$1/0/" target="_blank" class="ml-2 text-sm text-amber-700 hover:text-amber-900 underline font-medium">p.\$1</a>');
+                    
+                    // 2. Les Notes de Marge Universitaires
+                    // On cherche tout ce qui est entre [note] et [/note]
+                    res = res.replace(/[note]([\s\S]*?)\[\/note\]/g, (match, noteTexte) => {
+                        const num = compteurNotes++;
+                        return `<span class="group relative cursor-pointer text-amber-700 font-bold">
+                                    <sup class="text-xs hover:text-amber-900 transition-colors">${num}</sup>
+                                    
+                                    <!-- Note en marge gauche (Grands écrans uniquement) -->
+                                    <span class="hidden xl:block absolute z-40" style="top: -2px; left: -260px; width: 240px;">
+                                        <span class="block text-xs text-stone-500 text-right pr-4 border-r-2 border-amber-300 font-normal leading-relaxed pointer-events-auto">
+                                            <strong class="text-amber-800">${num}.</strong> ${noteTexte}
+                                        </span>
+                                    </span>
+                                    
+                                    <!-- Bulle flottante (Téléphones et Tablettes) -->
+                                    <span class="xl:hidden invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-all duration-300 absolute z-50 left-1/2 -translate-x-1/2 top-full mt-2 w-64 p-3 bg-stone-900 text-stone-100 text-xs rounded shadow-lg text-left font-normal leading-relaxed pointer-events-none">
+                                        <strong class="text-amber-400">${num}.</strong> ${noteTexte}
+                                    </span>
+                                </span>`;
+                    });
+                    
+                    return res;
+                }
+
+                // Construction de la page
                 donneesArray.forEach((bloc) => {
                     if (bloc.type === 'text') {
-                        // On passe le texte dans la fonction magique avant de l'afficher
-                        container.innerHTML += `<p class="mb-6">${formaterLiensEcodices(bloc.content)}</p>`;
+                        // On passe le texte dans la fonction magique
+                        container.innerHTML += `<p class="mb-6">${formaterTexte(bloc.content)}</p>`;
                     }
                     else if (bloc.type === 'titre') {
-                        container.innerHTML += `<h3 class="text-xl font-serif font-bold text-stone-900 mt-8 mb-4">${formaterLiensEcodices(bloc.content)}</h3>`;
+                        container.innerHTML += `<h3 class="text-xl font-serif font-bold text-stone-900 mt-8 mb-4">${formaterTexte(bloc.content)}</h3>`;
                     }
                     else if (bloc.type === 'image') {
                         container.innerHTML += `
                             <div class="my-6 text-center">
                                 <img src="${bloc.src}" alt="Illustration" class="w-full md:w-[700px] h-auto object-contain mx-auto rounded shadow-sm border border-stone-200 bg-stone-50 p-2">
                                 <p class="text-xs text-stone-500 mt-2 italic">${bloc.legende}</p>
-                            </div>
-                        `;
-                    }
-                    // -> NOUVEAU : Si c'est une VIDÉO YOUTUBE <-
-                    else if (bloc.type === 'youtube') {
-                        container.innerHTML += `
-                            <div class="my-8 max-w-3xl mx-auto shadow-md rounded-lg overflow-hidden border border-stone-200">
-                                <iframe class="w-full aspect-video" src="https://www.youtube.com/embed/${bloc.id}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                             </div>
                         `;
                     }
@@ -561,12 +581,19 @@
                             </div>
                         `;
                     }
+                    else if (bloc.type === 'youtube') {
+                        container.innerHTML += `
+                            <div class="my-8 max-w-3xl mx-auto shadow-md rounded-lg overflow-hidden border border-stone-200">
+                                <iframe class="w-full aspect-video" src="https://www.youtube.com/embed/${bloc.id}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            </div>
+                        `;
+                    }
                     else if (bloc.type === 'accordeon') {
                         const couleurTitre = bloc.couleurTitre ? bloc.couleurTitre : '#d97706';
                         const htmlTraduction = bloc.traduction ? `<div class="text-sm md:text-base font-normal mt-1 opacity-90">${bloc.traduction}</div>` : '';
                         
-                        // On passe le contenu de l'accordéon dans la fonction magique
-                        const contenuFormate = formaterLiensEcodices(bloc.contenu);
+                        // On passe aussi l'accordéon dans la fonction magique
+                        const contenuFormate = formaterTexte(bloc.contenu);
 
                         container.innerHTML += `
                             <details class="group mb-4 bg-white rounded-lg shadow-sm border border-stone-200">
