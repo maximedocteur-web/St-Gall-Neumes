@@ -8,7 +8,7 @@ siteData.modes = [
     content:`<strong>Discipulis</strong> : Maître, qu'est ce qu'un mode ?<br><br>
     <strong>Magister</strong> : Un mode, c'est une manière de se déplacer sur une échelle. Mais laisse moi reprendre depuis le début.<br><br>
     Tout d'abord, il y a des notes. Imagine une droite sur laquelle on a réparti les notes depuis les graves, jusqu'aux aigues en gardant
-    l'ordre dans lequel elles se suivent, c'eqt-à-dire : Sol-La-Si-Do-Ré-Mi-Fa-Sol-La-Si-Do-Ré(etc.).<br><br>
+    l'ordre dans lequel elles se suivent, c'est-à-dire : Sol-La-Si-Do-Ré-Mi-Fa-Sol-La-Si-Do-Ré(etc.).<br><br>
     Au début de la droite, voilà les notes les plus graves, c'est la voix de l'ogre, extrêment grave et si on monte un peu sur cette
     droite, on arrive à la voix de l'homme. Si on continue de monter, on arrive à la voix de femme et tout en haut, on arrive à la
     voix de l'enfant.`
@@ -53,7 +53,9 @@ siteData.modes = [
     <strong>M.</strong> : Retien bien cette définition : <strong>le mode, c'est l'art et la manière de se mouvoir sur l'échelle</strong>. Pour synthétiser mon propos, nous avons d'abord
     tout un paquet de notes à notre disposition. Ensuite, on mets ces notes bout-à-bout pour créer des échelles, or, le chant grégorien à conserver quatre de celles-ci. Enfin,
     nous avons les modes, qui sont basés sur échelles mais qui nous apportent la manière d'aller et venir, de bas en haut et de haut en bas, sur ces quatre échelles. Toute l'essence du mode
-    repose sur les relations qu'entretiennent `
+    repose sur les relations qu'entretiennent la note du mode, qu'on apelle aussi tonique, avec les autres notes de l'échelle. C'est exactement ce que décrit un traité musical du début du Xe siècle,
+    la <em>Musica Enchiriadis</em>, où il est dit que chaque mode est "régi/dirigé" par le degré grave qui lui communique une qualité, un caractère, une propriété[note]Jacques Viret, Le Chant Grégorien, des
+    origines à nos jours, deuxième édition, Paris, Eyrolles, 2017, p.91[/note].`
   },
   {
     type:"text",
