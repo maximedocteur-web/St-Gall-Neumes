@@ -82,8 +82,8 @@ siteData.catalogue_des_fetes = [
         contenu: `
             <strong>Introït :</strong> Prope esto Domine[p.13]<br><br>
             <strong>Graduel :</strong> Ostende nobis Domine[p.13]<br><br>
-            <strong>ATTENTION ! Pas d'Alleluia ici<br><br>
-            <strong>ATTENTION ! Il n'est noté ici que par son incipit, pour voir la pièce entière rdv [p.14]<br>Offertoire :</strong> Os tu convertens[p.]<br>V. XXX <br>V. XXX<br><br>
+            ATTENTION ! Pas d'Alleluia ici<br><br>
+            ATTENTION ! Il n'est noté ici que par son incipit, pour voir la pièce entière rdv [p.3]<br><strong>Offertoire :</strong> Deus tu convertens[p.14]<br>V. XXX <br>V. XXX<br><br>
             <strong>Communion :</strong> Ecce Dominus veniet[p.14]
         `
     },
@@ -93,11 +93,13 @@ siteData.catalogue_des_fetes = [
         couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
         traduction: "Samedi à la 12e lecture",
         contenu: `
-            <strong>Introït :</strong> [p.]<br><br>
-            <strong>Graduel :</strong> [p.]<br><br>
-            <strong>Alléluia :</strong> [p.]<br><br>
-            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
-            <strong>Communion :</strong> [p.]
+            <strong>Introït :</strong> Veniet ostende nobis faciem[p.14]<br><br>
+            <strong>Graduel :</strong> A summo caelo egressio eius[p.15]<br><br>
+            <strong>ATTENTION ! GRADUEL ICI AUSSI (pas d'alleluia) :</strong> In sole posuit tabernaculum[p.15]<br><br>
+            <strong>ATTENTION ! GRADUEL ICI AUSSI (pas d'alleluia) :</strong> Domine Deus virtutum[p.15]<br><br>
+            <strong>ATTENTION ! GRADUEL ICI AUSSI (pas d'alleluia) :</strong> Excita Domine potentiam tuam[p.16]<br><br>
+            <strong>pas d'Offertoire<br><br>
+            <strong>pas de Communion
         `
     },
     {
@@ -106,8 +108,8 @@ siteData.catalogue_des_fetes = [
         couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
         traduction: "Le dernier dimanche",
         contenu: `
-            <strong>Introït :</strong> [p.]<br><br>
-            <strong>Graduel :</strong> [p.]<br><br>
+            <strong>Introït :</strong> Memento nostri Domine[p.21]<br><br>
+            <strong>Graduel :</strong> Prope est Dominus[p.]<br><br>
             <strong>Alléluia :</strong> [p.]<br><br>
             <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
             <strong>Communion :</strong> [p.]
