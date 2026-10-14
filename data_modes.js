@@ -22,7 +22,7 @@ siteData.modes = [
     type:"text",
     content:`À partir de ces notes, on va former des <strong>échelles</strong>. C'est un nom parfaitement choisi puisqu'à l'image d'une echelle,
     on va disposer nos notes par échellons, les unes à la suite des autres. Le chant grégorien fonctionne sur <strong>quatre échelles</strong> : 
-    <strong>Une échelle de Ré</strong>, <strong>une échelle de Mi</strong>, <strong>une échelle de Fa</strong>, <strong>une échelle de Sol</strong> 
+    <strong>une échelle de Ré</strong>, <strong>une échelle de Mi</strong>, <strong>une échelle de Fa</strong>, <strong>une échelle de Sol</strong> 
     et chaque échelle possède un nombre fini de notes.<br><br>`
   },
   {
@@ -31,7 +31,8 @@ siteData.modes = [
     legende: `Les échelles.`
   },
   {  
-    `Pour l'échelle de Ré,
+    type:"text",
+    content:`Pour l'échelle de Ré,
     on cosidère que pour faire simple, l'échelle va du Ré, jusqu'au Ré plus aigu, donc Ré-Mi-Fa-Sol-La-Si-Do-Ré, pour l'échelle de Mi, ça va de Mi 
     jusqu'au Mi plus aigu et ainsi de suite pour les quatre échelles. Donc, pour résumé, nous nous retrouvons avec :<br><br>
     échelle de Ré : Ré-Mi-Fa-Sol-La-Si-Do-Ré<br>
