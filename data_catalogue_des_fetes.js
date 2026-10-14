@@ -163,7 +163,7 @@ siteData.catalogue_des_fetes = [
             <strong>Introït :</strong> Puer natus est nobis [p.30]<br><br>
             <strong>Graduel :</strong> Viderunt omnes fines [p.30]<br><br>
             <strong>Alléluia :</strong> Dies sanctificatus in luxit [p.31]<br><br>
-            <strong>Offertoire :</strong> Tui sunt caeli et tua [p.31]<br>V. Magnus et metuendus<br>V. Misericordia et veritas<br><br> V.Tu humiliasti sicut<br><br>
+            <strong>Offertoire :</strong> Tui sunt caeli et tua [p.31]<br>V. Magnus et metuendus<br>V. Misericordia et veritas<br> V.Tu humiliasti sicut<br><br>
             <strong>Communion :</strong> Viderunt omnes fines [p.33]
         `
     },
@@ -177,7 +177,8 @@ siteData.catalogue_des_fetes = [
             <strong>Graduel :</strong> Sederunt principes et ad versum [p.34]<br><br>
             <strong>Alléluia :</strong> Video caelos apertos [p.34]<br><br>
             <strong>Offertoire :</strong> In virtute tua Domine [p.34]<br>V. Vitam peciit et tribuisti<br>V. Magna est gloria eiusbr><br>
-            ATTENTION ! Un autre offertoire. <strong>Offertoire :</strong> Elegerunt apostoli Stephanum [p.35]<br>V. Viderunt faciem eius<br>V. Positis autem genibus<br><br>
+            ATTENTION ! Un autre offertoire.<br><strong>Offertoire :</strong> Elegerunt apostoli Stephanum [p.35]<br>V. Viderunt faciem eius<br>V. Positis autem genibus<br><br>
+            ATTENTION ! Pas d'alleluia ici.<br><br>
             <strong>Communion :</strong> Video caelos apertos [p.36]
         `
     },
@@ -189,7 +190,7 @@ siteData.catalogue_des_fetes = [
         contenu: `
             <strong>Introït :</strong> Ego autem sicut oliva [p.37]<br><br>
             <strong>Graduel :</strong> Justus ut palma florebunt [p.37]<br><br>
-            ATTENTION ! pas d'alleluia ici <strong>Alléluia :</strong> XXX<br><br>
+            ATTENTION ! pas d'alleluia ici.<br><br>
             <strong>Offertoire :</strong> Gloria et honore coronasti [p.38]<br>V. Domine Dominus noster<br>V. Quid est homo quod<br><br>
             <strong>Communion :</strong> Magna est gloria eius [p.39]
         `
@@ -215,7 +216,7 @@ siteData.catalogue_des_fetes = [
         contenu: `
             <strong>Introït :</strong> Exore infantium Deus [p.41]<br><br>
             <strong>Graduel :</strong> Anima nostra sicut passer [p.42]<br><br>
-            ATTENTION ! Pas d'alleluia ici <strong>Alléluia :</strong> XXX<br><br>
+            ATTENTION ! Pas d'alleluia ici.<br><br>
             <strong>Offertoire :</strong> Anima nostra sicut passer [p.42]<br>V. Nisi quod Dominus erat<br>V. Torrentem pertransivit<br><br>
             <strong>Communion :</strong> Vox in rama audita est ploratus [p.43]
         `
@@ -228,7 +229,7 @@ siteData.catalogue_des_fetes = [
         contenu: `
             <strong>Introït :</strong> Sacerdotes tui Domine [p.44]<br><br>
             <strong>Graduel :</strong> Ecce sacerdos magnus [p.44]<br><br>
-            ATTENTION ! Pas d'alleluia ici <strong>Alléluia :</strong> XXX<br><br>
+            ATTENTION ! Pas d'alleluia ici.<br><br>
             <strong>Offertoire :</strong> In veni David servum [p.44]<br>V. Potens es Domine et veritas<br>V. Veritas mea et misericordia<br><br>
             <strong>Communion :</strong> Beatus servus quem [p.46]
         `
@@ -241,7 +242,7 @@ siteData.catalogue_des_fetes = [
         contenu: `
             <strong>Introït :</strong> Vultum tuum deprecabuntur [p.46]<br><br>
             <strong>Graduel :</strong> Diffusa est gratia [p.46]<br><br>
-            TTENTION ! Pas d'alleluia ici <strong>Alléluia :</strong> XXX<br><br>
+            TTENTION ! Pas d'alleluia ici.<br><br>
             <strong>Offertoire :</strong> Offerentur regi virgines [p.47]<br>V. Eructuavit cor meum<br>(un seul verset noté ici)<br><br>
             <strong>Communion :</strong> Simile est regnum caelorum [p.48]
         `
@@ -254,8 +255,8 @@ siteData.catalogue_des_fetes = [
         contenu: `
             <strong>Introït :</strong> Dum medium silentium tenerent[p.48]<br><br>
             <strong>Graduel :</strong> Speciosus forma praefiliis [p.49]<br><br>
-            ATTENTION ! Il n'est noté ici que par son incipit, pour voir la pièce entière rdv [p.27] <strong>Alléluia :</strong> Dominus regnavit [p.49]<br><br>
-            ATTENTION ! Il n'est noté ici que par son incipit, pour voir la pièce entière rdv [p.28] <strong>Offertoire :</strong> Deus enim frimavit [p.49]<br>V. XXX <br>V. XXX<br><br>
+            <strong>Alléluia :</strong> Dominus regnavit [p.49]<br>ATTENTION ! Il n'est noté ici que par son incipit, pour voir la pièce entière rdv [p.27] <br><br>
+            <strong>Offertoire :</strong> Deus enim frimavit [p.49]<br>V. XXX <br>V. XXX<br>ATTENTION ! Il n'est noté ici que par son incipit, pour voir la pièce entière rdv [p.28]<br><br>
             <strong>Communion :</strong> Tolle puerum et matrem eius [p.49]
         `
     },
