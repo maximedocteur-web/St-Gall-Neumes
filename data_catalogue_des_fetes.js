@@ -39,12 +39,11 @@ siteData.catalogue_des_fetes = [
         couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
         traduction: "Naissance de sainte Lucie",
         contenu: `
-            <strong>Introït :</strong> [p.]<br><br>
-            <strong>Graduel :</strong> [p.]<br><br>
-            <strong>Alléluia :</strong> [p.]<br><br>
-            <strong>Séquence :</strong> [p.]<br><br>
-            <strong>Offertoire :</strong> [p.]<br>V. <br>V. 
-            <strong>Communion :</strong> [p.]
+            <strong>Introït :</strong> Dilexisti iustitiam[p.5]<br><br>
+            <strong>Graduel :</strong> Dilexisti iustitiam[p.5]<br><br>
+            <strong>Alléluia :</strong> Diffusa est gratia[p.5]<br><br>
+            <strong>Offertoire :</strong> Offerentur regi virgines[p.6]<br>V. Eructuavit cor meum<br>V. Adducentur in laetitia<br><br>
+            <strong>Communion :</strong> Diffusa est gratia[p.6]
         `
     },
     {
@@ -53,12 +52,12 @@ siteData.catalogue_des_fetes = [
         couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
         traduction: "Deuxième dimanche avant la naissance du Seigneur",
         contenu: `
-            <strong>Introït :</strong> [p.]<br><br>
-            <strong>Graduel :</strong> [p.]<br><br>
-            <strong>Alléluia :</strong> [p.]<br><br>
-            <strong>Séquence :</strong> [p.]<br><br>
-            <strong>Offertoire :</strong> [p.]<br>V. <br>V. 
-            <strong>Communion :</strong> [p.]
+            <strong>Introït :</strong> Gaudete in Domino[p.7]<br><br>
+            <strong>Graduel :</strong> Qui sedes Domine[p.7]<br><br>
+            <strong>Alléluia :</strong> Excita Domine potentiam tuam[p.8]<br><br>
+            <strong>(autre) Alléluia :</strong> Deus a Libano veniet[p.8]<br><br>
+            <strong>Offertoire :</strong> Benedixisti Domine terram[p.8]<br>V. Operuisti omnia<br>V. Ostende nobis Domine<br><br>
+            <strong>Communion :</strong> Dicite pusillanimis confortamini[p.9]
         `
     },
     {
@@ -70,8 +69,7 @@ siteData.catalogue_des_fetes = [
             <strong>Introït :</strong> [p.]<br><br>
             <strong>Graduel :</strong> [p.]<br><br>
             <strong>Alléluia :</strong> [p.]<br><br>
-            <strong>Séquence :</strong> [p.]<br><br>
-            <strong>Offertoire :</strong> [p.]<br>V. <br>V. 
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
             <strong>Communion :</strong> [p.]
         `
     },
@@ -84,8 +82,7 @@ siteData.catalogue_des_fetes = [
             <strong>Introït :</strong> [p.]<br><br>
             <strong>Graduel :</strong> [p.]<br><br>
             <strong>Alléluia :</strong> [p.]<br><br>
-            <strong>Séquence :</strong> [p.]<br><br>
-            <strong>Offertoire :</strong> [p.]<br>V. <br>V. 
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
             <strong>Communion :</strong> [p.]
         `
     },
@@ -98,8 +95,7 @@ siteData.catalogue_des_fetes = [
             <strong>Introït :</strong> [p.]<br><br>
             <strong>Graduel :</strong> [p.]<br><br>
             <strong>Alléluia :</strong> [p.]<br><br>
-            <strong>Séquence :</strong> [p.]<br><br>
-            <strong>Offertoire :</strong> [p.]<br>V. <br>V. 
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
             <strong>Communion :</strong> [p.]
         `
     },
@@ -112,8 +108,7 @@ siteData.catalogue_des_fetes = [
             <strong>Introït :</strong> [p.]<br><br>
             <strong>Graduel :</strong> [p.]<br><br>
             <strong>Alléluia :</strong> [p.]<br><br>
-            <strong>Séquence :</strong> [p.]<br><br>
-            <strong>Offertoire :</strong> [p.]<br>V. <br>V. 
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
             <strong>Communion :</strong> [p.]
         `
     },
@@ -126,8 +121,7 @@ siteData.catalogue_des_fetes = [
             <strong>Introït :</strong> [p.]<br><br>
             <strong>Graduel :</strong> [p.]<br><br>
             <strong>Alléluia :</strong> [p.]<br><br>
-            <strong>Séquence :</strong> [p.]<br><br>
-            <strong>Offertoire :</strong> [p.]<br>V. <br>V. 
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
             <strong>Communion :</strong> [p.]
         `
     },
@@ -140,8 +134,7 @@ siteData.catalogue_des_fetes = [
             <strong>Introït :</strong> [p.]<br><br>
             <strong>Graduel :</strong> [p.]<br><br>
             <strong>Alléluia :</strong> [p.]<br><br>
-            <strong>Séquence :</strong> [p.]<br><br>
-            <strong>Offertoire :</strong> [p.]<br>V. <br>V. 
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
             <strong>Communion :</strong> [p.]
         `
     },
@@ -154,8 +147,7 @@ siteData.catalogue_des_fetes = [
             <strong>Introït :</strong> [p.]<br><br>
             <strong>Graduel :</strong> [p.]<br><br>
             <strong>Alléluia :</strong> [p.]<br><br>
-            <strong>Séquence :</strong> [p.]<br><br>
-            <strong>Offertoire :</strong> [p.]<br>V. <br>V. 
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
             <strong>Communion :</strong> [p.]
         `
     },
@@ -168,8 +160,7 @@ siteData.catalogue_des_fetes = [
             <strong>Introït :</strong> [p.]<br><br>
             <strong>Graduel :</strong> [p.]<br><br>
             <strong>Alléluia :</strong> [p.]<br><br>
-            <strong>Séquence :</strong> [p.]<br><br>
-            <strong>Offertoire :</strong> [p.]<br>V. <br>V. 
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
             <strong>Communion :</strong> [p.]
         `
     },
@@ -182,8 +173,7 @@ siteData.catalogue_des_fetes = [
             <strong>Introït :</strong> [p.]<br><br>
             <strong>Graduel :</strong> [p.]<br><br>
             <strong>Alléluia :</strong> [p.]<br><br>
-            <strong>Séquence :</strong> [p.]<br><br>
-            <strong>Offertoire :</strong> [p.]<br>V. <br>V. 
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
             <strong>Communion :</strong> [p.]
         `
     },
@@ -196,8 +186,7 @@ siteData.catalogue_des_fetes = [
             <strong>Introït :</strong> [p.]<br><br>
             <strong>Graduel :</strong> [p.]<br><br>
             <strong>Alléluia :</strong> [p.]<br><br>
-            <strong>Séquence :</strong> [p.]<br><br>
-            <strong>Offertoire :</strong> [p.]<br>V. <br>V. 
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
             <strong>Communion :</strong> [p.]
         `
     },
@@ -210,8 +199,7 @@ siteData.catalogue_des_fetes = [
             <strong>Introït :</strong> [p.]<br><br>
             <strong>Graduel :</strong> [p.]<br><br>
             <strong>Alléluia :</strong> [p.]<br><br>
-            <strong>Séquence :</strong> [p.]<br><br>
-            <strong>Offertoire :</strong> [p.]<br>V. <br>V. 
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
             <strong>Communion :</strong> [p.]
         `
     },
@@ -224,8 +212,7 @@ siteData.catalogue_des_fetes = [
             <strong>Introït :</strong> [p.]<br><br>
             <strong>Graduel :</strong> [p.]<br><br>
             <strong>Alléluia :</strong> [p.]<br><br>
-            <strong>Séquence :</strong> [p.]<br><br>
-            <strong>Offertoire :</strong> [p.]<br>V. <br>V. 
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
             <strong>Communion :</strong> [p.]
         `
     },
@@ -238,8 +225,7 @@ siteData.catalogue_des_fetes = [
             <strong>Introït :</strong> [p.]<br><br>
             <strong>Graduel :</strong> [p.]<br><br>
             <strong>Alléluia :</strong> [p.]<br><br>
-            <strong>Séquence :</strong> [p.]<br><br>
-            <strong>Offertoire :</strong> [p.]<br>V. <br>V. 
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
             <strong>Communion :</strong> [p.]
         `
     },
@@ -252,8 +238,7 @@ siteData.catalogue_des_fetes = [
             <strong>Introït :</strong> [p.]<br><br>
             <strong>Graduel :</strong> [p.]<br><br>
             <strong>Alléluia :</strong> [p.]<br><br>
-            <strong>Séquence :</strong> [p.]<br><br>
-            <strong>Offertoire :</strong> [p.]<br>V. <br>V. 
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
             <strong>Communion :</strong> [p.]
         `
     },
@@ -266,8 +251,7 @@ siteData.catalogue_des_fetes = [
             <strong>Introït :</strong> [p.]<br><br>
             <strong>Graduel :</strong> [p.]<br><br>
             <strong>Alléluia :</strong> [p.]<br><br>
-            <strong>Séquence :</strong> [p.]<br><br>
-            <strong>Offertoire :</strong> [p.]<br>V. <br>V. 
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
             <strong>Communion :</strong> [p.]
         `
     },
@@ -280,8 +264,7 @@ siteData.catalogue_des_fetes = [
             <strong>Introït :</strong> [p.]<br><br>
             <strong>Graduel :</strong> [p.]<br><br>
             <strong>Alléluia :</strong> [p.]<br><br>
-            <strong>Séquence :</strong> [p.]<br><br>
-            <strong>Offertoire :</strong> [p.]<br>V. <br>V. 
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
             <strong>Communion :</strong> [p.]
         `
     },
@@ -294,8 +277,7 @@ siteData.catalogue_des_fetes = [
             <strong>Introït :</strong> [p.]<br><br>
             <strong>Graduel :</strong> [p.]<br><br>
             <strong>Alléluia :</strong> [p.]<br><br>
-            <strong>Séquence :</strong> [p.]<br><br>
-            <strong>Offertoire :</strong> [p.]<br>V. <br>V. 
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
             <strong>Communion :</strong> [p.]
         `
     },
@@ -308,10 +290,1049 @@ siteData.catalogue_des_fetes = [
             <strong>Introït :</strong> [p.]<br><br>
             <strong>Graduel :</strong> [p.]<br><br>
             <strong>Alléluia :</strong> [p.]<br><br>
-            <strong>Séquence :</strong> [p.]<br><br>
-            <strong>Offertoire :</strong> [p.]<br>V. <br>V. 
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
             <strong>Communion :</strong> [p.]
         `
     },
+    {
+        type: "accordeon",
+        titre: "",
+        couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
+        traduction: "",
+        contenu: `
+            <strong>Introït :</strong> [p.]<br><br>
+            <strong>Graduel :</strong> [p.]<br><br>
+            <strong>Alléluia :</strong> [p.]<br><br>
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
+            <strong>Communion :</strong> [p.]
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "",
+        couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
+        traduction: "",
+        contenu: `
+            <strong>Introït :</strong> [p.]<br><br>
+            <strong>Graduel :</strong> [p.]<br><br>
+            <strong>Alléluia :</strong> [p.]<br><br>
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
+            <strong>Communion :</strong> [p.]
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "",
+        couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
+        traduction: "",
+        contenu: `
+            <strong>Introït :</strong> [p.]<br><br>
+            <strong>Graduel :</strong> [p.]<br><br>
+            <strong>Alléluia :</strong> [p.]<br><br>
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
+            <strong>Communion :</strong> [p.]
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "",
+        couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
+        traduction: "",
+        contenu: `
+            <strong>Introït :</strong> [p.]<br><br>
+            <strong>Graduel :</strong> [p.]<br><br>
+            <strong>Alléluia :</strong> [p.]<br><br>
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
+            <strong>Communion :</strong> [p.]
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "",
+        couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
+        traduction: "",
+        contenu: `
+            <strong>Introït :</strong> [p.]<br><br>
+            <strong>Graduel :</strong> [p.]<br><br>
+            <strong>Alléluia :</strong> [p.]<br><br>
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
+            <strong>Communion :</strong> [p.]
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "",
+        couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
+        traduction: "",
+        contenu: `
+            <strong>Introït :</strong> [p.]<br><br>
+            <strong>Graduel :</strong> [p.]<br><br>
+            <strong>Alléluia :</strong> [p.]<br><br>
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
+            <strong>Communion :</strong> [p.]
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "",
+        couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
+        traduction: "",
+        contenu: `
+            <strong>Introït :</strong> [p.]<br><br>
+            <strong>Graduel :</strong> [p.]<br><br>
+            <strong>Alléluia :</strong> [p.]<br><br>
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
+            <strong>Communion :</strong> [p.]
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "",
+        couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
+        traduction: "",
+        contenu: `
+            <strong>Introït :</strong> [p.]<br><br>
+            <strong>Graduel :</strong> [p.]<br><br>
+            <strong>Alléluia :</strong> [p.]<br><br>
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
+            <strong>Communion :</strong> [p.]
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "",
+        couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
+        traduction: "",
+        contenu: `
+            <strong>Introït :</strong> [p.]<br><br>
+            <strong>Graduel :</strong> [p.]<br><br>
+            <strong>Alléluia :</strong> [p.]<br><br>
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
+            <strong>Communion :</strong> [p.]
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "",
+        couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
+        traduction: "",
+        contenu: `
+            <strong>Introït :</strong> [p.]<br><br>
+            <strong>Graduel :</strong> [p.]<br><br>
+            <strong>Alléluia :</strong> [p.]<br><br>
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
+            <strong>Communion :</strong> [p.]
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "",
+        couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
+        traduction: "",
+        contenu: `
+            <strong>Introït :</strong> [p.]<br><br>
+            <strong>Graduel :</strong> [p.]<br><br>
+            <strong>Alléluia :</strong> [p.]<br><br>
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
+            <strong>Communion :</strong> [p.]
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "",
+        couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
+        traduction: "",
+        contenu: `
+            <strong>Introït :</strong> [p.]<br><br>
+            <strong>Graduel :</strong> [p.]<br><br>
+            <strong>Alléluia :</strong> [p.]<br><br>
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
+            <strong>Communion :</strong> [p.]
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "",
+        couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
+        traduction: "",
+        contenu: `
+            <strong>Introït :</strong> [p.]<br><br>
+            <strong>Graduel :</strong> [p.]<br><br>
+            <strong>Alléluia :</strong> [p.]<br><br>
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
+            <strong>Communion :</strong> [p.]
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "",
+        couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
+        traduction: "",
+        contenu: `
+            <strong>Introït :</strong> [p.]<br><br>
+            <strong>Graduel :</strong> [p.]<br><br>
+            <strong>Alléluia :</strong> [p.]<br><br>
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
+            <strong>Communion :</strong> [p.]
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "",
+        couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
+        traduction: "",
+        contenu: `
+            <strong>Introït :</strong> [p.]<br><br>
+            <strong>Graduel :</strong> [p.]<br><br>
+            <strong>Alléluia :</strong> [p.]<br><br>
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
+            <strong>Communion :</strong> [p.]
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "",
+        couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
+        traduction: "",
+        contenu: `
+            <strong>Introït :</strong> [p.]<br><br>
+            <strong>Graduel :</strong> [p.]<br><br>
+            <strong>Alléluia :</strong> [p.]<br><br>
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
+            <strong>Communion :</strong> [p.]
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "",
+        couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
+        traduction: "",
+        contenu: `
+            <strong>Introït :</strong> [p.]<br><br>
+            <strong>Graduel :</strong> [p.]<br><br>
+            <strong>Alléluia :</strong> [p.]<br><br>
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
+            <strong>Communion :</strong> [p.]
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "",
+        couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
+        traduction: "",
+        contenu: `
+            <strong>Introït :</strong> [p.]<br><br>
+            <strong>Graduel :</strong> [p.]<br><br>
+            <strong>Alléluia :</strong> [p.]<br><br>
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
+            <strong>Communion :</strong> [p.]
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "",
+        couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
+        traduction: "",
+        contenu: `
+            <strong>Introït :</strong> [p.]<br><br>
+            <strong>Graduel :</strong> [p.]<br><br>
+            <strong>Alléluia :</strong> [p.]<br><br>
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
+            <strong>Communion :</strong> [p.]
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "",
+        couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
+        traduction: "",
+        contenu: `
+            <strong>Introït :</strong> [p.]<br><br>
+            <strong>Graduel :</strong> [p.]<br><br>
+            <strong>Alléluia :</strong> [p.]<br><br>
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
+            <strong>Communion :</strong> [p.]
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "",
+        couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
+        traduction: "",
+        contenu: `
+            <strong>Introït :</strong> [p.]<br><br>
+            <strong>Graduel :</strong> [p.]<br><br>
+            <strong>Alléluia :</strong> [p.]<br><br>
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
+            <strong>Communion :</strong> [p.]
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "",
+        couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
+        traduction: "",
+        contenu: `
+            <strong>Introït :</strong> [p.]<br><br>
+            <strong>Graduel :</strong> [p.]<br><br>
+            <strong>Alléluia :</strong> [p.]<br><br>
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
+            <strong>Communion :</strong> [p.]
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "",
+        couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
+        traduction: "",
+        contenu: `
+            <strong>Introït :</strong> [p.]<br><br>
+            <strong>Graduel :</strong> [p.]<br><br>
+            <strong>Alléluia :</strong> [p.]<br><br>
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
+            <strong>Communion :</strong> [p.]
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "",
+        couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
+        traduction: "",
+        contenu: `
+            <strong>Introït :</strong> [p.]<br><br>
+            <strong>Graduel :</strong> [p.]<br><br>
+            <strong>Alléluia :</strong> [p.]<br><br>
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
+            <strong>Communion :</strong> [p.]
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "",
+        couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
+        traduction: "",
+        contenu: `
+            <strong>Introït :</strong> [p.]<br><br>
+            <strong>Graduel :</strong> [p.]<br><br>
+            <strong>Alléluia :</strong> [p.]<br><br>
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
+            <strong>Communion :</strong> [p.]
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "",
+        couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
+        traduction: "",
+        contenu: `
+            <strong>Introït :</strong> [p.]<br><br>
+            <strong>Graduel :</strong> [p.]<br><br>
+            <strong>Alléluia :</strong> [p.]<br><br>
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
+            <strong>Communion :</strong> [p.]
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "",
+        couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
+        traduction: "",
+        contenu: `
+            <strong>Introït :</strong> [p.]<br><br>
+            <strong>Graduel :</strong> [p.]<br><br>
+            <strong>Alléluia :</strong> [p.]<br><br>
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
+            <strong>Communion :</strong> [p.]
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "",
+        couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
+        traduction: "",
+        contenu: `
+            <strong>Introït :</strong> [p.]<br><br>
+            <strong>Graduel :</strong> [p.]<br><br>
+            <strong>Alléluia :</strong> [p.]<br><br>
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
+            <strong>Communion :</strong> [p.]
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "",
+        couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
+        traduction: "",
+        contenu: `
+            <strong>Introït :</strong> [p.]<br><br>
+            <strong>Graduel :</strong> [p.]<br><br>
+            <strong>Alléluia :</strong> [p.]<br><br>
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
+            <strong>Communion :</strong> [p.]
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "",
+        couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
+        traduction: "",
+        contenu: `
+            <strong>Introït :</strong> [p.]<br><br>
+            <strong>Graduel :</strong> [p.]<br><br>
+            <strong>Alléluia :</strong> [p.]<br><br>
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
+            <strong>Communion :</strong> [p.]
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "",
+        couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
+        traduction: "",
+        contenu: `
+            <strong>Introït :</strong> [p.]<br><br>
+            <strong>Graduel :</strong> [p.]<br><br>
+            <strong>Alléluia :</strong> [p.]<br><br>
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
+            <strong>Communion :</strong> [p.]
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "",
+        couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
+        traduction: "",
+        contenu: `
+            <strong>Introït :</strong> [p.]<br><br>
+            <strong>Graduel :</strong> [p.]<br><br>
+            <strong>Alléluia :</strong> [p.]<br><br>
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
+            <strong>Communion :</strong> [p.]
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "",
+        couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
+        traduction: "",
+        contenu: `
+            <strong>Introït :</strong> [p.]<br><br>
+            <strong>Graduel :</strong> [p.]<br><br>
+            <strong>Alléluia :</strong> [p.]<br><br>
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
+            <strong>Communion :</strong> [p.]
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "",
+        couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
+        traduction: "",
+        contenu: `
+            <strong>Introït :</strong> [p.]<br><br>
+            <strong>Graduel :</strong> [p.]<br><br>
+            <strong>Alléluia :</strong> [p.]<br><br>
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
+            <strong>Communion :</strong> [p.]
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "",
+        couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
+        traduction: "",
+        contenu: `
+            <strong>Introït :</strong> [p.]<br><br>
+            <strong>Graduel :</strong> [p.]<br><br>
+            <strong>Alléluia :</strong> [p.]<br><br>
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
+            <strong>Communion :</strong> [p.]
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "",
+        couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
+        traduction: "",
+        contenu: `
+            <strong>Introït :</strong> [p.]<br><br>
+            <strong>Graduel :</strong> [p.]<br><br>
+            <strong>Alléluia :</strong> [p.]<br><br>
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
+            <strong>Communion :</strong> [p.]
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "",
+        couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
+        traduction: "",
+        contenu: `
+            <strong>Introït :</strong> [p.]<br><br>
+            <strong>Graduel :</strong> [p.]<br><br>
+            <strong>Alléluia :</strong> [p.]<br><br>
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
+            <strong>Communion :</strong> [p.]
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "",
+        couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
+        traduction: "",
+        contenu: `
+            <strong>Introït :</strong> [p.]<br><br>
+            <strong>Graduel :</strong> [p.]<br><br>
+            <strong>Alléluia :</strong> [p.]<br><br>
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
+            <strong>Communion :</strong> [p.]
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "",
+        couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
+        traduction: "",
+        contenu: `
+            <strong>Introït :</strong> [p.]<br><br>
+            <strong>Graduel :</strong> [p.]<br><br>
+            <strong>Alléluia :</strong> [p.]<br><br>
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
+            <strong>Communion :</strong> [p.]
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "",
+        couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
+        traduction: "",
+        contenu: `
+            <strong>Introït :</strong> [p.]<br><br>
+            <strong>Graduel :</strong> [p.]<br><br>
+            <strong>Alléluia :</strong> [p.]<br><br>
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
+            <strong>Communion :</strong> [p.]
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "",
+        couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
+        traduction: "",
+        contenu: `
+            <strong>Introït :</strong> [p.]<br><br>
+            <strong>Graduel :</strong> [p.]<br><br>
+            <strong>Alléluia :</strong> [p.]<br><br>
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
+            <strong>Communion :</strong> [p.]
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "",
+        couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
+        traduction: "",
+        contenu: `
+            <strong>Introït :</strong> [p.]<br><br>
+            <strong>Graduel :</strong> [p.]<br><br>
+            <strong>Alléluia :</strong> [p.]<br><br>
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
+            <strong>Communion :</strong> [p.]
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "",
+        couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
+        traduction: "",
+        contenu: `
+            <strong>Introït :</strong> [p.]<br><br>
+            <strong>Graduel :</strong> [p.]<br><br>
+            <strong>Alléluia :</strong> [p.]<br><br>
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
+            <strong>Communion :</strong> [p.]
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "",
+        couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
+        traduction: "",
+        contenu: `
+            <strong>Introït :</strong> [p.]<br><br>
+            <strong>Graduel :</strong> [p.]<br><br>
+            <strong>Alléluia :</strong> [p.]<br><br>
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
+            <strong>Communion :</strong> [p.]
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "",
+        couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
+        traduction: "",
+        contenu: `
+            <strong>Introït :</strong> [p.]<br><br>
+            <strong>Graduel :</strong> [p.]<br><br>
+            <strong>Alléluia :</strong> [p.]<br><br>
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
+            <strong>Communion :</strong> [p.]
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "",
+        couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
+        traduction: "",
+        contenu: `
+            <strong>Introït :</strong> [p.]<br><br>
+            <strong>Graduel :</strong> [p.]<br><br>
+            <strong>Alléluia :</strong> [p.]<br><br>
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
+            <strong>Communion :</strong> [p.]
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "",
+        couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
+        traduction: "",
+        contenu: `
+            <strong>Introït :</strong> [p.]<br><br>
+            <strong>Graduel :</strong> [p.]<br><br>
+            <strong>Alléluia :</strong> [p.]<br><br>
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
+            <strong>Communion :</strong> [p.]
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "",
+        couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
+        traduction: "",
+        contenu: `
+            <strong>Introït :</strong> [p.]<br><br>
+            <strong>Graduel :</strong> [p.]<br><br>
+            <strong>Alléluia :</strong> [p.]<br><br>
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
+            <strong>Communion :</strong> [p.]
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "",
+        couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
+        traduction: "",
+        contenu: `
+            <strong>Introït :</strong> [p.]<br><br>
+            <strong>Graduel :</strong> [p.]<br><br>
+            <strong>Alléluia :</strong> [p.]<br><br>
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
+            <strong>Communion :</strong> [p.]
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "",
+        couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
+        traduction: "",
+        contenu: `
+            <strong>Introït :</strong> [p.]<br><br>
+            <strong>Graduel :</strong> [p.]<br><br>
+            <strong>Alléluia :</strong> [p.]<br><br>
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
+            <strong>Communion :</strong> [p.]
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "",
+        couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
+        traduction: "",
+        contenu: `
+            <strong>Introït :</strong> [p.]<br><br>
+            <strong>Graduel :</strong> [p.]<br><br>
+            <strong>Alléluia :</strong> [p.]<br><br>
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
+            <strong>Communion :</strong> [p.]
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "",
+        couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
+        traduction: "",
+        contenu: `
+            <strong>Introït :</strong> [p.]<br><br>
+            <strong>Graduel :</strong> [p.]<br><br>
+            <strong>Alléluia :</strong> [p.]<br><br>
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
+            <strong>Communion :</strong> [p.]
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "",
+        couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
+        traduction: "",
+        contenu: `
+            <strong>Introït :</strong> [p.]<br><br>
+            <strong>Graduel :</strong> [p.]<br><br>
+            <strong>Alléluia :</strong> [p.]<br><br>
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
+            <strong>Communion :</strong> [p.]
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "",
+        couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
+        traduction: "",
+        contenu: `
+            <strong>Introït :</strong> [p.]<br><br>
+            <strong>Graduel :</strong> [p.]<br><br>
+            <strong>Alléluia :</strong> [p.]<br><br>
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
+            <strong>Communion :</strong> [p.]
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "",
+        couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
+        traduction: "",
+        contenu: `
+            <strong>Introït :</strong> [p.]<br><br>
+            <strong>Graduel :</strong> [p.]<br><br>
+            <strong>Alléluia :</strong> [p.]<br><br>
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
+            <strong>Communion :</strong> [p.]
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "",
+        couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
+        traduction: "",
+        contenu: `
+            <strong>Introït :</strong> [p.]<br><br>
+            <strong>Graduel :</strong> [p.]<br><br>
+            <strong>Alléluia :</strong> [p.]<br><br>
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
+            <strong>Communion :</strong> [p.]
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "",
+        couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
+        traduction: "",
+        contenu: `
+            <strong>Introït :</strong> [p.]<br><br>
+            <strong>Graduel :</strong> [p.]<br><br>
+            <strong>Alléluia :</strong> [p.]<br><br>
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
+            <strong>Communion :</strong> [p.]
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "",
+        couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
+        traduction: "",
+        contenu: `
+            <strong>Introït :</strong> [p.]<br><br>
+            <strong>Graduel :</strong> [p.]<br><br>
+            <strong>Alléluia :</strong> [p.]<br><br>
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
+            <strong>Communion :</strong> [p.]
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "",
+        couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
+        traduction: "",
+        contenu: `
+            <strong>Introït :</strong> [p.]<br><br>
+            <strong>Graduel :</strong> [p.]<br><br>
+            <strong>Alléluia :</strong> [p.]<br><br>
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
+            <strong>Communion :</strong> [p.]
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "",
+        couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
+        traduction: "",
+        contenu: `
+            <strong>Introït :</strong> [p.]<br><br>
+            <strong>Graduel :</strong> [p.]<br><br>
+            <strong>Alléluia :</strong> [p.]<br><br>
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
+            <strong>Communion :</strong> [p.]
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "",
+        couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
+        traduction: "",
+        contenu: `
+            <strong>Introït :</strong> [p.]<br><br>
+            <strong>Graduel :</strong> [p.]<br><br>
+            <strong>Alléluia :</strong> [p.]<br><br>
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
+            <strong>Communion :</strong> [p.]
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "",
+        couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
+        traduction: "",
+        contenu: `
+            <strong>Introït :</strong> [p.]<br><br>
+            <strong>Graduel :</strong> [p.]<br><br>
+            <strong>Alléluia :</strong> [p.]<br><br>
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
+            <strong>Communion :</strong> [p.]
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "",
+        couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
+        traduction: "",
+        contenu: `
+            <strong>Introït :</strong> [p.]<br><br>
+            <strong>Graduel :</strong> [p.]<br><br>
+            <strong>Alléluia :</strong> [p.]<br><br>
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
+            <strong>Communion :</strong> [p.]
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "",
+        couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
+        traduction: "",
+        contenu: `
+            <strong>Introït :</strong> [p.]<br><br>
+            <strong>Graduel :</strong> [p.]<br><br>
+            <strong>Alléluia :</strong> [p.]<br><br>
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
+            <strong>Communion :</strong> [p.]
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "",
+        couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
+        traduction: "",
+        contenu: `
+            <strong>Introït :</strong> [p.]<br><br>
+            <strong>Graduel :</strong> [p.]<br><br>
+            <strong>Alléluia :</strong> [p.]<br><br>
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
+            <strong>Communion :</strong> [p.]
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "",
+        couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
+        traduction: "",
+        contenu: `
+            <strong>Introït :</strong> [p.]<br><br>
+            <strong>Graduel :</strong> [p.]<br><br>
+            <strong>Alléluia :</strong> [p.]<br><br>
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
+            <strong>Communion :</strong> [p.]
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "",
+        couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
+        traduction: "",
+        contenu: `
+            <strong>Introït :</strong> [p.]<br><br>
+            <strong>Graduel :</strong> [p.]<br><br>
+            <strong>Alléluia :</strong> [p.]<br><br>
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
+            <strong>Communion :</strong> [p.]
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "",
+        couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
+        traduction: "",
+        contenu: `
+            <strong>Introït :</strong> [p.]<br><br>
+            <strong>Graduel :</strong> [p.]<br><br>
+            <strong>Alléluia :</strong> [p.]<br><br>
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
+            <strong>Communion :</strong> [p.]
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "",
+        couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
+        traduction: "",
+        contenu: `
+            <strong>Introït :</strong> [p.]<br><br>
+            <strong>Graduel :</strong> [p.]<br><br>
+            <strong>Alléluia :</strong> [p.]<br><br>
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
+            <strong>Communion :</strong> [p.]
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "",
+        couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
+        traduction: "",
+        contenu: `
+            <strong>Introït :</strong> [p.]<br><br>
+            <strong>Graduel :</strong> [p.]<br><br>
+            <strong>Alléluia :</strong> [p.]<br><br>
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
+            <strong>Communion :</strong> [p.]
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "",
+        couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
+        traduction: "",
+        contenu: `
+            <strong>Introït :</strong> [p.]<br><br>
+            <strong>Graduel :</strong> [p.]<br><br>
+            <strong>Alléluia :</strong> [p.]<br><br>
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
+            <strong>Communion :</strong> [p.]
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "",
+        couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
+        traduction: "",
+        contenu: `
+            <strong>Introït :</strong> [p.]<br><br>
+            <strong>Graduel :</strong> [p.]<br><br>
+            <strong>Alléluia :</strong> [p.]<br><br>
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
+            <strong>Communion :</strong> [p.]
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "",
+        couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
+        traduction: "",
+        contenu: `
+            <strong>Introït :</strong> [p.]<br><br>
+            <strong>Graduel :</strong> [p.]<br><br>
+            <strong>Alléluia :</strong> [p.]<br><br>
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
+            <strong>Communion :</strong> [p.]
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "",
+        couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
+        traduction: "",
+        contenu: `
+            <strong>Introït :</strong> [p.]<br><br>
+            <strong>Graduel :</strong> [p.]<br><br>
+            <strong>Alléluia :</strong> [p.]<br><br>
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
+            <strong>Communion :</strong> [p.]
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "",
+        couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
+        traduction: "",
+        contenu: `
+            <strong>Introït :</strong> [p.]<br><br>
+            <strong>Graduel :</strong> [p.]<br><br>
+            <strong>Alléluia :</strong> [p.]<br><br>
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
+            <strong>Communion :</strong> [p.]
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "",
+        couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
+        traduction: "",
+        contenu: `
+            <strong>Introït :</strong> [p.]<br><br>
+            <strong>Graduel :</strong> [p.]<br><br>
+            <strong>Alléluia :</strong> [p.]<br><br>
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
+            <strong>Communion :</strong> [p.]
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "",
+        couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
+        traduction: "",
+        contenu: `
+            <strong>Introït :</strong> [p.]<br><br>
+            <strong>Graduel :</strong> [p.]<br><br>
+            <strong>Alléluia :</strong> [p.]<br><br>
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
+            <strong>Communion :</strong> [p.]
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "",
+        couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
+        traduction: "",
+        contenu: `
+            <strong>Introït :</strong> [p.]<br><br>
+            <strong>Graduel :</strong> [p.]<br><br>
+            <strong>Alléluia :</strong> [p.]<br><br>
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
+            <strong>Communion :</strong> [p.]
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "",
+        couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
+        traduction: "",
+        contenu: `
+            <strong>Introït :</strong> [p.]<br><br>
+            <strong>Graduel :</strong> [p.]<br><br>
+            <strong>Alléluia :</strong> [p.]<br><br>
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
+            <strong>Communion :</strong> [p.]
+        `
+    },
+    {
+        type: "accordeon",
+        titre: "",
+        couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
+        traduction: "",
+        contenu: `
+            <strong>Introït :</strong> [p.]<br><br>
+            <strong>Graduel :</strong> [p.]<br><br>
+            <strong>Alléluia :</strong> [p.]<br><br>
+            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
+            <strong>Communion :</strong> [p.]
+        `
+    }
 ];
   
