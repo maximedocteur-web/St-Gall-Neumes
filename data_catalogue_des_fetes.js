@@ -1,7 +1,7 @@
 siteData.catalogue_des_fetes = [
     {
         type: "titre",
-        content: "Le Propre du Temps"
+        content: "Catalogue du Graduel Einseideln 121"
     },
     {
         type: "text",
