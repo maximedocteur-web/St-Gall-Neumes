@@ -67,6 +67,7 @@
                     <button class="px-3 py-1.5 rounded-md transition text-stone-700 hover:bg-stone-100 cursor-default">Théorie musicale ▾</button>
                     <div class="hidden group-hover:block absolute left-0 mt-0 pt-2 w-56 z-50">
                         <div class="bg-white border border-stone-200 rounded-md shadow-lg overflow-hidden py-1">
+                            <a onclick="showPage('je-debute')" class="block cursor-pointer px-4 py-2 text-sm text-stone-700 hover:bg-amber-50 hover:text-amber-800">Je débute</a>
                             <a onclick="showPage('modes')" class="block cursor-pointer px-4 py-2 text-sm text-stone-700 hover:bg-amber-50 hover:text-amber-800">Les modes</a>
                             <a onclick="showPage('psalmodies')" class="block cursor-pointer px-4 py-2 text-sm text-stone-700 hover:bg-amber-50 hover:text-amber-800">Les psalmodies</a>
                             <a onclick="showPage('monocorde')" class="block cursor-pointer px-4 py-2 text-sm text-stone-700 hover:bg-amber-50 hover:text-amber-800">Le monocorde</a>
@@ -251,6 +252,12 @@
                 <div id="notations-contenu" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 text-stone-700 text-justify leading-relaxed"></div>
             </section>
 
+            <!-- PAGE JE DÉBUTE -->
+            <section id="page-je-debute" class="page-section space-y-6">
+                <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Je débute</h2>
+                <div id="je-debute-contenu" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 text-stone-700 text-justify leading-relaxed"></div>
+            </section>
+
             <!-- PAGE LES MODES -->
             <section id="page-modes" class="page-section space-y-6">
                 <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Les Modes</h2>
@@ -365,6 +372,7 @@
     <script src="data_sitographie.js"></script>
     <script src="data_manuscrit_carre.js"></script>
     <script src="data_carre_manuscrit.js"></script>
+    <script src="data_je_debute.js"></script>
 
     <!-- Script principal -->
     <script>
@@ -567,6 +575,7 @@
             genererPageDynamique('sitographie-contenu', siteData.sitographie);
             genererPageDynamique('manuscrit-carre-contenu', siteData.manuscrit_carre || siteData.manuscritCarre);
             genererPageDynamique('carre-manuscrit-contenu', siteData.carre_manuscrit || siteData.carreManuscrit);
+            genererPageDynamique('je-debute-contenu', siteData.je_debute || siteData.jeDebute);
             
         });
 
