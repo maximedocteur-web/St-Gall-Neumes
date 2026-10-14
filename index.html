@@ -530,7 +530,7 @@
                     let res = texte.replace(/\[p\.([^\]]+)\]/g, '<a href="https://www.e-codices.unifr.ch/fr/sbe/0121/\$1/0/" target="_blank" class="ml-2 text-sm text-amber-700 hover:text-amber-900 underline font-medium">p.\$1</a>');
                     
                     // 2. Les Notes en BULLE INTERACTIVE (Tooltip)
-                    // Note technique : Il faut bien "échapper" les crochets dans la formule /[note]/
+                    // Cette fois, les crochets sont BIEN échappés avec des antislashs !
                     res = res.replace(/[note]([\s\S]*?)\[\/note\]/g, (match, noteTexte) => {
                         const num = compteurNotes++;
                         return `<span class="group relative inline-block cursor-help text-amber-700 font-bold">
