@@ -95,6 +95,19 @@
                         </div>
                     </div>
                 </div>
+               
+                <!-- 8. Ressources -->
+                <div class="group relative">
+                    <button class="px-3 py-1.5 rounded-md transition text-stone-700 hover:bg-stone-100 cursor-default">Ressources ▾</button>
+                    <div class="hidden group-hover:block absolute left-0 mt-0 pt-2 w-56 z-50">
+                        <div class="bg-white border border-stone-200 rounded-md shadow-lg overflow-hidden py-1">
+                            <a onclick="showPage('bibliographie')" class="block cursor-pointer px-4 py-2 text-sm text-stone-700 hover:bg-amber-50 hover:text-amber-800">Bibliographie</a>
+                            <a onclick="showPage('sitographie')" class="block cursor-pointer px-4 py-2 text-sm text-stone-700 hover:bg-amber-50 hover:text-amber-800">Sitographie</a>
+                            <a onclick="showPage('manuscrit-carre')" class="block cursor-pointer px-4 py-2 text-sm text-stone-700 hover:bg-amber-50 hover:text-amber-800">Manuscrit → Carré</a>
+                            <a onclick="showPage('carre-manuscrit')" class="block cursor-pointer px-4 py-2 text-sm text-stone-700 hover:bg-amber-50 hover:text-amber-800">Carré → Manuscrit</a>
+                        </div>
+                    </div>
+                </div>
 
             </div>
         </nav>
@@ -267,6 +280,29 @@
                 <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Trier selon les Catégories</h2>
                 <div id="trier-categories-contenu" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 text-stone-700 text-justify leading-relaxed"></div>
             </section>
+            <!-- PAGE BIBLIOGRAPHIE -->
+            <section id="page-bibliographie" class="page-section space-y-6">
+                <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Bibliographie</h2>
+                <div id="bibliographie-contenu" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 text-stone-700 text-justify leading-relaxed"></div>
+            </section>
+
+            <!-- PAGE SITOGRAPHIE -->
+            <section id="page-sitographie" class="page-section space-y-6">
+                <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Sitographie</h2>
+                <div id="sitographie-contenu" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 text-stone-700 text-justify leading-relaxed"></div>
+            </section>
+
+            <!-- PAGE MANUSCRIT VERS CARRÉ -->
+            <section id="page-manuscrit-carre" class="page-section space-y-6">
+                <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Manuscrit → Carré</h2>
+                <div id="manuscrit-carre-contenu" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 text-stone-700 text-justify leading-relaxed"></div>
+            </section>
+
+            <!-- PAGE CARRÉ VERS MANUSCRIT -->
+            <section id="page-carre-manuscrit" class="page-section space-y-6">
+                <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Carré → Manuscrit</h2>
+                <div id="carre-manuscrit-contenu" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 text-stone-700 text-justify leading-relaxed"></div>
+            </section>
 
             <!-- ============================================== -->
             <!-- FIN DES MOULES                                 -->
@@ -325,6 +361,10 @@
     <script src="data_se_reperer.js"></script>
     <script src="data_trier_par_categories.js"></script>
     <script src="data_types_de_pieces.js"></script>
+    <script src="data_bibliographie.js"></script>
+    <script src="data_sitographie.js"></script>
+    <script src="data_manuscrit_carre.js"></script>
+    <script src="data_carre_manuscrit.js"></script>
 
     <!-- Script principal -->
     <script>
@@ -523,6 +563,10 @@
             genererPageDynamique('monocorde-contenu', siteData.monocorde);
             genererPageDynamique('catalogue-fetes-contenu', siteData.catalogue_des_fetes || siteData.catalogueFetes);
             genererPageDynamique('trier-categories-contenu', siteData.trier_par_categories || siteData.trierCategories);
+            genererPageDynamique('bibliographie-contenu', siteData.bibliographie);
+            genererPageDynamique('sitographie-contenu', siteData.sitographie);
+            genererPageDynamique('manuscrit-carre-contenu', siteData.manuscrit_carre || siteData.manuscritCarre);
+            genererPageDynamique('carre-manuscrit-contenu', siteData.carre_manuscrit || siteData.carreManuscrit);
             
         });
 
