@@ -14,7 +14,5 @@ siteData.modes = [
   },
   {
     image : "images/grave_aigu.png"
-  },
-    
-
+  }
 ]
