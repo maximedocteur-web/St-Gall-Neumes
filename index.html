@@ -21,10 +21,10 @@
             </div>
         </header>
         
-        <!-- Barre de navigation (Menu Flottant centré) -->
-        <div class="sticky top-0 z-50 w-full pt-0 xl:pt-4 pointer-events-none">
-            <nav class="max-w-5xl mx-auto bg-white border border-stone-200 shadow-md xl:rounded-xl pointer-events-auto">
-                <div class="px-4 flex flex-wrap justify-center gap-2 md:gap-6 py-3 text-sm md:text-base font-medium">
+        <!-- Barre de navigation Dynamique -->
+        <div id="nav-container" class="sticky top-0 z-50 w-full pt-0 xl:pt-4 pointer-events-none transition-all duration-300">
+            <nav id="main-nav" class="max-w-5xl mx-auto bg-white border border-stone-200 shadow-md xl:rounded-xl pointer-events-auto transition-all duration-300">
+                <div class="max-w-5xl mx-auto px-4 flex flex-wrap justify-center gap-2 md:gap-6 py-3 text-sm md:text-base font-medium">
 
                 <!-- 1. Accueil -->
                 <button onclick="showPage('accueil')" id="nav-accueil" class="px-3 py-1.5 rounded-md transition bg-amber-700 text-white">Accueil</button>
@@ -628,6 +628,19 @@
             }
             
             window.scrollTo({ top: 0, behavior: 'smooth' });
+            // --- NOUVEAU : Changement de forme du menu ---
+            const navContainer = document.getElementById('nav-container');
+            const mainNav = document.getElementById('main-nav');
+            
+            if (pageName === 'accueil') {
+                // Style Accueil : Menu flottant arrondi
+                if (navContainer) navContainer.className = "sticky top-0 z-50 w-full pt-0 xl:pt-4 pointer-events-none transition-all duration-300";
+                if (mainNav) mainNav.className = "max-w-5xl mx-auto bg-white border border-stone-200 shadow-md xl:rounded-xl pointer-events-auto transition-all duration-300";
+            } else {
+                // Style Autres pages : Bandeau classique sur toute la largeur
+                if (navContainer) navContainer.className = "sticky top-0 z-50 w-full pointer-events-auto transition-all duration-300";
+                if (mainNav) mainNav.className = "w-full bg-white border-b border-stone-200 shadow-sm transition-all duration-300";
+            }
         }
 
         // Gestion des sous-onglets neumes
