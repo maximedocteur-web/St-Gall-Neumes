@@ -500,32 +500,32 @@
                 const container = document.getElementById(containerId);
                 if (!container || !donneesArray) return; 
 
-                // Le compteur de notes, qui repart à 1 à chaque nouvelle page !
+                // Tableau pour stocker toutes les notes de la page
+                let tableauNotes = [];
                 let compteurNotes = 1;
 
-                // Fonction magique qui gère TOUS tes raccourcis : [p.XX] et [note]...[/note]
+                // Fonction magique qui gère [p.XX] et [note]...[/note]
                 function formaterTexte(texte) {
                     if (!texte) return "";
                     
                     // 1. Les liens E-codices
                     let res = texte.replace(/\[p\.([^\]]+)\]/g, '<a href="https://www.e-codices.unifr.ch/fr/sbe/0121/\$1/0/" target="_blank" class="ml-2 text-sm text-amber-700 hover:text-amber-900 underline font-medium">p.\$1</a>');
                     
-                    // 2. Les Notes en BULLE INTERACTIVE (Tooltip)
+                    // 2. Les Vraies Notes de bas de page
                     res = res.replace(/[note]([\s\S]*?)\[\/note\]/gi, (match, noteTexte) => {
-                        const num = compteurNotes++;
-                        return `<span class="group relative inline-block cursor-help text-amber-700 font-bold">
-                                    <sup class="text-xs hover:text-amber-900 transition-colors">${num}</sup>
-                                    
-                                    <!-- La Bulle Magique qui apparaît au survol -->
-                                    <span class="invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-all duration-300 absolute z-50 left-1/2 -translate-x-1/2 top-full mt-2 w-64 md:w-80 p-4 bg-stone-800 text-stone-100 text-sm rounded-lg shadow-xl text-left font-normal leading-relaxed pointer-events-none">
-                                        <strong class="text-amber-400 block mb-1">📌 Note ${num}</strong>
-                                        ${noteTexte}
-                                    </span>
-                                </span>`;
+                        const num = compteurNotes;
+                        tableauNotes.push(noteTexte); // On sauvegarde le texte pour la fin de la page
+                        compteurNotes++;
+                        
+                        // On retourne juste un petit numéro cliquable qui descend vers la note
+                        return `<sup id="appel-${containerId}-${num}" class="ml-0.5"><a href="#note-${containerId}-${num}" class="text-amber-700 font-bold text-xs hover:text-amber-900 transition-colors">${num}</a></sup>`;
                     });
                     
                     return res;
                 }
+
+                // On vide le conteneur par sécurité avant de le remplir
+                container.innerHTML = "";
 
                 // Construction de la page
                 donneesArray.forEach((bloc) => {
@@ -564,7 +564,6 @@
                     else if (bloc.type === 'accordeon') {
                         const couleurTitre = bloc.couleurTitre ? bloc.couleurTitre : '#d97706';
                         const htmlTraduction = bloc.traduction ? `<div class="text-sm md:text-base font-normal mt-1 opacity-90">${bloc.traduction}</div>` : '';
-                        
                         const contenuFormate = formaterTexte(bloc.contenu);
 
                         container.innerHTML += `
@@ -583,6 +582,31 @@
                         `;
                     }
                 });
+
+                // --- GÉNÉRATION DES NOTES EN BAS DE PAGE ---
+                if (tableauNotes.length > 0) {
+                    let htmlNotes = `
+                        <div class="mt-12 pt-6 border-t border-stone-200">
+                            <h4 class="font-serif font-bold text-lg text-stone-900 mb-4">Notes et références</h4>
+                            <ol class="space-y-2 text-sm text-stone-600 list-decimal list-inside">
+                    `;
+                    
+                    tableauNotes.forEach((note, index) => {
+                        const num = index + 1;
+                        htmlNotes += `
+                            <li id="note-${containerId}-${num}" class="leading-relaxed">
+                                <span class="inline">${note}</span>
+                                <a href="#appel-${containerId}-${num}" class="text-amber-700 font-bold hover:underline ml-2" title="Retourner au texte">^</a>
+                            </li>
+                        `;
+                    });
+
+                    htmlNotes += `
+                            </ol>
+                        </div>
+                    `;
+                    container.innerHTML += htmlNotes;
+                }
             }
 
             // --- APPEL DE LA FONCTION POUR TOUTES TES PAGES ---
