@@ -132,24 +132,18 @@
             <!-- PAGE ACCUEIL (Tableau de Bord) -->
             <section id="page-accueil" class="page-section active">
                 
-                <!-- DÉCORS LATÉRAUX AGRANDIS (Plaqués sur les bords) -->
                 <img src="images/decor_gauche.png" alt="" class="fixed left-0 top-1/2 -translate-y-1/2 w-48 xl:w-72 2xl:w-80 pointer-events-none hidden lg:block z-0">
                 <img src="images/decor_droit.png" alt="" class="fixed right-0 top-1/2 -translate-y-1/2 w-48 xl:w-72 2xl:w-80 pointer-events-none hidden lg:block z-0">
                 
-                <!-- CONTENEUR CENTRAL RÉDUIT (max-w-3xl au lieu de 5xl) -->
                 <div class="max-w-3xl mx-auto relative z-10 space-y-8 pb-10">
-                    
                     <div class="text-center space-y-4 mb-8 mt-4">
                         <h2 class="text-3xl md:text-4xl font-serif font-bold text-stone-900">Que fait-on aujourd'hui ?</h2>
-                        
-                        <!-- LE GRAND BOUTON DÉBUTANT -->
                         <button onclick="showPage('je-debute')" class="mt-4 w-full max-w-xl mx-auto block bg-gradient-to-r from-amber-700 to-amber-900 text-white font-serif font-bold text-lg py-3 rounded-xl shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group ring-1 ring-amber-900/10">
                             Je débute le chant grégorien 
                             <span class="inline-block transition-transform duration-300 group-hover:translate-x-2 ml-2">→</span>
                         </button>
                     </div>
 
-                    <!-- GRILLE DES CARTES -->
                     <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-5">
                         <div onclick="showPage('historique')" class="bg-white p-5 rounded-lg shadow-sm border border-stone-200 hover:border-amber-400 hover:bg-amber-50/30 hover:-translate-y-1 hover:shadow-md cursor-pointer transition-all duration-300 group animate-fade-up delay-100">
                             <h3 class="text-lg font-serif font-bold text-stone-900 group-hover:text-amber-800 transition mb-1">📜 Historique</h3>
@@ -182,7 +176,6 @@
             <!-- PAGE NEUMES -->
             <section id="page-neumes" class="page-section space-y-6 relative z-10">
                 <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Catalogue des Neumes</h2>
-                
                 <div class="bg-white p-6 rounded-lg border border-stone-200 shadow-sm space-y-4">
                     <div>
                         <label for="search-input" class="block text-sm font-medium text-stone-700 mb-1">Recherche par nom (ex: pes, clivis, torculus...) :</label>
@@ -193,12 +186,10 @@
                         <div id="visual-grid" class="flex flex-wrap gap-3"></div>
                     </div>
                 </div>
-
                 <div class="flex gap-2 border-b border-stone-200 pb-4">
                     <button onclick="switchNeumeTab('simples')" id="btn-simples" class="px-4 py-2 bg-amber-700 text-white rounded-md font-medium text-sm transition">Neumes simples</button>
                     <button onclick="switchNeumeTab('ornementaux')" id="btn-ornementaux" class="px-4 py-2 bg-stone-200 text-stone-700 rounded-md font-medium text-sm transition hover:bg-stone-300">Neumes ornementaux</button>
                 </div>
-
                 <div id="tab-simples" class="neume-tab-content grid md:grid-cols-2 gap-6"></div>
                 <div id="tab-ornementaux" class="neume-tab-content grid md:grid-cols-2 gap-6 hidden"></div>
             </section>
@@ -207,14 +198,12 @@
             <section id="page-lettres-hub" class="page-section space-y-6 relative z-10">
                 <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Les Lettres Significatives</h2>
                 <p class="text-stone-600">Choisissez l'une sections ci-dessous pour approfondir votre étude des lettres significatives de Saint-Gall :</p>
-                
                 <div class="grid md:grid-cols-2 gap-6 pt-4">
                     <div onclick="showPage('lettres-apprendre')" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 hover:border-amber-700 cursor-pointer transition space-y-3 text-center group">
                         <div class="w-12 h-12 bg-amber-50 text-amber-800 rounded-full flex items-center justify-center mx-auto group-hover:bg-amber-700 group-hover:text-white transition font-serif font-bold text-lg">?</div>
                         <h3 class="text-xl font-serif font-bold text-stone-900 group-hover:text-amber-800 transition">En apprendre plus sur les lettres significatives</h3>
                         <p class="text-sm text-stone-600">Découvrez l'origine de ces lettres, les notices poétiques de Notker et l'interprétation vocale sous-jacente.</p>
                     </div>
-
                     <div onclick="showPage('lettres-catalogue')" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 hover:border-amber-700 cursor-pointer transition space-y-3 text-center group">
                         <div class="w-12 h-12 bg-amber-50 text-amber-800 rounded-full flex items-center justify-center mx-auto group-hover:bg-amber-700 group-hover:text-white transition font-serif font-bold text-lg">📖</div>
                         <h3 class="text-xl font-serif font-bold text-stone-900 group-hover:text-amber-800 transition">Catalogue des lettres significatives</h3>
@@ -223,7 +212,7 @@
                 </div>
             </section>
 
-            <!-- PAGE LETTRES - EN APPRENDRE PLUS -->
+            <!-- TOUTES LES AUTRES PAGES (Générées Dynamiquement) -->
             <section id="page-lettres-apprendre" class="page-section space-y-6 relative z-10">
                 <div class="flex items-center justify-between border-b-2 border-amber-700 pb-2">
                     <h2 class="text-2xl font-serif font-bold text-stone-900">En apprendre plus sur les Lettres Significatives</h2>
@@ -231,84 +220,65 @@
                 </div>
                 <div id="lettres-apprendre-contenu" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 text-stone-700 text-justify leading-relaxed"></div>
             </section>
-
-            <!-- PAGE LETTRES - CATALOGUE -->
             <section id="page-lettres-catalogue" class="page-section space-y-6 relative z-10">
                 <div class="flex items-center justify-between border-b-2 border-amber-700 pb-2">
                     <h2 class="text-2xl font-serif font-bold text-stone-900">Catalogue des Lettres Significatives</h2>
                     <button onclick="showPage('lettres-hub')" class="text-sm text-amber-700 hover:underline font-medium">&larr; Retour au choix</button>
                 </div>
-                <div class="bg-white p-8 rounded-lg shadow-sm border border-stone-200">
-                    <div id="lettres-container" class="space-y-6"></div>
-                </div>
+                <div class="bg-white p-8 rounded-lg shadow-sm border border-stone-200"><div id="lettres-container" class="space-y-6"></div></div>
             </section>
-
-            <!-- TOUS LES MOULES VIDES -->
             <section id="page-historique" class="page-section space-y-6 relative z-10">
                 <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">L'Historique</h2>
                 <div id="historique-contenu" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 text-stone-700 text-justify leading-relaxed"></div>
             </section>
-
             <section id="page-manuscrits" class="page-section space-y-6 relative z-10">
                 <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Se repérer dans les Manuscrits</h2>
                 <div id="manuscrits-contenu" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 text-stone-700 text-justify leading-relaxed"></div>
             </section>
-
             <section id="page-types-pieces" class="page-section space-y-6 relative z-10">
                 <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Types de Pièces</h2>
                 <div id="types-pieces-contenu" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 text-stone-700 text-justify leading-relaxed"></div>
             </section>
-
             <section id="page-notations" class="page-section space-y-6 relative z-10">
                 <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Les Notations</h2>
                 <div id="notations-contenu" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 text-stone-700 text-justify leading-relaxed"></div>
             </section>
-
             <section id="page-je-debute" class="page-section space-y-6 relative z-10">
                 <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Je débute</h2>
                 <div id="je-debute-contenu" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 text-stone-700 text-justify leading-relaxed"></div>
             </section>
-
             <section id="page-modes" class="page-section space-y-6 relative z-10">
                 <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Les Modes</h2>
                 <div id="modes-contenu" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 text-stone-700 text-justify leading-relaxed"></div>
             </section>
-
             <section id="page-psalmodies" class="page-section space-y-6 relative z-10">
                 <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Les Psalmodies</h2>
                 <div id="psalmodies-contenu" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 text-stone-700 text-justify leading-relaxed"></div>
             </section>
-
             <section id="page-monocorde" class="page-section space-y-6 relative z-10">
                 <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Le Monocorde</h2>
                 <div id="monocorde-contenu" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 text-stone-700 text-justify leading-relaxed"></div>
             </section>
-
             <section id="page-catalogue-fetes" class="page-section space-y-6 relative z-10">
                 <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Catalogue des Fêtes</h2>
                 <div id="catalogue-fetes-contenu" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 text-stone-700 text-justify leading-relaxed"></div>
             </section>
-
             <section id="page-trier-categories" class="page-section space-y-6 relative z-10">
                 <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Trier selon les Catégories</h2>
                 <div id="trier-categories-contenu" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 text-stone-700 text-justify leading-relaxed"></div>
             </section>
-
             <section id="page-bibliographie" class="page-section space-y-6 relative z-10">
                 <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Bibliographie</h2>
                 <div id="bibliographie-contenu" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 text-stone-700 text-justify leading-relaxed"></div>
             </section>
-
             <section id="page-sitographie" class="page-section space-y-6 relative z-10">
                 <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Sitographie</h2>
                 <div id="sitographie-contenu" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 text-stone-700 text-justify leading-relaxed"></div>
             </section>
-
             <section id="page-manuscrit-carre" class="page-section space-y-6 relative z-10">
                 <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Manuscrit → Carré</h2>
                 <div id="manuscrit-carre-contenu" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 text-stone-700 text-justify leading-relaxed"></div>
             </section>
-
             <section id="page-carre-manuscrit" class="page-section space-y-6 relative z-10">
                 <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Carré → Manuscrit</h2>
                 <div id="carre-manuscrit-contenu" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 text-stone-700 text-justify leading-relaxed"></div>
@@ -380,7 +350,6 @@
             const ornementauxContainer = document.getElementById('tab-ornementaux');
             const visualGrid = document.getElementById('visual-grid');
 
-            // 1. Neumes
             if (siteData.neumes) {
                 siteData.neumes.forEach((n, index) => {
                     const neumeId = 'neume-' + index;
@@ -431,7 +400,6 @@
                 });
             }
 
-            // 2. Lettres significatives
             const lettresContainer = document.getElementById('lettres-container');
             if (siteData.lettres && lettresContainer) {
                 siteData.lettres.forEach(l => {
@@ -447,7 +415,6 @@
                 });
             }
 
-            // 3. Analyse Chant
             if (siteData.analyseChant) {
                 const titreEl = document.getElementById('analyse-titre');
                 const descEl = document.getElementById('analyse-desc');
@@ -476,7 +443,6 @@
                 }
             }
 
-            // 4. Quiz
             const quizBox = document.getElementById('quiz-box');
             if(siteData.quiz && siteData.quiz.length > 0 && quizBox) {
                 const q = siteData.quiz[0];
@@ -500,27 +466,39 @@
                 const container = document.getElementById(containerId);
                 if (!container || !donneesArray) return; 
 
-                // Tableau pour stocker toutes les notes de la page
+                // Le tableau qui va stocker les notes pour les lister à la fin de la page
                 let tableauNotes = [];
                 let compteurNotes = 1;
 
-                // Fonction magique qui gère [p.XX] et [note]...[/note]
+                // MÉTHODE INFAILLIBLE : Aucun usage de Regex pour les notes !
                 function formaterTexte(texte) {
                     if (!texte) return "";
                     
-                    // 1. Les liens E-codices
+                    // 1. Les liens E-codices (qui marchent très bien)
                     let res = texte.replace(/\[p\.([^\]]+)\]/g, '<a href="https://www.e-codices.unifr.ch/fr/sbe/0121/\$1/0/" target="_blank" class="ml-2 text-sm text-amber-700 hover:text-amber-900 underline font-medium">p.\$1</a>');
                     
-                    // 2. Les Vraies Notes de bas de page
-                    res = res.replace(/[note]([\s\S]*?)\[\/note\]/gi, (match, noteTexte) => {
-                        const num = compteurNotes;
-                        tableauNotes.push(noteTexte); // On sauvegarde le texte pour la fin de la page
-                        compteurNotes++;
+                    // 2. Les Notes de bas de page (Découpage manuel sécurisé)
+                    while (res.includes("[note]") && res.includes("[/note]")) {
+                        let indexDebut = res.indexOf("[note]");
+                        let indexFin = res.indexOf("[/note]");
                         
-                        // On retourne juste un petit numéro cliquable qui descend vers la note
-                        return `<sup id="appel-${containerId}-${num}" class="ml-0.5"><a href="#note-${containerId}-${num}" class="text-amber-700 font-bold text-xs hover:text-amber-900 transition-colors">${num}</a></sup>`;
-                    });
-                    
+                        if (indexDebut < indexFin) {
+                            let texteAvant = res.substring(0, indexDebut);
+                            let texteNote = res.substring(indexDebut + 6, indexFin);
+                            let texteApres = res.substring(indexFin + 7);
+                            
+                            let num = compteurNotes;
+                            tableauNotes.push(texteNote); // On sauvegarde le texte de la note
+                            compteurNotes++;
+                            
+                            // On génère le petit chiffre rouge
+                            let appel = `<sup id="appel-${containerId}-${num}" class="ml-0.5"><a href="#note-${containerId}-${num}" class="text-amber-700 font-bold text-xs hover:text-amber-900 transition-colors">${num}</a></sup>`;
+                            
+                            res = texteAvant + appel + texteApres;
+                        } else {
+                            break; // Sécurité anti-boucle infinie
+                        }
+                    }
                     return res;
                 }
 
@@ -628,7 +606,7 @@
             
         });
 
-        // Gestion de la navigation par pages (Sécurisé)
+        // Gestion de la navigation par pages
         function showPage(pageName) {
             document.querySelectorAll('.page-section').forEach(el => el.classList.remove('active'));
 
@@ -647,7 +625,6 @@
                 console.warn("Attention: La page HTML pour '" + targetPage + "' n'existe pas encore !");
             }
 
-            // Gère la surbrillance de l'accueil
             const btnAccueil = document.getElementById('nav-accueil');
             if(btnAccueil) {
                 if (pageName === 'accueil') {
@@ -659,22 +636,18 @@
             
             window.scrollTo({ top: 0, behavior: 'smooth' });
 
-            // --- Changement de forme du menu ---
             const navContainer = document.getElementById('nav-container');
             const mainNav = document.getElementById('main-nav');
             
             if (pageName === 'accueil') {
-                // Style Accueil : Menu flottant arrondi
                 if (navContainer) navContainer.className = "sticky top-0 z-50 w-full pt-0 xl:pt-4 pointer-events-none transition-all duration-300";
                 if (mainNav) mainNav.className = "max-w-5xl mx-auto bg-white border border-stone-200 shadow-md xl:rounded-xl pointer-events-auto transition-all duration-300";
             } else {
-                // Style Autres pages : Bandeau classique sur toute la largeur
                 if (navContainer) navContainer.className = "sticky top-0 z-50 w-full pointer-events-auto transition-all duration-300";
                 if (mainNav) mainNav.className = "w-full bg-white border-b border-stone-200 shadow-sm transition-all duration-300";
             }
         }
 
-        // Gestion des sous-onglets neumes
         function switchNeumeTab(category) {
             document.querySelectorAll('.neume-tab-content').forEach(el => el.classList.add('hidden'));
             document.getElementById('tab-' + category).classList.remove('hidden');
@@ -691,7 +664,6 @@
             });
         }
 
-        // Filtre de recherche
         function filterNeumes() {
             const query = document.getElementById('search-input').value.toLowerCase();
             const cards = document.querySelectorAll('.neume-card');
@@ -701,7 +673,6 @@
             });
         }
 
-        // Vérification quiz
         function checkQuiz() {
             const selected = document.querySelector('input[name="quiz-q"]:checked');
             const resultEl = document.getElementById('quiz-result');
