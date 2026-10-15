@@ -84,7 +84,10 @@ siteData.neumes = [
             description: `<strong>3 notes</strong>, mouvement : descendant/ascendant. Ce neume représente trois notes, la seconde étant plus basse (plus grave) que la première
             et la troisième plus elevée (plus aigue) que la deuxième mais on ne sait pas de combien elle est plus élevée (une tierce ? une quarte ? une octave ? rien ne l'indique 
             dans sa graphie). La première image est sa graphie standard,`,
-            image: "images/scandicus.png"
+            images:[ 
+                "images/scandicus_1.png",
+                "images/scandicus_2.png"
+                    ]
         },
         {
             nom: "Climacus",
