@@ -142,47 +142,35 @@
                     <div class="text-center space-y-4 mb-8 mt-4">
                         <h2 class="text-3xl md:text-4xl font-serif font-bold text-stone-900">Que fait-on aujourd'hui ?</h2>
                         
-                        <!-- LE GRAND BOUTON DÉBUTANT (Affiné en hauteur) -->
+                        <!-- LE GRAND BOUTON DÉBUTANT -->
                         <button onclick="showPage('je-debute')" class="mt-4 w-full max-w-xl mx-auto block bg-gradient-to-r from-amber-700 to-amber-900 text-white font-serif font-bold text-lg py-3 rounded-xl shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group ring-1 ring-amber-900/10">
                             Je débute le chant grégorien 
                             <span class="inline-block transition-transform duration-300 group-hover:translate-x-2 ml-2">→</span>
                         </button>
                     </div>
 
-                    <!-- GRILLE DES CARTES (Plus compacte) -->
+                    <!-- GRILLE DES CARTES -->
                     <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-5">
-                        
-                        <!-- Carte 1 -->
                         <div onclick="showPage('historique')" class="bg-white p-5 rounded-lg shadow-sm border border-stone-200 hover:border-amber-400 hover:bg-amber-50/30 hover:-translate-y-1 hover:shadow-md cursor-pointer transition-all duration-300 group animate-fade-up delay-100">
                             <h3 class="text-lg font-serif font-bold text-stone-900 group-hover:text-amber-800 transition mb-1">📜 Historique</h3>
                             <p class="text-xs text-stone-600 leading-relaxed">Découvrez les origines de la notation monastique et l'âge d'or de Saint-Gall.</p>
                         </div>
-
-                        <!-- Carte 2 -->
                         <div onclick="showPage('manuscrits')" class="bg-white p-5 rounded-lg shadow-sm border border-stone-200 hover:border-amber-400 hover:bg-amber-50/30 hover:-translate-y-1 hover:shadow-md cursor-pointer transition-all duration-300 group animate-fade-up delay-200">
                             <h3 class="text-lg font-serif font-bold text-stone-900 group-hover:text-amber-800 transition mb-1">📖 Manuscrits</h3>
                             <p class="text-xs text-stone-600 leading-relaxed">Apprenez à vous repérer sur une page et explorez les différents types de pièces.</p>
                         </div>
-
-                        <!-- Carte 3 -->
                         <div onclick="showPage('neumes')" class="bg-white p-5 rounded-lg shadow-sm border border-stone-200 hover:border-amber-400 hover:bg-amber-50/30 hover:-translate-y-1 hover:shadow-md cursor-pointer transition-all duration-300 group animate-fade-up delay-300">
                             <h3 class="text-lg font-serif font-bold text-stone-900 group-hover:text-amber-800 transition mb-1">✍️ Sémiologie</h3>
                             <p class="text-xs text-stone-600 leading-relaxed">Étude détaillée des notations, catalogue interactif des neumes et lettres significatives.</p>
                         </div>
-
-                        <!-- Carte 4 -->
                         <div onclick="showPage('modes')" class="bg-white p-5 rounded-lg shadow-sm border border-stone-200 hover:border-amber-400 hover:bg-amber-50/30 hover:-translate-y-1 hover:shadow-md cursor-pointer transition-all duration-300 group animate-fade-up delay-400">
                             <h3 class="text-lg font-serif font-bold text-stone-900 group-hover:text-amber-800 transition mb-1">🎵 Théorie musicale</h3>
                             <p class="text-xs text-stone-600 leading-relaxed">Comprendre les modes de l'octoéchos, les psalmodies et l'étude du monocorde.</p>
                         </div>
-
-                        <!-- Carte 5 -->
                         <div onclick="showPage('catalogue-fetes')" class="bg-white p-5 rounded-lg shadow-sm border border-stone-200 hover:border-amber-400 hover:bg-amber-50/30 hover:-translate-y-1 hover:shadow-md cursor-pointer transition-all duration-300 group animate-fade-up delay-500">
                             <h3 class="text-lg font-serif font-bold text-stone-900 group-hover:text-amber-800 transition mb-1">🗂️ Répertoire</h3>
                             <p class="text-xs text-stone-600 leading-relaxed">Explorez le catalogue des fêtes et triez les chants selon leurs catégories liturgiques.</p>
                         </div>
-
-                        <!-- Carte 6 -->
                         <div onclick="showPage('analyse')" class="bg-white p-5 rounded-lg shadow-sm border border-stone-200 hover:border-amber-400 hover:bg-amber-50/30 hover:-translate-y-1 hover:shadow-md cursor-pointer transition-all duration-300 group animate-fade-up delay-600">
                             <h3 class="text-lg font-serif font-bold text-stone-900 group-hover:text-amber-800 transition mb-1">🔍 Pratique</h3>
                             <p class="text-xs text-stone-600 leading-relaxed">Exercez-vous avec nos lectures guidées pas à pas et testez-vous via les quiz.</p>
@@ -255,10 +243,7 @@
                 </div>
             </section>
 
-            <!-- ============================================== -->
-            <!-- TOUS LES NOUVEAUX "MOULES" VIDES SONT ICI      -->
-            <!-- ============================================== -->
-
+            <!-- TOUS LES MOULES VIDES -->
             <section id="page-historique" class="page-section space-y-6 relative z-10">
                 <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">L'Historique</h2>
                 <div id="historique-contenu" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 text-stone-700 text-justify leading-relaxed"></div>
@@ -329,10 +314,6 @@
                 <div id="carre-manuscrit-contenu" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 text-stone-700 text-justify leading-relaxed"></div>
             </section>
 
-            <!-- ============================================== -->
-            <!-- FIN DES MOULES                                 -->
-            <!-- ============================================== -->
-
             <!-- PAGE LECTURE GUIDEE -->
             <section id="page-analyse" class="page-section space-y-6 relative z-10">
                 <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Lecture Guidée : Analyse d'un Chant</h2>
@@ -399,7 +380,7 @@
             const ornementauxContainer = document.getElementById('tab-ornementaux');
             const visualGrid = document.getElementById('visual-grid');
 
-            // 1. Neumes (Sécurisé)
+            // 1. Neumes
             if (siteData.neumes) {
                 siteData.neumes.forEach((n, index) => {
                     const neumeId = 'neume-' + index;
@@ -450,7 +431,7 @@
                 });
             }
 
-            // 2. Lettres significatives (Sécurisé)
+            // 2. Lettres significatives
             const lettresContainer = document.getElementById('lettres-container');
             if (siteData.lettres && lettresContainer) {
                 siteData.lettres.forEach(l => {
@@ -466,7 +447,7 @@
                 });
             }
 
-            // 3. Analyse Chant (Sécurisé)
+            // 3. Analyse Chant
             if (siteData.analyseChant) {
                 const titreEl = document.getElementById('analyse-titre');
                 const descEl = document.getElementById('analyse-desc');
@@ -495,7 +476,7 @@
                 }
             }
 
-            // 4. Quiz (Sécurisé)
+            // 4. Quiz
             const quizBox = document.getElementById('quiz-box');
             if(siteData.quiz && siteData.quiz.length > 0 && quizBox) {
                 const q = siteData.quiz[0];
@@ -529,9 +510,8 @@
                     // 1. Les liens E-codices
                     let res = texte.replace(/\[p\.([^\]]+)\]/g, '<a href="https://www.e-codices.unifr.ch/fr/sbe/0121/\$1/0/" target="_blank" class="ml-2 text-sm text-amber-700 hover:text-amber-900 underline font-medium">p.\$1</a>');
                     
-                    // 2. Les Notes en BULLE INTERACTIVE (Tooltip)
-                    // Cette fois, les crochets sont BIEN échappés avec des antislashs !
-                    res = res.replace(/[note]([\s\S]*?)\[\/note\]/g, (match, noteTexte) => {
+                    // 2. Les Notes en BULLE INTERACTIVE (Tooltip) - PARFAITEMENT SÉCURISÉES !
+                    res = res.replace(/[note]([\s\S]*?)\[\/note\]/gi, (match, noteTexte) => {
                         const num = compteurNotes++;
                         return `<span class="group relative inline-block cursor-help text-amber-700 font-bold">
                                     <sup class="text-xs hover:text-amber-900 transition-colors">${num}</sup>
@@ -550,7 +530,6 @@
                 // Construction de la page
                 donneesArray.forEach((bloc) => {
                     if (bloc.type === 'text') {
-                        // On passe le texte dans la fonction magique avant de l'afficher
                         container.innerHTML += `<p class="mb-6">${formaterTexte(bloc.content)}</p>`;
                     }
                     else if (bloc.type === 'titre') {
@@ -586,7 +565,6 @@
                         const couleurTitre = bloc.couleurTitre ? bloc.couleurTitre : '#d97706';
                         const htmlTraduction = bloc.traduction ? `<div class="text-sm md:text-base font-normal mt-1 opacity-90">${bloc.traduction}</div>` : '';
                         
-                        // On passe aussi l'accordéon dans la fonction magique
                         const contenuFormate = formaterTexte(bloc.contenu);
 
                         container.innerHTML += `
@@ -639,7 +617,6 @@
 
             const targetSection = document.getElementById('page-' + targetPage);
             
-            // Si la section HTML existe, on l'affiche. Sinon, on ne fait rien !
             if (targetSection) {
                 targetSection.classList.add('active');
             } else {
