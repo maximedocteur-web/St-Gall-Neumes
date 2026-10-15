@@ -81,9 +81,9 @@ siteData.neumes = [
         {
             nom: "Scandicus",
             categorie: "simples",
-            description: `<strong>3 notes</strong>, mouvement : descendant/ascendant. Ce neume représente trois notes, la seconde étant plus basse (plus grave) que la première
+            description: `<strong>3 notes</strong>, mouvement : ascendant/ascendant. Ce neume représente trois notes, la seconde étant plus élevée (plus aigue) que la première
             et la troisième plus elevée (plus aigue) que la deuxième mais on ne sait pas de combien elle est plus élevée (une tierce ? une quarte ? une octave ? rien ne l'indique 
-            dans sa graphie). La première image est sa graphie standard,`,
+            dans sa graphie). La première image est sa graphie standard (mais assez peu usitée sous cette forme), la seconde représente le même neume mais avec trois punctums au lieu de deux.`,
             images:[ 
                 "images/scandicus_1.png",
                 "images/scandicus_2.png"
