@@ -206,7 +206,7 @@
             <!-- PAGE LETTRES SIGNIFICATIVES - HUB -->
             <section id="page-lettres-hub" class="page-section space-y-6 relative z-10">
                 <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Les Lettres Significatives</h2>
-                <p class="text-stone-600">Choisissez l'une des sections ci-dessous pour approfondir votre étude des lettres significatives de Saint-Gall :</p>
+                <p class="text-stone-600">Choisissez l'une sections ci-dessous pour approfondir votre étude des lettres significatives de Saint-Gall :</p>
                 
                 <div class="grid md:grid-cols-2 gap-6 pt-4">
                     <div onclick="showPage('lettres-apprendre')" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 hover:border-amber-700 cursor-pointer transition space-y-3 text-center group">
@@ -510,7 +510,7 @@
                     // 1. Les liens E-codices
                     let res = texte.replace(/\[p\.([^\]]+)\]/g, '<a href="https://www.e-codices.unifr.ch/fr/sbe/0121/\$1/0/" target="_blank" class="ml-2 text-sm text-amber-700 hover:text-amber-900 underline font-medium">p.\$1</a>');
                     
-                    // 2. Les Notes en BULLE INTERACTIVE (Tooltip) - PARFAITEMENT SÉCURISÉES !
+                    // 2. Les Notes en BULLE INTERACTIVE (Tooltip)
                     res = res.replace(/[note]([\s\S]*?)\[\/note\]/gi, (match, noteTexte) => {
                         const num = compteurNotes++;
                         return `<span class="group relative inline-block cursor-help text-amber-700 font-bold">
