@@ -470,14 +470,18 @@
                 let tableauNotes = [];
                 let compteurNotes = 1;
 
-                // MÉTHODE INFAILLIBLE : Aucun usage de Regex pour les notes !
+                // MÉTHODE INFAILLIBLE : Aucun usage de Regex complexe pour les notes !
                 function formaterTexte(texte) {
                     if (!texte) return "";
                     
-                    // 1. Les liens E-codices (qui marchent très bien)
+                    // 1. Les liens E-codices
                     let res = texte.replace(/\[p\.([^\]]+)\]/g, '<a href="https://www.e-codices.unifr.ch/fr/sbe/0121/\$1/0/" target="_blank" class="ml-2 text-sm text-amber-700 hover:text-amber-900 underline font-medium">p.\$1</a>');
                     
-                    // 2. Les Notes de bas de page (Découpage manuel sécurisé)
+                    // 2. NOUVEAU : Les liens internes vers d'autres pages
+                    // Transforme [lien=neumes]mot[/lien] en un bouton cliquable
+                    res = res.replace(/\[lien=([^\]]+)\]([\s\S]*?)\[\/lien\]/gi, `<a onclick="showPage('$1')" class="text-amber-700 font-bold hover:text-amber-900 hover:underline cursor-pointer transition-colors">$2</a>`);
+                    
+                    // 3. Les Notes de bas de page (Découpage manuel sécurisé)
                     while (res.includes("[note]") && res.includes("[/note]")) {
                         let indexDebut = res.indexOf("[note]");
                         let indexFin = res.indexOf("[/note]");
@@ -488,15 +492,14 @@
                             let texteApres = res.substring(indexFin + 7);
                             
                             let num = compteurNotes;
-                            tableauNotes.push(texteNote); // On sauvegarde le texte de la note
+                            tableauNotes.push(texteNote);
                             compteurNotes++;
                             
-                            // On génère le petit chiffre rouge
                             let appel = `<sup id="appel-${containerId}-${num}" class="ml-0.5"><a href="#note-${containerId}-${num}" class="text-amber-700 font-bold text-xs hover:text-amber-900 transition-colors">${num}</a></sup>`;
                             
                             res = texteAvant + appel + texteApres;
                         } else {
-                            break; // Sécurité anti-boucle infinie
+                            break; 
                         }
                     }
                     return res;
