@@ -305,7 +305,7 @@ siteData.catalogue_des_fetes = [
         type: "accordeon",
         titre: "Dominica tertia post Nat. Dni.",
         couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
-        traduction: "Le troisième dimanche après la naissance du Seigneur.",
+        traduction: "Le troisième dimanche après la naissance du Seigneur",
         contenu: `
             <strong>Introït :</strong> Omnis terra adoret te [p.57]<br><br>
             <strong>Graduel :</strong> Missit Dominus verbum [p.57]<br><br>
