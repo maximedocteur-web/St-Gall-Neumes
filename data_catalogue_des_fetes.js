@@ -508,7 +508,7 @@ siteData.catalogue_des_fetes = [
         contenu: `
             <strong>Introït :</strong> Esto mihi in Deum protectorem [p.88]<br><br>
             <strong>Graduel :</strong> Tu es Deus qui facit mirabilia [p.88]<br><br>
-            ATTENTION ! Ici c'est un TRAIT qui remplace l'Alleluia<br><strong>Trait :</strong>Iubilate Domino omnis terra<br><br>
+            ATTENTION ! Ici c'est un TRAIT qui remplace l'Alleluia<br><strong>Trait :</strong>Iubilate Domino omnis terra [p.89]<br><br>
             <strong>Offertoire :</strong> Benedictus es Domine doce me [p.89]<br>V. Beati immaculati un via<br>V. In via testimoniorum<br> V. Viam iniquitatis Domine<br><br>
             <strong>Communion :</strong> Manducaverunt et saturari sunt [p.91]
         `
