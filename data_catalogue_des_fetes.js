@@ -566,66 +566,67 @@ siteData.catalogue_des_fetes = [
             <strong>Graduel :</strong> Angelis suis mandabit [p.99]<br><br>
             ATTENTION ! Ici c'est un TRAIT qui remplace l'Alleluia<br><strong>Trait :</strong> Qui habitat in adiutorio altissimi [p.100]<br><br>
             <strong>Offertoire :</strong> Scapulis sui obumbrabit [p.102]<br>V. Dicet Domino suceptor<br>V. Quoniam angelis suis<br> V. Super aspidem et basilicum<br><br>
-            <strong>Communion :</strong> Scapulis suis obumbrabit [p.100]
+            <strong>Communion :</strong> Scapulis suis obumbrabit [p.103]
         `
     },
     {
         type: "accordeon",
-        titre: "",
+        titre: "Feria .II.",
         couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
-        traduction: "",
+        traduction: "Deuxième jour",
         contenu: `
-            <strong>Introït :</strong> [p.]<br><br>
-            <strong>Graduel :</strong> [p.]<br><br>
-            <strong>Alléluia :</strong> [p.]<br><br>
-            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
-            <strong>Communion :</strong> [p.]
+            <strong>Introït :</strong> Sicut oculi servorum [p.104]<br><br>
+            <strong>Graduel :</strong> Protector noster aspice [p.104]<br><br>
+            ATTENTION ! Pas d'alleluia ici.br><br>
+            <strong>Offertoire :</strong> Revela oculos meos [p.105]<br>V. Legem pone mihi Domine<br>V. Veniant super me miserationes<br><br>
+            <strong>Communion :</strong> Voce mea ad Dominum [p.105]
         `
     },
     {
         type: "accordeon",
-        titre: "",
+        titre: "Feria .III.",
         couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
-        traduction: "",
+        traduction: "Troisième jour",
         contenu: `
-            <strong>Introït :</strong> [p.]<br><br>
-            <strong>Graduel :</strong> [p.]<br><br>
-            <strong>Alléluia :</strong> [p.]<br><br>
-            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
-            <strong>Communion :</strong> [p.]
+            <strong>Introït :</strong> Domine refugium factus [p.106]<br><br>
+            <strong>Graduel :</strong> Dirigatur oratio mea [p.106]<br><br>
+            ATTENTION ! Pas d'alleluia ici.br><br>
+            <strong>Offertoire :</strong> In te speravi Domine [p.106]<br>V. Illumina faciem tuam<br>V. Quam magna multitudo<br><br>
+            <strong>Communion :</strong> Cum invocarem te [p.107]
         `
     },
     {
         type: "accordeon",
-        titre: "",
+        titre: "Feria .IIII.",
         couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
-        traduction: "",
+        traduction: "Quatrième jour",
         contenu: `
-            <strong>Introït :</strong> [p.]<br><br>
-            <strong>Graduel :</strong> [p.]<br><br>
-            <strong>Alléluia :</strong> [p.]<br><br>
-            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
-            <strong>Communion :</strong> [p.]
+            <strong>Introït :</strong> Reminiscere miserationum tuarum Domine [p.108]<br><br>
+            <strong>Graduel :</strong> Tribulationes cordis mei [p.108]<br><br>
+            ATTENTION : un autre graduel ici :<br>
+            <strong>Graduel :</strong> De necessitatibus meis [p. 108]
+            <strong>Offertoire :</strong> Meditabar in mandatis tuis [p.109]<br>V. Pars mea Domine<br>V. Miserere mei <br><br>
+            <strong>Communion :</strong> Intellege clamorem meum [p.109]
         `
     },
     {
         type: "accordeon",
-        titre: "",
+        titre: "Feria .V.",
         couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
-        traduction: "",
+        traduction: "Cinquième jour",
         contenu: `
-            <strong>Introït :</strong> [p.]<br><br>
-            <strong>Graduel :</strong> [p.]<br><br>
-            <strong>Alléluia :</strong> [p.]<br><br>
-            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
-            <strong>Communion :</strong> [p.]
+            <strong>Introït :</strong> Confessio et pulchritudo [p.110]<br><br>
+            <strong>Graduel :</strong> Custodi me Domine [p.111]<br><br>
+            ATTENTION ! Pas d'alleluia ici.<br><br>
+            <strong>Offertoire :</strong> Immittit angelus Domini [p.111]<br>V. Benedicam Domino<br>V. In Domino laudabitur<br> V. Accedite ad eum<br><br>
+            <strong>Communion :</strong> Panis quem ego [p.112]
         `
     },
     {
         type: "accordeon",
-        titre: "",
+        titre: "Feria sexta",
         couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
-        traduction: "",
+        traduction: "Sixième jour",
         contenu: `
             <strong>Introït :</strong> [p.]<br><br>
             <strong>Graduel :</strong> [p.]<br><br>
