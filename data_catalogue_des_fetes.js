@@ -245,7 +245,7 @@ siteData.catalogue_des_fetes = [
             <strong>Introït :</strong> Vultum tuum deprecabuntur [p.46]<br><br>
             <strong>Graduel :</strong> Diffusa est gratia [p.46]<br><br>
             ATTENTION ! Pas d'alleluia ici.<br><br>
-            <strong>Offertoire :</strong> Offerentur regi virgines [p.47]<br>V. Eructuavit cor meum<br>(un seul verset noté ici)<br><br>
+            <strong>Offertoire :</strong> ur regi virgines [p.47]<br>V. Eructuavit cor meum<br>(un seul verset noté ici)<br><br>
             <strong>Communion :</strong> Simile est regnum caelorum [p.48]
         `
     },
@@ -394,171 +394,179 @@ siteData.catalogue_des_fetes = [
     },
     {
         type: "accordeon",
-        titre: "",
+        titre: "Nat. Sce. Agnetis",
         couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
-        traduction: "",
+        traduction: "À la naissance de sainte Agnès<br>(On l'a déjà eu un peu plus haut mais avec des pièces différentes)",
         contenu: `
-            <strong>Introït :</strong> [p.]<br><br>
-            <strong>Graduel :</strong> [p.]<br><br>
-            <strong>Alléluia :</strong> [p.]<br><br>
-            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
-            <strong>Communion :</strong> [p.]
+            <strong>Introït :</strong> Vultum tuum [p.70] <br>ATTENTION ! Il n'est noté ici que par son incipit, pour voir la pièce entière rdv [p.46]<br><br>
+            <strong>Graduel :</strong> Specie tua [p.70]<br>ATTENTION ! Il n'est noté ici que par son incipit, pour voir la pièce entière rdv [p.62]<br><br>
+            ATTENTION ! Pas d'alleluia ici.<br><br>
+            <strong>Offertoire :</strong> Diffusa est gratia [p.70]<br>V. Specie tua et pulchritudine <br>V. Eructavit cor<br><br>
+            <strong>Communion :</strong> Simile est regnum caelorum [p.71]<br>ATTENTION ! Il n'est noté ici que par son incipit, pour voir la pièce entière rdv [p.48]
         `
     },
     {
         type: "accordeon",
-        titre: "",
+        titre: "In purificatione S. Mar.",
         couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
-        traduction: "",
+        traduction: " Purification de la Sainte Marie",
         contenu: `
-            <strong>Introït :</strong> [p.]<br><br>
-            <strong>Graduel :</strong> [p.]<br><br>
-            <strong>Alléluia :</strong> [p.]<br><br>
-            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
-            <strong>Communion :</strong> [p.]
+            <strong>Antienne :</strong> Responsum accepit Simeon [p.71]<br><br>
+            <strong>Antienne :</strong> Ave gratia plena Dei genitrix [p.72]<br><br>
+            <strong>Antienne :</strong> Adorna thalamum tuum [p.72]<br><br>
+            (Puis "Ad missam" (à la messe))<br><br>
+            <strong>Introït :</strong> Suscepimus Deus misericordiam [p.73]<br><br>
+            <strong>Graduel :</strong> Suscepimus Deus misericordiam [p.74]<br><br>
+            <strong>Alléluia :</strong> Adorabo ad [p.74]<br>ATTENTION ! Il n'est noté ici que par son incipit, pour voir la pièce entière rdv [p.352]<br><br> 
+            <strong>Offertoire :</strong> Diffusa est gratia [p.74]<br>V. XXX<br>V. XXX<br>ATTENTION ! Il n'est noté ici que par son incipit, pour voir la pièce entière rdv [p.70]<br><br> 
+            <strong>Communion :</strong> responsum accepit Simeon [p.74]
         `
     },
     {
         type: "accordeon",
-        titre: "",
+        titre: "Nat. Scae. Agathae Vir.",
         couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
-        traduction: "",
+        traduction: "À la naissance de sainte Agathe, vierge",
         contenu: `
-            <strong>Introït :</strong> [p.]<br><br>
-            <strong>Graduel :</strong> [p.]<br><br>
-            <strong>Alléluia :</strong> [p.]<br><br>
-            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
-            <strong>Communion :</strong> [p.]
+            <strong>Introït :</strong> Gaudeamus omnes in Domino [p.75]<br><br>
+            <strong>Graduel :</strong> Adjuvabit eam Deus [p.75]<br><br>
+            ATTENTION ! Ici c'est un TRAIT qui remplace l'Alleluia<br><strong>Trait :</strong> Qui seminant in lacrimis [p.76]<br><br>
+            <strong>Offertoire :</strong> Offerentur [p.76]<br>V. XXX<br>V. XXX<br>ATTENTION ! Il n'est noté ici que par son incipit, pour voir la pièce entière rdv [p.6]<br><br> 
+            <strong>Communion :</strong> Qui me dignatus est ab omni plaga [p.76]
         `
     },
     {
         type: "accordeon",
-        titre: "",
+        titre: "In Nat. Sci. Valentini",
         couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
-        traduction: "",
+        traduction: "À la naissance de saint Valentin",
         contenu: `
-            <strong>Introït :</strong> [p.]<br><br>
-            <strong>Graduel :</strong> [p.]<br><br>
-            <strong>Alléluia :</strong> [p.]<br><br>
-            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
-            <strong>Communion :</strong> [p.]
+            <strong>Introït :</strong> In virtute tua Domine [p.77]<br><br>
+            <strong>Graduel :</strong> Beatus vir qui timet [p.77]<br><br>
+            ATTENTION ! Ici c'est un TRAIT qui remplace l'Alleluia<br><strong>Trait :</strong> Desiderium anime eius tribu [p.78]<br><br>
+            <strong>Offertoire :</strong> In virtute tua [p.78]<br>V. XXX<br>V. XXX<br>ATTENTION ! Il n'est noté ici que par son incipit, pour voir la pièce entière rdv [p.34]<br><br>
+            <strong>Communion :</strong> Magna est [p.78]<br>ATTENTION ! Il n'est noté ici que par son incipit, pour voir la pièce entière rdv [p.39]
         `
     },
     {
         type: "accordeon",
-        titre: "",
+        titre: "Nat. Sci. Gregorii",
         couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
-        traduction: "",
+        traduction: "À la naissance de Saint Grégoire",
         contenu: `
-            <strong>Introït :</strong> [p.]<br><br>
-            <strong>Graduel :</strong> [p.]<br><br>
-            <strong>Alléluia :</strong> [p.]<br><br>
-            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
-            <strong>Communion :</strong> [p.]
+            <strong>Introït :</strong> Sacerdotes Dei benedicite [p.78]<br><br>
+            <strong>Graduel :</strong> Juravit Dominus [p.79]<br>ATTENTION ! Il n'est noté ici que par son incipit, pour voir la pièce entière rdv [p.56]<br><br>
+            ATTENTION ! Ici c'est un TRAIT qui remplace l'Alleluia<br><strong>Trait :</strong> Beatus vir qui timet Dominum [p.79]<br><br>
+            <strong>Offertoire :</strong> Veritas mea [p.79]<br>V. XXX<br>V. XXX<br>Il n'est noté ici que par son incipit, pour voir la pièce entière rdv [p.56]<br><br>
+            <strong>Communion :</strong> Fidelis servus et prudens [p.79]
         `
     },
     {
         type: "accordeon",
-        titre: "",
+        titre: "In adnunt. S. Mar.",
         couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
-        traduction: "",
+        traduction: "À l'Annonciation à la sainte Marie",
         contenu: `
-            <strong>Introït :</strong> [p.]<br><br>
-            <strong>Graduel :</strong> [p.]<br><br>
-            <strong>Alléluia :</strong> [p.]<br><br>
-            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
-            <strong>Communion :</strong> [p.]
+            <strong>Introït :</strong> Vultum tuum [p.80]<br>Il n'est noté ici que par son incipit, pour voir la pièce entière rdv [p.46]<br><br>
+            <strong>Graduel :</strong> Diffusa est [p.80]<br>Il n'est noté ici que par son incipit, pour voir la pièce entière rdv [p.46]<br><br>
+           ATTENTION ! Ici c'est un TRAIT qui remplace l'Alleluia<br><strong>Trait :</strong> Audi filia et vide [p.80]<br><br>
+            <strong>Offertoire :</strong> Ave Maria [p.81]<br>V. XXX<br>V. XXX<br>Il n'est noté ici que par son incipit, pour voir la pièce entière rdv [p.12]<br><br>
+            <strong>Communion :</strong> Ecce virgo [p.81]
         `
     },
     {
         type: "accordeon",
-        titre: "",
+        titre: "Dom. In .LXX.ma",
         couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
-        traduction: "",
+        traduction: "Dimanche de la Septuagésime",
         contenu: `
-            <strong>Introït :</strong> [p.]<br><br>
-            <strong>Graduel :</strong> [p.]<br><br>
-            <strong>Alléluia :</strong> [p.]<br><br>
-            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
-            <strong>Communion :</strong> [p.]
+            <strong>Introït :</strong> Circumdederunt me gemitus [p.81]<br><br>
+            <strong>Graduel :</strong> Adjutor inoportunitatibus [p.81]<br><br>
+            ATTENTION ! Ici c'est un TRAIT qui remplace l'Alleluia<br><strong>Trait :</strong> De profundis clamavi ad te Domine [p.82]<br><br>
+            <strong>Offertoire :</strong> Bonum est confiteri Domino [p.83]<br>V. Quam magnificata sunt opera<br>V. Ecce inimici tui Domine<br> V.Exaltabitur sicut unicornis<br><br>
+            <strong>Communion :</strong> Illumina faciem tuam [p.84]
         `
     },
     {
         type: "accordeon",
-        titre: "",
+        titre: "Dom. In .LX.ma",
         couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
-        traduction: "",
+        traduction: "Dimanche de la Sexagésime",
         contenu: `
-            <strong>Introït :</strong> [p.]<br><br>
-            <strong>Graduel :</strong> [p.]<br><br>
-            <strong>Alléluia :</strong> [p.]<br><br>
-            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
-            <strong>Communion :</strong> [p.]
+            <strong>Introït :</strong> Exsurge quare obdormis [p.84]<br><br>
+            <strong>Graduel :</strong> Sciant gentes quoniam nomen [p.85]<br><br>
+            ATTENTION ! Ici c'est un TRAIT qui remplace l'Alleluia<br><strong>Trait :</strong> Commovisti Domine terram [p.85]<br><br>
+            <strong>Offertoire :</strong> Perfice gressus meos [p.86]<br>V. Exaudi Domine iustitiam<br>V. Custodime Domine ut pupillam<br> V. Ego autem cum iusticia<br><br>
+            <strong>Communion :</strong> Introïbo ad altare Dei [p.87]
         `
     },
     {
         type: "accordeon",
-        titre: "",
+        titre: "Dom. in Quiquagesima",
         couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
-        traduction: "",
+        traduction: "Dimanche de la Quinquagésime",
         contenu: `
-            <strong>Introït :</strong> [p.]<br><br>
-            <strong>Graduel :</strong> [p.]<br><br>
-            <strong>Alléluia :</strong> [p.]<br><br>
-            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
-            <strong>Communion :</strong> [p.]
+            <strong>Introït :</strong> Esto mihi in Deum protectorem [p.88]<br><br>
+            <strong>Graduel :</strong> Tu es Deus qui facit mirabilia [p.88]<br><br>
+            ATTENTION ! Ici c'est un TRAIT qui remplace l'Alleluia<br><strong>Trait :</strong>Iubilate Domino omnis terra<br><br>
+            <strong>Offertoire :</strong> Benedictus es Domine doce me [p.89]<br>V. Beati immaculati un via<br>V. In via testimoniorum<br> V. Viam iniquitatis Domine<br><br>
+            <strong>Communion :</strong> Manducaverunt et saturari sunt [p.91]
         `
     },
     {
         type: "accordeon",
-        titre: "",
+        titre: "Feria .IIII. in caput ieiun (ieiunii).",
         couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
-        traduction: "",
+        traduction: "Quatrième jour, au début du jeûne",
         contenu: `
-            <strong>Introït :</strong> [p.]<br><br>
-            <strong>Graduel :</strong> [p.]<br><br>
-            <strong>Alléluia :</strong> [p.]<br><br>
-            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
-            <strong>Communion :</strong> [p.]
+            <strong>Antienne :</strong> Exaudi nos Domine [p.92]<br><br>
+            <strong>Antienne :</strong> Immutemur habitu in cinere [p.92]<br><br>
+            <strong>Antienne :</strong> iuxtu vestibulum et altare [p.92]<br><br>
+            (Puis "Ad missam" (à la messe))<br><br>
+            <strong>Introït :</strong> Misereris omnium Domine et nihil [p.93]<br><br>
+            <strong>Graduel :</strong> Miserere mei Deus [p.93]<br><br>
+            Pas d'alleluia ici.<br><br>
+            <strong>Offertoire :</strong> Exaltabo te Domine quoniam [p.94]<br>V. Domine abstraxisti <br>V. Ego autem dixi <br><br>
+            <strong>Communion :</strong> Qui meditabitur in lege Domini [p.95]
         `
     },
     {
         type: "accordeon",
-        titre: "",
+        titre: "Fer. .V.",
         couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
-        traduction: "",
+        traduction: "Cinquième jour",
         contenu: `
-            <strong>Introït :</strong> [p.]<br><br>
-            <strong>Graduel :</strong> [p.]<br><br>
-            <strong>Alléluia :</strong> [p.]<br><br>
-            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
-            <strong>Communion :</strong> [p.]
+            <strong>Introït :</strong> Dum clamarem ad Diminum [p.95]<br><br>
+            <strong>Graduel :</strong> Facta cogitatum tuum [p.96]<br><br>
+            Pas d'alleluia ici.<br><br>
+            <strong>Offertoire :</strong> Ad te Domine levavi [p.96]<br>Il n'est noté ici que par son incipit, pour voir la pièce entière rdv [p.1]<br><br>
+            <strong>Communion :</strong> Acceptabit sacrificium iustitiae [p.97]
         `
     },
     {
         type: "accordeon",
-        titre: "",
+        titre: "Feria .VI.",
         couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
-        traduction: "",
+        traduction: "Sixième jour",
         contenu: `
-            <strong>Introït :</strong> [p.]<br><br>
-            <strong>Graduel :</strong> [p.]<br><br>
-            <strong>Alléluia :</strong> [p.]<br><br>
-            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
-            <strong>Communion :</strong> [p.]
+            <strong>Introït :</strong> Audivit Dominus [p.97]<br><br>
+            <strong>Graduel :</strong> Unam petii a Domino [p.97]<br><br>
+            Pas d'alleluia ici.<br><br>
+            <strong>Offertoire :</strong> Domine vivifica me [p.98]<br>V. Ea cum servo tuo<br>V. Da mihi intellectum<br><br>
+            <strong>Communion :</strong> Servite Domino in timore [p.98]
         `
     },
     {
         type: "accordeon",
-        titre: "",
+        titre: "Dominica in Quadragesima",
         couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
-        traduction: "",
+        traduction: "Dimanche de la Quadragésime",
         contenu: `
-            <strong>Introït :</strong> [p.]<br><br>
-            <strong>Graduel :</strong> [p.]<br><br>
-            <strong>Alléluia :</strong> [p.]<br><br>
-            <strong>Offertoire :</strong> [p.]<br>V. <br>V. <br><br>
-            <strong>Communion :</strong> [p.]
+            <strong>Introït :</strong> Invocavit me et ego [p.99]<br><br>
+            <strong>Graduel :</strong> Angelis suis mandabit [p.99]<br><br>
+            ATTENTION ! Ici c'est un TRAIT qui remplace l'Alleluia<br><strong>Trait :</strong> Qui habitat in adiutorio altissimi [p.100]<br><br>
+            <strong>Offertoire :</strong> Scapulis sui obumbrabit [p.102]<br>V. Dicet Domino suceptor<br>V. Quoniam angelis suis<br> V. Super aspidem et basilicum<br><br>
+            <strong>Communion :</strong> Scapulis suis obumbrabit [p.100]
         `
     },
     {
