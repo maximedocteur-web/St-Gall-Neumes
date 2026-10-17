@@ -322,7 +322,7 @@
         const siteData = {};
     </script>
 
-    <!-- 2. ON CHARGE TOUS TES 14 FICHIERS EXACTEMENT COMME DEMANDÉ -->
+    <!-- 2. ON CHARGE TOUS TES FICHIERS EXACTEMENT COMME DEMANDÉ -->
     <script src="data_catalogue_des_fetes.js"></script>
     <script src="data_en_apprendre_plus.js"></script>
     <script src="data_historique.js"></script>
@@ -460,33 +460,60 @@
 
             // =========================================================
             // 5. FONCTION UNIVERSELLE POUR GÉNÉRER LES PAGES DYNAMIQUES
+            // (100% BLINDÉE : AUCUNE REGEX, AUCUN RISQUE DE PLANTER)
             // =========================================================
             
             function genererPageDynamique(containerId, donneesArray) {
                 const container = document.getElementById(containerId);
                 if (!container || !donneesArray) return; 
 
-                // Le tableau qui va stocker les notes pour les lister à la fin de la page
                 let tableauNotes = [];
                 let compteurNotes = 1;
 
-                // MÉTHODE INFAILLIBLE : Aucun usage de Regex complexe pour les notes !
                 function formaterTexte(texte) {
                     if (!texte) return "";
+                    let res = texte;
                     
-                    // 1. Les liens E-codices
-                    let res = texte.replace(/\[p\.([^\]]+)\]/g, '<a href="https://www.e-codices.unifr.ch/fr/sbe/0121/\$1/0/" target="_blank" class="ml-2 text-sm text-amber-700 hover:text-amber-900 underline font-medium">p.\$1</a>');
-                    
-                    // 2. NOUVEAU : Les liens internes vers d'autres pages
-                    // Transforme [lien=neumes]mot[/lien] en un bouton cliquable
-                    res = res.replace(/\[lien=([^\]]+)\]([\s\S]*?)\[\/lien\]/gi, `<a onclick="showPage('$1')" class="text-amber-700 font-bold hover:text-amber-900 hover:underline cursor-pointer transition-colors">$2</a>`);
-                    
-                    // 3. Les Notes de bas de page (Découpage manuel sécurisé)
+                    // 1. LES LIENS INTERNES : [lien=nomPage]Le mot[/lien]
+                    while (res.includes("[lien=") && res.includes("[/lien]")) {
+                        let indexDebut = res.indexOf("[lien=");
+                        let indexFin = res.indexOf("[/lien]");
+                        
+                        if (indexDebut !== -1 && indexFin !== -1 && indexDebut < indexFin) {
+                            let indexFinCrochet = res.indexOf("]", indexDebut);
+                            if (indexFinCrochet !== -1 && indexFinCrochet < indexFin) {
+                                let texteAvant = res.substring(0, indexDebut);
+                                let pageCible = res.substring(indexDebut + 6, indexFinCrochet);
+                                let texteLien = res.substring(indexFinCrochet + 1, indexFin);
+                                let texteApres = res.substring(indexFin + 7);
+                                
+                                let boutonHTML = '<a onclick="showPage(\'' + pageCible + '\')" class="text-amber-700 font-bold hover:text-amber-900 hover:underline cursor-pointer transition-colors">' + texteLien + '</a>';
+                                res = texteAvant + boutonHTML + texteApres;
+                            } else { break; }
+                        } else { break; }
+                    }
+
+                    // 2. LES LIENS E-CODICES : [p.XXX]
+                    while (res.includes("[p.") && res.includes("]")) {
+                        let indexDebut = res.indexOf("[p.");
+                        let indexFin = res.indexOf("]", indexDebut);
+                        
+                        if (indexDebut !== -1 && indexFin !== -1 && indexFin > indexDebut) {
+                            let texteAvant = res.substring(0, indexDebut);
+                            let pageId = res.substring(indexDebut + 3, indexFin);
+                            let texteApres = res.substring(indexFin + 1);
+                            
+                            let lienEcodices = '<a href="https://www.e-codices.unifr.ch/fr/sbe/0121/' + pageId + '/0/" target="_blank" class="ml-2 text-sm text-amber-700 hover:text-amber-900 underline font-medium">p.' + pageId + '</a>';
+                            res = texteAvant + lienEcodices + texteApres;
+                        } else { break; }
+                    }
+
+                    // 3. LES NOTES DE BAS DE PAGE : [note]Mon texte[/note]
                     while (res.includes("[note]") && res.includes("[/note]")) {
                         let indexDebut = res.indexOf("[note]");
                         let indexFin = res.indexOf("[/note]");
                         
-                        if (indexDebut < indexFin) {
+                        if (indexDebut !== -1 && indexFin !== -1 && indexDebut < indexFin) {
                             let texteAvant = res.substring(0, indexDebut);
                             let texteNote = res.substring(indexDebut + 6, indexFin);
                             let texteApres = res.substring(indexFin + 7);
@@ -495,20 +522,16 @@
                             tableauNotes.push(texteNote);
                             compteurNotes++;
                             
-                            let appel = `<sup id="appel-${containerId}-${num}" class="ml-0.5"><a href="#note-${containerId}-${num}" class="text-amber-700 font-bold text-xs hover:text-amber-900 transition-colors">${num}</a></sup>`;
-                            
+                            let appel = '<sup id="appel-' + containerId + '-' + num + '" class="ml-0.5"><a href="#note-' + containerId + '-' + num + '" class="text-amber-700 font-bold text-xs hover:text-amber-900 transition-colors">' + num + '</a></sup>';
                             res = texteAvant + appel + texteApres;
-                        } else {
-                            break; 
-                        }
+                        } else { break; }
                     }
+
                     return res;
                 }
 
-                // On vide le conteneur par sécurité avant de le remplir
                 container.innerHTML = "";
 
-                // Construction de la page
                 donneesArray.forEach((bloc) => {
                     if (bloc.type === 'text') {
                         container.innerHTML += `<p class="mb-6">${formaterTexte(bloc.content)}</p>`;
