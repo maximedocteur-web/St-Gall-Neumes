@@ -18,5 +18,9 @@ siteData.je_debute = [
     content:`<strong>D.</strong> : C'est... ... ... abstrait.<br><br>
     <strong>M.</strong> : Pas tant que ça, regarde, je t'explique. Su la feuille que je t'ai donnée, tu as l'édition d'un chant grégorien. Tout d'abord, tu as le <span style="color: #0000ff;">texte du chant grégorien</span></strong> 
     ainsi que sa <span style="color: #da0000;">traduction</span></strong>.`
+  },
+  {
+    type:"image",
+    src:"images/exemple2"
   }
 ];
