@@ -65,7 +65,9 @@ siteData.je_debute = [
   },
   {
     type:"text",
-    content :`<strong>D.</strong> : Je peine à comprendre pourquoi avoir besoin de deux notations musicales si elles expriment toutes deux la même chose !<br><br>
+    content :`<strong>D.</strong> : Ha oui, on retrouve bien les symboles et le même texte ! Mais ici, il ne semble y avoir qu'une seule notation au dessus du texte, alors
+    pourquoi nous, nous avons deux différentes si une seule leur suffit amplement ?<br><br>
+    <strong>D.</strong> : Je peine à comprendre pourquoi avoir besoin de deux notations musicales si elles expriment toutes deux la même chose !<br><br>
     <strong>M.</strong> : Tu m'entends bien mais tu m'écoutes mal... Je n'ai pas dit qu'elles exprimaient toutes les deux la même chose, j'ai simplement dit que ce sont
     des notations musicales, la subtilité étant dans le fait que, justement, elles ne notent pas la même chose.`
   }
