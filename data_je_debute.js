@@ -8,4 +8,4 @@ siteData.je_debute = [
     Il faut comprendre que le chant que l'on dit "grégorien" n'a pas été créé <em>ex nihilo</em> (à partir de rien), il est
     le fruit d'influences diverses et de créations depuis le début du christianisme. Je t'invite à aller voir dans la section [lien=historique]Historique[/lien]`
   }
-]
+];
