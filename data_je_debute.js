@@ -37,6 +37,16 @@ siteData.je_debute = [
   {
     type:"image",
     src:"images/exemple3.png"
+  },
+  {
+    type:"text",
+    content:`<strong>M.</strong> : Je t'expliquerai juste après à quoi cette notation correspond. Juste au dessus de cette notation carrée, tu trouveras une seconde notation.<br><br>
+    <strong>D.</strong> : Vous voulez dire une autre notation musicale ?
+    <strong>M.</strong> : Oui, même si c'est un petit peu plus compliqué que ça... Mais reprenons, donc avec cette notation carrée cohabite une seconde notation que nous appellons 
+    "notation de Saint-Gall" ou "notation sangallienne".`
+  },
+  {
+    type:"image",
+    src:"images/exemple4.png"
   }
-  
 ];
