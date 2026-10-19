@@ -11,7 +11,7 @@ siteData.je_debute = [
   },
   {
     type:"image",
-    src :"images/exemple1"
+    src :"images/exemple1.png"
   },
   {
     type:"text",
@@ -21,6 +21,6 @@ siteData.je_debute = [
   },
   {
     type:"image",
-    src:"images/exemple2"
+    src:"images/exemple2.png"
   }
 ];
