@@ -48,5 +48,24 @@ siteData.je_debute = [
   {
     type:"image",
     src:"images/exemple4.png"
+  },
+  {
+    type:"text",
+    content:`<strong>D.</strong> : C'est très beau comme notation, on dirait que c'est fait à la main.<br><br>
+    <strong>M.</strong> : C'est le cas, bien vu ! Cette notation se trouve être la plus ancienne que nous possédons pour le chant grégorien. Elle date du Xe siècle. On l'apelle "notation
+    de Saint-Gall" car le manuscrit qui la contient est conservé et a été rédigé à l'Abbaye de Saint-Gall dans l'actuelle Suisse. Plusieurs manuscrits de la même région comportent cette 
+    notation pour le chant grégorien.<br><br>
+    <strong>D.</strong> : Mais alors, à quoi ressemble le manuscrit d'origine pusqu'ici les symboles semblent découpés ?
+    <strong>M.</strong> : À ceci :`
+  },
+  {
+    type:"image",
+    src:"images/exemple5.png"
+  },
+  {
+    type:"text",
+    content :`<strong>D.</strong> : Je peine à comprendre pourquoi avoir besoin de deux notations musicales si elles expriment toutes deux la même chose !<br><br>
+    <strong>M.</strong> : Tu m'entends bien mais tu m'écoutes mal... Je n'ai pas dit qu'elles exprimaient toutes les deux la même chose, j'ai simplement dit que ce sont
+    des notations musicales, la subtilité étant dans le fait que, justement, elles ne notent pas la même chose.`
   }
 ];
