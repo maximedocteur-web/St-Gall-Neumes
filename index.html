@@ -102,9 +102,10 @@
                 <!-- 7. Pratique -->
                 <div class="group relative">
                     <button class="px-3 py-1.5 rounded-md transition text-stone-700 hover:bg-stone-100 cursor-default">Pratique ▾</button>
-                    <div class="hidden group-hover:block absolute left-0 mt-0 pt-2 w-48 z-50">
+                    <div class="hidden group-hover:block absolute left-0 mt-0 pt-2 w-56 z-50">
                         <div class="bg-white border border-stone-200 rounded-md shadow-lg overflow-hidden py-1">
                             <a onclick="showPage('analyse')" class="block cursor-pointer px-4 py-2 text-sm text-stone-700 hover:bg-amber-50 hover:text-amber-800">Lecture Guidée</a>
+                            <a onclick="showPage('manuscrit-interactif')" class="block cursor-pointer px-4 py-2 text-sm text-stone-700 hover:bg-amber-50 hover:text-amber-800">Manuscrit Interactif</a>
                             <a onclick="showPage('quiz')" class="block cursor-pointer px-4 py-2 text-sm text-stone-700 hover:bg-amber-50 hover:text-amber-800">Quiz</a>
                         </div>
                     </div>
@@ -284,6 +285,21 @@
                 <div id="carre-manuscrit-contenu" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 text-stone-700 text-justify leading-relaxed"></div>
             </section>
 
+            <!-- PAGE MANUSCRIT INTERACTIF -->
+            <section id="page-manuscrit-interactif" class="page-section space-y-6 relative z-10">
+                <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Manuscrit Interactif</h2>
+                <div class="bg-white p-8 rounded-lg shadow-sm border border-stone-200">
+                    <p class="text-stone-600 mb-6">Passez votre souris sur les neumes de l'image pour voir leur nom.</p>
+                    
+                    <div id="interactive-container" class="relative inline-block w-full shadow-md border border-stone-200 cursor-crosshair">
+                        <img id="interactive-image" src="" alt="Manuscrit" class="w-full h-auto block rounded">
+                        <div id="interactive-tooltip" class="pointer-events-none absolute opacity-0 bg-stone-900 text-white text-sm font-bold px-3 py-1.5 rounded shadow-lg transition-opacity duration-200 z-50 transform -translate-x-1/2 -translate-y-full">
+                            Nom
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <!-- PAGE LECTURE GUIDEE -->
             <section id="page-analyse" class="page-section space-y-6 relative z-10">
                 <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Lecture Guidée : Analyse d'un Chant</h2>
@@ -342,6 +358,8 @@
     <script src="data_manuscrit_carre.js"></script>
     <script src="data_carre_manuscrit.js"></script>
     <script src="data_je_debute.js"></script>
+    <!-- On charge le nouveau fichier des neumes interactifs -->
+    <script src="data_manuscrit_interactif.js"></script>
 
     <!-- 3. SCRIPT PRINCIPAL -->
     <script>
@@ -560,6 +578,53 @@
                 }
             } catch(e) { console.error("Erreur Quiz:", e); }
 
+            // 4.5 MANUSCRIT INTERACTIF
+            try {
+                if (siteData.manuscritInteractif) {
+                    const container = document.getElementById('interactive-container');
+                    const img = document.getElementById('interactive-image');
+                    const tooltip = document.getElementById('interactive-tooltip');
+
+                    if (img) img.src = siteData.manuscritInteractif.image;
+
+                    if (siteData.manuscritInteractif.neumes) {
+                        siteData.manuscritInteractif.neumes.forEach((neume) => {
+                            const hotspot = document.createElement('div');
+                            // Position et taille en pourcentage
+                            hotspot.style.left = neume.x + '%';
+                            hotspot.style.top = neume.y + '%';
+                            hotspot.style.width = neume.w + '%';
+                            hotspot.style.height = neume.h + '%';
+                            
+                            // Apparence : transparent par défaut, se teinte légèrement au survol
+                            hotspot.className = "absolute border-2 border-transparent hover:border-amber-500 hover:bg-amber-500/20 transition-all rounded";
+
+                            // Quand la souris entre dans la zone
+                            hotspot.addEventListener('mouseenter', () => {
+                                tooltip.textContent = neume.nom;
+                                tooltip.style.opacity = '1';
+                            });
+
+                            // La bulle suit la souris dans la zone
+                            hotspot.addEventListener('mousemove', (e) => {
+                                const rect = container.getBoundingClientRect();
+                                const mouseX = e.clientX - rect.left;
+                                const mouseY = e.clientY - rect.top;
+                                
+                                tooltip.style.left = mouseX + 'px';
+                                tooltip.style.top = (mouseY - 15) + 'px'; // 15px au-dessus du curseur
+                            });
+
+                            // Quand la souris quitte la zone
+                            hotspot.addEventListener('mouseleave', () => {
+                                tooltip.style.opacity = '0';
+                            });
+
+                            container.appendChild(hotspot);
+                        });
+                    }
+                }
+            } catch(e) { console.error("Erreur Manuscrit Interactif:", e); }
 
             // =========================================================
             // 5. FONCTION UNIVERSELLE ULTRA-ROBUSTE
