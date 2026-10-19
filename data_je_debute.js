@@ -26,7 +26,7 @@ siteData.je_debute = [
   {
     type:"text",
     content:`<strong>D.</strong> : D'accord, oui, ça c'était le plus facile.<br><br>
-    <strong>M/</strong> : Ensuite, lance toi !<br><br>
+    <strong>M.</strong> : Ensuite ? Lance toi !<br><br>
     <strong>D.</strong> : Il y a des lignes noires au dessus du texte et ce qui ressemble à des gros carrés qui sont assemblés tout le lognde celles-ci.
     Au dessus il y a des symboles d'une autre couleur. Il y a des symboles qui reviennent plusieurs fois...
     <strong>M. </strong> : Effectivement ! Ce que tu vois ici, ce sont deux notations mélodiques supersposées. Les gros carrés noirs sur les lignes forment ce que l'on apelle 
