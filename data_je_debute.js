@@ -71,12 +71,22 @@ siteData.je_debute = [
     <strong>M.</strong> : Tu m'entends bien mais tu m'écoutes mal... Je n'ai pas dit qu'elles exprimaient toutes les deux la même chose, j'ai simplement dit que ce sont
     des notations musicales, la subtilité étant dans le fait que, justement, elles n'ont pas la volonté de traduire un même phénomène sonore.<br><br>
     <strong>D.</strong> : Ha, ça se complique.<br><br>
-    <strong>M.</strong> : Non, pas autant que tu le crois ! Noter de la musicale dans notre monde contemporain, c'est rendre visible et compréhensible en même temps tous les paramètres du son,
+    <strong>M.</strong> : Non, pas autant que tu le crois ! Noter de la musique dans notre monde contemporain, c'est rendre visible et compréhensible en même temps tous les paramètres du son,
     que ce soit la hauteur des sons (grave/aigu), la longeur des notes, l'enchainement de celles-ci, le tempo, les nuances etc. mais dans les notations plus anciennes, on ne note pas forcément
     tous ces paramètres à la fois. Dans la notation carrée, les gros carrés qu'on appelle des notes, sont disposés sur des lignes, comme les barreaux d'une échelle et à l'aide d'une clé donnée
     au début des lignes, on peut savoir précisément à quelle hauteur est cette note sur une échelle verticale qui va du grave en bas à l'aigu en haut.<br><br>
     <strong>D.</strong> : Donc la notation carrée se focalise sur la hauteur des sons comme paramètre musical important c'est ça ?<br><br>
     <strong>M.</strong> : Voilà, on peut dire ça comme ça. En tous cas, elle possède un système très élaboré pour définir avec beaucoup de précision la place des notes sur une échelle qui va
-    du grave à l'aigu.`
+    du grave à l'aigu.<br><br>`
+  },
+  {
+    type:"image",
+    src :"images/exemple6.png",
+    legende :"la notation carrée"
+  },
+  {
+    type:"text",
+    content :`<strong>D.</strong> : Et la notation de Saint-Gall ne note donc pas la hauteur des notes ?
+    <strong>M.</strong> : Non. Enfin, pas vraiment...`
   }
 ];
