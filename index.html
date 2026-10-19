@@ -102,10 +102,9 @@
                 <!-- 7. Pratique -->
                 <div class="group relative">
                     <button class="px-3 py-1.5 rounded-md transition text-stone-700 hover:bg-stone-100 cursor-default">Pratique ▾</button>
-                    <div class="hidden group-hover:block absolute left-0 mt-0 pt-2 w-56 z-50">
+                    <div class="hidden group-hover:block absolute left-0 mt-0 pt-2 w-48 z-50">
                         <div class="bg-white border border-stone-200 rounded-md shadow-lg overflow-hidden py-1">
                             <a onclick="showPage('analyse')" class="block cursor-pointer px-4 py-2 text-sm text-stone-700 hover:bg-amber-50 hover:text-amber-800">Lecture Guidée</a>
-                            <a onclick="showPage('manuscrit-interactif')" class="block cursor-pointer px-4 py-2 text-sm text-stone-700 hover:bg-amber-50 hover:text-amber-800">Manuscrit Interactif</a>
                             <a onclick="showPage('quiz')" class="block cursor-pointer px-4 py-2 text-sm text-stone-700 hover:bg-amber-50 hover:text-amber-800">Quiz</a>
                         </div>
                     </div>
@@ -132,7 +131,6 @@
 
             <!-- PAGE ACCUEIL (Tableau de Bord) -->
             <section id="page-accueil" class="page-section active">
-                
                 <img src="images/decor_gauche.png" alt="" class="fixed left-0 top-1/2 -translate-y-1/2 w-48 xl:w-72 2xl:w-80 pointer-events-none hidden lg:block z-0">
                 <img src="images/decor_droit.png" alt="" class="fixed right-0 top-1/2 -translate-y-1/2 w-48 xl:w-72 2xl:w-80 pointer-events-none hidden lg:block z-0">
                 
@@ -213,7 +211,7 @@
                 </div>
             </section>
 
-            <!-- TOUTES LES AUTRES PAGES (Générées Dynamiquement) -->
+            <!-- TOUTES LES AUTRES PAGES -->
             <section id="page-lettres-apprendre" class="page-section space-y-6 relative z-10">
                 <div class="flex items-center justify-between border-b-2 border-amber-700 pb-2">
                     <h2 class="text-2xl font-serif font-bold text-stone-900">En apprendre plus sur les Lettres Significatives</h2>
@@ -285,37 +283,30 @@
                 <div id="carre-manuscrit-contenu" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 text-stone-700 text-justify leading-relaxed"></div>
             </section>
 
-            <!-- PAGE MANUSCRIT INTERACTIF -->
-            <section id="page-manuscrit-interactif" class="page-section space-y-6 relative z-10">
-                <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Manuscrit Interactif</h2>
-                <div class="bg-white p-8 rounded-lg shadow-sm border border-stone-200">
-                    <p class="text-stone-600 mb-6">Passez votre souris sur les neumes de l'image pour voir leur nom.</p>
-                    
-                    <div id="interactive-container" class="relative inline-block w-full shadow-md border border-stone-200 cursor-crosshair">
-                        <img id="interactive-image" src="" alt="Manuscrit" class="w-full h-auto block rounded">
-                        <div id="interactive-tooltip" class="pointer-events-none absolute opacity-0 bg-stone-900 text-white text-sm font-bold px-3 py-1.5 rounded shadow-lg transition-opacity duration-200 z-50 transform -translate-x-1/2 -translate-y-full">
-                            Nom
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- PAGE LECTURE GUIDEE -->
+            <!-- PAGE LECTURE GUIDEE (Devenue le Manuscrit Interactif) -->
             <section id="page-analyse" class="page-section space-y-6 relative z-10">
-                <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Lecture Guidée : Analyse d'un Chant</h2>
+                <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Lecture Guidée Interactive</h2>
                 <div class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 space-y-6">
                     <div class="bg-amber-50 border-l-4 border-amber-700 p-4 rounded-r-lg">
                         <h3 id="analyse-titre" class="font-bold text-amber-900"></h3>
                         <p id="analyse-desc" class="text-sm text-amber-800 mt-1"></p>
                     </div>
+                    
                     <div id="audio-container" class="hidden">
                         <p class="text-sm font-medium text-stone-700 mb-2">Écouter l'extrait :</p>
                         <audio id="audio-player" controls class="w-full"></audio>
                     </div>
-                    <div id="image-container" class="hidden text-center">
-                        <img id="manuscrit-img" src="" alt="Extrait de manuscrit" class="mx-auto rounded-lg shadow-sm max-h-96 object-contain">
+                    
+                    <div id="image-container" class="hidden">
+                        <p class="text-stone-600 mb-4 font-medium">Passez votre souris sur les neumes de l'image pour voir leur nom :</p>
+                        <div id="interactive-container" class="relative inline-block w-full shadow-md border border-stone-200 cursor-crosshair rounded bg-stone-50">
+                            <img id="manuscrit-img" src="" alt="Extrait de manuscrit" class="w-full h-auto block rounded">
+                            
+                            <div id="interactive-tooltip" class="pointer-events-none absolute opacity-0 bg-stone-900 text-white text-sm font-bold px-3 py-1.5 rounded shadow-lg transition-opacity duration-200 z-50 transform -translate-x-1/2 -translate-y-full">
+                                Nom
+                            </div>
+                        </div>
                     </div>
-                    <div id="etapes-list" class="space-y-4 divide-y divide-stone-100"></div>
                 </div>
             </section>
 
@@ -358,8 +349,6 @@
     <script src="data_manuscrit_carre.js"></script>
     <script src="data_carre_manuscrit.js"></script>
     <script src="data_je_debute.js"></script>
-    <!-- On charge le nouveau fichier des neumes interactifs -->
-    <script src="data_manuscrit_interactif.js"></script>
 
     <!-- 3. SCRIPT PRINCIPAL -->
     <script>
@@ -529,33 +518,58 @@
                 }
             } catch(e) { console.error("Erreur Lettres:", e); }
 
-            // 3. ANALYSE CHANT
+            // 3. ANALYSE CHANT (Lecture Guidée Interactive)
             try {
-                if (siteData.analyseChant) {
+                if (siteData.analyseChant || siteData.lecture_guidee) {
+                    const data = siteData.analyseChant || siteData.lecture_guidee;
                     const titreEl = document.getElementById('analyse-titre');
                     const descEl = document.getElementById('analyse-desc');
-                    if (titreEl) titreEl.textContent = siteData.analyseChant.titre;
-                    if (descEl) descEl.textContent = siteData.analyseChant.description;
+                    if (titreEl && data.titre) titreEl.textContent = data.titre;
+                    if (descEl && data.description) descEl.textContent = data.description;
                     
-                    if(siteData.analyseChant.audioGlobal) {
+                    if(data.audioGlobal) {
                         document.getElementById('audio-container').classList.remove('hidden');
-                        document.getElementById('audio-player').src = siteData.analyseChant.audioGlobal;
+                        document.getElementById('audio-player').src = data.audioGlobal;
                     }
-                    if(siteData.analyseChant.imageGlobale) {
+                    if(data.imageGlobale) {
                         document.getElementById('image-container').classList.remove('hidden');
-                        document.getElementById('manuscrit-img').src = siteData.analyseChant.imageGlobale;
-                    }
-                    const etapesList = document.getElementById('etapes-list');
-                    if (etapesList && siteData.analyseChant.etapes) {
-                        siteData.analyseChant.etapes.forEach(e => {
-                            const row = document.createElement('div');
-                            row.className = "pt-4 flex flex-col md:flex-row justify-between items-start md:items-center";
-                            row.innerHTML = `
-                                <div class="font-mono bg-stone-100 px-3 py-1 rounded text-amber-900 font-bold mb-2 md:mb-0">${e.signe}</div>
-                                <p class="text-sm text-stone-600 md:w-2/3">${e.explications}</p>
-                            `;
-                            etapesList.appendChild(row);
-                        });
+                        const img = document.getElementById('manuscrit-img');
+                        img.src = data.imageGlobale;
+
+                        const container = document.getElementById('interactive-container');
+                        const tooltip = document.getElementById('interactive-tooltip');
+
+                        // On place les zones interactives
+                        if (data.zones && Array.isArray(data.zones)) {
+                            data.zones.forEach((zone) => {
+                                const hotspot = document.createElement('div');
+                                hotspot.style.left = zone.x + '%';
+                                hotspot.style.top = zone.y + '%';
+                                hotspot.style.width = zone.w + '%';
+                                hotspot.style.height = zone.h + '%';
+                                
+                                hotspot.className = "absolute border-2 border-transparent hover:border-amber-500 hover:bg-amber-500/20 transition-all rounded";
+
+                                hotspot.addEventListener('mouseenter', () => {
+                                    tooltip.textContent = zone.nom;
+                                    tooltip.style.opacity = '1';
+                                });
+
+                                hotspot.addEventListener('mousemove', (e) => {
+                                    const rect = container.getBoundingClientRect();
+                                    const mouseX = e.clientX - rect.left;
+                                    const mouseY = e.clientY - rect.top;
+                                    tooltip.style.left = mouseX + 'px';
+                                    tooltip.style.top = (mouseY - 15) + 'px'; // 15px au-dessus du curseur
+                                });
+
+                                hotspot.addEventListener('mouseleave', () => {
+                                    tooltip.style.opacity = '0';
+                                });
+
+                                container.appendChild(hotspot);
+                            });
+                        }
                     }
                 }
             } catch(e) { console.error("Erreur Analyse:", e); }
@@ -578,54 +592,6 @@
                 }
             } catch(e) { console.error("Erreur Quiz:", e); }
 
-            // 4.5 MANUSCRIT INTERACTIF
-            try {
-                if (siteData.manuscritInteractif) {
-                    const container = document.getElementById('interactive-container');
-                    const img = document.getElementById('interactive-image');
-                    const tooltip = document.getElementById('interactive-tooltip');
-
-                    if (img) img.src = siteData.manuscritInteractif.image;
-
-                    if (siteData.manuscritInteractif.neumes) {
-                        siteData.manuscritInteractif.neumes.forEach((neume) => {
-                            const hotspot = document.createElement('div');
-                            // Position et taille en pourcentage
-                            hotspot.style.left = neume.x + '%';
-                            hotspot.style.top = neume.y + '%';
-                            hotspot.style.width = neume.w + '%';
-                            hotspot.style.height = neume.h + '%';
-                            
-                            // Apparence : transparent par défaut, se teinte légèrement au survol
-                            hotspot.className = "absolute border-2 border-transparent hover:border-amber-500 hover:bg-amber-500/20 transition-all rounded";
-
-                            // Quand la souris entre dans la zone
-                            hotspot.addEventListener('mouseenter', () => {
-                                tooltip.textContent = neume.nom;
-                                tooltip.style.opacity = '1';
-                            });
-
-                            // La bulle suit la souris dans la zone
-                            hotspot.addEventListener('mousemove', (e) => {
-                                const rect = container.getBoundingClientRect();
-                                const mouseX = e.clientX - rect.left;
-                                const mouseY = e.clientY - rect.top;
-                                
-                                tooltip.style.left = mouseX + 'px';
-                                tooltip.style.top = (mouseY - 15) + 'px'; // 15px au-dessus du curseur
-                            });
-
-                            // Quand la souris quitte la zone
-                            hotspot.addEventListener('mouseleave', () => {
-                                tooltip.style.opacity = '0';
-                            });
-
-                            container.appendChild(hotspot);
-                        });
-                    }
-                }
-            } catch(e) { console.error("Erreur Manuscrit Interactif:", e); }
-
             // =========================================================
             // 5. FONCTION UNIVERSELLE ULTRA-ROBUSTE
             // =========================================================
@@ -634,7 +600,6 @@
                     const container = document.getElementById(containerId);
                     if (!container || !donneesArray) return; 
                     
-                    // CORRECTION MAGIQUE : Si on a oublié de mettre des crochets [] dans le fichier de données
                     let data = donneesArray;
                     if (!Array.isArray(donneesArray)) {
                         data = [donneesArray];
