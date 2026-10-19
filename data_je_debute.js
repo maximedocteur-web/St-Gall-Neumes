@@ -27,11 +27,11 @@ siteData.je_debute = [
     type:"text",
     content:`<strong>D.</strong> : D'accord, oui, ça c'était le plus facile.<br><br>
     <strong>M.</strong> : Ensuite ? Lance toi !<br><br>
-    <strong>D.</strong> : Il y a des lignes noires au dessus du texte et ce qui ressemble à des gros carrés qui sont assemblés tout le lognde celles-ci.
-    Au dessus il y a des symboles d'une autre couleur. Il y a des symboles qui reviennent plusieurs fois...
+    <strong>D.</strong> : Il y a des lignes noires au dessus du texte et ce qui ressemble à des gros carrés qui sont assemblés tout le long de celles-ci.
+    Au dessus il y a des symboles d'une autre couleur. Il y a des symboles qui reviennent plusieurs fois...<br><br>
     <strong>M. </strong> : Effectivement ! Ce que tu vois ici, ce sont deux notations mélodiques supersposées. Les gros carrés noirs sur les lignes forment ce que l'on apelle 
-    la "<strong><span style="color: #02c539;">notation carrée</span></strong>", inutile d'expliquer pourquoi car ça coule de source...
-    <strong> D.</strong>: Car les notes sont des gros carrés c'est ça ?
+    la "<strong><span style="color: #02c539;">notation carrée</span></strong>", inutile d'expliquer pourquoi car ça coule de source...<br><br>
+    <strong> D.</strong>: Car les notes sont des gros carrés c'est ça ?<br><br>
     <strong>M. </strong> : OUI.`
   },
   {
@@ -41,9 +41,9 @@ siteData.je_debute = [
   {
     type:"text",
     content:`<strong>M.</strong> : Je t'expliquerai juste après à quoi cette notation correspond. Juste au dessus de cette notation carrée, tu trouveras une seconde notation.<br><br>
-    <strong>D.</strong> : Vous voulez dire une autre notation musicale ?
+    <strong>D.</strong> : Vous voulez dire une autre notation musicale ?<br><br>
     <strong>M.</strong> : Oui, même si c'est un petit peu plus compliqué que ça... Mais reprenons, donc avec cette notation carrée cohabite une seconde notation que nous appellons 
-    "notation de Saint-Gall" ou "notation sangallienne".`
+    "notation de Saint-Gall" ou "notation sangallienne".<br><br>`
   },
   {
     type:"image",
