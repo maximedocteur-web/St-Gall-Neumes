@@ -55,7 +55,7 @@ siteData.je_debute = [
     <strong>M.</strong> : C'est le cas, bien vu ! Cette notation se trouve être la plus ancienne que nous possédons pour le chant grégorien. Elle date du Xe siècle. On l'apelle "notation
     de Saint-Gall" car le manuscrit qui la contient est conservé et a été rédigé à l'Abbaye de Saint-Gall dans l'actuelle Suisse. Plusieurs manuscrits de la même région comportent cette 
     notation pour le chant grégorien.<br><br>
-    <strong>D.</strong> : Mais alors, à quoi ressemble le manuscrit d'origine pusqu'ici les symboles semblent découpés ?
+    <strong>D.</strong> : Mais alors, à quoi ressemble le manuscrit d'origine pusqu'ici les symboles semblent découpés ?<br><br>
     <strong>M.</strong> : À ceci :`
   },
   {
