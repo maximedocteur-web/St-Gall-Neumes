@@ -1,22 +1,371 @@
-<!-- Script principal -->
-    <script>
-        // =========================================================
-        // 1. FONCTIONS GLOBALES (Accessibles par les boutons HTML)
-        // =========================================================
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pédagogie du Chant Grégorien</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .page-section { display: none; }
+        .page-section.active { display: block; }
+        .text-orange-custom { color: #ff4f15; }
+        
+        /* Animations d'apparition de l'accueil */
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-up { animation: fadeUp 0.6s ease-out forwards; opacity: 0; }
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+        .delay-400 { animation-delay: 400ms; }
+        .delay-500 { animation-delay: 500ms; }
+        .delay-600 { animation-delay: 600ms; }
+    </style>
+</head>
+<body class="bg-stone-50 text-stone-800 font-sans min-h-screen flex flex-col justify-between relative">
+    <div>
+        <!-- En-tête -->
+        <header class="bg-stone-900 text-stone-100 py-8 shadow-md">
+            <div class="max-w-5xl mx-auto px-6 text-center">
+                <h1 class="text-3xl md:text-4xl font-serif font-bold tracking-wide">Pédagogie du Chant Grégorien</h1>
+                <p class="text-stone-300 mt-2 text-sm md:text-base">Étude des neumes de St-Gall</p>
+            </div>
+        </header>
+        
+        <!-- Barre de navigation Dynamique -->
+        <div id="nav-container" class="sticky top-0 z-50 w-full pt-0 xl:pt-4 pointer-events-none transition-all duration-300">
+            <nav id="main-nav" class="max-w-5xl mx-auto bg-white border border-stone-200 shadow-md xl:rounded-xl pointer-events-auto transition-all duration-300">
+                <div class="max-w-5xl mx-auto px-4 flex flex-wrap justify-center gap-2 md:gap-6 py-3 text-sm md:text-base font-medium">
 
-        // Gestion de la navigation par pages
+                <!-- 1. Accueil -->
+                <button onclick="showPage('accueil')" id="nav-accueil" class="px-3 py-1.5 rounded-md transition bg-amber-700 text-white">Accueil</button>
+
+                <!-- 2. Historique -->
+                <div class="group relative">
+                    <button class="px-3 py-1.5 rounded-md transition text-stone-700 hover:bg-stone-100 cursor-default">Historique ▾</button>
+                    <div class="hidden group-hover:block absolute left-0 mt-0 pt-2 w-48 z-50">
+                        <div class="bg-white border border-stone-200 rounded-md shadow-lg overflow-hidden py-1">
+                            <a onclick="showPage('historique')" class="block cursor-pointer px-4 py-2 text-sm text-stone-700 hover:bg-amber-50 hover:text-amber-800">L'Historique</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Manuscrits -->
+                <div class="group relative">
+                    <button class="px-3 py-1.5 rounded-md transition text-stone-700 hover:bg-stone-100 cursor-default">Manuscrits ▾</button>
+                    <div class="hidden group-hover:block absolute left-0 mt-0 pt-2 w-56 z-50">
+                        <div class="bg-white border border-stone-200 rounded-md shadow-lg overflow-hidden py-1">
+                            <a onclick="showPage('manuscrits')" class="block cursor-pointer px-4 py-2 text-sm text-stone-700 hover:bg-amber-50 hover:text-amber-800">Se repérer</a>
+                            <a onclick="showPage('types-pieces')" class="block cursor-pointer px-4 py-2 text-sm text-stone-700 hover:bg-amber-50 hover:text-amber-800">Types de pièces</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Sémiologie -->
+                <div class="group relative">
+                    <button class="px-3 py-1.5 rounded-md transition text-stone-700 hover:bg-stone-100 cursor-default">Sémiologie ▾</button>
+                    <div class="hidden group-hover:block absolute left-0 mt-0 pt-2 w-64 z-50">
+                        <div class="bg-white border border-stone-200 rounded-md shadow-lg overflow-hidden py-1">
+                            <a onclick="showPage('notations')" class="block cursor-pointer px-4 py-2 text-sm text-stone-700 hover:bg-amber-50 hover:text-amber-800">Les notations</a>
+                            <a onclick="showPage('neumes')" class="block cursor-pointer px-4 py-2 text-sm text-stone-700 hover:bg-amber-50 hover:text-amber-800">Les Neumes</a>
+                            <a onclick="showPage('lettres-hub')" class="block cursor-pointer px-4 py-2 text-sm text-stone-700 hover:bg-amber-50 hover:text-amber-800">Lettres significatives</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. Théorie musicale -->
+                <div class="group relative">
+                    <button class="px-3 py-1.5 rounded-md transition text-stone-700 hover:bg-stone-100 cursor-default">Théorie musicale ▾</button>
+                    <div class="hidden group-hover:block absolute left-0 mt-0 pt-2 w-56 z-50">
+                        <div class="bg-white border border-stone-200 rounded-md shadow-lg overflow-hidden py-1">
+                            <a onclick="showPage('je-debute')" class="block cursor-pointer px-4 py-2 text-sm text-stone-700 hover:bg-amber-50 hover:text-amber-800">Je débute</a>
+                            <a onclick="showPage('modes')" class="block cursor-pointer px-4 py-2 text-sm text-stone-700 hover:bg-amber-50 hover:text-amber-800">Les modes</a>
+                            <a onclick="showPage('psalmodies')" class="block cursor-pointer px-4 py-2 text-sm text-stone-700 hover:bg-amber-50 hover:text-amber-800">Les psalmodies</a>
+                            <a onclick="showPage('monocorde')" class="block cursor-pointer px-4 py-2 text-sm text-stone-700 hover:bg-amber-50 hover:text-amber-800">Le monocorde</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. Répertoire -->
+                <div class="group relative">
+                    <button class="px-3 py-1.5 rounded-md transition text-stone-700 hover:bg-stone-100 cursor-default">Répertoire ▾</button>
+                    <div class="hidden group-hover:block absolute left-0 mt-0 pt-2 w-64 z-50">
+                        <div class="bg-white border border-stone-200 rounded-md shadow-lg overflow-hidden py-1">
+                            <a onclick="showPage('catalogue-fetes')" class="block cursor-pointer px-4 py-2 text-sm text-stone-700 hover:bg-amber-50 hover:text-amber-800">Catalogue des fêtes</a>
+                            <a onclick="showPage('trier-categories')" class="block cursor-pointer px-4 py-2 text-sm text-stone-700 hover:bg-amber-50 hover:text-amber-800">Trier selon les catégories</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. Pratique -->
+                <div class="group relative">
+                    <button class="px-3 py-1.5 rounded-md transition text-stone-700 hover:bg-stone-100 cursor-default">Pratique ▾</button>
+                    <div class="hidden group-hover:block absolute left-0 mt-0 pt-2 w-48 z-50">
+                        <div class="bg-white border border-stone-200 rounded-md shadow-lg overflow-hidden py-1">
+                            <a onclick="showPage('analyse')" class="block cursor-pointer px-4 py-2 text-sm text-stone-700 hover:bg-amber-50 hover:text-amber-800">Lecture Guidée</a>
+                            <a onclick="showPage('quiz')" class="block cursor-pointer px-4 py-2 text-sm text-stone-700 hover:bg-amber-50 hover:text-amber-800">Quiz</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 8. Ressources -->
+                <div class="group relative">
+                    <button class="px-3 py-1.5 rounded-md transition text-stone-700 hover:bg-stone-100 cursor-default">Ressources ▾</button>
+                    <div class="hidden group-hover:block absolute left-0 mt-0 pt-2 w-56 z-50">
+                        <div class="bg-white border border-stone-200 rounded-md shadow-lg overflow-hidden py-1">
+                            <a onclick="showPage('bibliographie')" class="block cursor-pointer px-4 py-2 text-sm text-stone-700 hover:bg-amber-50 hover:text-amber-800">Bibliographie</a>
+                            <a onclick="showPage('sitographie')" class="block cursor-pointer px-4 py-2 text-sm text-stone-700 hover:bg-amber-50 hover:text-amber-800">Sitographie</a>
+                            <a onclick="showPage('manuscrit-carre')" class="block cursor-pointer px-4 py-2 text-sm text-stone-700 hover:bg-amber-50 hover:text-amber-800">Manuscrit → Carré</a>
+                            <a onclick="showPage('carre-manuscrit')" class="block cursor-pointer px-4 py-2 text-sm text-stone-700 hover:bg-amber-50 hover:text-amber-800">Carré → Manuscrit</a>
+                        </div>
+                    </div>
+                </div>
+
+                </div>
+            </nav>
+        </div>
+
+        <main class="max-w-5xl mx-auto px-6 py-10">
+
+            <!-- PAGE ACCUEIL (Tableau de Bord) -->
+            <section id="page-accueil" class="page-section active">
+                
+                <img src="images/decor_gauche.png" alt="" class="fixed left-0 top-1/2 -translate-y-1/2 w-48 xl:w-72 2xl:w-80 pointer-events-none hidden lg:block z-0">
+                <img src="images/decor_droit.png" alt="" class="fixed right-0 top-1/2 -translate-y-1/2 w-48 xl:w-72 2xl:w-80 pointer-events-none hidden lg:block z-0">
+                
+                <div class="max-w-3xl mx-auto relative z-10 space-y-8 pb-10">
+                    <div class="text-center space-y-4 mb-8 mt-4">
+                        <h2 class="text-3xl md:text-4xl font-serif font-bold text-stone-900">Que fait-on aujourd'hui ?</h2>
+                        <button onclick="showPage('je-debute')" class="mt-4 w-full max-w-xl mx-auto block bg-gradient-to-r from-amber-700 to-amber-900 text-white font-serif font-bold text-lg py-3 rounded-xl shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group ring-1 ring-amber-900/10">
+                            Je débute le chant grégorien 
+                            <span class="inline-block transition-transform duration-300 group-hover:translate-x-2 ml-2">→</span>
+                        </button>
+                    </div>
+
+                    <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-5">
+                        <div onclick="showPage('historique')" class="bg-white p-5 rounded-lg shadow-sm border border-stone-200 hover:border-amber-400 hover:bg-amber-50/30 hover:-translate-y-1 hover:shadow-md cursor-pointer transition-all duration-300 group animate-fade-up delay-100">
+                            <h3 class="text-lg font-serif font-bold text-stone-900 group-hover:text-amber-800 transition mb-1">📜 Historique</h3>
+                            <p class="text-xs text-stone-600 leading-relaxed">Découvrez les origines de la notation monastique et l'âge d'or de Saint-Gall.</p>
+                        </div>
+                        <div onclick="showPage('manuscrits')" class="bg-white p-5 rounded-lg shadow-sm border border-stone-200 hover:border-amber-400 hover:bg-amber-50/30 hover:-translate-y-1 hover:shadow-md cursor-pointer transition-all duration-300 group animate-fade-up delay-200">
+                            <h3 class="text-lg font-serif font-bold text-stone-900 group-hover:text-amber-800 transition mb-1">📖 Manuscrits</h3>
+                            <p class="text-xs text-stone-600 leading-relaxed">Apprenez à vous repérer sur une page et explorez les différents types de pièces.</p>
+                        </div>
+                        <div onclick="showPage('neumes')" class="bg-white p-5 rounded-lg shadow-sm border border-stone-200 hover:border-amber-400 hover:bg-amber-50/30 hover:-translate-y-1 hover:shadow-md cursor-pointer transition-all duration-300 group animate-fade-up delay-300">
+                            <h3 class="text-lg font-serif font-bold text-stone-900 group-hover:text-amber-800 transition mb-1">✍️ Sémiologie</h3>
+                            <p class="text-xs text-stone-600 leading-relaxed">Étude détaillée des notations, catalogue interactif des neumes et lettres significatives.</p>
+                        </div>
+                        <div onclick="showPage('modes')" class="bg-white p-5 rounded-lg shadow-sm border border-stone-200 hover:border-amber-400 hover:bg-amber-50/30 hover:-translate-y-1 hover:shadow-md cursor-pointer transition-all duration-300 group animate-fade-up delay-400">
+                            <h3 class="text-lg font-serif font-bold text-stone-900 group-hover:text-amber-800 transition mb-1">🎵 Théorie musicale</h3>
+                            <p class="text-xs text-stone-600 leading-relaxed">Comprendre les modes de l'octoéchos, les psalmodies et l'étude du monocorde.</p>
+                        </div>
+                        <div onclick="showPage('catalogue-fetes')" class="bg-white p-5 rounded-lg shadow-sm border border-stone-200 hover:border-amber-400 hover:bg-amber-50/30 hover:-translate-y-1 hover:shadow-md cursor-pointer transition-all duration-300 group animate-fade-up delay-500">
+                            <h3 class="text-lg font-serif font-bold text-stone-900 group-hover:text-amber-800 transition mb-1">🗂️ Répertoire</h3>
+                            <p class="text-xs text-stone-600 leading-relaxed">Explorez le catalogue des fêtes et triez les chants selon leurs catégories liturgiques.</p>
+                        </div>
+                        <div onclick="showPage('analyse')" class="bg-white p-5 rounded-lg shadow-sm border border-stone-200 hover:border-amber-400 hover:bg-amber-50/30 hover:-translate-y-1 hover:shadow-md cursor-pointer transition-all duration-300 group animate-fade-up delay-600">
+                            <h3 class="text-lg font-serif font-bold text-stone-900 group-hover:text-amber-800 transition mb-1">🔍 Pratique</h3>
+                            <p class="text-xs text-stone-600 leading-relaxed">Exercez-vous avec nos lectures guidées pas à pas et testez-vous via les quiz.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PAGE NEUMES -->
+            <section id="page-neumes" class="page-section space-y-6 relative z-10">
+                <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Catalogue des Neumes</h2>
+                <div class="bg-white p-6 rounded-lg border border-stone-200 shadow-sm space-y-4">
+                    <div>
+                        <label for="search-input" class="block text-sm font-medium text-stone-700 mb-1">Recherche par nom (ex: pes, clivis, torculus...) :</label>
+                        <input type="text" id="search-input" onkeyup="filterNeumes()" placeholder="Tapez le nom d'un neume..." class="w-full md:w-1/2 p-2.5 border border-stone-300 rounded-md focus:ring-2 focus:ring-amber-700 focus:outline-none text-sm">
+                    </div>
+                    <div>
+                        <p class="text-sm font-medium text-stone-700 mb-2">Ou cliquez sur un neume pour voir sa fiche :</p>
+                        <div id="visual-grid" class="flex flex-wrap gap-3"></div>
+                    </div>
+                </div>
+                <div class="flex gap-2 border-b border-stone-200 pb-4">
+                    <button onclick="switchNeumeTab('simples')" id="btn-simples" class="px-4 py-2 bg-amber-700 text-white rounded-md font-medium text-sm transition">Neumes simples</button>
+                    <button onclick="switchNeumeTab('ornementaux')" id="btn-ornementaux" class="px-4 py-2 bg-stone-200 text-stone-700 rounded-md font-medium text-sm transition hover:bg-stone-300">Neumes ornementaux</button>
+                </div>
+                <div id="tab-simples" class="neume-tab-content grid md:grid-cols-2 gap-6"></div>
+                <div id="tab-ornementaux" class="neume-tab-content grid md:grid-cols-2 gap-6 hidden"></div>
+            </section>
+
+            <!-- PAGE LETTRES SIGNIFICATIVES - HUB -->
+            <section id="page-lettres-hub" class="page-section space-y-6 relative z-10">
+                <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Les Lettres Significatives</h2>
+                <p class="text-stone-600">Choisissez l'une sections ci-dessous pour approfondir votre étude des lettres significatives de Saint-Gall :</p>
+                <div class="grid md:grid-cols-2 gap-6 pt-4">
+                    <div onclick="showPage('lettres-apprendre')" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 hover:border-amber-700 cursor-pointer transition space-y-3 text-center group">
+                        <div class="w-12 h-12 bg-amber-50 text-amber-800 rounded-full flex items-center justify-center mx-auto group-hover:bg-amber-700 group-hover:text-white transition font-serif font-bold text-lg">?</div>
+                        <h3 class="text-xl font-serif font-bold text-stone-900 group-hover:text-amber-800 transition">En apprendre plus sur les lettres significatives</h3>
+                        <p class="text-sm text-stone-600">Découvrez l'origine de ces lettres, les notices poétiques de Notker et l'interprétation vocale sous-jacente.</p>
+                    </div>
+                    <div onclick="showPage('lettres-catalogue')" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 hover:border-amber-700 cursor-pointer transition space-y-3 text-center group">
+                        <div class="w-12 h-12 bg-amber-50 text-amber-800 rounded-full flex items-center justify-center mx-auto group-hover:bg-amber-700 group-hover:text-white transition font-serif font-bold text-lg">📖</div>
+                        <h3 class="text-xl font-serif font-bold text-stone-900 group-hover:text-amber-800 transition">Catalogue des lettres significatives</h3>
+                        <p class="text-sm text-stone-600">Consultez la liste exhaustive de chaque sigle et sa description musicale associée.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TOUTES LES AUTRES PAGES (Générées Dynamiquement) -->
+            <section id="page-lettres-apprendre" class="page-section space-y-6 relative z-10">
+                <div class="flex items-center justify-between border-b-2 border-amber-700 pb-2">
+                    <h2 class="text-2xl font-serif font-bold text-stone-900">En apprendre plus sur les Lettres Significatives</h2>
+                    <button onclick="showPage('lettres-hub')" class="text-sm text-amber-700 hover:underline font-medium">&larr; Retour au choix</button>
+                </div>
+                <div id="lettres-apprendre-contenu" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 text-stone-700 text-justify leading-relaxed"></div>
+            </section>
+            <section id="page-lettres-catalogue" class="page-section space-y-6 relative z-10">
+                <div class="flex items-center justify-between border-b-2 border-amber-700 pb-2">
+                    <h2 class="text-2xl font-serif font-bold text-stone-900">Catalogue des Lettres Significatives</h2>
+                    <button onclick="showPage('lettres-hub')" class="text-sm text-amber-700 hover:underline font-medium">&larr; Retour au choix</button>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-sm border border-stone-200"><div id="lettres-container" class="space-y-6"></div></div>
+            </section>
+            <section id="page-historique" class="page-section space-y-6 relative z-10">
+                <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">L'Historique</h2>
+                <div id="historique-contenu" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 text-stone-700 text-justify leading-relaxed"></div>
+            </section>
+            <section id="page-manuscrits" class="page-section space-y-6 relative z-10">
+                <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Se repérer dans les Manuscrits</h2>
+                <div id="manuscrits-contenu" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 text-stone-700 text-justify leading-relaxed"></div>
+            </section>
+            <section id="page-types-pieces" class="page-section space-y-6 relative z-10">
+                <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Types de Pièces</h2>
+                <div id="types-pieces-contenu" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 text-stone-700 text-justify leading-relaxed"></div>
+            </section>
+            <section id="page-notations" class="page-section space-y-6 relative z-10">
+                <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Les Notations</h2>
+                <div id="notations-contenu" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 text-stone-700 text-justify leading-relaxed"></div>
+            </section>
+            <section id="page-je-debute" class="page-section space-y-6 relative z-10">
+                <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Je débute</h2>
+                <div id="je-debute-contenu" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 text-stone-700 text-justify leading-relaxed"></div>
+            </section>
+            <section id="page-modes" class="page-section space-y-6 relative z-10">
+                <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Les Modes</h2>
+                <div id="modes-contenu" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 text-stone-700 text-justify leading-relaxed"></div>
+            </section>
+            <section id="page-psalmodies" class="page-section space-y-6 relative z-10">
+                <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Les Psalmodies</h2>
+                <div id="psalmodies-contenu" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 text-stone-700 text-justify leading-relaxed"></div>
+            </section>
+            <section id="page-monocorde" class="page-section space-y-6 relative z-10">
+                <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Le Monocorde</h2>
+                <div id="monocorde-contenu" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 text-stone-700 text-justify leading-relaxed"></div>
+            </section>
+            <section id="page-catalogue-fetes" class="page-section space-y-6 relative z-10">
+                <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Catalogue des Fêtes</h2>
+                <div id="catalogue-fetes-contenu" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 text-stone-700 text-justify leading-relaxed"></div>
+            </section>
+            <section id="page-trier-categories" class="page-section space-y-6 relative z-10">
+                <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Trier selon les Catégories</h2>
+                <div id="trier-categories-contenu" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 text-stone-700 text-justify leading-relaxed"></div>
+            </section>
+            <section id="page-bibliographie" class="page-section space-y-6 relative z-10">
+                <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Bibliographie</h2>
+                <div id="bibliographie-contenu" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 text-stone-700 text-justify leading-relaxed"></div>
+            </section>
+            <section id="page-sitographie" class="page-section space-y-6 relative z-10">
+                <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Sitographie</h2>
+                <div id="sitographie-contenu" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 text-stone-700 text-justify leading-relaxed"></div>
+            </section>
+            <section id="page-manuscrit-carre" class="page-section space-y-6 relative z-10">
+                <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Manuscrit → Carré</h2>
+                <div id="manuscrit-carre-contenu" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 text-stone-700 text-justify leading-relaxed"></div>
+            </section>
+            <section id="page-carre-manuscrit" class="page-section space-y-6 relative z-10">
+                <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Carré → Manuscrit</h2>
+                <div id="carre-manuscrit-contenu" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 text-stone-700 text-justify leading-relaxed"></div>
+            </section>
+
+            <!-- PAGE LECTURE GUIDEE -->
+            <section id="page-analyse" class="page-section space-y-6 relative z-10">
+                <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Lecture Guidée : Analyse d'un Chant</h2>
+                <div class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 space-y-6">
+                    <div class="bg-amber-50 border-l-4 border-amber-700 p-4 rounded-r-lg">
+                        <h3 id="analyse-titre" class="font-bold text-amber-900"></h3>
+                        <p id="analyse-desc" class="text-sm text-amber-800 mt-1"></p>
+                    </div>
+                    <div id="audio-container" class="hidden">
+                        <p class="text-sm font-medium text-stone-700 mb-2">Écouter l'extrait :</p>
+                        <audio id="audio-player" controls class="w-full"></audio>
+                    </div>
+                    <div id="image-container" class="hidden text-center">
+                        <img id="manuscrit-img" src="" alt="Extrait de manuscrit" class="mx-auto rounded-lg shadow-sm max-h-96 object-contain">
+                    </div>
+                    <div id="etapes-list" class="space-y-4 divide-y divide-stone-100"></div>
+                </div>
+            </section>
+
+            <!-- PAGE QUIZ -->
+            <section id="page-quiz" class="page-section space-y-6 relative z-10">
+                <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Quiz de Reconnaissance</h2>
+                <div class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 space-y-6" id="quiz-box"></div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Pied de page -->
+    <footer class="bg-stone-900 text-stone-400 py-6 mt-16 text-center text-sm relative z-10">
+        <p>Fait par Maxime Docteur, doctorant à Montpellier (France)</p>
+    </footer>
+
+    <!-- 1. ON CRÉE UN "SAC" GLOBAL VIDE -->
+    <script>
+        const siteData = {};
+    </script>
+
+    <!-- 2. ON CHARGE TOUS TES FICHIERS DE DONNÉES EXACTEMENT ICI -->
+    <script src="data_catalogue_des_fetes.js"></script>
+    <script src="data_en_apprendre_plus.js"></script>
+    <script src="data_historique.js"></script>
+    <script src="data_lecture_guidee.js"></script>
+    <script src="data_lettres_significatives.js"></script>
+    <script src="data_modes.js"></script>
+    <script src="data_monocorde.js"></script>
+    <script src="data_neumes.js"></script>
+    <script src="data_notations.js"></script>
+    <script src="data_psalmodies.js"></script>
+    <script src="data_quizz.js"></script>
+    <script src="data_se_reperer.js"></script>
+    <script src="data_trier_par_categories.js"></script>
+    <script src="data_types_de_pieces.js"></script>
+    <script src="data_bibliographie.js"></script>
+    <script src="data_sitographie.js"></script>
+    <script src="data_manuscrit_carre.js"></script>
+    <script src="data_carre_manuscrit.js"></script>
+    <script src="data_je_debute.js"></script>
+
+    <!-- 3. SCRIPT PRINCIPAL -->
+    <script>
+        // ==========================================
+        // FONCTIONS DE NAVIGATION (GLOBALES)
+        // ==========================================
         function showPage(pageName) {
             document.querySelectorAll('.page-section').forEach(el => el.classList.remove('active'));
 
-            const targetSection = document.getElementById('page-' + pageName);
+            let targetPage = pageName;
+            if (pageName === 'lettres-apprendre' || pageName === 'lettres-catalogue') {
+                targetPage = pageName;
+            } else if (pageName === 'lettres-hub') {
+                targetPage = 'lettres-hub';
+            }
+
+            const targetSection = document.getElementById('page-' + targetPage);
             
             if (targetSection) {
                 targetSection.classList.add('active');
             } else {
-                console.warn("Attention: La page HTML pour '" + pageName + "' n'existe pas !");
+                console.warn("Attention: La page HTML pour '" + targetPage + "' n'existe pas !");
             }
 
-            // Gestion de l'apparence du bouton Accueil
             const btnAccueil = document.getElementById('nav-accueil');
             if(btnAccueil) {
                 if (pageName === 'accueil') {
@@ -26,10 +375,8 @@
                 }
             }
             
-            // Remonter en haut de la page
             window.scrollTo({ top: 0, behavior: 'smooth' });
 
-            // Gestion de la barre de navigation
             const navContainer = document.getElementById('nav-container');
             const mainNav = document.getElementById('main-nav');
             
@@ -42,7 +389,6 @@
             }
         }
 
-        // Gestion des onglets de Neumes
         function switchNeumeTab(category) {
             document.querySelectorAll('.neume-tab-content').forEach(el => el.classList.add('hidden'));
             document.getElementById('tab-' + category).classList.remove('hidden');
@@ -59,7 +405,6 @@
             });
         }
 
-        // Recherche de neumes
         function filterNeumes() {
             const query = document.getElementById('search-input').value.toLowerCase();
             const cards = document.querySelectorAll('.neume-card');
@@ -69,7 +414,6 @@
             });
         }
 
-        // Vérification du Quiz
         function checkQuiz() {
             const selected = document.querySelector('input[name="quiz-q"]:checked');
             const resultEl = document.getElementById('quiz-result');
@@ -87,284 +431,283 @@
             }
         }
 
-
-        // =========================================================
-        // 2. INITIALISATION DES DONNÉES (S'exécute au chargement)
-        // =========================================================
+        // ==========================================
+        // INITIALISATION DES DONNÉES
+        // ==========================================
         document.addEventListener("DOMContentLoaded", () => {
             
-            const simplesContainer = document.getElementById('tab-simples');
-            const ornementauxContainer = document.getElementById('tab-ornementaux');
-            const visualGrid = document.getElementById('visual-grid');
+            // 1. NEUMES
+            try {
+                const simplesContainer = document.getElementById('tab-simples');
+                const ornementauxContainer = document.getElementById('tab-ornementaux');
+                const visualGrid = document.getElementById('visual-grid');
 
-            if (siteData.neumes && Array.isArray(siteData.neumes)) {
-                siteData.neumes.forEach((n, index) => {
-                    const neumeId = 'neume-' + index;
+                if (siteData.neumes && Array.isArray(siteData.neumes)) {
+                    siteData.neumes.forEach((n, index) => {
+                        const neumeId = 'neume-' + index;
 
-                    const badge = document.createElement('div');
-                    badge.className = "flex items-center space-x-2 p-2 border border-stone-200 bg-stone-50 rounded hover:bg-amber-100 cursor-pointer transition text-xs font-medium text-stone-700";
-                    badge.onclick = () => {
-                        showPage('neumes');
-                        switchNeumeTab(n.categorie);
-                        setTimeout(() => {
-                            const el = document.getElementById(neumeId);
-                            if(el) {
-                                el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                                el.classList.add('ring-2', 'ring-amber-700', 'bg-amber-50');
-                                setTimeout(() => el.classList.remove('ring-2', 'ring-amber-700', 'bg-amber-50'), 2500);
-                            }
-                        }, 100);
-                    };
-                    
-                    let badgeImg = '';
-                    if(n.images && n.images.length > 0) badgeImg = `<img src="${n.images[0]}" alt="${n.nom}" class="h-6 w-6 object-contain">`;
-                    else if(n.image) badgeImg = `<img src="${n.image}" alt="${n.nom}" class="h-6 w-6 object-contain">`;
-                    
-                    badge.innerHTML = `${badgeImg}<span>${n.nom}</span>`;
-                    if (visualGrid) visualGrid.appendChild(badge);
+                        const badge = document.createElement('div');
+                        badge.className = "flex items-center space-x-2 p-2 border border-stone-200 bg-stone-50 rounded hover:bg-amber-100 cursor-pointer transition text-xs font-medium text-stone-700";
+                        badge.onclick = () => {
+                            showPage('neumes');
+                            switchNeumeTab(n.categorie);
+                            setTimeout(() => {
+                                const el = document.getElementById(neumeId);
+                                if(el) {
+                                    el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                                    el.classList.add('ring-2', 'ring-amber-700', 'bg-amber-50');
+                                    setTimeout(() => el.classList.remove('ring-2', 'ring-amber-700', 'bg-amber-50'), 2500);
+                                }
+                            }, 100);
+                        };
+                        
+                        let badgeImg = '';
+                        if(n.images && n.images.length > 0) badgeImg = `<img src="${n.images[0]}" alt="${n.nom}" class="h-6 w-6 object-contain">`;
+                        else if(n.image) badgeImg = `<img src="${n.image}" alt="${n.nom}" class="h-6 w-6 object-contain">`;
+                        
+                        badge.innerHTML = `${badgeImg}<span>${n.nom}</span>`;
+                        if (visualGrid) visualGrid.appendChild(badge);
 
-                    const card = document.createElement('div');
-                    card.id = neumeId;
-                    card.className = "neume-card bg-white p-6 rounded-lg shadow-sm border border-stone-200 space-y-3 transition duration-300";
-                    
-                    let html = `<h3 class="font-bold text-lg text-amber-800">${n.nom}</h3>`;
-                    
-                    if(n.images && Array.isArray(n.images)) {
-                        html += `<div class="flex flex-wrap gap-2 my-2">`;
-                        n.images.forEach(img => {
-                            html += `<img src="${img}" alt="${n.nom}" class="h-20 object-contain rounded">`;
-                        });
-                        html += `</div>`;
-                    } else if(n.image) {
-                        html += `<img src="${n.image}" alt="${n.nom}" class="h-24 object-contain my-2 rounded">`;
-                    }
+                        const card = document.createElement('div');
+                        card.id = neumeId;
+                        card.className = "neume-card bg-white p-6 rounded-lg shadow-sm border border-stone-200 space-y-3 transition duration-300";
+                        
+                        let html = `<h3 class="font-bold text-lg text-amber-800">${n.nom}</h3>`;
+                        
+                        if(n.images && Array.isArray(n.images)) {
+                            html += `<div class="flex flex-wrap gap-2 my-2">`;
+                            n.images.forEach(img => {
+                                html += `<img src="${img}" alt="${n.nom}" class="h-20 object-contain rounded">`;
+                            });
+                            html += `</div>`;
+                        } else if(n.image) {
+                            html += `<img src="${n.image}" alt="${n.nom}" class="h-24 object-contain my-2 rounded">`;
+                        }
 
-                    html += `<p class="text-sm text-stone-600 whitespace-pre-line text-justify">${n.description}</p>`;
-                    card.innerHTML = html;
+                        html += `<p class="text-sm text-stone-600 whitespace-pre-line text-justify">${n.description}</p>`;
+                        card.innerHTML = html;
 
-                    if(n.categorie === 'simples' && simplesContainer) simplesContainer.appendChild(card);
-                    if(n.categorie === 'ornementaux' && ornementauxContainer) ornementauxContainer.appendChild(card);
-                });
-            }
-
-            const lettresContainer = document.getElementById('lettres-container');
-            if (siteData.lettres && lettresContainer) {
-                siteData.lettres.forEach(l => {
-                    const div = document.createElement('div');
-                    div.className = "border-b border-stone-100 pb-4 last:border-0";
-                    let lHtml = `<h3 class="font-bold text-amber-800 text-lg mb-1">${l.sigle}</h3>`;
-                    lHtml += `<p class="text-stone-600 text-sm mb-2 text-justify">${l.texte}</p>`;
-                    if(l.image) {
-                        lHtml += `<img src="${l.image}" alt="${l.sigle}" class="h-16 object-contain rounded my-2">`;
-                    }
-                    div.innerHTML = lHtml;
-                    lettresContainer.appendChild(div);
-                });
-            }
-
-            if (siteData.analyseChant) {
-                const titreEl = document.getElementById('analyse-titre');
-                const descEl = document.getElementById('analyse-desc');
-                if (titreEl) titreEl.textContent = siteData.analyseChant.titre;
-                if (descEl) descEl.textContent = siteData.analyseChant.description;
-                
-                if(siteData.analyseChant.audioGlobal) {
-                    document.getElementById('audio-container').classList.remove('hidden');
-                    document.getElementById('audio-player').src = siteData.analyseChant.audioGlobal;
-                }
-                if(siteData.analyseChant.imageGlobale) {
-                    document.getElementById('image-container').classList.remove('hidden');
-                    document.getElementById('manuscrit-img').src = siteData.analyseChant.imageGlobale;
-                }
-                const etapesList = document.getElementById('etapes-list');
-                if (etapesList && siteData.analyseChant.etapes) {
-                    siteData.analyseChant.etapes.forEach(e => {
-                        const row = document.createElement('div');
-                        row.className = "pt-4 flex flex-col md:flex-row justify-between items-start md:items-center";
-                        row.innerHTML = `
-                            <div class="font-mono bg-stone-100 px-3 py-1 rounded text-amber-900 font-bold mb-2 md:mb-0">${e.signe}</div>
-                            <p class="text-sm text-stone-600 md:w-2/3">${e.explications}</p>
-                        `;
-                        etapesList.appendChild(row);
+                        if(n.categorie === 'simples' && simplesContainer) simplesContainer.appendChild(card);
+                        if(n.categorie === 'ornementaux' && ornementauxContainer) ornementauxContainer.appendChild(card);
                     });
                 }
-            }
+            } catch(e) { console.error("Erreur Neumes:", e); }
 
-            const quizBox = document.getElementById('quiz-box');
-            if(siteData.quiz && siteData.quiz.length > 0 && quizBox) {
-                const q = siteData.quiz[0];
-                let qHtml = `<p class="font-medium text-stone-800 mb-4">Question : ${q.question}</p><div class="space-y-2">`;
-                q.options.forEach((opt) => {
-                    qHtml += `
-                        <label class="block p-3 rounded border border-stone-200 hover:bg-stone-50 cursor-pointer text-justify">
-                            <input type="radio" name="quiz-q" value="${opt.correct}" class="mr-2"> ${opt.texte}
-                        </label>`;
-                });
-                qHtml += `</div><button onclick="checkQuiz()" class="mt-4 bg-amber-700 text-white px-6 py-2 rounded-md font-medium hover:bg-amber-800 transition">Vérifier ma réponse</button>
-                          <p id="quiz-result" class="font-medium mt-2"></p>`;
-                quizBox.innerHTML = qHtml;
-            }
+            // 2. LETTRES
+            try {
+                const lettresContainer = document.getElementById('lettres-container');
+                if (siteData.lettres && Array.isArray(siteData.lettres) && lettresContainer) {
+                    siteData.lettres.forEach(l => {
+                        const div = document.createElement('div');
+                        div.className = "border-b border-stone-100 pb-4 last:border-0";
+                        let lHtml = `<h3 class="font-bold text-amber-800 text-lg mb-1">${l.sigle}</h3>`;
+                        lHtml += `<p class="text-stone-600 text-sm mb-2 text-justify">${l.texte}</p>`;
+                        if(l.image) {
+                            lHtml += `<img src="${l.image}" alt="${l.sigle}" class="h-16 object-contain rounded my-2">`;
+                        }
+                        div.innerHTML = lHtml;
+                        lettresContainer.appendChild(div);
+                    });
+                }
+            } catch(e) { console.error("Erreur Lettres:", e); }
+
+            // 3. ANALYSE CHANT
+            try {
+                if (siteData.analyseChant) {
+                    const titreEl = document.getElementById('analyse-titre');
+                    const descEl = document.getElementById('analyse-desc');
+                    if (titreEl) titreEl.textContent = siteData.analyseChant.titre;
+                    if (descEl) descEl.textContent = siteData.analyseChant.description;
+                    
+                    if(siteData.analyseChant.audioGlobal) {
+                        document.getElementById('audio-container').classList.remove('hidden');
+                        document.getElementById('audio-player').src = siteData.analyseChant.audioGlobal;
+                    }
+                    if(siteData.analyseChant.imageGlobale) {
+                        document.getElementById('image-container').classList.remove('hidden');
+                        document.getElementById('manuscrit-img').src = siteData.analyseChant.imageGlobale;
+                    }
+                    const etapesList = document.getElementById('etapes-list');
+                    if (etapesList && siteData.analyseChant.etapes) {
+                        siteData.analyseChant.etapes.forEach(e => {
+                            const row = document.createElement('div');
+                            row.className = "pt-4 flex flex-col md:flex-row justify-between items-start md:items-center";
+                            row.innerHTML = `
+                                <div class="font-mono bg-stone-100 px-3 py-1 rounded text-amber-900 font-bold mb-2 md:mb-0">${e.signe}</div>
+                                <p class="text-sm text-stone-600 md:w-2/3">${e.explications}</p>
+                            `;
+                            etapesList.appendChild(row);
+                        });
+                    }
+                }
+            } catch(e) { console.error("Erreur Analyse:", e); }
+
+            // 4. QUIZ
+            try {
+                const quizBox = document.getElementById('quiz-box');
+                if(siteData.quiz && Array.isArray(siteData.quiz) && siteData.quiz.length > 0 && quizBox) {
+                    const q = siteData.quiz[0];
+                    let qHtml = `<p class="font-medium text-stone-800 mb-4">Question : ${q.question}</p><div class="space-y-2">`;
+                    q.options.forEach((opt) => {
+                        qHtml += `
+                            <label class="block p-3 rounded border border-stone-200 hover:bg-stone-50 cursor-pointer text-justify">
+                                <input type="radio" name="quiz-q" value="${opt.correct}" class="mr-2"> ${opt.texte}
+                            </label>`;
+                    });
+                    qHtml += `</div><button onclick="checkQuiz()" class="mt-4 bg-amber-700 text-white px-6 py-2 rounded-md font-medium hover:bg-amber-800 transition">Vérifier ma réponse</button>
+                              <p id="quiz-result" class="font-medium mt-2"></p>`;
+                    quizBox.innerHTML = qHtml;
+                }
+            } catch(e) { console.error("Erreur Quiz:", e); }
+
 
             // =========================================================
-            // FONCTION UNIVERSELLE POUR GÉNÉRER LES PAGES DYNAMIQUES
+            // 5. FONCTION UNIVERSELLE ULTRA-ROBUSTE
             // =========================================================
             function genererPageDynamique(containerId, donneesArray) {
-                const container = document.getElementById(containerId);
-                if (!container || !donneesArray) return; 
-                
-                // Petite sécurité si le fichier JS contient une erreur de format JSON
-                if (!Array.isArray(donneesArray)) {
-                    console.warn(`Attention: Les données pour ${containerId} ne sont pas un tableau.`);
-                    return;
-                }
-
-                let tableauNotes = [];
-                let compteurNotes = 1;
-
-                function formaterTexte(texte) {
-                    if (!texte) return "";
-                    let res = texte;
+                try {
+                    const container = document.getElementById(containerId);
+                    if (!container || !donneesArray) return; 
                     
-                    // 1. LES LIENS INTERNES : [lien=nomPage]Le mot[/lien]
-                    while (res.includes("[lien=") && res.includes("[/lien]")) {
-                        let indexDebut = res.indexOf("[lien=");
-                        let indexFin = res.indexOf("[/lien]");
+                    // CORRECTION MAGIQUE : Si on a oublié de mettre des crochets [] dans le fichier de données
+                    let data = donneesArray;
+                    if (!Array.isArray(donneesArray)) {
+                        data = [donneesArray];
+                    }
+
+                    let tableauNotes = [];
+                    let compteurNotes = 1;
+
+                    function formaterTexte(texte) {
+                        if (!texte) return "";
+                        let res = String(texte);
                         
-                        if (indexDebut !== -1 && indexFin !== -1 && indexDebut < indexFin) {
-                            let indexFinCrochet = res.indexOf("]", indexDebut);
-                            if (indexFinCrochet !== -1 && indexFinCrochet < indexFin) {
-                                let texteAvant = res.substring(0, indexDebut);
-                                let pageCible = res.substring(indexDebut + 6, indexFinCrochet);
-                                let texteLien = res.substring(indexFinCrochet + 1, indexFin);
-                                let texteApres = res.substring(indexFin + 7);
-                                
-                                let boutonHTML = '<a onclick="showPage(\'' + pageCible + '\')" class="text-amber-700 font-bold hover:text-amber-900 hover:underline cursor-pointer transition-colors">' + texteLien + '</a>';
-                                res = texteAvant + boutonHTML + texteApres;
+                        while (res.includes("[lien=") && res.includes("[/lien]")) {
+                            let indexDebut = res.indexOf("[lien=");
+                            let indexFin = res.indexOf("[/lien]");
+                            if (indexDebut !== -1 && indexFin !== -1 && indexDebut < indexFin) {
+                                let indexFinCrochet = res.indexOf("]", indexDebut);
+                                if (indexFinCrochet !== -1 && indexFinCrochet < indexFin) {
+                                    let texteAvant = res.substring(0, indexDebut);
+                                    let pageCible = res.substring(indexDebut + 6, indexFinCrochet);
+                                    let texteLien = res.substring(indexFinCrochet + 1, indexFin);
+                                    let texteApres = res.substring(indexFin + 7);
+                                    let boutonHTML = '<a onclick="showPage(\'' + pageCible + '\')" class="text-amber-700 font-bold hover:text-amber-900 hover:underline cursor-pointer transition-colors">' + texteLien + '</a>';
+                                    res = texteAvant + boutonHTML + texteApres;
+                                } else { break; }
                             } else { break; }
-                        } else { break; }
+                        }
+
+                        while (res.includes("[p.") && res.includes("]")) {
+                            let indexDebut = res.indexOf("[p.");
+                            let indexFin = res.indexOf("]", indexDebut);
+                            if (indexDebut !== -1 && indexFin !== -1 && indexFin > indexDebut) {
+                                let texteAvant = res.substring(0, indexDebut);
+                                let pageId = res.substring(indexDebut + 3, indexFin);
+                                let texteApres = res.substring(indexFin + 1);
+                                let lienEcodices = '<a href="https://www.e-codices.unifr.ch/fr/sbe/0121/' + pageId + '/0/" target="_blank" class="ml-2 text-sm text-amber-700 hover:text-amber-900 underline font-medium">p.' + pageId + '</a>';
+                                res = texteAvant + lienEcodices + texteApres;
+                            } else { break; }
+                        }
+
+                        while (res.includes("[note]") && res.includes("[/note]")) {
+                            let indexDebut = res.indexOf("[note]");
+                            let indexFin = res.indexOf("[/note]");
+                            if (indexDebut !== -1 && indexFin !== -1 && indexDebut < indexFin) {
+                                let texteAvant = res.substring(0, indexDebut);
+                                let texteNote = res.substring(indexDebut + 6, indexFin);
+                                let texteApres = res.substring(indexFin + 7);
+                                let num = compteurNotes;
+                                tableauNotes.push(texteNote);
+                                compteurNotes++;
+                                let appel = '<sup id="appel-' + containerId + '-' + num + '" class="ml-0.5"><a href="#note-' + containerId + '-' + num + '" class="text-amber-700 font-bold text-xs hover:text-amber-900 transition-colors">' + num + '</a></sup>';
+                                res = texteAvant + appel + texteApres;
+                            } else { break; }
+                        }
+                        return res;
                     }
 
-                    // 2. LES LIENS E-CODICES : [p.XXX]
-                    while (res.includes("[p.") && res.includes("]")) {
-                        let indexDebut = res.indexOf("[p.");
-                        let indexFin = res.indexOf("]", indexDebut);
-                        
-                        if (indexDebut !== -1 && indexFin !== -1 && indexFin > indexDebut) {
-                            let texteAvant = res.substring(0, indexDebut);
-                            let pageId = res.substring(indexDebut + 3, indexFin);
-                            let texteApres = res.substring(indexFin + 1);
-                            
-                            let lienEcodices = '<a href="https://www.e-codices.unifr.ch/fr/sbe/0121/' + pageId + '/0/" target="_blank" class="ml-2 text-sm text-amber-700 hover:text-amber-900 underline font-medium">p.' + pageId + '</a>';
-                            res = texteAvant + lienEcodices + texteApres;
-                        } else { break; }
-                    }
+                    container.innerHTML = "";
 
-                    // 3. LES NOTES DE BAS DE PAGE : [note]Mon texte[/note]
-                    while (res.includes("[note]") && res.includes("[/note]")) {
-                        let indexDebut = res.indexOf("[note]");
-                        let indexFin = res.indexOf("[/note]");
-                        
-                        if (indexDebut !== -1 && indexFin !== -1 && indexDebut < indexFin) {
-                            let texteAvant = res.substring(0, indexDebut);
-                            let texteNote = res.substring(indexDebut + 6, indexFin);
-                            let texteApres = res.substring(indexFin + 7);
-                            
-                            let num = compteurNotes;
-                            tableauNotes.push(texteNote);
-                            compteurNotes++;
-                            
-                            let appel = '<sup id="appel-' + containerId + '-' + num + '" class="ml-0.5"><a href="#note-' + containerId + '-' + num + '" class="text-amber-700 font-bold text-xs hover:text-amber-900 transition-colors">' + num + '</a></sup>';
-                            res = texteAvant + appel + texteApres;
-                        } else { break; }
-                    }
-
-                    return res;
-                }
-
-                container.innerHTML = "";
-
-                donneesArray.forEach((bloc) => {
-                    if (bloc.type === 'text') {
-                        container.innerHTML += `<p class="mb-6">${formaterTexte(bloc.content)}</p>`;
-                    }
-                    else if (bloc.type === 'titre') {
-                        container.innerHTML += `<h3 class="text-xl font-serif font-bold text-stone-900 mt-8 mb-4">${formaterTexte(bloc.content)}</h3>`;
-                    }
-                    else if (bloc.type === 'image') {
-                        container.innerHTML += `
-                            <div class="my-6 text-center">
-                                <img src="${bloc.src}" alt="Illustration" class="w-full md:w-[700px] h-auto object-contain mx-auto rounded shadow-sm border border-stone-200 bg-stone-50 p-2">
-                                <p class="text-xs text-stone-500 mt-2 italic">${bloc.legende}</p>
-                            </div>
-                        `;
-                    }
-                    else if (bloc.type === 'imageCompare') {
-                        container.innerHTML += `
-                            <div class="my-6 text-center">
-                                <div class="relative w-full md:w-[700px] mx-auto rounded shadow-sm border border-stone-200 bg-stone-50 p-2 group cursor-pointer">
-                                    <img src="${bloc.annotee}" alt="Manuscrit annoté" class="absolute top-2 left-2 right-2 bottom-2 w-[calc(100%-1rem)] h-[calc(100%-1rem)] object-contain rounded">
-                                    <img src="${bloc.original}" alt="Manuscrit original" class="relative z-10 w-full h-auto object-contain rounded bg-stone-50 transition-opacity duration-500 group-hover:opacity-0">
+                    data.forEach((bloc) => {
+                        if (bloc.type === 'text') {
+                            container.innerHTML += `<p class="mb-6">${formaterTexte(bloc.content)}</p>`;
+                        }
+                        else if (bloc.type === 'titre') {
+                            container.innerHTML += `<h3 class="text-xl font-serif font-bold text-stone-900 mt-8 mb-4">${formaterTexte(bloc.content)}</h3>`;
+                        }
+                        else if (bloc.type === 'image') {
+                            container.innerHTML += `
+                                <div class="my-6 text-center">
+                                    <img src="${bloc.src}" alt="Illustration" class="w-full md:w-[700px] h-auto object-contain mx-auto rounded shadow-sm border border-stone-200 bg-stone-50 p-2">
+                                    <p class="text-xs text-stone-500 mt-2 italic">${bloc.legende || ''}</p>
                                 </div>
-                                <p class="text-xs text-stone-500 mt-2 italic">${bloc.legende}</p>
-                            </div>
-                        `;
-                    }
-                    else if (bloc.type === 'youtube') {
-                        container.innerHTML += `
-                            <div class="my-8 max-w-3xl mx-auto shadow-md rounded-lg overflow-hidden border border-stone-200">
-                                <iframe class="w-full aspect-video" src="https://www.youtube.com/embed/${bloc.id}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                            </div>
-                        `;
-                    }
-                    else if (bloc.type === 'accordeon') {
-                        const couleurTitre = bloc.couleurTitre ? bloc.couleurTitre : '#d97706';
-                        const htmlTraduction = bloc.traduction ? `<div class="text-sm md:text-base font-normal mt-1 opacity-90">${bloc.traduction}</div>` : '';
-                        const contenuFormate = formaterTexte(bloc.contenu);
-
-                        container.innerHTML += `
-                            <details class="group mb-4 bg-white rounded-lg shadow-sm border border-stone-200">
-                                <summary class="list-none cursor-pointer p-4 font-serif hover:bg-stone-50 transition flex justify-between items-center outline-none [&::-webkit-details-marker]:hidden" style="color: ${couleurTitre};">
-                                    <div>
-                                        <div class="font-bold text-xl md:text-2xl">${bloc.titre}</div>
-                                        ${htmlTraduction}
+                            `;
+                        }
+                        else if (bloc.type === 'imageCompare') {
+                            container.innerHTML += `
+                                <div class="my-6 text-center">
+                                    <div class="relative w-full md:w-[700px] mx-auto rounded shadow-sm border border-stone-200 bg-stone-50 p-2 group cursor-pointer">
+                                        <img src="${bloc.annotee}" alt="Manuscrit annoté" class="absolute top-2 left-2 right-2 bottom-2 w-[calc(100%-1rem)] h-[calc(100%-1rem)] object-contain rounded">
+                                        <img src="${bloc.original}" alt="Manuscrit original" class="relative z-10 w-full h-auto object-contain rounded bg-stone-50 transition-opacity duration-500 group-hover:opacity-0">
                                     </div>
-                                    <span class="text-stone-400 group-open:rotate-180 transition-transform duration-300 text-xl ml-4">▼</span>
-                                </summary>
-                                <div class="p-6 border-t border-stone-100 text-stone-700 leading-relaxed bg-stone-50/50">
-                                    ${contenuFormate}
+                                    <p class="text-xs text-stone-500 mt-2 italic">${bloc.legende || ''}</p>
                                 </div>
-                            </details>
-                        `;
-                    }
-                });
+                            `;
+                        }
+                        else if (bloc.type === 'youtube') {
+                            container.innerHTML += `
+                                <div class="my-8 max-w-3xl mx-auto shadow-md rounded-lg overflow-hidden border border-stone-200">
+                                    <iframe class="w-full aspect-video" src="https://www.youtube.com/embed/${bloc.id}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                </div>
+                            `;
+                        }
+                        else if (bloc.type === 'accordeon') {
+                            const couleurTitre = bloc.couleurTitre ? bloc.couleurTitre : '#d97706';
+                            const htmlTraduction = bloc.traduction ? `<div class="text-sm md:text-base font-normal mt-1 opacity-90">${bloc.traduction}</div>` : '';
+                            const contenuFormate = formaterTexte(bloc.contenu);
 
-                // --- GÉNÉRATION DES NOTES EN BAS DE PAGE ---
-                if (tableauNotes.length > 0) {
-                    let htmlNotes = `
-                        <div class="mt-12 pt-6 border-t border-stone-200">
-                            <h4 class="font-serif font-bold text-lg text-stone-900 mb-4">Notes et références</h4>
-                            <ol class="space-y-2 text-sm text-stone-600 list-decimal list-inside">
-                    `;
-                    
-                    tableauNotes.forEach((note, index) => {
-                        const num = index + 1;
-                        htmlNotes += `
-                            <li id="note-${containerId}-${num}" class="leading-relaxed">
-                                <span class="inline">${note}</span>
-                                <a href="#appel-${containerId}-${num}" class="text-amber-700 font-bold hover:underline ml-2" title="Retourner au texte">^</a>
-                            </li>
-                        `;
+                            container.innerHTML += `
+                                <details class="group mb-4 bg-white rounded-lg shadow-sm border border-stone-200">
+                                    <summary class="list-none cursor-pointer p-4 font-serif hover:bg-stone-50 transition flex justify-between items-center outline-none [&::-webkit-details-marker]:hidden" style="color: ${couleurTitre};">
+                                        <div>
+                                            <div class="font-bold text-xl md:text-2xl">${bloc.titre}</div>
+                                            ${htmlTraduction}
+                                        </div>
+                                        <span class="text-stone-400 group-open:rotate-180 transition-transform duration-300 text-xl ml-4">▼</span>
+                                    </summary>
+                                    <div class="p-6 border-t border-stone-100 text-stone-700 leading-relaxed bg-stone-50/50">
+                                        ${contenuFormate}
+                                    </div>
+                                </details>
+                            `;
+                        }
                     });
 
-                    htmlNotes += `
-                            </ol>
-                        </div>
-                    `;
-                    container.innerHTML += htmlNotes;
+                    if (tableauNotes.length > 0) {
+                        let htmlNotes = `
+                            <div class="mt-12 pt-6 border-t border-stone-200">
+                                <h4 class="font-serif font-bold text-lg text-stone-900 mb-4">Notes et références</h4>
+                                <ol class="space-y-2 text-sm text-stone-600 list-decimal list-inside">
+                        `;
+                        tableauNotes.forEach((note, index) => {
+                            const num = index + 1;
+                            htmlNotes += `
+                                <li id="note-${containerId}-${num}" class="leading-relaxed">
+                                    <span class="inline">${note}</span>
+                                    <a href="#appel-${containerId}-${num}" class="text-amber-700 font-bold hover:underline ml-2" title="Retourner au texte">^</a>
+                                </li>
+                            `;
+                        });
+                        htmlNotes += `</ol></div>`;
+                        container.innerHTML += htmlNotes;
+                    }
+                } catch(error) {
+                    console.error("Erreur de rendu pour " + containerId, error);
                 }
             }
 
-            // --- APPEL DE LA FONCTION POUR TOUTES TES PAGES ---
+            // --- APPEL DE TOUTES LES PAGES ---
             genererPageDynamique('lettres-apprendre-contenu', siteData.lettresApprendre || siteData.en_apprendre_plus);
             genererPageDynamique('historique-contenu', siteData.historique);
             genererPageDynamique('manuscrits-contenu', siteData.se_reperer || siteData.seReperer);
@@ -383,3 +726,5 @@
             
         });
     </script>
+</body>
+</html>
