@@ -61,7 +61,7 @@ siteData.je_debute = [
   {
     type:"image",
     src:"images/exemple5.png",
-    legende:"Notation de saint-Gall. Einsiedeln, codex 121, p.59"
+    legende:"Notation de Saint-Gall. Einsiedeln, codex 121, p.59"
   },
   {
     type:"text",
