@@ -4,11 +4,11 @@ siteData.lecture_guidee = [
     audioGlobal: "audio/puer_natus.mp3",  // Optionnel
     imageGlobale: "images/exemple5.png", // L'image de ton manuscrit
     zones: [
-        { nom: "Pes épisémé", x: 16.2, y: 4.4, w: 4.5, h: 6.0 },
-        { nom: "Virga", x: 21.8, y: 5.1, w: 4.0, h: 5.5 },
-        { nom: "Clivis épisémée", x: 29.9, y: 5.3, w: 4.0, h: 5.5 },
-        { nom: "Climacus", x: 33.4, y: 4.3, w: 4.0, h: 5.5 },
-        { nom: "Porrectus+pressus", x: 38.9, y: 5.3, w: 4.0, h: 5.5 },
+        { nom: "pes épisémé", x: 16.2, y: 4.4, w: 4.5, h: 6.0 },
+        { nom: "virga", x: 21.8, y: 5.1, w: 4.0, h: 5.5 },
+        { nom: "clivis épisémée", x: 29.9, y: 5.3, w: 4.0, h: 5.5 },
+        { nom: "climacus", x: 33.4, y: 4.3, w: 4.0, h: 5.5 },
+        { nom: "porrectus+pressus", x: 38.9, y: 5.3, w: 4.0, h: 5.5 },
         { nom: "virga", x: 43.7, y: 4.3, w: 4.0, h: 5.5 },
         { nom: "pes épisémé", x: 47.2, y: 6.1, w: 4.0, h: 5.5 },
         { nom: "tractulus liquescent", x: 54.2, y: 6.2, w: 4.0, h: 5.5 },
