@@ -18,28 +18,7 @@ siteData.lecture_guidee = {
         { nom: "pes", x: , y: , w: 4.0, h: 5.5 },
         { nom: "bivirga épisémées", x: , y: , w: 4.0, h: 5.5 },
         { nom: "clivis épisémée", x: , y: , w: 4.0, h: 5.5 },
-        { nom: "virga", x: , y: , w: 4.0, h: 5.5 },
-        { nom: "", x: , y: , w: 4.0, h: 5.5 },
-        { nom: "", x: , y: , w: 4.0, h: 5.5 },
-        { nom: "", x: , y: , w: 4.0, h: 5.5 },
-        { nom: "", x: , y: , w: 4.0, h: 5.5 },
-        { nom: "", x: , y: , w: 4.0, h: 5.5 },
-        { nom: "", x: , y: , w: 4.0, h: 5.5 },
-        { nom: "", x: , y: , w: 4.0, h: 5.5 },
-        { nom: "", x: , y: , w: 4.0, h: 5.5 },
-        { nom: "", x: , y: , w: 4.0, h: 5.5 },
-        { nom: "", x: , y: , w: 4.0, h: 5.5 },
-        { nom: "", x: , y: , w: 4.0, h: 5.5 },
-        { nom: "", x: , y: , w: 4.0, h: 5.5 },
-        { nom: "", x: , y: , w: 4.0, h: 5.5 },
-        { nom: "", x: , y: , w: 4.0, h: 5.5 },
-        { nom: "", x: , y: , w: 4.0, h: 5.5 },
-        { nom: "", x: , y: , w: 4.0, h: 5.5 },
-        { nom: "", x: , y: , w: 4.0, h: 5.5 },
-        { nom: "", x: , y: , w: 4.0, h: 5.5 },
-        { nom: "", x: , y: , w: 4.0, h: 5.5 },
-        { nom: "", x: , y: , w: 4.0, h: 5.5 },
-        
+        { nom: "virga", x: , y: , w: 4.0, h: 5.5 }
         // Ajoute autant de zones que tu le souhaites
     ]
 };
