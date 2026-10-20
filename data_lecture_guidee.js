@@ -374,8 +374,7 @@ siteData.lecture_guidee = [
     {
         titre: "Répons. Dixit Joseph [Saint-Gall, cod. 390, p.156]",
         audioGlobal: "audio/panem_de_caelo.mp3",  
-        imageGlobale: "images/oravi_deum.png",
+        imageGlobale: "images/oravi_deum.png"
         
-    ]
     }
 ];
