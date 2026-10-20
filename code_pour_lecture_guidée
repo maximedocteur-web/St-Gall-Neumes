@@ -1,41 +1,38 @@
 #Code à mettre pour la page lecture_guidée. On met la photo du manuscrit sur la page, ensuite, quand il est affiché, on va dessus, clic-droit, inspecter, console et on colle ce code dedans puis entrée:
 
 window.mesZones = [];
-const img = document.getElementById('manuscrit-img');
-const container = document.getElementById('interactive-container');
 
-// On retire les anciens clics si on relance le script
-const nouvelleImg = img.cloneNode(true);
-img.parentNode.replaceChild(nouvelleImg, img);
+// On attache l'outil à TOUTES les images de manuscrit de la page
+document.querySelectorAll('.interactive-container').forEach(container => {
+    const img = container.querySelector('.manuscrit-img');
+    const nouvelleImg = img.cloneNode(true);
+    img.parentNode.replaceChild(nouvelleImg, img);
 
-nouvelleImg.addEventListener('click', function(e) {
-    const rect = nouvelleImg.getBoundingClientRect();
-    const x = ((e.clientX - rect.left) / rect.width) * 100;
-    const y = ((e.clientY - rect.top) / rect.height) * 100;
-    
-    // 1. Une fenêtre te demande le nom direct sur la page
-    let nom = prompt("Nom du neume ? (Laissez vide pour annuler)");
-    
-    if (nom) { 
-        // 2. On enregistre la ligne de code exacte
-        window.mesZones.push(`        { nom: "${nom}", x: ${x.toFixed(1)}, y: ${y.toFixed(1)}, w: 4.0, h: 5.5 }`);
+    nouvelleImg.addEventListener('click', function(e) {
+        const rect = nouvelleImg.getBoundingClientRect();
+        const x = ((e.clientX - rect.left) / rect.width) * 100;
+        const y = ((e.clientY - rect.top) / rect.height) * 100;
         
-        // 3. On dessine un carré rouge là où tu as cliqué pour que tu voies ce qui est déjà fait
-        let box = document.createElement('div');
-        box.style.position = 'absolute';
-        box.style.left = (x - 2.0) + '%';   // moitié de w
-        box.style.top = (y - 2.75) + '%';   // moitié de h
-        box.style.width = '4.0%';
-        box.style.height = '5.5%';
-        box.style.border = '2px solid red';
-        box.style.backgroundColor = 'rgba(255, 0, 0, 0.2)';
-        box.style.pointerEvents = 'none'; // Pour pouvoir cliquer à travers
-        container.appendChild(box);
+        let nom = prompt("Nom du neume ?");
+        
+        if (nom) { 
+            window.mesZones.push(`        { nom: "${nom}", x: ${x.toFixed(1)}, y: ${y.toFixed(1)}, w: 4.0, h: 5.5 }`);
+            
+            let box = document.createElement('div');
+            box.style.position = 'absolute';
+            box.style.left = (x - 2.0) + '%'; 
+            box.style.top = (y - 2.75) + '%';
+            box.style.width = '4.0%';
+            box.style.height = '5.5%';
+            box.style.border = '2px solid red';
+            box.style.backgroundColor = 'rgba(255, 0, 0, 0.2)';
+            box.style.pointerEvents = 'none';
+            container.appendChild(box);
 
-        // 4. On génère le code prêt à copier
-        console.clear();
-        console.log("👇 COPIEZ CE CODE DANS VOTRE FICHIER JS 👇\n\n");
-        console.log("    zones: [\n" + window.mesZones.join(",\n") + "\n    ]");
-    }
+            console.clear();
+            console.log("👇 COPIEZ CE CODE 👇\n\n    zones: [\n" + window.mesZones.join(",\n") + "\n    ]");
+        }
+    });
 });
+console.log("✅ OUTIL D'ÉDITION ACTIVÉ POUR TOUTES LES IMAGES !");
 console.log("✅ OUTIL D'ÉDITION ACTIVÉ ! Cliquez sur l'image pour commencer.");
