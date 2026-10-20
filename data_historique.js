@@ -1,5 +1,12 @@
 siteData.historique = [
   {
+    type:"image",
+    src:"images/construction.png"
+  },
+  {
+    type:"text",
+    content:"manuscrit en cours de rédaction... <em>Silentio dum scribo</em>...
+  /*{
     type : "text",
     content: `L'abbaye de Saint-Gall, située dans l'actuelle Suisse, a été l'un des foyers culturels 
     et musicaux les plus importants de l'Europe carolingienne au IXe et Xe siècle. C'est dans ce monastère
@@ -26,5 +33,5 @@ siteData.historique = [
     content: `Les manuscrits de Saint-Gall (tels que le fameux Codex Sangallensis 359) se distinguent par leur extraordinaire
     précision graphique et leur calligraphie aérienne. Les scribes ont développé un système de codification très poussé,
     associant aux neumes de base des lettres modificatrices (les lettres significatives) et des nuances subtiles d'exécution.`
-  }
+  }*/
 ];
