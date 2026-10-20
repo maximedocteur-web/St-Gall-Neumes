@@ -82,8 +82,8 @@ siteData.lecture_guidee = {
         { nom: "tractulus", x: 64.8, y: 91.7, w: 4.0, h: 5.5 }
         // Ajoute autant de zones que tu le souhaites
     ]
-},
-{
+    },
+    {
     titre: "Communion. Dicit Dominus, [p.59]",
     audioGlobal: "audio/puer_natus.mp3",  // Optionnel
     imageGlobale: "images/exemple5.png", // L'image de ton manuscrit
@@ -166,6 +166,5 @@ siteData.lecture_guidee = {
         { nom: "tractulus", x: 61.0, y: 91.7, w: 4.0, h: 5.5 },
         { nom: "tractulus", x: 64.8, y: 91.7, w: 4.0, h: 5.5 }
         ]
-}
-    
+        }
 };
