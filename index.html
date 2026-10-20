@@ -500,26 +500,38 @@
                 }
             } catch(e) { console.error("Erreur Lettres:", e); }
 
-            // 3. ANALYSE CHANT (Lecture Guidée Interactive Multi-images)
+            // 3. ANALYSE CHANT (Lecture Guidée Interactive Multi-images + Séparateurs)
             try {
                 let analyseData = siteData.lecture_guidee || siteData.analyseChant;
                 if (analyseData) {
                     const wrapper = document.getElementById('analyse-wrapper');
                     if (wrapper) {
-                        wrapper.innerHTML = ""; // On vide le conteneur
+                        wrapper.innerHTML = ""; 
                         
-                        // Sécurité magique : qu'il y ait 1 seule image ou 10, on force en format liste []
                         let listeAnalyses = Array.isArray(analyseData) ? analyseData : [analyseData];
 
-                        // Pour chaque image de ta liste...
                         listeAnalyses.forEach((data) => {
+                            
+                            // SI C'EST UN SÉPARATEUR
+                            if (data.type === 'separateur') {
+                                const sepBlock = document.createElement('div');
+                                sepBlock.className = "mt-12 mb-8 text-center";
+                                sepBlock.innerHTML = `
+                                    <hr class="border-stone-300 mb-6">
+                                    <h2 class="text-2xl md:text-3xl font-serif font-bold text-amber-800">${data.content}</h2>
+                                `;
+                                wrapper.appendChild(sepBlock);
+                                return; // On s'arrête là pour ce bloc, on passe au suivant
+                            }
+
+                            // SINON, C'EST UNE IMAGE DE LECTURE GUIDÉE CLASSIQUE
                             const block = document.createElement('div');
                             block.className = "bg-white p-8 rounded-lg shadow-sm border border-stone-200 space-y-6";
 
                             let html = `
                                 <div class="bg-amber-50 border-l-4 border-amber-700 p-4 rounded-r-lg">
                                     <h3 class="font-bold text-amber-900">${data.titre || ''}</h3>
-                                    <p class="text-sm text-amber-800 mt-1">${data.description || ''}</p>
+                                    ${data.description ? `<p class="text-sm text-amber-800 mt-1">\${data.description}</p>` : ''}
                                 </div>
                             `;
 
@@ -535,7 +547,7 @@
                             if(data.imageGlobale) {
                                 html += `
                                     <div>
-                                        <p class="text-stone-600 mb-4 font-medium">Passez votre souris sur les neumes de l'image pour voir leur nom :</p>
+                                        ${data.zones ? `<p class="text-stone-600 mb-4 font-medium">Passez votre souris sur les neumes de l'image pour voir leur nom :</p>` : ''}
                                         <div class="interactive-container relative inline-block w-full shadow-md border border-stone-200 cursor-crosshair rounded bg-stone-50">
                                             <img src="${data.imageGlobale}" class="w-full h-auto block rounded manuscrit-img">
                                             <div class="interactive-tooltip pointer-events-none absolute opacity-0 bg-stone-900 text-white text-sm font-bold px-3 py-1.5 rounded shadow-lg transition-opacity duration-200 z-50 transform -translate-x-1/2 -translate-y-full">
@@ -549,7 +561,6 @@
                             block.innerHTML = html;
                             wrapper.appendChild(block);
 
-                            // Ajout des zones invisibles
                             if(data.imageGlobale && data.zones) {
                                 const container = block.querySelector('.interactive-container');
                                 const tooltip = block.querySelector('.interactive-tooltip');
