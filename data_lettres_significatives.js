@@ -17,7 +17,8 @@ siteData.lettres = [
     },
     { 
         sigle: "m (Mediocriter)",
-        texte: "Nuance modérée.",
+        texte: `<span style="color: #e60004;">m</span>. <strong>Mediocriter melodiam moderari mendicando memorat.</strong><br>Nuance modérée.<br><br>
+        _ Cette lettre significative `,
         image: "images/m.png"
     },
     { 
