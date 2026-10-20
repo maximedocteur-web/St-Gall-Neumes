@@ -4,8 +4,8 @@ siteData.lecture_guidee = {
     audioGlobal: "audio/puer_natus.mp3",  // Optionnel
     imageGlobale: "images/exemple5.png", // L'image de ton manuscrit
     zones: [
-        { nom: "Pes (2 notes ascendantes)", x: 15.5, y: 20.0, w: 4.5, h: 6.0 },
-        { nom: "Torculus (3 notes, bas-haut-bas)", x: 30.2, y: 18.5, w: 4.0, h: 5.5 },
+        { nom: "Pes épisémé", x: 16.2, y: 4.4, w: 4.5, h: 6.0 },
+        { nom: "Torculus", x: 30.2, y: 18.5, w: 4.0, h: 5.5 },
         // Ajoute autant de zones que tu le souhaites
     ]
 };
