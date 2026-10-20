@@ -66,7 +66,7 @@ siteData.je_debute = [
   {
     type:"text",
     content :`<strong>D.</strong> : Ha oui, on retrouve bien les symboles et le même texte ! Mais ici, il ne semble y avoir qu'une seule notation au dessus du texte, alors
-    pourquoi nous, nous avons deux différentes si une seule leur suffit amplement ?<br><br>
+    pourquoi nous, nous en avons deux différentes si une seule leur suffit amplement ?<br><br>
     <strong>D.</strong> : Je peine à comprendre pourquoi avoir besoin de deux notations musicales si elles expriment toutes deux la même chose !<br><br>
     <strong>M.</strong> : Tu m'entends bien mais tu m'écoutes mal... Je n'ai pas dit qu'elles exprimaient toutes les deux la même chose, j'ai simplement dit que ce sont
     des notations musicales, la subtilité étant dans le fait que, justement, elles n'ont pas la volonté de traduire un même phénomène sonore.<br><br>
@@ -88,9 +88,9 @@ siteData.je_debute = [
     type:"text",
     content :`<strong>D.</strong> : Et la notation de Saint-Gall ne note donc pas la hauteur des notes ?<br><br>
     <strong>M.</strong> : Non. Enfin, pas vraiment... La notation de saint-Gall est composée d'une suite de signes et chacun de ces signes s'apelle un <strong>neume</strong>. 
-    Ces neumes, selon la manière de les dessiner, peut indiquer qu'ils contiennent une seule note, deux notes, trois notes, quatre notes ou plus et il arrive souvent 
-    que l'on colle deux neumes ensemble pour en créer un nouveau. Pour revenir sur l'histoire des hauteurs de sons dans cette notation, il existe par exemple un neume qui indique
-    qu'il y deux notes, dont la seconde est plus grave que la première mais rien n'indique de l'intervalle entre ces deux notes, c'est à dire on ne sait pas de combien sont-elles
+    Ces neumes, selon la manière de les dessiner, peuvent indiquer qu'ils contiennent une seule note, deux notes, trois notes, quatre notes ou plus et il arrive souvent 
+    que l'on colle deux neumes ensemble pour en créer un nouveau. Pour revenir sur l'histoire des hauteurs de sons dans cette notation, il existe par exemple un neume qui symbolise 
+    deux notes et où la seconde est plus grave que la première mais rien n'indique l'intervalle entre ces deux notes, c'est à dire on ne sait pas de combien sont-elles
     proches ou éloignées en terme de hauteur de note. C'est l'exemple que j'ai mis ci-dessous, tu as à gauche le neume manuscrit de Saint-Gall et à droite quelques possibilités de
     ce même neume dans la notation carrée, un seul neume, plusieurs possibilités.`
   },
@@ -105,5 +105,24 @@ siteData.je_debute = [
   {
     type:"image",
     src:"images/exemple8.png"
-  }
+  },
+  {
+    type:"text",
+   content:`<strong>D.</strong> : D'accord, je comprends ! Et donc, on a besoin de la notation carrée pour savoir quel est exactement l'intervalle entre les notes car cette notation
+   se focalise sur la hauteur des sons c'est bine ça ?<br><br>
+   <strong>M.</strong> : Exactement !<br><br>
+   <strong>D.</strong> : Ha oui, ça devient de plus en plus clair. Mais ça ne me dit toujours pas pourquoi vous avez besoin de la notation de Saint-Gall en plus de la notation carrée...<br><br>
+   <strong>M.</strong> : Si il est tellement important de la faire apparaître, tu sobbodore qu'il y a bien une raison qui nous pousse à le faire. La notation carrée, bien qu'elle nous permette de
+   savoir précisément la hauteur des notes ne sou donne que très très peu d'informations sur la manière de les chanter.<br><br>
+   <strong>D.</strong> : C'est à dire ?<br><br>
+   <strong>M.</strong> : La notation de saint-Gall n'a certes pas tenu à mentionner la hauteur parfaite des sons mais par contre, elle décrit avec une extrême précision la 
+   manière de chanter ces neumes : plus longs, plus rapides, liés, déliés, incisifs, très doux, forts, en somme, tout ce cqui fait le style du chant grégorien au Xe siècle est explicité dans
+   ces manuscrits.`
+  },
+  {
+    type: "imageCompare",
+    original: "images/exemple1.png",
+    annotee: "images/exemple9.png",
+    legende: "Survolez l'image avec votre souris pour révéler l'emplacement des paquets."
+  },
 ];
