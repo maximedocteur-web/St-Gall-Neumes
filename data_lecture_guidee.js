@@ -212,6 +212,5 @@ siteData.lecture_guidee = [
         audioGlobal: "audio/panem_de_caelo.mp3",  
         imageGlobale: "images/dextera_dei.png",
         
-    ]   
     }
 ];
