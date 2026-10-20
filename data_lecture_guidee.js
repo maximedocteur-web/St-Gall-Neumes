@@ -411,5 +411,12 @@ siteData.lecture_guidee = [
         { nom: "inferius", x: 47.3, y: 88.4, w: 2.0, h: 4.0 },
         { nom: "sursum", x: 72.4, y: 83.1, w: 2.4, h: 4.9 }
     ]
+    },
+    {
+        titre: "Daniel intellege [Einsiedeln, cod. 121, p.328]",
+        audioGlobal: "audio/panem_de_caelo.mp3",  
+        imageGlobale: "images/daniel_intellege.png",
+        
+    ]
     }
 ];
