@@ -122,7 +122,7 @@ siteData.lecture_guidee = [
         { nom: "clivis épisémée", x: 43.3, y: 74.1, w: 4.0, h: 5.5 },
         { nom: "virga", x: 50.3, y: 68.9, w: 4.0, h: 5.5 },
         { nom: "clivis épisémée", x: 51.8, y: 77.1, w: 4.0, h: 5.5 },
-        { nom: "climacus", x: 47.2, y: 71.9, w: 6.0, h: 10 },
+        { nom: "climacus", x: 47.2, y: 71.9, w: 5.0, h: 10 },
         { nom: "torculus", x: 59.7, y: 78.0, w: 4.0, h: 5.5 },
         { nom: "salicus avec virga épisémée", x: 66.0, y: 75.9, w: 4.0, h: 16 },
         { nom: "torculus + tractulus", x: 69.8, y: 77.4, w: 4.0, h: 5.5 },
