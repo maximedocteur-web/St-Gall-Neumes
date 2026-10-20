@@ -417,6 +417,5 @@ siteData.lecture_guidee = [
         audioGlobal: "audio/panem_de_caelo.mp3",  
         imageGlobale: "images/daniel_intellege.png",
         
-    ]
     }
 ];
