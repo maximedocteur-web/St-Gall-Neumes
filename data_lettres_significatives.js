@@ -6,9 +6,13 @@ siteData.lettres = [
         _ Cette lettre singnificative indique que l'on doit être plus rapide, c'est-à-dire diviser une ou toutes les valeurs rythmiques normales du neumes pour le faire plus rapidement.`
     },
     { 
+        
+        image: "images/t.png",
         sigle: "t (Tenete)",
-        texte: "Lenteur, allonger la durée du neume.",
-        image: "images/t.png"
+        texte: `<span style="color: #e60004;">t</span>. <strong>Trahere vel tenere debere testatur.</strong><br><br>
+        _ Cette lettre singifie qu'il faut allonger une ou des les valeurs rythmiques du neume, mais au delà de ça, cette lettre repésente plus une élongation du temps, comme si les neumes
+        étaient étendus sur une nappe et qu'on tirait la nappe d'un bout et de l'autre, c'est tout l'espace des neumes et entre les neumes qui s'est étiré. Parfois, on voit que le trait horizontal
+        qui barre le T est allongé sur plusieurs neumes, ainsi, tous seront soumis au <em>Tenete</em>`,
     },
     { 
         sigle: "m (Mediocriter)",
