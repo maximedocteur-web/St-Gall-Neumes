@@ -1,7 +1,8 @@
 siteData.psalmodies = [
 {
     type:"image",
-    src:"images/roi_david.jpg"
+    src:"images/roi_david.jpg",
+    legende:`"Le roi David avec son psaltérion, symbole du chant des psaumes" Londres, British Library, ms. Harley 2953, fol.20v, début XVIe siècle`
   },
     {
     type:"text",
