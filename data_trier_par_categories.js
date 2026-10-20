@@ -1,7 +1,7 @@
 siteData.trier_par_categories = [
 {
     type:"image",
-    src:"images/construction.jpg"
+    src:"images/construction.png"
   },
   {
     type:"text",
