@@ -1,7 +1,7 @@
 siteData.psalmodies = [
 {
     type:"image",
-    src:"images/roi_david.png"
+    src:"images/roi_david.jpg"
   },
     {
     type:"text",
