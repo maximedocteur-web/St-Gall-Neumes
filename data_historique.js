@@ -1,7 +1,7 @@
 siteData.historique = [
   {
     type:"image",
-    src:"images/construction.png"
+    src:"images/construction.jpg"
   },
   {
     type:"text",
