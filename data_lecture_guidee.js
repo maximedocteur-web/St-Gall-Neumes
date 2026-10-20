@@ -246,5 +246,11 @@ siteData.lecture_guidee = [
         { nom: "climacus épisémé", x: 72.4, y: 65.3, w: 3.6, h: 12.1 },
         { nom: "pressus maior", x: 77.3, y: 64.4, w: 3.7, h: 12.5 }
     ]
+    },
+    {
+        titre: "Répons. Dixit Joseph [Saint-Gall, cod. 390, p.156]",
+        audioGlobal: "audio/panem_de_caelo.mp3",  
+        imageGlobale: "images/dixit_joseph.png",
+        
     }
 ];
