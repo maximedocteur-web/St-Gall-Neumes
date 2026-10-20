@@ -539,12 +539,13 @@
                         const container = document.getElementById('interactive-container');
                         const tooltip = document.getElementById('interactive-tooltip');
 
-                        // On place les zones interactives
                         if (data.zones && Array.isArray(data.zones)) {
                             data.zones.forEach((zone) => {
                                 const hotspot = document.createElement('div');
-                                hotspot.style.left = zone.x + '%';
-                                hotspot.style.top = zone.y + '%';
+                                
+                                // CORRECTION ICI : on centre la zone sur le X et Y
+                                hotspot.style.left = (zone.x - (zone.w / 2)) + '%';
+                                hotspot.style.top = (zone.y - (zone.h / 2)) + '%';
                                 hotspot.style.width = zone.w + '%';
                                 hotspot.style.height = zone.h + '%';
                                 
@@ -560,7 +561,7 @@
                                     const mouseX = e.clientX - rect.left;
                                     const mouseY = e.clientY - rect.top;
                                     tooltip.style.left = mouseX + 'px';
-                                    tooltip.style.top = (mouseY - 15) + 'px'; // 15px au-dessus du curseur
+                                    tooltip.style.top = (mouseY - 15) + 'px'; 
                                 });
 
                                 hotspot.addEventListener('mouseleave', () => {
@@ -591,6 +592,51 @@
                     quizBox.innerHTML = qHtml;
                 }
             } catch(e) { console.error("Erreur Quiz:", e); }
+
+            // 4.5 MANUSCRIT INTERACTIF
+            try {
+                if (siteData.manuscritInteractif) {
+                    const container = document.getElementById('interactive-container');
+                    const img = document.getElementById('interactive-image');
+                    const tooltip = document.getElementById('interactive-tooltip');
+
+                    if (img) img.src = siteData.manuscritInteractif.image;
+
+                    if (siteData.manuscritInteractif.neumes) {
+                        siteData.manuscritInteractif.neumes.forEach((neume) => {
+                            const hotspot = document.createElement('div');
+                            
+                            // CORRECTION ICI : on centre la zone sur le X et Y
+                            hotspot.style.left = (neume.x - (neume.w / 2)) + '%';
+                            hotspot.style.top = (neume.y - (neume.h / 2)) + '%';
+                            hotspot.style.width = neume.w + '%';
+                            hotspot.style.height = neume.h + '%';
+                            
+                            hotspot.className = "absolute border-2 border-transparent hover:border-amber-500 hover:bg-amber-500/20 transition-all rounded";
+
+                            hotspot.addEventListener('mouseenter', () => {
+                                tooltip.textContent = neume.nom;
+                                tooltip.style.opacity = '1';
+                            });
+
+                            hotspot.addEventListener('mousemove', (e) => {
+                                const rect = container.getBoundingClientRect();
+                                const mouseX = e.clientX - rect.left;
+                                const mouseY = e.clientY - rect.top;
+                                
+                                tooltip.style.left = mouseX + 'px';
+                                tooltip.style.top = (mouseY - 15) + 'px'; 
+                            });
+
+                            hotspot.addEventListener('mouseleave', () => {
+                                tooltip.style.opacity = '0';
+                            });
+
+                            container.appendChild(hotspot);
+                        });
+                    }
+                }
+            } catch(e) { console.error("Erreur Manuscrit Interactif:", e); }
 
             // =========================================================
             // 5. FONCTION UNIVERSELLE ULTRA-ROBUSTE
