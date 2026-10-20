@@ -377,7 +377,39 @@ siteData.lecture_guidee = [
     {
         titre: "Offertoire. Oravi Deum [Einsiedeln, cod. 121, p.327]",
         audioGlobal: "audio/panem_de_caelo.mp3",  
-        imageGlobale: "images/oravi_deum.png"
-        
+        imageGlobale: "images/oravi_deum.png",
+        zones: [
+        { nom: "levate", x: 13.9, y: 4.4, w: 2.6, h: 4.0 },
+        { nom: "sursum", x: 17.8, y: 15.0, w: 2.1, h: 3.8 },
+        { nom: "sursum", x: 25.1, y: 3.1, w: 2.0, h: 2.4 },
+        { nom: "inferius", x: 30.3, y: 3.0, w: 1.5, h: 2.4 },
+        { nom: "inferius", x: 31.4, y: 10.2, w: 1.9, h: 3.3 },
+        { nom: "mediocriter", x: 36.0, y: 2.5, w: 3.6, h: 2.3 },
+        { nom: "inferius", x: 36.4, y: 8.9, w: 1.8, h: 3.5 },
+        { nom: "mediocriter", x: 77.9, y: 2.2, w: 4.2, h: 1.9 },
+        { nom: "sursum", x: 77.0, y: 11.1, w: 2.1, h: 4.4 },
+        { nom: "sursum mediocriter", x: 17.7, y: 24.0, w: 4.4, h: 4.4 },
+        { nom: "equaliter", x: 23.0, y: 30.8, w: 3.2, h: 4.0 },
+        { nom: "levate", x: 43.7, y: 25.5, w: 1.9, h: 4.9 },
+        { nom: "sursum", x: 50.6, y: 24.3, w: 2.2, h: 5.8 },
+        { nom: "celeriter", x: 16.6, y: 44.1, w: 2.4, h: 3.3 },
+        { nom: "sursum", x: 22.4, y: 52.8, w: 1.9, h: 3.7 },
+        { nom: "equaliter", x: 25.2, y: 54.4, w: 2.3, h: 3.0 },
+        { nom: "inferius", x: 36.5, y: 52.2, w: 1.8, h: 3.5 },
+        { nom: "equaliter", x: 41.4, y: 53.4, w: 2.8, h: 3.1 },
+        { nom: "celeriter", x: 47.9, y: 45.8, w: 2.8, h: 3.7 },
+        { nom: "sursum", x: 56.9, y: 48.1, w: 2.4, h: 4.4 },
+        { nom: "sursum", x: 60.2, y: 43.2, w: 2.3, h: 5.1 },
+        { nom: "equaliter", x: 90.2, y: 51.0, w: 2.8, h: 4.2 },
+        { nom: "inferius", x: 27.0, y: 71.8, w: 1.8, h: 3.3 },
+        { nom: "celeriter", x: 44.8, y: 65.5, w: 2.3, h: 4.0 },
+        { nom: "equaliter", x: 77.9, y: 72.4, w: 2.5, h: 3.8 },
+        { nom: "celeriter", x: 84.4, y: 64.5, w: 2.1, h: 3.3 },
+        { nom: "inferius", x: 14.9, y: 88.6, w: 2.9, h: 3.8 },
+        { nom: "altius", x: 27.6, y: 80.0, w: 3.3, h: 4.0 },
+        { nom: "celeriter", x: 43.7, y: 82.0, w: 2.2, h: 3.1 },
+        { nom: "inferius", x: 47.3, y: 88.4, w: 2.0, h: 4.0 },
+        { nom: "sursum", x: 72.4, y: 83.1, w: 2.4, h: 4.9 }
+    ]
     }
 ];
