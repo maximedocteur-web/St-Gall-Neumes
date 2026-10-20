@@ -1,7 +1,7 @@
 siteData.monocorde = [
   {
     type:"image",
-    src:"images/construction.jpg"
+    src:"images/construction.png"
   },
   {
     type:"text",
