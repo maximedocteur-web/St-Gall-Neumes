@@ -20,7 +20,7 @@ siteData.psalmodies = [
     4. Non sic impii, non sic ; sed tamquam pulvis quem projicit ventus a facie terræ.<br>
     5. Ideo non resurgent impii in judicio, neque peccatores in concilio justorum :<br>
     6. quoniam novit Dominus viam justorum, et iter impiorum peribit.</strong></em>"<br><br>
-    originellement, ces psaumes sont en hébreu (certains passages en araméen), ils ont été traduit ensuite en latin.<br><br>
+    Originellement, ces psaumes sont en hébreu (certains passages en araméen), ils ont été traduit ensuite en latin.<br><br>
     La chant des psaumes n'est pas fait d'envolées virtuoses mais d'une récitation scandée qui doit suivre des règles très précises.<br><br>
     Les psaumes sont souvent accompagnés d'un autre chant que l'on apelle l'<strong>Antienne</strong> et qui vient englober le psaume; l'antienne est chantée en premier puis à la fin de l'antienne,
     on chante le psaume. Il arrive que l'on chante l'antienne, versets 1 et 2 du psaume, l'antienne, versets 3 et 4 du psaume, l'antienne etc., voire l'antienne après chaque verset, mais dans un 
