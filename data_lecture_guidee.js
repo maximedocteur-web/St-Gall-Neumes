@@ -370,7 +370,10 @@ siteData.lecture_guidee = [
         { nom: "torculus", x: 98.6, y: 81.1, w: 2.0, h: 5.9 }
     ]
     },
-    { type: "separateur", content: "Lettres significatives" },
+    { 
+        type: "separateur",
+        content: "Lettres significatives" 
+    },
     {
         titre: "Offertoire. Oravi Deum [Einsiedeln, cod. 121, p.327]",
         audioGlobal: "audio/panem_de_caelo.mp3",  
