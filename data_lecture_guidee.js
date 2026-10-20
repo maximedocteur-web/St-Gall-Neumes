@@ -1,5 +1,5 @@
-siteData.lecture_guidee = {
-    titre: "Communion. Dicit Dominus, [Ensiedeln, cod. 121, p.59]",
+_siteData.lecture_guidee = {
+    titre: "Communion. Dicit Dominus [Ensiedeln, cod. 121, p.59]",
     audioGlobal: "audio/puer_natus.mp3",  // Optionnel
     imageGlobale: "images/exemple5.png", // L'image de ton manuscrit
     zones: [
@@ -84,10 +84,9 @@ siteData.lecture_guidee = {
     ]
     },
     {
-        titre: "Image Numéro 2",
-        description: "Description 2",
+        titre: "Communion. Panem de caelo [Ensiedeln, cod. 121, p.59]",
         audioGlobal: "audio/puer_natus2.mp3",  
-        imageGlobale: "images/exemple6.png",
+        imageGlobale: "images/panem_de.png",
         zones: [
             { nom: "Torculus", x: 20.0, y: 15.0, w: 4.0, h: 5.5 }
         ]
