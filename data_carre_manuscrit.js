@@ -1,7 +1,7 @@
 siteData.data_carre_manuscrit = [
 {
     type:"image",
-    src:"images/construction.jpg"
+    src:"images/construction.png"
   },
   {
     type:"text",
