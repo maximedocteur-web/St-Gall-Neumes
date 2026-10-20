@@ -85,7 +85,7 @@ siteData.lecture_guidee = [
     ]
     },
     {
-        titre: "Communion. Panem de caelo [Ensiedeln, cod. 121, p.324]",
+        titre: "Communion. Aufer a me [Ensiedeln, cod. 121, p.331]",
         audioGlobal: "audio/panem_de_caelo.mp3",  
         imageGlobale: "images/aufer_a_me.png"
         
