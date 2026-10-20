@@ -130,6 +130,24 @@ siteData.je_debute = [
     type:"text",
    content:`<strong>D.</strong> : D'accord, c'est très clair ! D'un seul coup d'oeil on a le texte, les hauteurs de notes et la manière de les interpréter, c'est ingénieux comme système...<br><br>
    <strong>M.</strong> : Très... Toute cette mise en place pour chanter le chant grégorien est rendue possible par le fait que le répertoire grégorien a été transmis de siècle en siècle sans trop
-   d'ajout, de supressions ou d'altérations des chants.`
+   d'ajout, de supressions ou d'altérations des chants. Ainsi, dans plusieurs régions, dans plusieurs notations et pendant plusieurs siècles, ce répertoire a été écrit, diffusé et transmit de génération
+   en génération.<br><br>
+   <strong>D.</strong> : Et sur cette partition, la notationc carrée est une notation ancienne ou tardive du chant grégorien ?<br><br>
+   <strong>M.</strong> : Il y a ici une subtilité. La notation carrée qui est présentée ici devant toi est le fruit de dizaines d'années de recherches faites par des moines sur ce répertoire. 
+   Les moines de l'Abbaye de Solesmes ont travaillé depuis le XIXe siècle à retrouver et à comprendre toutes les notations du chant grégorien. Or, ils se sont aperçus que certaines notations
+   comme la notation aquitaine donnait très tôt à voir les hauteurs de notes plutôt que le style et donc, à partir de plusieurs manuscrits du Moyen Âge, ils ont créer une notation qui se veut
+   assez proche des mélodies grégoriennes du Xe siècle.<br><br>
+   <strong>D.</strong> : D'accord !<br><br>
+   <strong>M.</strong> : Je vais t'apprendre maintenant à décrypter la notation de Saint-Gall.<br><br>`
+  },
+  {
+    type:"image",
+    src:"images/aufer_a_me.png"
+  },
+  {
+    type:"text",
+   content:`<strong>M.</strong> : Tout comme le texte se lit de gauche à droite, les neumes se lisent aussi de gauche à droite et ils sont divisés par des espaces.
+   . Il peut y avoir un ou plusieurs neumes 
+   par syllabe. <br><br>`
   },
 ];
