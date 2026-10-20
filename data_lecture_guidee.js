@@ -131,5 +131,11 @@ siteData.lecture_guidee = [
         { nom: "virga", x: 80.5, y: 76.8, w: 4.0, h: 5.5 },
         { nom: "clivis épisémée", x: 82.9, y: 80.4, w: 4.0, h: 5.5 }
     ]
+    },
+    {
+        titre: "Communion. Panem de caelo [Ensiedeln, cod. 121, p.324]",
+        audioGlobal: "audio/panem_de_caelo.mp3",  
+        imageGlobale: "images/honora_dominum.png"
+        
     }
 ];
