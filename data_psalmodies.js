@@ -26,6 +26,7 @@ siteData.psalmodies = [
     on chante le psaume. Il arrive que l'on chante l'antienne, versets 1 et 2 du psaume, l'antienne, versets 3 et 4 du psaume, l'antienne etc., voire l'antienne après chaque verset, mais dans un 
     premier temps, il vaut mieux faire l'antienne, tous les versets du psaume et l'antienne à nouveau. Lors de certains rituels particulièrement long, il est possible de mettre différents psaumes, 
     exemple :<br><br>
+    (ant. = antienne; ps. = psaume; V. = verset)<br>
     <strong>Ant.</strong>(ienne) <strong> Dominus regem, ps.</strong>(aume) <strong> 14, V.</strong>(erset) <strong>3, 6, 9; ps. 78, V. 2-13; ps. 2, V. 3.</strong><br><br>
     Ici, on chante l'antienne Dominus regem puis une fois finie, on chante le psaume 14 mais uniquement les versets 3, 6 et 9. Ensuite, le psaume 78 mais uniquement les versets 2 jusqu'à 13 et
     enfin le psaume 2 mais uniquement le verset 3. On reprend l'antienne Dominus regem.`
