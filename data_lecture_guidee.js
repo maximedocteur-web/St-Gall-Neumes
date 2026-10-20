@@ -372,7 +372,7 @@ siteData.lecture_guidee = [
     },
     { type: "separateur", content: "Lettres significatives" },
     {
-        titre: "Répons. Dixit Joseph [Saint-Gall, cod. 390, p.156]",
+        titre: "Offertoire. Oravi Deum [Einsiedeln, cod. 121, p.327]",
         audioGlobal: "audio/panem_de_caelo.mp3",  
         imageGlobale: "images/oravi_deum.png"
         
