@@ -1,38 +1,103 @@
 #Code à mettre pour la page lecture_guidée. On met la photo du manuscrit sur la page, ensuite, quand il est affiché, on va dessus, clic-droit, inspecter, console et on colle ce code dedans puis entrée:
 
-window.mesZones = [];
+window.mesZones = window.mesZones || [];
 
-// On attache l'outil à TOUTES les images de manuscrit de la page
 document.querySelectorAll('.interactive-container').forEach(container => {
-    const img = container.querySelector('.manuscrit-img');
-    const nouvelleImg = img.cloneNode(true);
-    img.parentNode.replaceChild(nouvelleImg, img);
+    // Si tu relances le script, on enlève l'ancien calque pour ne pas faire de doublons
+    const oldOverlay = container.querySelector('.draw-overlay');
+    if (oldOverlay) oldOverlay.remove();
 
-    nouvelleImg.addEventListener('click', function(e) {
-        const rect = nouvelleImg.getBoundingClientRect();
-        const x = ((e.clientX - rect.left) / rect.width) * 100;
-        const y = ((e.clientY - rect.top) / rect.height) * 100;
-        
-        let nom = prompt("Nom du neume ?");
-        
-        if (nom) { 
-            window.mesZones.push(`        { nom: "${nom}", x: ${x.toFixed(1)}, y: ${y.toFixed(1)}, w: 4.0, h: 5.5 }`);
-            
-            let box = document.createElement('div');
-            box.style.position = 'absolute';
-            box.style.left = (x - 2.0) + '%'; 
-            box.style.top = (y - 2.75) + '%';
-            box.style.width = '4.0%';
-            box.style.height = '5.5%';
-            box.style.border = '2px solid red';
-            box.style.backgroundColor = 'rgba(255, 0, 0, 0.2)';
-            box.style.pointerEvents = 'none';
-            container.appendChild(box);
+    // On crée un calque transparent par-dessus l'image pour dessiner
+    const overlay = document.createElement('div');
+    overlay.className = 'draw-overlay';
+    overlay.style.position = 'absolute';
+    overlay.style.inset = '0'; // Prend toute la place
+    overlay.style.cursor = 'crosshair'; // Curseur en forme de croix
+    overlay.style.zIndex = '100';
+    container.appendChild(overlay);
 
-            console.clear();
-            console.log("👇 COPIEZ CE CODE 👇\n\n    zones: [\n" + window.mesZones.join(",\n") + "\n    ]");
+    let isDrawing = false;
+    let startX = 0, startY = 0;
+    let currentBox = null;
+
+    // 1. QUAND ON CLIQUE : On commence à dessiner
+    overlay.addEventListener('mousedown', function(e) {
+        e.preventDefault(); // Empêche le navigateur d'essayer de glisser l'image elle-même
+        isDrawing = true;
+        const rect = overlay.getBoundingClientRect();
+        startX = e.clientX - rect.left;
+        startY = e.clientY - rect.top;
+
+        currentBox = document.createElement('div');
+        currentBox.style.position = 'absolute';
+        currentBox.style.border = '2px solid red';
+        currentBox.style.backgroundColor = 'rgba(255, 0, 0, 0.2)';
+        currentBox.style.pointerEvents = 'none'; // Laisse passer la souris
+        
+        container.appendChild(currentBox);
+    });
+
+    // 2. QUAND ON GLISSE : On agrandit la boîte
+    overlay.addEventListener('mousemove', function(e) {
+        if (!isDrawing) return;
+        const rect = overlay.getBoundingClientRect();
+        const currentX = e.clientX - rect.left;
+        const currentY = e.clientY - rect.top;
+
+        // Fonctionne même si on dessine à l'envers (de bas en haut)
+        const minX = Math.min(startX, currentX);
+        const minY = Math.min(startY, currentY);
+        const w = Math.abs(currentX - startX);
+        const h = Math.abs(currentY - startY);
+
+        currentBox.style.left = (minX / rect.width * 100) + '%';
+        currentBox.style.top = (minY / rect.height * 100) + '%';
+        currentBox.style.width = (w / rect.width * 100) + '%';
+        currentBox.style.height = (h / rect.height * 100) + '%';
+    });
+
+    // 3. QUAND ON RELÂCHE : On valide la boîte
+    overlay.addEventListener('mouseup', function(e) {
+        if (!isDrawing) return;
+        isDrawing = false;
+        
+        const rect = overlay.getBoundingClientRect();
+        const currentX = e.clientX - rect.left;
+        const currentY = e.clientY - rect.top;
+
+        const minX = Math.min(startX, currentX);
+        const minY = Math.min(startY, currentY);
+        const w = Math.abs(currentX - startX);
+        const h = Math.abs(currentY - startY);
+
+        const pctW = (w / rect.width) * 100;
+        const pctH = (h / rect.height) * 100;
+        const pctMinX = (minX / rect.width) * 100;
+        const pctMinY = (minY / rect.height) * 100;
+
+        // Calcul du CENTRE exact de la boîte (pour que ton site l'affiche parfaitement)
+        const centerX = pctMinX + (pctW / 2);
+        const centerY = pctMinY + (pctH / 2);
+
+        // Si on a juste fait un micro-clic sans faire exprès, on annule
+        if (pctW < 0.5 || pctH < 0.5) {
+            currentBox.remove();
+            return;
         }
+
+        // On attend 10 millisecondes pour que le carré rouge s'affiche à l'écran AVANT de demander le nom
+        setTimeout(() => {
+            let nom = prompt("Nom du neume ? (Laissez vide pour annuler)");
+            
+            if (nom) {
+                // On rajoute la ligne avec X, Y, Largeur (w) et Hauteur (h) exactes !
+                window.mesZones.push(`        { nom: "${nom}", x: ${centerX.toFixed(1)}, y: ${centerY.toFixed(1)}, w: ${pctW.toFixed(1)}, h: ${pctH.toFixed(1)} }`);
+                console.clear();
+                console.log("👇 COPIEZ CE CODE 👇\n\n    zones: [\n" + window.mesZones.join(",\n") + "\n    ]");
+            } else {
+                currentBox.remove(); // Si on clique sur "Annuler", le carré rouge disparaît
+            }
+        }, 10);
     });
 });
-console.log("✅ OUTIL D'ÉDITION ACTIVÉ POUR TOUTES LES IMAGES !");
-console.log("✅ OUTIL D'ÉDITION ACTIVÉ ! Cliquez sur l'image pour commencer.");
+console.log("✅ OUTIL DE SÉLECTION RECTANGULAIRE ACTIVÉ ! Cliquez, maintenez appuyé, glissez et relâchez sur l'image.");
