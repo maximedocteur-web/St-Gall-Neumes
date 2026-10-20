@@ -93,7 +93,7 @@ document.querySelectorAll('.interactive-container').forEach(container => {
                 // On rajoute la ligne avec X, Y, Largeur (w) et Hauteur (h) exactes !
                 window.mesZones.push(`        { nom: "${nom}", x: ${centerX.toFixed(1)}, y: ${centerY.toFixed(1)}, w: ${pctW.toFixed(1)}, h: ${pctH.toFixed(1)} }`);
                 console.clear();
-                console.log("👇 COPIEZ CE CODE 👇\n\n    zones: [\n" + window.mesZones.join(",\n") + "\n    ]");
+                console.log("    zones: [\n" + window.mesZones.join(",\n") + "\n    ]");
             } else {
                 currentBox.remove(); // Si on clique sur "Annuler", le carré rouge disparaît
             }
