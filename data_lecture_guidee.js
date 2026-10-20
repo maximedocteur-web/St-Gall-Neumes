@@ -133,7 +133,7 @@ siteData.lecture_guidee = [
     ]
     },
     {
-        titre: "Communion. Panem de caelo [Ensiedeln, cod. 121, p.324]",
+        titre: "Communion. Honora Dominum [Ensiedeln, cod. 121, p.322]",
         audioGlobal: "audio/panem_de_caelo.mp3",  
         imageGlobale: "images/honora_dominum.png",
         zones: [
@@ -205,6 +205,13 @@ siteData.lecture_guidee = [
         { nom: "climacus épisémé pre-bi-punctis", x: 92.1, y: 72.0, w: 7.3, h: 5.3 },
         { nom: "virga", x: 97.9, y: 69.8, w: 2.8, h: 3.5 },
         { nom: "clivis épisémée", x: 20.2, y: 88.5, w: 3.5, h: 5.5 }
+    ]   
+    },
+    {
+        titre: "Alleluia. Dextera Dei [Ensiedeln, cod. 121, p.351]",
+        audioGlobal: "audio/panem_de_caelo.mp3",  
+        imageGlobale: "images/dextera_dei.png",
+        
     ]   
     }
 ];
