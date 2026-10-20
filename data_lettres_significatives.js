@@ -1,9 +1,9 @@
 siteData.lettres = [
     { 
+        image: "images/c.png",
         sigle: "c (Celeriter)", 
         texte: `<span style="color: #e60004;">c</span>. <strong>Ut cito vel celeriter dicatur certificat.</strong><br><br>
-        _ Cette lettre singnificative indique que l'on doit être plus rapide, c'est-à-dire diviser une ou toutes les valeurs rythmiques normales du neumes pour le faire plus rapidement.`,
-        image: "images/c.png"
+        _ Cette lettre singnificative indique que l'on doit être plus rapide, c'est-à-dire diviser une ou toutes les valeurs rythmiques normales du neumes pour le faire plus rapidement.`
     },
     { 
         sigle: "t (Tenete)",
