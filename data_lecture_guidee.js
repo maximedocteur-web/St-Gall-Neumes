@@ -1,6 +1,5 @@
 siteData.lecture_guidee = {
-    titre: "Lecture Guidée : Puer Natus Est",
-    description: "Voici l'introït Puer Natus Est de Noël. Survolez l'image pour analyser les neumes.",
+    titre: "Communion. Dicit Dominus, [p.59]",
     audioGlobal: "audio/puer_natus.mp3",  // Optionnel
     imageGlobale: "images/exemple5.png", // L'image de ton manuscrit
     zones: [
