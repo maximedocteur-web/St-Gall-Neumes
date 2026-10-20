@@ -116,13 +116,20 @@ siteData.je_debute = [
    savoir précisément la hauteur des notes ne sou donne que très très peu d'informations sur la manière de les chanter.<br><br>
    <strong>D.</strong> : C'est à dire ?<br><br>
    <strong>M.</strong> : La notation de saint-Gall n'a certes pas tenu à mentionner la hauteur parfaite des sons mais par contre, elle décrit avec une extrême précision la 
-   manière de chanter ces neumes : plus longs, plus rapides, liés, déliés, incisifs, très doux, forts, en somme, tout ce cqui fait le style du chant grégorien au Xe siècle est explicité dans
-   ces manuscrits.`
+   manière de chanter ces neumes : plus longs, plus rapides, liés, déliés, incisifs, très doux, forts, en somme, tout ce qui fait le style du chant grégorien au Xe siècle est explicité dans
+   ces manuscrits. De fait on met les deux notation l'une au dessus de l'autre et surtout, on fait correspondre chaque neumes/notes dans les deux notations. Regarde, je vais te les entourer
+   en rouge.`
   },
   {
     type: "imageCompare",
     original: "images/exemple1.png",
     annotee: "images/exemple9.png",
-    legende: "Survolez l'image avec votre souris pour révéler l'emplacement des paquets."
+    legende: "Survolez l'image avec votre souris pour voir où sont les neumes dans chaque notation."
+  },
+  {
+    type:"text",
+   content:`<strong>D.</strong> : D'accord, c'est très clair ! D'un seul coup d'oeil on a le texte, les hauteurs de notes et la manière de les interpréter, c'est ingénieux comme système...<br><br>
+   <strong>M.</strong> : Très... Toute cette mise en place pour chanter le chant grégorien est rendue possible par le fait que le répertoire grégorien a été transmis de siècle en siècle sans trop
+   d'ajout, de supressions ou d'altérations des chants.`
   },
 ];
