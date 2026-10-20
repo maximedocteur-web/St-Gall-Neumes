@@ -26,7 +26,7 @@ siteData.lecture_guidee = {
         { nom: "virga", x: 48.5, y: 17.8, w: 4.0, h: 5.5 },
         { nom: "virga épisémée", x: 53.8, y: 19.2, w: 4.0, h: 5.5 },
         { nom: "quilisma", x: 57.4, y: 17.7, w: 4.0, h: 5.5 },
-        { nom: "pes subbipunctis épisémé", x: 62.3, y: 20.3, w: 4.0, h: 5.5 },
+        { nom: "pes subbipunctis épisémé", x: 62.3, y: 20.3, w: 5.0, h: 5.5 },
         { nom: "virga", x: 66.1, y: 18.3, w: 4.0, h: 5.5 },
         { nom: "clivis épisémée", x: 68.2, y: 20.1, w: 4.0, h: 5.5 },
         { nom: "tractulus", x: 78.9, y: 20.6, w: 4.0, h: 5.5 },
