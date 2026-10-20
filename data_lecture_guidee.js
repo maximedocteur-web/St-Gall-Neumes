@@ -87,6 +87,12 @@ siteData.lecture_guidee = [
     {
         titre: "Communion. Panem de caelo [Ensiedeln, cod. 121, p.324]",
         audioGlobal: "audio/panem_de_caelo.mp3",  
+        imageGlobale: "images/aufer_a_me.png"
+        
+    },
+    {
+        titre: "Communion. Panem de caelo [Ensiedeln, cod. 121, p.324]",
+        audioGlobal: "audio/panem_de_caelo.mp3",  
         imageGlobale: "images/panem_de.png",
         zones: [
         { nom: "virga épisémée", x: 16.6, y: 12.1, w: 4.0, h: 5.5 },
