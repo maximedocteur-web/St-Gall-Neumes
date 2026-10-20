@@ -1,4 +1,5 @@
-_siteData.lecture_guidee = {
+_siteData.lecture_guidee = [
+    {
     titre: "Communion. Dicit Dominus [Ensiedeln, cod. 121, p.59]",
     audioGlobal: "audio/puer_natus.mp3",  // Optionnel
     imageGlobale: "images/exemple5.png", // L'image de ton manuscrit
