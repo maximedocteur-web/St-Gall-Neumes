@@ -5,7 +5,8 @@ siteData.historique = [
   },
   {
     type:"text",
-    content:"manuscrit en cours de rédaction... <em>Silentio dum scribo</em>...
+    content:"manuscrit en cours de rédaction... <em>Silentio dum scribo</em>..."
+  }
   /*{
     type : "text",
     content: `L'abbaye de Saint-Gall, située dans l'actuelle Suisse, a été l'un des foyers culturels 
