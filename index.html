@@ -283,31 +283,13 @@
                 <div id="carre-manuscrit-contenu" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 text-stone-700 text-justify leading-relaxed"></div>
             </section>
 
-            <!-- PAGE LECTURE GUIDEE (Devenue le Manuscrit Interactif) -->
+            <!-- PAGE LECTURE GUIDEE (Multi-images) -->
             <section id="page-analyse" class="page-section space-y-6 relative z-10">
                 <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Lecture Guidée Interactive</h2>
-                <div class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 space-y-6">
-                    <div class="bg-amber-50 border-l-4 border-amber-700 p-4 rounded-r-lg">
-                        <h3 id="analyse-titre" class="font-bold text-amber-900"></h3>
-                        <p id="analyse-desc" class="text-sm text-amber-800 mt-1"></p>
-                    </div>
-                    
-                    <div id="audio-container" class="hidden">
-                        <p class="text-sm font-medium text-stone-700 mb-2">Écouter l'extrait :</p>
-                        <audio id="audio-player" controls class="w-full"></audio>
-                    </div>
-                    
-                    <div id="image-container" class="hidden">
-                        <p class="text-stone-600 mb-4 font-medium">Passez votre souris sur les neumes de l'image pour voir leur nom :</p>
-                        <div id="interactive-container" class="relative inline-block w-full shadow-md border border-stone-200 cursor-crosshair rounded bg-stone-50">
-                            <img id="manuscrit-img" src="" alt="Extrait de manuscrit" class="w-full h-auto block rounded">
-                            
-                            <div id="interactive-tooltip" class="pointer-events-none absolute opacity-0 bg-stone-900 text-white text-sm font-bold px-3 py-1.5 rounded shadow-lg transition-opacity duration-200 z-50 transform -translate-x-1/2 -translate-y-full">
-                                Nom
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
+                <!-- C'est ici que le code va empiler toutes tes images les unes sous les autres -->
+                <div id="analyse-wrapper" class="space-y-12"></div>
+                
             </section>
 
             <!-- PAGE QUIZ -->
@@ -518,59 +500,89 @@
                 }
             } catch(e) { console.error("Erreur Lettres:", e); }
 
-            // 3. ANALYSE CHANT (Lecture Guidée Interactive)
+            // 3. ANALYSE CHANT (Lecture Guidée Interactive Multi-images)
             try {
-                if (siteData.analyseChant || siteData.lecture_guidee) {
-                    const data = siteData.analyseChant || siteData.lecture_guidee;
-                    const titreEl = document.getElementById('analyse-titre');
-                    const descEl = document.getElementById('analyse-desc');
-                    if (titreEl && data.titre) titreEl.textContent = data.titre;
-                    if (descEl && data.description) descEl.textContent = data.description;
-                    
-                    if(data.audioGlobal) {
-                        document.getElementById('audio-container').classList.remove('hidden');
-                        document.getElementById('audio-player').src = data.audioGlobal;
-                    }
-                    if(data.imageGlobale) {
-                        document.getElementById('image-container').classList.remove('hidden');
-                        const img = document.getElementById('manuscrit-img');
-                        img.src = data.imageGlobale;
+                let analyseData = siteData.lecture_guidee || siteData.analyseChant;
+                if (analyseData) {
+                    const wrapper = document.getElementById('analyse-wrapper');
+                    if (wrapper) {
+                        wrapper.innerHTML = ""; // On vide le conteneur
+                        
+                        // Sécurité magique : qu'il y ait 1 seule image ou 10, on force en format liste []
+                        let listeAnalyses = Array.isArray(analyseData) ? analyseData : [analyseData];
 
-                        const container = document.getElementById('interactive-container');
-                        const tooltip = document.getElementById('interactive-tooltip');
+                        // Pour chaque image de ta liste...
+                        listeAnalyses.forEach((data) => {
+                            const block = document.createElement('div');
+                            block.className = "bg-white p-8 rounded-lg shadow-sm border border-stone-200 space-y-6";
 
-                        if (data.zones && Array.isArray(data.zones)) {
-                            data.zones.forEach((zone) => {
-                                const hotspot = document.createElement('div');
-                                
-                                // CORRECTION ICI : on centre la zone sur le X et Y
-                                hotspot.style.left = (zone.x - (zone.w / 2)) + '%';
-                                hotspot.style.top = (zone.y - (zone.h / 2)) + '%';
-                                hotspot.style.width = zone.w + '%';
-                                hotspot.style.height = zone.h + '%';
-                                
-                                hotspot.className = "absolute border-2 border-transparent hover:border-amber-500 hover:bg-amber-500/20 transition-all rounded";
+                            let html = `
+                                <div class="bg-amber-50 border-l-4 border-amber-700 p-4 rounded-r-lg">
+                                    <h3 class="font-bold text-amber-900">${data.titre || ''}</h3>
+                                    <p class="text-sm text-amber-800 mt-1">${data.description || ''}</p>
+                                </div>
+                            `;
 
-                                hotspot.addEventListener('mouseenter', () => {
-                                    tooltip.textContent = zone.nom;
-                                    tooltip.style.opacity = '1';
+                            if(data.audioGlobal) {
+                                html += `
+                                    <div>
+                                        <p class="text-sm font-medium text-stone-700 mb-2">Écouter l'extrait :</p>
+                                        <audio controls class="w-full" src="${data.audioGlobal}"></audio>
+                                    </div>
+                                `;
+                            }
+
+                            if(data.imageGlobale) {
+                                html += `
+                                    <div>
+                                        <p class="text-stone-600 mb-4 font-medium">Passez votre souris sur les neumes de l'image pour voir leur nom :</p>
+                                        <div class="interactive-container relative inline-block w-full shadow-md border border-stone-200 cursor-crosshair rounded bg-stone-50">
+                                            <img src="${data.imageGlobale}" class="w-full h-auto block rounded manuscrit-img">
+                                            <div class="interactive-tooltip pointer-events-none absolute opacity-0 bg-stone-900 text-white text-sm font-bold px-3 py-1.5 rounded shadow-lg transition-opacity duration-200 z-50 transform -translate-x-1/2 -translate-y-full">
+                                                Nom
+                                            </div>
+                                        </div>
+                                    </div>
+                                `;
+                            }
+
+                            block.innerHTML = html;
+                            wrapper.appendChild(block);
+
+                            // Ajout des zones invisibles
+                            if(data.imageGlobale && data.zones) {
+                                const container = block.querySelector('.interactive-container');
+                                const tooltip = block.querySelector('.interactive-tooltip');
+
+                                data.zones.forEach((zone) => {
+                                    const hotspot = document.createElement('div');
+                                    hotspot.style.left = (zone.x - (zone.w / 2)) + '%';
+                                    hotspot.style.top = (zone.y - (zone.h / 2)) + '%';
+                                    hotspot.style.width = zone.w + '%';
+                                    hotspot.style.height = zone.h + '%';
+                                    hotspot.className = "absolute border-2 border-transparent hover:border-amber-500 hover:bg-amber-500/20 transition-all rounded";
+
+                                    hotspot.addEventListener('mouseenter', () => {
+                                        tooltip.textContent = zone.nom;
+                                        tooltip.style.opacity = '1';
+                                    });
+
+                                    hotspot.addEventListener('mousemove', (e) => {
+                                        const rect = container.getBoundingClientRect();
+                                        const mouseX = e.clientX - rect.left;
+                                        const mouseY = e.clientY - rect.top;
+                                        tooltip.style.left = mouseX + 'px';
+                                        tooltip.style.top = (mouseY - 15) + 'px'; 
+                                    });
+
+                                    hotspot.addEventListener('mouseleave', () => {
+                                        tooltip.style.opacity = '0';
+                                    });
+
+                                    container.appendChild(hotspot);
                                 });
-
-                                hotspot.addEventListener('mousemove', (e) => {
-                                    const rect = container.getBoundingClientRect();
-                                    const mouseX = e.clientX - rect.left;
-                                    const mouseY = e.clientY - rect.top;
-                                    tooltip.style.left = mouseX + 'px';
-                                    tooltip.style.top = (mouseY - 15) + 'px'; 
-                                });
-
-                                hotspot.addEventListener('mouseleave', () => {
-                                    tooltip.style.opacity = '0';
-                                });
-
-                                container.appendChild(hotspot);
-                            });
-                        }
+                            }
+                        });
                     }
                 }
             } catch(e) { console.error("Erreur Analyse:", e); }
