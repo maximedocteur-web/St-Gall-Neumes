@@ -370,11 +370,11 @@ siteData.lecture_guidee = [
         { nom: "torculus", x: 98.6, y: 81.1, w: 2.0, h: 5.9 }
     ]
     },
-    { type: "separateur", content: "L'Âge d'Or de Saint-Gall" },
+    { type: "separateur", content: "Lettres significatives" },
     {
         titre: "Répons. Dixit Joseph [Saint-Gall, cod. 390, p.156]",
         audioGlobal: "audio/panem_de_caelo.mp3",  
-        imageGlobale: "images/dixit_joseph.png",
+        imageGlobale: "images/oravi_deum.png",
         
     ]
     }
