@@ -743,6 +743,14 @@
                                 </div>
                             `;
                         }
+                        else if (bloc.type === 'separateur') {
+                            container.innerHTML += `
+                                <div class="mt-12 mb-8 text-center">
+                                    <hr class="border-stone-300 mb-6">
+                                    <h2 class="text-2xl md:text-3xl font-serif font-bold text-amber-800">${formaterTexte(bloc.content)}</h2>
+                                </div>
+                            `;
+                        }
                         else if (bloc.type === 'youtube') {
                             container.innerHTML += `
                                 <div class="my-8 max-w-3xl mx-auto shadow-md rounded-lg overflow-hidden border border-stone-200">
