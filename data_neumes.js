@@ -26,12 +26,12 @@ siteData.neumes = [
         {
             nom: "Virga",
             categorie: "simples",
-            description: "<strong>1 note</strong>. Il est normalement employé en composition,"+
-            "c'est-à-dire qu'on le trouve dans d'autres neumes plus complexes. Il n'est, me semble-t-il jamais utilisé seul,"+ 
-            "c'est à dire que l'on est sensé le trouver uniquement dans d'autres neumes mais jamais tout seul,"+ 
-            "il n'a pas d'autonomie en tant que neume. Il ne possède pas de forme avec épisème car en cas d'alongement"+
-            "de la note dans un neume en composition, on lui préférera le tractulus, voire le tractulus épisémé.",
-            image: "images/virga.png"
+            description: "<strong>1 note</strong>. Elle peut être employée seule ou en composition."+
+            "Sa première graphie forme sa base, la seconde est la version épisémée et la troisième version sa graphie liquescente.",
+            images: [ "images/virga.png",
+                     "images/virga_episemee.png",
+                     "images/virga_lisquescente.png"
+                     ]
         },
         {
             nom: "Clivis",
