@@ -37,10 +37,10 @@ siteData.neumes = [
         {
             nom: "Clivis",
             categorie: "simples",
-            description: "<strong>2 notes</strong>, mouvement : descendant. Ce neume représente deux notes, la seconde étant plus basse (plus grave) que la première"+
-            "mais on ne sait pas de combien elle est plus basse (une tierce ? une quarte ? une octave ? rien ne l'indique)"+
-            "dans sa graphie. Vous pouvez voir dans la seconde image, sa forme épisémée qui revient très souvent. Le petit"+
-            "chapeau posé sur le neume indique que la première note est plus longue que la seconde.",
+            description: "<strong>2 notes</strong>, mouvement : descendant. Ce neume représente deux notes, la seconde étant plus basse (plus grave) que la première "+
+            "mais on ne sait pas de combien elle est plus basse (une tierce ? une quarte ? une octave ?), rien ne l'indique "+
+            "dans sa graphie. Vous pouvez voir dans la seconde image, sa forme épisémée qui revient très souvent. Ce petit "+
+            "chapeau posé sur le neume indique que la première note est deux fois plus longue que la seconde.",
             images: [
                 "images/clivis.png",
                 "images/clivis_episeme.png"
@@ -50,9 +50,9 @@ siteData.neumes = [
             nom: "Pes",
             categorie: "simples",
             description: "<strong>2 notes</strong>, mouvement : ascendant. Ce neume représente deux notes, la seconde étant plus élevée (plus aigue) que la première"+
-            "mais on ne sait pas de combien elle est plus élevée (une tierce ? une quarte ? une octave ? rien ne l'indique"+
-            "dans sa graphie). La première image est sa graphie standard, les trois autres images représentent ses graphies épisémées : la seconde image"+
-            "montre la version (long-court), la troisième (court-long), la quatrième (long-long).",
+            " mais on ne sait pas de combien elle est plus élevée (une tierce ? une quarte ? une octave ?), rien ne l'indique"+
+            " dans sa graphie. La première image est sa graphie standard, les trois autres images représentent ses graphies épisémées : la seconde image"+
+            " montre la version <strong>long-court</strong>, la troisième <strong>court-long</strong>, la quatrième <strong>long-long</strong>.",
             images: [
                 "images/pes.png",
                 "images/pes_episeme1.png",
