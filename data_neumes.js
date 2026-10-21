@@ -117,25 +117,26 @@ siteData.neumes = [
             nom: "Porrectus flexus",
             categorie: "simples",
             description: "<strong>4 notes</strong>, mouvement : descendant/ascendant/descendant. Ce neume représente quatre notes, c'est simplement un porrectus avec une quatrième note qui est placée"+
-            " plus grave par rapport à la dernière note du porrectus (donc 4e note plus grave que la 3e note)",
+            " plus graves par rapport à la dernière note du porrectus (donc 4e note plus grave que la 3e note)",
             image: "images/porrectus_flexus.png"
         },
         {
             nom: "Pes sub-bipunctis",
             categorie: "simples",
-            description: `<strong>4 notes</strong>, mouvement : ascendant/descendant/descendant. Ce neume représente quatre notes, `,
+            description: "<strong>4 notes</strong>, mouvement : ascendant/descendant/descendant. Ce neume représente quatre notes, c'est simplement un pes suivi de deux punctums qui sont plus"+
+            " graves par rapport à la deuxième note (3e note plus basse que la 2e et 4e plus basse que la 3e)",
             image: "images/pes_sub_bipunctis.png"
         },
         {
             nom: "Scandicus flexus",
             categorie: "simples",
-            description: `<strong>4 notes</strong>, mouvement : ascendant/ascendant/descendant. Ce neume représente quatre notes, `,
+            description: "<strong>4 notes</strong>, mouvement : ascendant/ascendant/descendant. Ce neume représente quatre notes, c'est simplement une clivis précédée de deux punctums (ou plus).",
             image: "images/scandicus_flexus.png"
         },
         {
             nom: "Quilisma",
             categorie: "ornementaux",
-            description: "Neume dentelé en forme de crémaillère. Indique une vocalise légère, un frémissement.",
+            description: "C'est un neume ornementé qui peut avoir deux ou trois boucles.",
             images: [
                 "images/quilisma.png",
                 "images/quilisma3.png"
@@ -156,7 +157,11 @@ siteData.neumes = [
         {
             nom: "Pressus",
             categorie: "ornementaux",
-            description: "Ascension de trois notes ou plus, comportant une pression sur l'avant-dernière note.",
+            description: "Neume ornementé qui peut avoir deux graphies. Pour faire TRÈS simple, on peut découper ce neume en trois parties, une virga, une vague et un punctum. Quand ces trois"+
+            " éléments sont réunis, le pressus est dit <strong>maior</strong> (grand) et si il manque la virga au début, il est dit <strong>minor</strong> (petit). Dans la première image, vous"+
+            " avez un pressus minor et dans la seconde image un pressus maior. La virga et le punctum ont tous deux leur rôle habituel et l'ornemente st en fait cette vague. Quand le pressus est"+
+            " minor, on enchaîne l'ornement directement à la fin du neume qui le précède et on fait le punctum."+
+            "Quand il est maior, on prend le temps de bien faire la virga puis l'ornement et le punctum.",
             images: [
                 "images/pressus_minor.png",
                 "images/pressus_maior.png"
