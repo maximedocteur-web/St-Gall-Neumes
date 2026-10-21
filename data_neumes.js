@@ -18,7 +18,8 @@ siteData.neumes = [
             épisémée qui lui donne le double de sa valeur initale.`,
             images: [
                 "images/tractulus.png",
-                "images/tractulus_episeme.png"
+                "images/tractulus_episeme.png",
+                "images/tractulus_liquescent.png"
                 ]
         },
         {
