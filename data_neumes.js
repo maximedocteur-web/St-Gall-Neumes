@@ -130,7 +130,8 @@ siteData.neumes = [
         {
             nom: "Scandicus flexus",
             categorie: "simples",
-            description: "<strong>4 notes</strong>, mouvement : ascendant/ascendant/descendant. Ce neume représente quatre notes, c'est simplement une clivis précédée de deux punctums (ou plus).",
+            description: "<strong>4 notes</strong>, mouvement : ascendant/ascendant/descendant. Ce neume représente quatre notes, c'est simplement une clivis précédée de deux punctums (ou plus)"+ 
+            "mais son nom a voulu conserver le scandicus, ainsi, on peut aussi le comprendre comme un scandicus avec une note qui redescend après celui-ci.",
             image: "images/scandicus_flexus.png"
         },
         {
