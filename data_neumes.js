@@ -152,7 +152,7 @@ siteData.neumes = [
         {
             nom: "oriscus",
             categorie: "ornementaux",
-            description: "C'est un ornement à lui tout seul qui peut se présenter seul ou en composition lorsqu'il se toruve accolé à d'autres neumes. Par exemple, lorsqu'on le fait suivre
+            description: "C'est un ornement à lui tout seul qui peut se présenter seul ou en composition lorsqu'il se toruve accolé à d'autres neumes. Par exemple, lorsqu'on le fait suivre"+
             "par une virga (image2), on l'apelle <strong>pes quassus</strong> ou on peut aussi bien le trouver collé à une clivis (épisémée dans le cas ici présenté dans l'image3).",
             images: [
                 "images/oriscus.png",
