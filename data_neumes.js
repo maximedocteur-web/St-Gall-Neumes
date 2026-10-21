@@ -13,10 +13,10 @@ siteData.neumes = [
     {
             nom: "Tractulus",
             categorie: "simples",
-            description: `<strong>1 note</strong>. Il est employé seul ou en composition,
-            c'est-à-dire qu'on peut aussi le trouver dans d'autres neumes plus complexes. Il possède une forme 
-            épisémée qui lui donne le double de sa valeur initale. La dernière graphie où il est en forme de C renversé
-            est la forme qu'il prend lorqu'il est liquescent.`,
+            description: "<strong>1 note</strong>. Il est employé seul ou en composition,"+
+            " c'est-à-dire qu'on peut aussi le trouver dans d'autres neumes plus complexes. Il possède une forme"+
+            " épisémée qui allonge sa valeur du simple au double. La dernière graphie où il est en forme de C renversé"+
+            " est la forme qu'il prend lorqu'il est liquescent.",
             images: [
                 "images/tractulus.png",
                 "images/tractulus_episeme.png",
@@ -26,8 +26,9 @@ siteData.neumes = [
         {
             nom: "Virga",
             categorie: "simples",
-            description: "<strong>1 note</strong>. Elle peut être employée seule ou en composition."+
-            "Sa première graphie forme sa base, la seconde est la version épisémée et la troisième version sa graphie liquescente.",
+            description: "<strong>1 note</strong>. Elle peut être employée seule ou en composition. "+
+            "Sa première graphie est sa forme de base, la seconde est la version épisémée et la troisième version sa graphie liquescente."+
+            " Sa version épisémée allonge sa valeur du simple au double.",
             images: [ "images/virga.png",
                      "images/virga_episemee.png",
                      "images/virga_liquescente.png"
