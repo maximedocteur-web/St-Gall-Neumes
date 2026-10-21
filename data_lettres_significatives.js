@@ -29,6 +29,11 @@ siteData.lettres = [
         image: "images/e.png"
     },
     { 
+        sigle: "p (Pressio)",
+        texte: "???.",
+        image: "images/ppressio.png"
+    },
+    { 
         sigle: "st (STatim)",
         texte: "???.",
         image: "images/st.png"
