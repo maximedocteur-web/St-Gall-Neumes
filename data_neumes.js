@@ -3,11 +3,11 @@ siteData.neumes = [
     {
         nom: "Punctum",
         categorie: "simples",
-        description: `<strong>1 note</strong>. Il est normalement employé en composition,
-        c'est-à-dire qu'on le trouve dans d'autres neumes plus complexes. Il n'est, me semble-t-il jamais utilisé seul,
-        c'est à dire que l'on est sensé le trouver uniquement dans d'autres neumes mais jamais tout seul,
-        il n'a pas d'autonomie en tant que neume. Il ne possède pas de forme avec épisème car en cas d'alongement
-        de la note dans un neume en composition, on lui préférera le tractulus, voire le tractulus épisémé.`,
+        description: "<strong>1 note</strong>. Il est normalement employé en composition,"+
+        "c'est-à-dire qu'on le trouve dans d'autres neumes plus complexes. Il n'est, me semble-t-il jamais utilisé seul,"+
+        "c'est à dire que l'on est sensé le trouver uniquement dans d'autres neumes mais jamais tout seul,"+
+        "il n'a pas d'autonomie en tant que neume. Il ne possède pas de forme avec épisème car en cas d'alongement"+
+        "de la note dans un neume en composition, on lui préférera le tractulus, voire le tractulus épisémé.",
         image: "images/punctum.png"
     },
     {
@@ -15,7 +15,8 @@ siteData.neumes = [
             categorie: "simples",
             description: `<strong>1 note</strong>. Il est employé seul ou en composition,
             c'est-à-dire qu'on peut aussi le trouver dans d'autres neumes plus complexes. Il possède une forme 
-            épisémée qui lui donne le double de sa valeur initale.`,
+            épisémée qui lui donne le double de sa valeur initale. La dernière graphie où il est en forme de C renversé
+            est la forme qu'il prend lorqu'il est liquescent.`,
             images: [
                 "images/tractulus.png",
                 "images/tractulus_episeme.png",
@@ -30,7 +31,7 @@ siteData.neumes = [
             "c'est à dire que l'on est sensé le trouver uniquement dans d'autres neumes mais jamais tout seul,"+ 
             "il n'a pas d'autonomie en tant que neume. Il ne possède pas de forme avec épisème car en cas d'alongement"+
             "de la note dans un neume en composition, on lui préférera le tractulus, voire le tractulus épisémé.",
-            image: "images/punctum.png"
+            image: "images/virga.png"
         },
         {
             nom: "Clivis",
