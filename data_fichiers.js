@@ -1,10 +1,14 @@
 siteData.fichiers = [
     { 
-        nom: "Tableau récapitulatif des neumes de St-Gall (PDF)", 
-        url: "fichiers/tableau_stgall.pdf" 
+        nom: "Tableau récapitulatif des neumes de St-Gall (image)", 
+        url: "fichiers/tableau_stgall.png" 
     },
     { 
-        nom: "Répons. Maria Magdalenae (image)", 
-        url: "fichiers/maria_magdalenae.jpg" 
+        nom: "Tableau des neumes simples (image)", 
+        url: "fichiers/tableau_neumes_simples.png" 
+    },
+    { 
+        nom: "Répons. Maria Magdalenae (pdf)", 
+        url: "fichiers/maria_magdalenae.pdf" 
     }
 ];
