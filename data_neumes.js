@@ -146,14 +146,19 @@ siteData.neumes = [
         {
             nom: "Salicus",
             categorie: "ornementaux",
-            description: "Ascension de trois notes ou plus, comportant une pression sur l'avant-dernière note.",
+            description: "Neume ornementé en trois partie, un punctum, le signe ornemental et une virga.",
             image: "images/salicus.png"
         },
         {
-            nom: "Pes quassus",
+            nom: "oriscus",
             categorie: "ornementaux",
-            description: "Ascension de trois notes ou plus, comportant une pression sur l'avant-dernière note.",
-            image: "images/pes_quassus.png"
+            description: "C'est un ornement à lui tout seul qui peut se présenter seul ou en composition lorsqu'il se toruve accolé à d'autres neumes. Par exemple, lorsqu'on le fait suivre
+            "par une virga (image2), on l'apelle <strong>pes quassus</strong> ou on peut aussi bien le trouver collé à une clivis (épisémée dans le cas ici présenté dans l'image3).",
+            images: [
+                "images/oriscus.png",
+                "images/pes_quassus.png",
+                "images/oriscus2.png"
+                ]
         },
         {
             nom: "Pressus",
