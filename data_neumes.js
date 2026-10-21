@@ -30,7 +30,7 @@ siteData.neumes = [
             "Sa première graphie forme sa base, la seconde est la version épisémée et la troisième version sa graphie liquescente.",
             images: [ "images/virga.png",
                      "images/virga_episemee.png",
-                     "images/virga_lisquescente.png"
+                     "images/virga_liquescente.png"
                      ]
         },
         {
