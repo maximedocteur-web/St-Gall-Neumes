@@ -119,6 +119,7 @@
                             <a onclick="showPage('sitographie')" class="block cursor-pointer px-4 py-2 text-sm text-stone-700 hover:bg-amber-50 hover:text-amber-800">Sitographie</a>
                             <a onclick="showPage('manuscrit-carre')" class="block cursor-pointer px-4 py-2 text-sm text-stone-700 hover:bg-amber-50 hover:text-amber-800">Manuscrit → Carré</a>
                             <a onclick="showPage('carre-manuscrit')" class="block cursor-pointer px-4 py-2 text-sm text-stone-700 hover:bg-amber-50 hover:text-amber-800">Carré → Manuscrit</a>
+                            <a onclick="showPage('fichiers')" class="block cursor-pointer px-4 py-2 text-sm text-amber-700 font-medium hover:bg-amber-50 hover:text-amber-900 border-t border-stone-100">Fichiers à télécharger</a>
                         </div>
                     </div>
                 </div>
@@ -283,19 +284,27 @@
                 <div id="carre-manuscrit-contenu" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 text-stone-700 text-justify leading-relaxed"></div>
             </section>
 
-            <!-- PAGE LECTURE GUIDEE (Multi-images) -->
+            <!-- PAGE LECTURE GUIDEE -->
             <section id="page-analyse" class="page-section space-y-6 relative z-10">
                 <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Lecture Guidée Interactive</h2>
-                
-                <!-- C'est ici que le code va empiler toutes tes images les unes sous les autres -->
                 <div id="analyse-wrapper" class="space-y-12"></div>
-                
             </section>
 
             <!-- PAGE QUIZ -->
             <section id="page-quiz" class="page-section space-y-6 relative z-10">
                 <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Quiz de Reconnaissance</h2>
                 <div class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 space-y-6" id="quiz-box"></div>
+            </section>
+
+            <!-- PAGE FICHIERS (Nouveau) -->
+            <section id="page-fichiers" class="page-section space-y-6 relative z-10">
+                <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Fichiers à télécharger</h2>
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-stone-200">
+                    <p class="text-stone-600 mb-4">Cliquez sur l'icône pour télécharger le fichier directement sur votre appareil.</p>
+                    <div id="fichiers-container" class="flex flex-col">
+                        <!-- Les fichiers seront injectés ici par Javascript -->
+                    </div>
+                </div>
             </section>
 
         </main>
@@ -331,6 +340,7 @@
     <script src="data_manuscrit_carre.js"></script>
     <script src="data_carre_manuscrit.js"></script>
     <script src="data_je_debute.js"></script>
+    <script src="data_fichiers.js"></script>
 
     <!-- 3. SCRIPT PRINCIPAL -->
     <script>
@@ -521,7 +531,7 @@
                                     <h2 class="text-2xl md:text-3xl font-serif font-bold text-amber-800">${data.content}</h2>
                                 `;
                                 wrapper.appendChild(sepBlock);
-                                return; // On s'arrête là pour ce bloc, on passe au suivant
+                                return; 
                             }
 
                             // SINON, C'EST UNE IMAGE DE LECTURE GUIDÉE CLASSIQUE
@@ -616,53 +626,36 @@
                 }
             } catch(e) { console.error("Erreur Quiz:", e); }
 
-            // 4.5 MANUSCRIT INTERACTIF
+            // 5. FICHIERS A TELECHARGER (Nouveau)
             try {
-                if (siteData.manuscritInteractif) {
-                    const container = document.getElementById('interactive-container');
-                    const img = document.getElementById('interactive-image');
-                    const tooltip = document.getElementById('interactive-tooltip');
+                const fichiersContainer = document.getElementById('fichiers-container');
+                if (siteData.fichiers && Array.isArray(siteData.fichiers) && fichiersContainer) {
+                    siteData.fichiers.forEach(fichier => {
+                        const row = document.createElement('div');
+                        // Ajout de la fine ligne de séparation (border-b) et de l'espace (py-4)
+                        row.className = "flex justify-between items-center py-4 border-b border-stone-200 last:border-0 hover:bg-stone-50 transition px-2 rounded-md";
+                        
+                        // Icône de téléchargement SVG
+                        const iconHtml = `
+                            <svg class="w-6 h-6 text-amber-700 hover:text-amber-900 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                            </svg>
+                        `;
 
-                    if (img) img.src = siteData.manuscritInteractif.image;
-
-                    if (siteData.manuscritInteractif.neumes) {
-                        siteData.manuscritInteractif.neumes.forEach((neume) => {
-                            const hotspot = document.createElement('div');
-                            
-                            // CORRECTION ICI : on centre la zone sur le X et Y
-                            hotspot.style.left = (neume.x - (neume.w / 2)) + '%';
-                            hotspot.style.top = (neume.y - (neume.h / 2)) + '%';
-                            hotspot.style.width = neume.w + '%';
-                            hotspot.style.height = neume.h + '%';
-                            
-                            hotspot.className = "absolute border-2 border-transparent hover:border-amber-500 hover:bg-amber-500/20 transition-all rounded";
-
-                            hotspot.addEventListener('mouseenter', () => {
-                                tooltip.textContent = neume.nom;
-                                tooltip.style.opacity = '1';
-                            });
-
-                            hotspot.addEventListener('mousemove', (e) => {
-                                const rect = container.getBoundingClientRect();
-                                const mouseX = e.clientX - rect.left;
-                                const mouseY = e.clientY - rect.top;
-                                
-                                tooltip.style.left = mouseX + 'px';
-                                tooltip.style.top = (mouseY - 15) + 'px'; 
-                            });
-
-                            hotspot.addEventListener('mouseleave', () => {
-                                tooltip.style.opacity = '0';
-                            });
-
-                            container.appendChild(hotspot);
-                        });
-                    }
+                        // "download" force le navigateur à télécharger le fichier
+                        row.innerHTML = `
+                            <span class="font-medium text-stone-700 text-sm md:text-base">${fichier.nom}</span>
+                            <a href="${fichier.url}" download class="p-2 bg-amber-50 rounded hover:bg-amber-100 transition" title="Télécharger">
+                                ${iconHtml}
+                            </a>
+                        `;
+                        fichiersContainer.appendChild(row);
+                    });
                 }
-            } catch(e) { console.error("Erreur Manuscrit Interactif:", e); }
+            } catch(e) { console.error("Erreur Fichiers:", e); }
 
             // =========================================================
-            // 5. FONCTION UNIVERSELLE ULTRA-ROBUSTE
+            // 6. FONCTION UNIVERSELLE ULTRA-ROBUSTE
             // =========================================================
             function genererPageDynamique(containerId, donneesArray) {
                 try {
@@ -735,6 +728,14 @@
                         else if (bloc.type === 'titre') {
                             container.innerHTML += `<h3 class="text-xl font-serif font-bold text-stone-900 mt-8 mb-4">${formaterTexte(bloc.content)}</h3>`;
                         }
+                        else if (bloc.type === 'separateur') {
+                            container.innerHTML += `
+                                <div class="mt-12 mb-8 text-center">
+                                    <hr class="border-stone-300 mb-6">
+                                    <h2 class="text-2xl md:text-3xl font-serif font-bold text-amber-800">${formaterTexte(bloc.content)}</h2>
+                                </div>
+                            `;
+                        }
                         else if (bloc.type === 'image') {
                             container.innerHTML += `
                                 <div class="my-6 text-center">
@@ -751,14 +752,6 @@
                                         <img src="${bloc.original}" alt="Manuscrit original" class="relative z-10 w-full h-auto object-contain rounded bg-stone-50 transition-opacity duration-500 group-hover:opacity-0">
                                     </div>
                                     <p class="text-xs text-stone-500 mt-2 italic">${bloc.legende || ''}</p>
-                                </div>
-                            `;
-                        }
-                        else if (bloc.type === 'separateur') {
-                            container.innerHTML += `
-                                <div class="mt-12 mb-8 text-center">
-                                    <hr class="border-stone-300 mb-6">
-                                    <h2 class="text-2xl md:text-3xl font-serif font-bold text-amber-800">${formaterTexte(bloc.content)}</h2>
                                 </div>
                             `;
                         }
