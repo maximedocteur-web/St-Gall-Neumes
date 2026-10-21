@@ -76,17 +76,19 @@ siteData.neumes = [
         {
             nom: "Porrectus",
             categorie: "simples",
-            description: `<strong>3 notes</strong>, mouvement : descendant/ascendant. Ce neume représente trois notes, la seconde étant plus basse (plus grave) que la première
-            et la troisième plus elevée (plus aigue) que la deuxième mais on ne sait pas de combien elle est plus élevée (une tierce ? une quarte ? une octave ? rien ne l'indique 
-            dans sa graphie). La première image est sa graphie standard,`,
+            description: "<strong>3 notes</strong>, mouvement : descendant/ascendant. Ce neume représente trois notes, la seconde étant plus basse (plus grave) que la première "+
+            "et la troisième plus elevée (plus aigue) que la deuxième mais on ne sait pas de combien elle est plus élevée (une tierce ? une quarte ? une octave ? rien ne l'indique "+
+            "dans sa graphie). Son image ici présente est sa graphie standard. Il arrive que la dernière note soit épisémée, dans ce cas, la virga finale porte un trait horizontal "+
+            "à son sommet. Dans notre lecture actuelle des neumes, les deux première notes sont plus rapides que la dernière selon le schéma : <strong>1/2</strong> ; <strong>1/2</strong> ; <strong>1</strong> .",
             image: "images/porrectus.png"
         },
         {
             nom: "Scandicus",
             categorie: "simples",
-            description: `<strong>3 notes</strong>, mouvement : ascendant/ascendant. Ce neume représente trois notes, la seconde étant plus élevée (plus aigue) que la première
-            et la troisième plus elevée (plus aigue) que la deuxième mais on ne sait pas de combien elle est plus élevée (une tierce ? une quarte ? une octave ? rien ne l'indique 
-            dans sa graphie). La première image est sa graphie standard (mais assez peu usitée sous cette forme), la seconde représente le même neume mais avec trois punctums au lieu de deux.`,
+            description: "<strong>3 notes</strong>, mouvement : ascendant/ascendant. Ce neume représente trois notes, la seconde étant plus élevée (plus aigue) que la première "+
+            "et la troisième plus elevée (plus aigue) que la deuxième mais on ne sait pas de combien elles sont plus élevées (une tierce ? une quarte ? une octave ? rien ne l'indique "+
+            "dans sa graphie). Les deux images sont des graphies standard, une a deux punctums et une à trois. Il existe une grande variété de graphies où l'on peut remplacer un ou des punctums "+
+            "par des tractulus (voire des tractulus épisémés) et où la virga finale peut être sous toutes les formes indiquées précédemment (voir VIRGA)",
             images:[ 
                 "images/scandicus_1.png",
                 "images/scandicus_2.png"
@@ -95,44 +97,49 @@ siteData.neumes = [
         {
             nom: "Climacus",
             categorie: "simples",
-            description: `<strong>3 notes</strong>, mouvement : descendant/ascendant. Ce neume représente trois notes, la seconde étant plus basse (plus grave) que la première
-            et la troisième plus elevée (plus aigue) que la deuxième mais on ne sait pas de combien elle est plus élevée (une tierce ? une quarte ? une octave ? rien ne l'indique 
-            dans sa graphie). La première image est sa graphie standard,`,
+            description: "<strong>3 notes</strong>, mouvement : descendant/ascendant. Ce neume représente trois notes (si il y en a plus, c'est simplement des punctums rajoutés après la virga),"+
+            " toutes les notes après la virga étant à chaque fois plus basses les unes par rapport aux autres mais on ne sait pas de combien elle est plus élevée (une tierce ? une quarte ? "+
+            "une octave ? rien ne l'indique dans sa graphie). Il existe une grande variété de graphies où l'on peut remplacer un ou des punctums "+
+            "par des tractulus (voire des tractulus épisémés) et où la virga finale peut être sous toutes les formes indiquées précédemment (voir VIRGA).",
             images: [
                 "images/climacus_2p.png",
-                "images/climacus_3p.png",
-                "images/climacus_episeme1.png"
+                "images/climacus_3p.png"
                 ]
         },
         {
             nom: "Torculus resupinus",
             categorie: "simples",
-            description: `<strong>4 notes</strong>, mouvement : descendant/ascendant. Ce neume représente quatre notes, `,
+            description: "<strong>4 notes</strong>, mouvement : ascendant/descendant/ascendant. Ce neume représente quatre notes, c'est simplement un torculus avec une virga finale qui est placée"+
+            " plus aigue par rapport à la dernière note du torculus (donc 4e note plus élevée que la 3e note).",
             image: "images/torculus_resupinus.png"
         },
         {
             nom: "Porrectus flexus",
             categorie: "simples",
-            description: `<strong>4 notes</strong>, mouvement : descendant/ascendant. Ce neume représente quatre notes, `,
+            description: "<strong>4 notes</strong>, mouvement : descendant/ascendant/descendant. Ce neume représente quatre notes, c'est simplement un porrectus avec une quatrième note qui est placée"+
+            " plus grave par rapport à la dernière note du porrectus (donc 4e note plus grave que la 3e note)",
             image: "images/porrectus_flexus.png"
         },
         {
             nom: "Pes sub-bipunctis",
             categorie: "simples",
-            description: `<strong>4 notes</strong>, mouvement : descendant/ascendant. Ce neume représente quatre notes, `,
+            description: `<strong>4 notes</strong>, mouvement : ascendant/descendant/descendant. Ce neume représente quatre notes, `,
             image: "images/pes_sub_bipunctis.png"
         },
         {
             nom: "Scandicus flexus",
             categorie: "simples",
-            description: `<strong>4 notes</strong>, mouvement : descendant/ascendant. Ce neume représente quatre notes, `,
+            description: `<strong>4 notes</strong>, mouvement : ascendant/ascendant/descendant. Ce neume représente quatre notes, `,
             image: "images/scandicus_flexus.png"
         },
         {
             nom: "Quilisma",
             categorie: "ornementaux",
             description: "Neume dentelé en forme de crémaillère. Indique une vocalise légère, un frémissement.",
-            image: "images/quilisma.png"
+            images: [
+                "images/quilisma.png",
+                "images/quilisma3.png"
+                ]
         },
         {
             nom: "Salicus",
