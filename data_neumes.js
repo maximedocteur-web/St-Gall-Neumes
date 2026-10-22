@@ -182,7 +182,10 @@ siteData.neumes = [
         {
             nom: "apostropha",
             categorie: "ornementaux",
-            description: "Neume ornementé en trois partie, un punctum, le signe ornemental et une virga.",
+            description: "Une apostropha (la <em>gifle</em> en latin), est une seule note représentée par une virgule qui est légèrement tremblée (image 1) mais elle peut aussi être représentée"+
+            " par paire ou par triplette. Par paire c'est une <strong>distropha</strong> (image 2) et par triplette une <strong>tristropha</strong> (image 4). Il arrive que la dernière note"+
+            " puisse être plus longue (image 3) ou liquescente (image 5). Peut importe le nombre de virgules, ils faut toutes qu'elles aient ce léger tremblement. Il arrive que l'on retrouve"+
+            " plusieurs de ces petits paquets les uns à la suite des autres.",
             images: [
                 "images/apostropha.png",
                 "images/distropha.png",
