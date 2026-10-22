@@ -144,31 +144,99 @@
                         </button>
                     </div>
 
-                    <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-5">
-                        <div onclick="showPage('historique')" class="bg-white p-5 rounded-lg shadow-sm border border-stone-200 hover:border-amber-400 hover:bg-amber-50/30 hover:-translate-y-1 hover:shadow-md cursor-pointer transition-all duration-300 group animate-fade-up delay-100">
-                            <h3 class="text-lg font-serif font-bold text-stone-900 group-hover:text-amber-800 transition mb-1">📜 Historique</h3>
-                            <p class="text-xs text-stone-600 leading-relaxed">Découvrez les origines de la notation monastique et l'âge d'or de Saint-Gall.</p>
+                    <!-- LISTE VERTICALE DE TOUTES LES PAGES -->
+                    <div class="space-y-4 animate-fade-up">
+                        
+                        <div onclick="showPage('historique')" class="w-full bg-white p-5 rounded-lg shadow-sm border border-stone-200 hover:border-amber-400 hover:bg-amber-50/30 hover:-translate-y-0.5 hover:shadow-md cursor-pointer transition-all duration-300 group">
+                            <h3 class="text-lg font-serif font-bold text-stone-900 group-hover:text-amber-800 transition mb-1">L'Historique</h3>
+                            <p class="text-sm text-stone-600 leading-relaxed">Un petit point historique pour mieux appréhender ce répertoire.</p>
                         </div>
-                        <div onclick="showPage('manuscrits')" class="bg-white p-5 rounded-lg shadow-sm border border-stone-200 hover:border-amber-400 hover:bg-amber-50/30 hover:-translate-y-1 hover:shadow-md cursor-pointer transition-all duration-300 group animate-fade-up delay-200">
-                            <h3 class="text-lg font-serif font-bold text-stone-900 group-hover:text-amber-800 transition mb-1">📖 Manuscrits</h3>
-                            <p class="text-xs text-stone-600 leading-relaxed">Apprenez à vous repérer sur une page et explorez les différents types de pièces.</p>
+
+                        <div onclick="showPage('manuscrits')" class="w-full bg-white p-5 rounded-lg shadow-sm border border-stone-200 hover:border-amber-400 hover:bg-amber-50/30 hover:-translate-y-0.5 hover:shadow-md cursor-pointer transition-all duration-300 group">
+                            <h3 class="text-lg font-serif font-bold text-stone-900 group-hover:text-amber-800 transition mb-1">Se repérer</h3>
+                            <p class="text-sm text-stone-600 leading-relaxed">Face à un manuscrit, comment se repère-t-on à l'intérieur.</p>
                         </div>
-                        <div onclick="showPage('neumes')" class="bg-white p-5 rounded-lg shadow-sm border border-stone-200 hover:border-amber-400 hover:bg-amber-50/30 hover:-translate-y-1 hover:shadow-md cursor-pointer transition-all duration-300 group animate-fade-up delay-300">
-                            <h3 class="text-lg font-serif font-bold text-stone-900 group-hover:text-amber-800 transition mb-1">✍️ Sémiologie</h3>
-                            <p class="text-xs text-stone-600 leading-relaxed">Étude détaillée des notations, catalogue interactif des neumes et lettres significatives.</p>
+
+                        <div onclick="showPage('types-pieces')" class="w-full bg-white p-5 rounded-lg shadow-sm border border-stone-200 hover:border-amber-400 hover:bg-amber-50/30 hover:-translate-y-0.5 hover:shadow-md cursor-pointer transition-all duration-300 group">
+                            <h3 class="text-lg font-serif font-bold text-stone-900 group-hover:text-amber-800 transition mb-1">Types de pièces</h3>
+                            <p class="text-sm text-stone-600 leading-relaxed">Quels sont les types de pièces que l'on trouve dans le chant grégorien.</p>
                         </div>
-                        <div onclick="showPage('modes')" class="bg-white p-5 rounded-lg shadow-sm border border-stone-200 hover:border-amber-400 hover:bg-amber-50/30 hover:-translate-y-1 hover:shadow-md cursor-pointer transition-all duration-300 group animate-fade-up delay-400">
-                            <h3 class="text-lg font-serif font-bold text-stone-900 group-hover:text-amber-800 transition mb-1">🎵 Théorie musicale</h3>
-                            <p class="text-xs text-stone-600 leading-relaxed">Comprendre les modes de l'octoéchos, les psalmodies et l'étude du monocorde.</p>
+
+                        <div onclick="showPage('notations')" class="w-full bg-white p-5 rounded-lg shadow-sm border border-stone-200 hover:border-amber-400 hover:bg-amber-50/30 hover:-translate-y-0.5 hover:shadow-md cursor-pointer transition-all duration-300 group">
+                            <h3 class="text-lg font-serif font-bold text-stone-900 group-hover:text-amber-800 transition mb-1">Les notations</h3>
+                            <p class="text-sm text-stone-600 leading-relaxed">Un petit coup d'oeil sur les différentes notations qui coexistent dans le chant grégorien.</p>
                         </div>
-                        <div onclick="showPage('catalogue-fetes')" class="bg-white p-5 rounded-lg shadow-sm border border-stone-200 hover:border-amber-400 hover:bg-amber-50/30 hover:-translate-y-1 hover:shadow-md cursor-pointer transition-all duration-300 group animate-fade-up delay-500">
-                            <h3 class="text-lg font-serif font-bold text-stone-900 group-hover:text-amber-800 transition mb-1">🗂️ Répertoire</h3>
-                            <p class="text-xs text-stone-600 leading-relaxed">Explorez le catalogue des fêtes et triez les chants selon leurs catégories liturgiques.</p>
+
+                        <div onclick="showPage('neumes')" class="w-full bg-white p-5 rounded-lg shadow-sm border border-stone-200 hover:border-amber-400 hover:bg-amber-50/30 hover:-translate-y-0.5 hover:shadow-md cursor-pointer transition-all duration-300 group">
+                            <h3 class="text-lg font-serif font-bold text-stone-900 group-hover:text-amber-800 transition mb-1">Les Neumes</h3>
+                            <p class="text-sm text-stone-600 leading-relaxed">Quels sont les neumes utilisés dans la notation de Saint-Gall</p>
                         </div>
-                        <div onclick="showPage('analyse')" class="bg-white p-5 rounded-lg shadow-sm border border-stone-200 hover:border-amber-400 hover:bg-amber-50/30 hover:-translate-y-1 hover:shadow-md cursor-pointer transition-all duration-300 group animate-fade-up delay-600">
-                            <h3 class="text-lg font-serif font-bold text-stone-900 group-hover:text-amber-800 transition mb-1">🔍 Pratique</h3>
-                            <p class="text-xs text-stone-600 leading-relaxed">Exercez-vous avec nos lectures guidées pas à pas et testez-vous via les quiz.</p>
+
+                        <div onclick="showPage('lettres-hub')" class="w-full bg-white p-5 rounded-lg shadow-sm border border-stone-200 hover:border-amber-400 hover:bg-amber-50/30 hover:-translate-y-0.5 hover:shadow-md cursor-pointer transition-all duration-300 group">
+                            <h3 class="text-lg font-serif font-bold text-stone-900 group-hover:text-amber-800 transition mb-1">Lettres significatives</h3>
+                            <p class="text-sm text-stone-600 leading-relaxed">Que sont et que veulent dire les lettres significatives dans la notation de Saint-Gall.</p>
                         </div>
+
+                        <div onclick="showPage('modes')" class="w-full bg-white p-5 rounded-lg shadow-sm border border-stone-200 hover:border-amber-400 hover:bg-amber-50/30 hover:-translate-y-0.5 hover:shadow-md cursor-pointer transition-all duration-300 group">
+                            <h3 class="text-lg font-serif font-bold text-stone-900 group-hover:text-amber-800 transition mb-1">Les modes</h3>
+                            <p class="text-sm text-stone-600 leading-relaxed">Qu'est ce que les modes qui constituent les mélodies grégoriennes.</p>
+                        </div>
+
+                        <div onclick="showPage('psalmodies')" class="w-full bg-white p-5 rounded-lg shadow-sm border border-stone-200 hover:border-amber-400 hover:bg-amber-50/30 hover:-translate-y-0.5 hover:shadow-md cursor-pointer transition-all duration-300 group">
+                            <h3 class="text-lg font-serif font-bold text-stone-900 group-hover:text-amber-800 transition mb-1">Les psalmodies</h3>
+                            <p class="text-sm text-stone-600 leading-relaxed">Comment chanter les psaumes.</p>
+                        </div>
+
+                        <div onclick="showPage('monocorde')" class="w-full bg-white p-5 rounded-lg shadow-sm border border-stone-200 hover:border-amber-400 hover:bg-amber-50/30 hover:-translate-y-0.5 hover:shadow-md cursor-pointer transition-all duration-300 group">
+                            <h3 class="text-lg font-serif font-bold text-stone-900 group-hover:text-amber-800 transition mb-1">Le monocorde</h3>
+                            <p class="text-sm text-stone-600 leading-relaxed">Un très bon outil pour former l'oreille aux tempéraments non égaux.</p>
+                        </div>
+
+                        <div onclick="showPage('catalogue-fetes')" class="w-full bg-white p-5 rounded-lg shadow-sm border border-stone-200 hover:border-amber-400 hover:bg-amber-50/30 hover:-translate-y-0.5 hover:shadow-md cursor-pointer transition-all duration-300 group">
+                            <h3 class="text-lg font-serif font-bold text-stone-900 group-hover:text-amber-800 transition mb-1">Catalogue des fêtes</h3>
+                            <p class="text-sm text-stone-600 leading-relaxed">Index des pièces que l'on trouve pour chaque fête dans le Einsiedeln 121 et le St-Gall 390-391.</p>
+                        </div>
+
+                        <div onclick="showPage('trier-categories')" class="w-full bg-white p-5 rounded-lg shadow-sm border border-stone-200 hover:border-amber-400 hover:bg-amber-50/30 hover:-translate-y-0.5 hover:shadow-md cursor-pointer transition-all duration-300 group">
+                            <h3 class="text-lg font-serif font-bold text-stone-900 group-hover:text-amber-800 transition mb-1">Trier selon les catégories</h3>
+                            <p class="text-sm text-stone-600 leading-relaxed">L'ensemble des pièces triables par types et par modes.</p>
+                        </div>
+
+                        <div onclick="showPage('analyse')" class="w-full bg-white p-5 rounded-lg shadow-sm border border-stone-200 hover:border-amber-400 hover:bg-amber-50/30 hover:-translate-y-0.5 hover:shadow-md cursor-pointer transition-all duration-300 group">
+                            <h3 class="text-lg font-serif font-bold text-stone-900 group-hover:text-amber-800 transition mb-1">Lecture Guidée</h3>
+                            <p class="text-sm text-stone-600 leading-relaxed">Lecture des neumes et lettres significatives de Saint-Gall avec une aide pour les identifier.</p>
+                        </div>
+
+                        <div onclick="showPage('quiz')" class="w-full bg-white p-5 rounded-lg shadow-sm border border-stone-200 hover:border-amber-400 hover:bg-amber-50/30 hover:-translate-y-0.5 hover:shadow-md cursor-pointer transition-all duration-300 group">
+                            <h3 class="text-lg font-serif font-bold text-stone-900 group-hover:text-amber-800 transition mb-1">Quiz</h3>
+                            <p class="text-sm text-stone-600 leading-relaxed">Des quizz pour s'exercer.</p>
+                        </div>
+
+                        <div onclick="showPage('bibliographie')" class="w-full bg-white p-5 rounded-lg shadow-sm border border-stone-200 hover:border-amber-400 hover:bg-amber-50/30 hover:-translate-y-0.5 hover:shadow-md cursor-pointer transition-all duration-300 group">
+                            <h3 class="text-lg font-serif font-bold text-stone-900 group-hover:text-amber-800 transition mb-1">Bibliographie</h3>
+                            <p class="text-sm text-stone-600 leading-relaxed">Une bibliographie.</p>
+                        </div>
+
+                        <div onclick="showPage('sitographie')" class="w-full bg-white p-5 rounded-lg shadow-sm border border-stone-200 hover:border-amber-400 hover:bg-amber-50/30 hover:-translate-y-0.5 hover:shadow-md cursor-pointer transition-all duration-300 group">
+                            <h3 class="text-lg font-serif font-bold text-stone-900 group-hover:text-amber-800 transition mb-1">Sitographie</h3>
+                            <p class="text-sm text-stone-600 leading-relaxed">Différents sites qui peuvent être utiles.</p>
+                        </div>
+
+                        <div onclick="showPage('manuscrit-carre')" class="w-full bg-white p-5 rounded-lg shadow-sm border border-stone-200 hover:border-amber-400 hover:bg-amber-50/30 hover:-translate-y-0.5 hover:shadow-md cursor-pointer transition-all duration-300 group">
+                            <h3 class="text-lg font-serif font-bold text-stone-900 group-hover:text-amber-800 transition mb-1">Manuscrit → Carré</h3>
+                            <p class="text-sm text-stone-600 leading-relaxed">Trouver les neumes de Saint-Gall quand on a déjà la même pièce en notation carrée.</p>
+                        </div>
+
+                        <div onclick="showPage('carre-manuscrit')" class="w-full bg-white p-5 rounded-lg shadow-sm border border-stone-200 hover:border-amber-400 hover:bg-amber-50/30 hover:-translate-y-0.5 hover:shadow-md cursor-pointer transition-all duration-300 group">
+                            <h3 class="text-lg font-serif font-bold text-stone-900 group-hover:text-amber-800 transition mb-1">Carré → Manuscrit</h3>
+                            <p class="text-sm text-stone-600 leading-relaxed">Trouver la notation carrée quand on a déjà la même pièce en notation de Saint-Gall.</p>
+                        </div>
+
+                        <div onclick="showPage('fichiers')" class="w-full bg-white p-5 rounded-lg shadow-sm border border-stone-200 hover:border-amber-400 hover:bg-amber-50/30 hover:-translate-y-0.5 hover:shadow-md cursor-pointer transition-all duration-300 group">
+                            <h3 class="text-lg font-serif font-bold text-stone-900 group-hover:text-amber-800 transition mb-1">Fichiers à télécharger</h3>
+                            <p class="text-sm text-stone-600 leading-relaxed">Un ensemble de fichiers que vous pouvez télécharger.</p>
+                        </div>
+
                     </div>
                 </div>
             </section>
@@ -296,14 +364,12 @@
                 <div class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 space-y-6" id="quiz-box"></div>
             </section>
 
-            <!-- PAGE FICHIERS (Nouveau) -->
+            <!-- PAGE FICHIERS -->
             <section id="page-fichiers" class="page-section space-y-6 relative z-10">
                 <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Fichiers à télécharger</h2>
                 <div class="bg-white p-6 rounded-lg shadow-sm border border-stone-200">
                     <p class="text-stone-600 mb-4">Cliquez sur l'icône pour télécharger le fichier directement sur votre appareil.</p>
-                    <div id="fichiers-container" class="flex flex-col">
-                        <!-- Les fichiers seront injectés ici par Javascript -->
-                    </div>
+                    <div id="fichiers-container" class="flex flex-col"></div>
                 </div>
             </section>
 
@@ -541,7 +607,7 @@
                             let html = `
                                 <div class="bg-amber-50 border-l-4 border-amber-700 p-4 rounded-r-lg">
                                     <h3 class="font-bold text-amber-900">${data.titre || ''}</h3>
-                                    ${data.description ? `<p class="text-sm text-amber-800 mt-1">\${data.description}</p>` : ''}
+                                    ${data.description ? `<p class="text-sm text-amber-800 mt-1">${data.description}</p>` : ''}
                                 </div>
                             `;
 
@@ -626,23 +692,20 @@
                 }
             } catch(e) { console.error("Erreur Quiz:", e); }
 
-            // 5. FICHIERS A TELECHARGER (Nouveau)
+            // 5. FICHIERS A TELECHARGER
             try {
                 const fichiersContainer = document.getElementById('fichiers-container');
                 if (siteData.fichiers && Array.isArray(siteData.fichiers) && fichiersContainer) {
                     siteData.fichiers.forEach(fichier => {
                         const row = document.createElement('div');
-                        // Ajout de la fine ligne de séparation (border-b) et de l'espace (py-4)
                         row.className = "flex justify-between items-center py-4 border-b border-stone-200 last:border-0 hover:bg-stone-50 transition px-2 rounded-md";
                         
-                        // Icône de téléchargement SVG
                         const iconHtml = `
                             <svg class="w-6 h-6 text-amber-700 hover:text-amber-900 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
                             </svg>
                         `;
 
-                        // "download" force le navigateur à télécharger le fichier
                         row.innerHTML = `
                             <span class="font-medium text-stone-700 text-sm md:text-base">${fichier.nom}</span>
                             <a href="${fichier.url}" download class="p-2 bg-amber-50 rounded hover:bg-amber-100 transition" title="Télécharger">
