@@ -178,5 +178,17 @@ siteData.neumes = [
             categorie: "ornementaux",
             description: "Ascension de trois notes ou plus, comportant une pression sur l'avant-dernière note.",
             image: "images/virga_strata.png"
-        }
+        },
+        {
+            nom: "apostropha",
+            categorie: "ornementaux",
+            description: "Neume ornementé en trois partie, un punctum, le signe ornemental et une virga.",
+            images: [
+                "images/apostropha.png",
+                "images/distropha.png",
+                "images/distropha_episemee.png",
+                "images/tristropha.png",
+                "images/tristropha_liquescente.png"
+            ]
+        },
 ]
