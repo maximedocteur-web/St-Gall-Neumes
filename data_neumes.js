@@ -190,5 +190,5 @@ siteData.neumes = [
                 "images/tristropha.png",
                 "images/tristropha_liquescente.png"
             ]
-        },
+        }
 ]
