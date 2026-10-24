@@ -1,7 +1,7 @@
 siteData.catalogue_des_fetes = [
     {
         type: "titre",
-        content: "Catalogue du Graduel Einseideln 121"
+        content: "Catalogue du Graduel Einsiedeln 121"
     },
     {
         type: "text",
