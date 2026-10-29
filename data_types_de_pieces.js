@@ -10,6 +10,13 @@ siteData.types_de_pieces = [
         Si l'on regarde dans le manuscrit <em>Einsiedeln 121</em> qui est un graduel, on trouve régulièrement les mêmes lettres rouges au début des chants.`
     },
     {
+        type:"gallerie",
+        images:[
+            "images/psaume.png",
+            "images/repons.png",
+            "images/alleluia.png"
+            
+    {
     type:"image",
     src:"images/psaume.png"
   },
