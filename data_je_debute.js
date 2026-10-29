@@ -156,6 +156,6 @@ siteData.je_debute = [
   {
     type:"text",
    content:`<strong>M.</strong> : Pour ce qui est de l'indentification de ces neumes et de leurs significations, je t'invite à aller voir mes collègues dans la salle [lien=neumes]Neumes[/lien] 
-   et dans la salle [lien=lecture guidee]Lecture guidée[/lien]. <br><br>`
+   et dans la salle [lien=lecture_guidee]Lecture guidée[/lien]. <br><br>`
   },
 ];
