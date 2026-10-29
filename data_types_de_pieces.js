@@ -19,15 +19,31 @@ siteData.types_de_pieces = [
         ]
     },
     {
-        type:"text",
-        content:`bzzbzz`
-    },
+    type:"image",
+    src:"images/psaume.png"
+  },
     {
     type:"image",
-    src:"images/construction.png"
+    src:"images/repons.png"
   },
-  {
-    type:"text",
-    content:"manuscrit en cours de rédaction... <em>Silentio dum scribo</em>..."
+    {
+    type:"image",
+    src:"images/alleluia.png"
+  },
+    {
+    type:"image",
+    src:"images/trait.png"
+  },
+    {
+    type:"image",
+    src:"images/verset.png"
+  },
+    {
+    type:"image",
+    src:"images/offertoire.png"
+  },
+    {
+    type:"image",
+    src:"images/communion.png"
   }
   ];
