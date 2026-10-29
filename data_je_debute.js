@@ -146,12 +146,16 @@ siteData.je_debute = [
   },
   {
     type:"text",
-   content:`<strong>M.</strong> : Tout comme le texte se lit de gauche à droite, les neumes se lisent aussi de gauche à droite et ils sont divisés par des espaces.
-   . Il peut y avoir un ou plusieurs neumes 
-   par syllabe. <br><br>`
+   content:`<strong>M.</strong> : Tout comme le texte se lit de gauche à droite, les neumes se lisent aussi de gauche à droite et leur enchainement est divisé par syllabe.
+   . Il peut y avoir un ou plusieurs neumes sur chaque syllabe. Regarde ici, j'ai regroupé les neumes ppar les syllabes où ils doivent être chantés. <br>`
   },
   {
     type:"image",
     src:"images/exemple10.png"
-  }
+  },
+  {
+    type:"text",
+   content:`<strong>M.</strong> : Pour ce qui est de l'indentification de ces neumes et de leurs significations, je t'invite à aller voir mes collègues dans la salle [lien=neumes]Neumes[/lien] 
+   et dans la salle [lien=lecture_guidee]Lecture guidée[/lien]. <br><br>`
+  },
 ];
