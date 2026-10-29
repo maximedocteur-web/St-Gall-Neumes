@@ -19,6 +19,10 @@ siteData.types_de_pieces = [
         ]
     },
     {
+        type:"text",
+        content:`bzzbzz`
+    },
+    {
     type:"image",
     src:"images/construction.png"
   },
