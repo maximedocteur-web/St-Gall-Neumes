@@ -138,7 +138,7 @@ siteData.je_debute = [
    comme la notation aquitaine donnait très tôt à voir les hauteurs de notes plutôt que le style et donc, à partir de plusieurs manuscrits du Moyen Âge, ils ont créer une notation qui se veut
    assez proche des mélodies grégoriennes du Xe siècle.<br><br>
    <strong>D.</strong> : D'accord !<br><br>
-   <strong>M.</strong> : Je vais t'apprendre maintenant à décrypter la notation de Saint-Gall.<br><br>`
+   <strong>M.</strong> : Je vais t'apprendre maintenant à décrypter la notation de Saint-Gall.<br>`
   },
   {
     type:"image",
@@ -150,4 +150,8 @@ siteData.je_debute = [
    . Il peut y avoir un ou plusieurs neumes 
    par syllabe. <br><br>`
   },
+  {
+    type:"image",
+    src:"images/exemple10.png"
+  }
 ];
