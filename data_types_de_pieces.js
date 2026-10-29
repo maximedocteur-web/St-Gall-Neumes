@@ -9,9 +9,11 @@ siteData.types_de_pieces = [
         Intéréssons nous maintenant aux types de pièces que ces manuscrits renferment.<br><br>
         Si l'on regarde dans le manuscrit <em>Einsiedeln 121</em> qui est un graduel, on trouve régulièrement les mêmes lettres rouges au début des chants.`,
         images: [
-            "images/introït.png",
-            "images/graduel.png",
+            "images/psaume.png",
+            "images/repons.png",
             "images/alleluia.png",
+            "images/trait.png",
+            "images/verset.png",
             "images/offertoire.png",
             "images/communion.png"
         ]
