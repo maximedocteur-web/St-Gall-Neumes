@@ -36,11 +36,16 @@ siteData.types_de_pieces = [
         <strong>Agnus</strong><br><br>
         <strong>Communion</strong><br><br>
         Toutes ces pièce sont divisées en deux catégories : les pièces de l'<em>Ordinaire</em> et du <em>Propre</em>.<br><br>
-        <strong>ORDINAIRE</strong><br><br>
+        <strong>ORDINAIRE</strong><br>
         Les pièces de l'Ordinaire sont des chants dont le texte n'est jamais modifié (mis à part une légère exception pour l'Agnus Dei mais ne rentrons pas dans les détails...). Les chants qui font
         partie de l'Ordinaire sont le <strong>Kyrie</strong>, le <strong>Gloria</strong>, le <strong>Credo</strong>, le <strong>Sanctus</strong> et l'<strong>Agnus Dei</strong>. Ces chants ne sont
         présents dans les manuscrits que de façon marginale puisqu'ils ne changent pas d'un jour à l'autre. Toutefois, comme leur mélodies peuvent parfois varier, on leur réserve un petit bout de 
-        graduel que l'on appelle le <em>Kyriale</em>.`
+        graduel que l'on appelle le <em>Kyriale</em>.<br><br>
+        <strong>PROPRE</strong><br>
+        Les pièces du Propre sont des chants dont le texte est modifié d'une messe à l'autre. Les chants du Propre sont l'<strong>Introït</strong>, le <strong>Graduel</strong>,
+        l'<strong>Alleluia</strong>, l'<strong>Offertoire</strong> et la <strong>Communion</strong>. Donc, d'une messe à l'autre les textes de ces chants ne seront pas les mêmes même si ces
+        chants occupent une fonction liturgique semblable lors de la célébration (voir dans le détail des pièces).
+        `
     },
     {
         type:"separateur",
