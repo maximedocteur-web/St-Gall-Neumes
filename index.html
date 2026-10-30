@@ -741,7 +741,7 @@
             } catch(e) { console.error("Erreur Fichiers:", e); }
 
             // =========================================================
-            // 6. FONCTION UNIVERSELLE ULTRA-ROBUSTE
+            // 6. FONCTION UNIVERSELLE ULTRA-ROBUSTE (Mise à jour finale)
             // =========================================================
             function genererPageDynamique(containerId, donneesArray) {
                 try {
@@ -760,6 +760,7 @@
                         if (!texte) return "";
                         let res = String(texte);
                         
+                        // Liens internes
                         while (res.includes("[lien=") && res.includes("[/lien]")) {
                             let indexDebut = res.indexOf("[lien=");
                             let indexFin = res.indexOf("[/lien]");
@@ -776,6 +777,7 @@
                             } else { break; }
                         }
 
+                        // Lien E-codices
                         while (res.includes("[p.") && res.includes("]")) {
                             let indexDebut = res.indexOf("[p.");
                             let indexFin = res.indexOf("]", indexDebut);
@@ -788,6 +790,7 @@
                             } else { break; }
                         }
 
+                        // Notes de bas de page
                         while (res.includes("[note]") && res.includes("[/note]")) {
                             let indexDebut = res.indexOf("[note]");
                             let indexFin = res.indexOf("[/note]");
@@ -802,6 +805,37 @@
                                 res = texteAvant + appel + texteApres;
                             } else { break; }
                         }
+                        
+                        // NOUVEAU : Infobulle Lexique
+                        while (res.includes("[lexique=") && res.includes("[/lexique]")) {
+                            let indexDebut = res.indexOf("[lexique=");
+                            let indexFin = res.indexOf("[/lexique]");
+                            if (indexDebut !== -1 && indexFin !== -1 && indexDebut < indexFin) {
+                                let indexFinCrochet = res.indexOf("]", indexDebut);
+                                if (indexFinCrochet !== -1 && indexFinCrochet < indexFin) {
+                                    let texteAvant = res.substring(0, indexDebut);
+                                    let definition = res.substring(indexDebut + 9, indexFinCrochet);
+                                    let mot = res.substring(indexFinCrochet + 1, indexFin);
+                                    let texteApres = res.substring(indexFin + 10);
+                                    let baliseLexique = `<span title="${definition}" class="cursor-help border-b-2 border-dotted border-amber-600 text-amber-800 font-medium">${mot}</span>`;
+                                    res = texteAvant + baliseLexique + texteApres;
+                                } else { break; }
+                            } else { break; }
+                        }
+
+                        // NOUVEAU : Icône dans le texte
+                        while (res.includes("[icone=") && res.includes("]")) {
+                            let indexDebut = res.indexOf("[icone=");
+                            let indexFin = res.indexOf("]", indexDebut);
+                            if (indexDebut !== -1 && indexFin !== -1) {
+                                let texteAvant = res.substring(0, indexDebut);
+                                let cheminImg = res.substring(indexDebut + 7, indexFin);
+                                let texteApres = res.substring(indexFin + 1);
+                                let baliseIcone = `<img src="${cheminImg}" class="inline-block h-6 w-auto mx-1 align-middle" alt="icone">`;
+                                res = texteAvant + baliseIcone + texteApres;
+                            } else { break; }
+                        }
+
                         return res;
                     }
 
@@ -830,7 +864,6 @@
                                 </div>
                             `;
                         }
-                        // NOUVEAU TYPE : GALERIE
                         else if (bloc.type === 'galerie') {
                             let imagesHtml = '';
                             bloc.images.forEach(img => {
@@ -851,6 +884,24 @@
                                     </div>
                                     <p class="text-xs text-stone-500 mt-2 italic">${bloc.legende || ''}</p>
                                 </div>
+                            `;
+                        }
+                        // NOUVEAU : Encadré
+                        else if (bloc.type === 'encadre') {
+                            container.innerHTML += `
+                                <div class="bg-amber-100 border-l-4 border-amber-600 p-5 rounded-r-lg my-6 shadow-sm">
+                                    ${bloc.titre ? `<h4 class="font-bold text-amber-900 mb-2">${bloc.titre}</h4>` : ''}
+                                    <p class="text-amber-900 leading-relaxed">${formaterTexte(bloc.content)}</p>
+                                </div>
+                            `;
+                        }
+                        // NOUVEAU : Citation
+                        else if (bloc.type === 'citation') {
+                            container.innerHTML += `
+                                <blockquote class="italic text-stone-700 border-l-4 border-stone-300 pl-4 py-2 my-6 bg-stone-50 rounded-r text-justify">
+                                    « ${formaterTexte(bloc.content)} »
+                                    ${bloc.auteur ? `<footer class="mt-2 text-sm font-bold text-stone-500">— ${bloc.auteur}</footer>` : ''}
+                                </blockquote>
                             `;
                         }
                         else if (bloc.type === 'youtube') {
