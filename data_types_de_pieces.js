@@ -85,7 +85,7 @@ siteData.types_de_pieces = [
         que les chantres montaient sur les marches de l'ambon pour éxécuter ce chant.`
     },
     {
-        type:"imageComparare",
+        type:"imageCompare",
         original:"images/suscepimus.png",
         annotee:"images/suscepimus2.png",
         legende:"passez votre souris sur l'image pour voir où se situent les différentes parties."
