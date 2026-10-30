@@ -48,6 +48,7 @@ siteData.types_de_pieces = [
     {
         type:"imageCompare",
         original:"images/adorate.png",
-        annotee:"images/adorate2.png"
+        annotee:"images/adorate2.png",
+        legende:"passez votre souris sur l'image pour voir où se situent les différentes parties."
     }
 ]
