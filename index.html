@@ -576,11 +576,14 @@
                 }
             } catch(e) { console.error("Erreur Lettres:", e); }
 
-            // 3. ANALYSE CHANT (Lecture Guidée Interactive Multi-images + Séparateurs)
+            // 3. ANALYSE CHANT (Lecture Guidée Interactive Multi-images + Audio Zéro Latence)
             try {
                 let analyseData = siteData.lecture_guidee || siteData.analyseChant;
                 if (analyseData) {
                     const wrapper = document.getElementById('analyse-wrapper');
+                    // On crée une mémoire globale pour couper le son précédent si on va trop vite
+                    window.sonEnCours = null;
+
                     if (wrapper) {
                         wrapper.innerHTML = ""; 
                         
@@ -623,7 +626,7 @@
                             if(data.imageGlobale) {
                                 html += `
                                     <div>
-                                        ${data.zones ? `<p class="text-stone-600 mb-4 font-medium">Passez votre souris sur les neumes de l'image pour voir leur nom :</p>` : ''}
+                                        ${data.zones ? `<p class="text-stone-600 mb-4 font-medium">Passez votre souris sur les neumes de l'image pour voir leur nom et écouter l'extrait :</p>` : ''}
                                         <div class="interactive-container relative inline-block w-full shadow-md border border-stone-200 cursor-crosshair rounded bg-stone-50">
                                             <img src="${data.imageGlobale}" class="w-full h-auto block rounded manuscrit-img">
                                             <div class="interactive-tooltip pointer-events-none absolute opacity-0 bg-stone-900 text-white text-sm font-bold px-3 py-1.5 rounded shadow-lg transition-opacity duration-200 z-50 transform -translate-x-1/2 -translate-y-full">
@@ -642,6 +645,13 @@
                                 const tooltip = block.querySelector('.interactive-tooltip');
 
                                 data.zones.forEach((zone) => {
+                                    // PRÉCHARGEMENT AUDIO INVISIBLE
+                                    let zoneAudio = null;
+                                    if (zone.audio) {
+                                        zoneAudio = new Audio(zone.audio);
+                                        zoneAudio.preload = "auto"; // Ordonne au navigateur de télécharger le son immédiatement
+                                    }
+
                                     const hotspot = document.createElement('div');
                                     hotspot.style.left = (zone.x - (zone.w / 2)) + '%';
                                     hotspot.style.top = (zone.y - (zone.h / 2)) + '%';
@@ -652,6 +662,18 @@
                                     hotspot.addEventListener('mouseenter', () => {
                                         tooltip.textContent = zone.nom;
                                         tooltip.style.opacity = '1';
+
+                                        // DÉCLENCHEMENT DU SON
+                                        if (zoneAudio) {
+                                            if (window.sonEnCours) {
+                                                // Coupe le son du neume précédent si on va très vite
+                                                window.sonEnCours.pause();
+                                                window.sonEnCours.currentTime = 0; 
+                                            }
+                                            // Joue le nouveau son
+                                            zoneAudio.play().catch(e => console.log("Lecture bloquée par le navigateur", e));
+                                            window.sonEnCours = zoneAudio;
+                                        }
                                     });
 
                                     hotspot.addEventListener('mousemove', (e) => {
@@ -664,6 +686,7 @@
 
                                     hotspot.addEventListener('mouseleave', () => {
                                         tooltip.style.opacity = '0';
+                                        // Le son continue de jouer jusqu'au bout, à moins que la souris ne touche un autre neume.
                                     });
 
                                     container.appendChild(hotspot);
