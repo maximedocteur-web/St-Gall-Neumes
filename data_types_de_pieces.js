@@ -89,5 +89,19 @@ siteData.types_de_pieces = [
         original:"images/suscepimus.png",
         annotee:"images/suscepimus2.png",
         legende:"passez votre souris sur l'image pour voir où se situent les différentes parties."
+    },
+    {
+        type:"separateur",
+        content:"Alleluia (Propre)"
+    },
+    {
+        type:"text",
+        content:`L'alleluia, appelé aussi <em>Répons graduel</em>, est formé d'une première partie appelée l'<em>Alleluia</em> et d'une seconde qui est le <em>Verset alléluiatique</em>.`
+    },
+    {
+        type:"imageComparare",
+        original:"images/confitebuntur.png",
+        annotee:"images/confitebuntur2.png",
+        legende:"passez votre souris sur l'image pour voir où se situent les différentes parties."
     }
 ]
