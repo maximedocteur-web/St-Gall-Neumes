@@ -807,6 +807,18 @@
                                 </div>
                             `;
                         }
+                        // NOUVEAU TYPE : GALERIE
+                        else if (bloc.type === 'galerie') {
+                            let imagesHtml = '';
+                            bloc.images.forEach(img => {
+                                imagesHtml += `<img src="${img}" alt="Pièce" class="h-24 w-auto object-contain rounded border border-stone-200 shadow-sm bg-white p-1">`;
+                            });
+                            container.innerHTML += `
+                                <div class="my-6 flex flex-wrap justify-center gap-4">
+                                    ${imagesHtml}
+                                </div>
+                            `;
+                        }
                         else if (bloc.type === 'imageCompare') {
                             container.innerHTML += `
                                 <div class="my-6 text-center">
