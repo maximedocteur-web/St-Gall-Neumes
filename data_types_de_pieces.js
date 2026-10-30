@@ -26,14 +26,25 @@ siteData.types_de_pieces = [
         content:`Toutes ces rubriques sont en fait des indications permettant d'indiquer qu'à cet endroit un chant commence et selon la rubrique, on sait quel type de chant. Ces indications s'éclairent
         lorsque l'on connaît l'organisation des pièces chantées durant la messe :<br><br>
         <strong>Introït</strong><br><br>
+        <strong>Kyrie</strong><br><br>
+        <strong>Gloria</strong><br><br>
         <strong>Graduel</strong><br><br>
         <strong>Alleluia</strong><br><br>
+        <strong>Credo</strong><br><br>
         <strong>Offertoire</strong><br><br>
-        <strong>Communion</strong><br><br>`
+        <strong>Sanctus</strong><br><br>
+        <strong>Agnus</strong><br><br>
+        <strong>Communion</strong><br><br>
+        Toutes ces pièce sont divisées en deux catégories : les pièces de l'<em>Ordinaire</em> et du <em>Propre</em>.<br><br>
+        <strong>ORDINAIRE</strong><br><br>
+        Les pièces de l'Ordinaire sont des chants dont le texte n'est jamais modifié (mis à part une légère exception pour l'Agnus Dei mais ne rentrons pas dans les détails...). Les chants qui font
+        partie de l'Ordinaire sont le <strong>Kyrie</strong>, le <strong>Gloria</strong>, le <strong>Credo</strong>, le <strong>Sanctus</strong> et l'<strong>Agnus Dei</strong>. Ces chants ne sont
+        présents dans les manuscrits que de façon marginale puisqu'ils ne changent pas d'un jour à l'autre. Toutefois, comme leur mélodies peuvent parfois varier, on leur réserve un petit bout de 
+        graduel que l'on appelle le <em>Kyriale</em>.`
     },
     {
         type:"separateur",
-        content:"Introït"
+        content:"Introït (Propre)"
     },
     {
         type:"text",
