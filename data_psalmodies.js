@@ -9,8 +9,8 @@ siteData.psalmodies = [
     content:`Dans la tradition du chant grégorien, la  lecture et la récitaiton des psaumes a une importance capitale. À l'époque médiévale, pour qu'un jeune garçon puisse commencer
     son apprentissage de chantre, il lui fallait avoir en mémoire les textes des 150 psaumes. Psaume vient du grec ancien <em>psalmos</em> qui peut désigner un chant accompagné 
     d'un instrument ou une musique jouée au psaltérion. Ces psaumes sont attribués au roi David qui les aurait composés. Chacun de ces psaumes comporte plusieurs versets, pour schématiser,
-    plusieurs phrases qui mises bout à bout forment le psaume. Ces derniers sont toujours appelés par leurs  incipit, par exemple, le psaumen n°1 est <em>Beatus vir</em> et quand il est prit
-    dans totalité ça donne :<br><br>
+    plusieurs phrases qui, mises bout à bout, forment le psaume. Ces derniers sont toujours appelés par leurs  incipit, par exemple, le psaumen n°1 est <em>Beatus vir</em> et quand il est prit
+    dans sa totalité ça donne :<br><br>
     "<em><strong>1. Beatus vir qui non abiit in consilio impiorum, et in via peccatorum non stetit, et in cathedra pestilentiæ non sedit ;<br>
     2.sed in lege Domini voluntas ejus, et in lege ejus meditabitur die ac nocte.<br>
     3. Et erit tamquam lignum quod plantatum est secus decursus aquarum, quod fructum suum dabit in tempore suo : et folium ejus non defluet ; et omnia quæcumque faciet prosperabuntur.<br>
@@ -24,8 +24,24 @@ siteData.psalmodies = [
     premier temps, il vaut mieux faire l'antienne, tous les versets du psaume et l'antienne à nouveau. Lors de certains rituels particulièrement long, il est possible de mettre différents psaumes, 
     exemple :<br><br>
     (ant. = antienne; ps. = psaume; V. = verset)<br>
-    <strong>Ant. </strong>Dominus regem, <strong>ps.</strong>14, <strong>V.</strong>3, 6, 9 ; <strong>ps.</strong>78, <strong>V.</strong>2-13 ; <strong>ps.</strong>2, <strong>V.</strong>3.</strong><br><br>
+    <strong>Ant. </strong><em>Dominus regem</em>, <strong>ps.</strong>14, <strong>V.</strong>3, 6, 9 ; <strong>ps.</strong>78, <strong>V.</strong>2-13 ; <strong>ps.</strong>2, <strong>V.</strong>3.</strong><br><br>
     Ici, on chante l'antienne Dominus regem puis une fois finie, on chante le psaume 14 mais uniquement les versets 3, 6 et 9. Ensuite, le psaume 78 mais uniquement les versets 2 jusqu'à 13 et
     enfin le psaume 2 mais uniquement le verset 3. On reprend l'antienne Dominus regem.`
-}
+},
+    { 
+        type: "separateur", 
+        content: "Les immuables règles de la psalmodie"
+    },
+    { 
+        type: "text", 
+        content: `Les psaumes peuvent se chanter dans tous les modes mélodiques, c'est-à-dire huit modes. Un psaume comporte une mélodie
+        pour débuter qui est al <strong>Formule d'intonation</strong>, une portion de mélodie au milieu qui est 
+        la <strong>Médiante</strong> et une portion finale qui termine le verset
+        qui est la <strong>Terminaison</strong>.<br><br>
+        D'un mode à l'autre, ces trois formules mélodiques changent mais généralement et subitilité remarquable, à l'intérieur même
+        d'un mode, il existe plusieurs <strong>Terminaisons</strong>. C'est d'ailleurs ce qu'indique les manuscrits : il y a souvent
+        marqué <em>Ps.<e/em> (qui veut dire psaume), un mot ou deux qui est le psaume choisit pour être chanté et par dessus cinq 
+        ou six notes qui indiquent la <strong>Terminaison</strong> choisie dans le mode pour ce psaume.<br><br>
+        `
+    },
 ];
