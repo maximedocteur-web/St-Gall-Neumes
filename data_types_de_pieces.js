@@ -6,8 +6,15 @@ siteData.types_de_pieces = [
         regroupées dans un livre de chants liturgiques appellé le <strong>GRADUEL</strong>, celles pour les offices sont réparties dans l'<strong>ANTIPHONAIRE</strong>. Je tiens à préciser qu'il 
         existe beaucoup d'autres livres de chants liturgiques comme l'hymnaire (où sont conservées les hymnes), le processional (où sont conservés les chants de procession), les tropaires et
         séquentiaires (où sont conservés les tropes et les séquences), le prosaire (où sont conservées les proses) etc. chacun avec un but spécifique et un rite associé.<br><br>
-        Intéréssons nous maintenant aux types de pièces que ces manuscrits renferment.<br><br>
-        Si l'on regarde dans le manuscrit <em>Einsiedeln 121</em> qui est un graduel, on trouve régulièrement les mêmes lettres rouges au début des chants.`
+        Intéréssons nous maintenant aux types de pièces que ces manuscrits renferment.<br><br>`
+    },
+    {
+        type:"separateur",
+        content:"GRADUEL"
+    },
+    {
+        type:"text",
+        content:`Si l'on regarde dans le manuscrit <em>Einsiedeln 121</em> qui est un graduel, on trouve régulièrement les mêmes lettres rouges au début des chants.`
     },
     {
         type: "galerie",
