@@ -20,5 +20,33 @@ siteData.types_de_pieces = [
             "images/offertoire.png",
             "images/communion.png"
         ]
+    },
+    {
+        type:"text",
+        content:`Toutes ces rubriques sont en fait des indications permettant d'indiquer qu'à cet endroit un chant commence et selon la rubrique, on sait quel type de chant. Ces indications s'éclairent
+        lorsque l'on connaît l'organisation des pièces chantées durant la messe :<br><br>
+        <strong>Introït</strong><br><br>
+        <strong>Graduel</strong><br><br>
+        <strong>Alleluia</strong><br><br>
+        <strong>Offertoire</strong><br><br>
+        <strong>Communion</strong><br><br>`
+    },
+    {
+        type:"separateur",
+        content:"Introït"
+    },
+    {
+        type:"text",
+        content :`L'introït est la première pièce chantée de la messe mais il faut se méfier car il peut aussi être appelé "<em>antiphona ad introïtum</em>" car c'est en fait une antienne et ce n'est que
+        plus tardivement que l'on enploiera le terme <em>introït</em> defaçon autonome. Ce chant a pour but de débuter le temps de la messe et de faire entrer les fidèle dans la célébration.
+        C'est sur cette pièce qu'entre le clergé dans l'église en traversant la nef jusqu'à l'autel. L'introït est donc une antienne accompagnée d'au moins un verset de psaume mais selon le
+        temps que mets le clergé à traverser la nef (temps qui diffère si la célébration se passe dans une église de 20 mètres ou dans une catédrale de 150 mètres), on peut mettre plusieurs
+        versets de psaume pour faire durer le chant. Dans le graduel Einsiedeln 121, il n'y a pas de rubrique mentionnant le début de l'introït par ce que sa position est assez explicite. En effet,
+        il est placé juste après la rubrique indiquant le début de la célébration, ce qui en fait, <em>de facto</em>, l'introït, première pièce chantée de la messe. Par contre, à la fin de la pièce,
+        vous devriez trouver une idication abrégée <strong>PS.</strong> qui signifie le début du psaume associé à l'antienne qui se trouve juste avant.`
+    },
+    {
+        type:"image",
+        src:"images/adorate.png"
     }
-];
+]
