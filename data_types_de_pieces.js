@@ -46,7 +46,8 @@ siteData.types_de_pieces = [
         vous devriez trouver une idication abrégée <strong>PS.</strong> qui signifie le début du psaume associé à l'antienne qui se trouve juste avant.`
     },
     {
-        type:"image",
-        src:"images/adorate.png"
+        type:"imageCompare",
+        original:"images/adorate.png",
+        annotee:"images/adorate2.png"
     }
 ]
