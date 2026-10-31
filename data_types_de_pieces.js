@@ -5,7 +5,7 @@ siteData.types_de_pieces = [
     { niveau: 1, label: "GRADUEL", id: "graduel1" },
     { niveau: 2, label: "Introït (Propre)", id: "introït" },
     { niveau: 2, label: "Graduel (Propre)", id: "graduel2" },
-    { niveau: 2, label: "Alléluia (Propre)", id: "Alleluia" },
+    { niveau: 2, label: "Alléluia (Propre)", id: "alleluia" },
     { niveau: 2, label: "Offertoire (Propre)", id: "offertoire" },
     { niveau: 2, label: "Communion (Propre)", id: "communion" },
     { niveau: 2, label: "Kyrie (Ordinaire)", id: "kyrie" },
