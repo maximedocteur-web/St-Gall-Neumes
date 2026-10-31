@@ -193,7 +193,7 @@ siteData.types_de_pieces = [
         latin:`Kyrie eleison<br>Kyrie eleison<br>Kyrie eleison<br>
             Christe eleison<br>Christe eleison<br>Christe eleison<br>
             Kyrie eleison<br>Kyrie eleison<br>Kyrie eleison.`,
-        français:`Seigneur prends pitié (x3)<br>
+        francais:`Seigneur prends pitié (x3)<br>
         Christ prends pitié (x3)<br>
         Seigneur prends pitié (x3)`
     },
