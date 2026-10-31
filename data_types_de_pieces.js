@@ -83,7 +83,8 @@ siteData.types_de_pieces = [
     {
         type:"text",
         content:`Le graduel, appelé aussi <em>Répons graduel</em>, est formé d'une première partie appelée le <em>Répons</em> et d'une seconde qui est le <em>Verset</em>. Son nom vient du fait
-        que les chantres montaient sur les marches de l'ambon pour éxécuter ce chant.`
+        que les chantres montaient sur les marches de l'ambon pour éxécuter ce chant. Au début du chant, vous pouvez voir la rubrique [icone=images/graduel.png] qui est l'abbréviation (latine) 
+        de <strong>[couleur=#d96e28]R[/couleur]</strong>épons <strong>[couleur=#d96e28]G[/couleur]</strong>raduel.`
     },
     {
         type:"imageCompare",
