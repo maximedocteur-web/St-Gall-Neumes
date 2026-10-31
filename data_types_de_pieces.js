@@ -94,7 +94,7 @@ siteData.types_de_pieces = [
     },
     {
         type:"separateur",
-        content:"Alleluia (Propre)"
+        content:"Alléluia (Propre)"
     },
     {
         type:"text",
