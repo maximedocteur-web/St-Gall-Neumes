@@ -15,7 +15,8 @@ siteData.types_de_pieces = [
     {
         type:"text",
         content:`Comme dit précédemment, le graduel est le livre de chants liturgiques qui contient le détail des pièces chantées pendant la messe.
-        Si l'on regarde dans le manuscrit <em>Einsiedeln 121</em> qui est un graduel de la fin du Xe siècle, on trouve régulièrement les mêmes lettres rouges au début des chants.`
+        Pour nous aider dans le détail des pièces présentes durant la messe, nous allons nous aider du graduel <em><a href-"https://www.e-codices.unifr.ch/fr/sbe/0121/30" target-_blanck">Einsiedeln 121</em></a>
+        qui est un graduel de la fin du Xe siècle, on trouve régulièrement les mêmes lettres rouges au début des chants.`
     },
     {
         type: "galerie",
@@ -131,5 +132,9 @@ siteData.types_de_pieces = [
         original:"images/domine_quinque.png",
         annotee:"images/domine_quinque2.png",
         legende:"passez votre souris sur l'image pour voir où se situent les différentes parties."
-    }
+    },
+    {
+        type:"separateur",
+        content:"ANTIPHONAIRE"
+    },
 ]
