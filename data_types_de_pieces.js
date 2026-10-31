@@ -15,7 +15,7 @@ siteData.types_de_pieces = [
     {
         type:"text",
         content:`Comme dit précédemment, le graduel est le livre de chants liturgiques qui contient le détail des pièces chantées pendant la messe.
-        Pour nous aider dans le détail des pièces présentes durant la messe, nous allons nous aider du graduel <em><a href-"https://www.e-codices.unifr.ch/fr/sbe/0121/30" target-_blanck">Einsiedeln 121</em></a>
+        Pour nous aider dans le détail des pièces présentes durant la messe, nous allons nous aider du graduel <a href-"https://www.e-codices.unifr.ch/fr/sbe/0121/30" target-_blanck"><em>Einsiedeln 121</em></a>
         qui est un graduel de la fin du Xe siècle. Dans ce graduel, on trouve régulièrement les mêmes lettres rouges au début des chants.`
     },
     {
@@ -137,5 +137,11 @@ siteData.types_de_pieces = [
     {
         type:"separateur",
         content:"ANTIPHONAIRE"
+    },
+    {
+        type:"text",
+        content:`L'antiphonaire est le livre de chants liturgiques qui contient le détail des pièces chantées pendant les offices.
+        Pour nous aider dans le détail des pièces présentes durant les offices, nous allons nous aider de l'antiphonaire <em><a href-"https://www.e-codices.unifr.ch/fr/sbe/0121/30" target-_blanck">Einsiedeln 121</em></a>
+        qui est un graduel de la fin du Xe siècle. Dans ce graduel, on trouve régulièrement les mêmes lettres rouges au début des chants.`
     },
 ]
