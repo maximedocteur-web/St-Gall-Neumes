@@ -875,15 +875,46 @@
                             container.innerHTML += `<p class="mb-6">${formaterTexte(bloc.content)}</p>`;
                         }
                         else if (bloc.type === 'titre') {
-                            container.innerHTML += `<h3 class="text-xl font-serif font-bold text-stone-900 mt-8 mb-4">${formaterTexte(bloc.content)}</h3>`;
+                            // On ajoute scroll-mt-28 pour que le titre ne soit pas caché sous le menu fixe quand on clique sur le lien !
+                            let ancre = bloc.id ? `id="${bloc.id}"` : '';
+                            container.innerHTML += `<h3 ${ancre} class="text-xl font-serif font-bold text-stone-900 mt-8 mb-4 scroll-mt-28">${formaterTexte(bloc.content)}</h3>`;
                         }
                         else if (bloc.type === 'separateur') {
+                            let ancre = bloc.id ? `id="${bloc.id}"` : '';
                             container.innerHTML += `
-                                <div class="mt-12 mb-8 text-center">
+                                <div ${ancre} class="mt-12 mb-8 text-center scroll-mt-28">
                                     <hr class="border-stone-300 mb-6">
                                     <h2 class="text-2xl md:text-3xl font-serif font-bold text-amber-800">${formaterTexte(bloc.content)}</h2>
                                 </div>
                             `;
+                        }
+                        // NOUVEAU : LE SOMMAIRE
+                        else if (bloc.type === 'sommaire') {
+                            let sommaireHtml = `<div class="bg-stone-50 border border-stone-200 p-6 rounded-lg my-8 shadow-sm max-w-2xl">`;
+                            sommaireHtml += `<h3 class="font-serif font-bold text-stone-900 text-xl mb-4 border-b border-stone-200 pb-2">Sommaire</h3>`;
+                            sommaireHtml += `<ul class="space-y-1.5">`;
+                            
+                            if (bloc.items && Array.isArray(bloc.items)) {
+                                bloc.items.forEach(item => {
+                                    let styleClass = '';
+                                    // GESTION DES 4 NIVEAUX DE DÉCALAGE
+                                    if (item.niveau === 1) {
+                                        styleClass = 'font-bold text-amber-900 mt-3 pt-2';
+                                    } else if (item.niveau === 2) {
+                                        styleClass = 'ml-6 text-stone-800 font-medium border-l-2 border-amber-200 pl-3';
+                                    } else if (item.niveau === 3) {
+                                        styleClass = 'ml-12 text-stone-600 text-sm border-l-2 border-stone-200 pl-3';
+                                    } else if (item.niveau >= 4) {
+                                        styleClass = 'ml-16 text-stone-500 text-sm italic border-l-2 border-stone-200 pl-3';
+                                    }
+                                    
+                                    sommaireHtml += `<li class="${styleClass}">
+                                        <a href="#${item.id}" class="hover:text-amber-600 hover:underline transition-colors block">${item.label}</a>
+                                    </li>`;
+                                });
+                            }
+                            sommaireHtml += `</ul></div>`;
+                            container.innerHTML += sommaireHtml;
                         }
                         else if (bloc.type === 'image') {
                             container.innerHTML += `
