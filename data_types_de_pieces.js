@@ -130,7 +130,8 @@ siteData.types_de_pieces = [
         le choeur. Pour conclure, le choeur reprend le mot <em>Alléluia</em> en entier.<br><br>
         Ce mélisme qui est composé d'une longue série de notes a eu un rôle capital dans le développement de nouvelles parties [lexique=Logo- le Verbe, -gène qui crée, donc 
         qui invente du texte]logogènes[/lexique] et [lexique=Mélo- la mélodie, -gène qui crée, donc 
-        qui invente de la mélodie]mélogènes[/lexique] dans la liturgie.`
+        qui invente de la mélodie]mélogènes[/lexique] dans la liturgie. En effet, les longs mélismes de l'Alléluia, normalement chanté sur un "aaa" vont se voir imposer des nouvelles portions
+        de texte qui sont évidemment en rapport avec le sujet de l'Alleluia de ce messe. Cette nouvelel création `
     },
     {
         type:"imageCompare",
@@ -145,7 +146,13 @@ siteData.types_de_pieces = [
     },
     {
         type:"text",
-        content:`L'alleluia, appelé aussi <em>Répons graduel</em>, est formé d'une première partie appelée l'<em>Alleluia</em> et d'une seconde qui est le <em>Verset alléluiatique</em>.`
+        content:`L'offertoire est une des pièces les plus virtuoses du chant grégorien. C'est un chant assez long puisqu'il exécuté pendant que l'on prépare le pain et les osties avant
+        la consécration et la communion même si départ, la pièce était chantée pendant que les fidèles venaient apporter des offrandes (nourritures, argent, cierge...), rituel qui fut  
+        remplacé par la quête. L'offertoire est composé d'une antienne qui peut-être assez longue mais surtout de deux versets chantés par le chantre soliste. Ces deux versets
+        sont d'une composition virtuose, raffinée et expressive qui demande un savoir-faire très technique. Toutefois, les siècles passant, on a supprimé un verset puis les deux mais
+        dans les manuscrits du Moyen Âge vous en trouverez encore deux (comme ici dans le graduel <em>Einsiedeln 121</em>). À la fin de chaque verset, le choeur doit reprendre la fin 
+        de l'antienne et pour ça, les notateurs ont placé un mot qui nous dit à quel endroit reprendre dans l'antienne quand on finit le verset.
+        `
     },
     {
         type:"imageCompare",
