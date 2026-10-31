@@ -180,6 +180,106 @@ siteData.types_de_pieces = [
     },
     {
         type:"separateur",
+        id:"kyrie",
+        content:"Kyrie (Ordinaire)"
+    },
+    {
+        type:"text",
+        content:`Le Kyrie est un des rares chants non pas en latin mais en grec (avec les Impropères).
+        `
+    },
+    {
+        type:"bilingue",
+        latin:`Kyrie eleison<br>Kyrie eleison<br>Kyrie eleison<br>
+            Christe eleison<br>Christe eleison<br>Christe eleison<br>
+            Kyrie eleison<br>Kyrie eleison<br>Kyrie eleison.`,
+        français:`Seigneur prends pitié (x3)<br>
+        Christ prends pitié (x3)<br>
+        Seigneur prends pitié (x3)`
+    },
+    {
+        type:"imageCompare",
+        original:"images/domine_quinque.png",
+        annotee:"images/domine_quinque2.png",
+        legende:"passez votre souris sur l'image pour voir où se situent les différentes parties."
+    },
+    {
+        type:"separateur",
+        id:"gloria",
+        content:"Gloria (Ordinaire)"
+    },
+    {
+        type:"text",
+        content:`La communion est la dernière pièce du propre à être chantée. Elle est à gémétrie variable car elle doit s'étendre sur tout le long de la distribution des hosties aux communiants.
+        Elle est composée d'une antienne et de versets de psaumes. L'antienne sera répétée comme un refrain après chaque verset et il y aura autant de verset que la distribution 
+        des hosties l'exige. Quand la distribution touche à sa fin, on répète une dernière fois l'antienne.
+        `
+    },
+    {
+        type:"imageCompare",
+        original:"images/domine_quinque.png",
+        annotee:"images/domine_quinque2.png",
+        legende:"passez votre souris sur l'image pour voir où se situent les différentes parties."
+    },
+    {
+        type:"separateur",
+        id:"credo",
+        content:"Credo (Ordinaire)"
+    },
+    {
+        type:"text",
+        content:`La communion est la dernière pièce du propre à être chantée. Elle est à gémétrie variable car elle doit s'étendre sur tout le long de la distribution des hosties aux communiants.
+        Elle est composée d'une antienne et de versets de psaumes. L'antienne sera répétée comme un refrain après chaque verset et il y aura autant de verset que la distribution 
+        des hosties l'exige. Quand la distribution touche à sa fin, on répète une dernière fois l'antienne.
+        `
+    },
+    {
+        type:"imageCompare",
+        original:"images/domine_quinque.png",
+        annotee:"images/domine_quinque2.png",
+        legende:"passez votre souris sur l'image pour voir où se situent les différentes parties."
+    },
+    {
+        type:"separateur",
+        id:"sanctus",
+        content:"Sanctus (Ordinaire)"
+    },
+    {
+        type:"text",
+        content:`La communion est la dernière pièce du propre à être chantée. Elle est à gémétrie variable car elle doit s'étendre sur tout le long de la distribution des hosties aux communiants.
+        Elle est composée d'une antienne et de versets de psaumes. L'antienne sera répétée comme un refrain après chaque verset et il y aura autant de verset que la distribution 
+        des hosties l'exige. Quand la distribution touche à sa fin, on répète une dernière fois l'antienne.
+        `
+    },
+    {
+        type:"imageCompare",
+        original:"images/domine_quinque.png",
+        annotee:"images/domine_quinque2.png",
+        legende:"passez votre souris sur l'image pour voir où se situent les différentes parties."
+    },
+    {
+        type:"separateur",
+        id:"agnus_dei",
+        content:"Agnus Dei (Ordinaire)"
+    },
+    {
+        type:"text",
+        content:`La communion est la dernière pièce du propre à être chantée. Elle est à gémétrie variable car elle doit s'étendre sur tout le long de la distribution des hosties aux communiants.
+        Elle est composée d'une antienne et de versets de psaumes. L'antienne sera répétée comme un refrain après chaque verset et il y aura autant de verset que la distribution 
+        des hosties l'exige. Quand la distribution touche à sa fin, on répète une dernière fois l'antienne.
+        `
+    },
+    {
+        type:"imageCompare",
+        original:"images/domine_quinque.png",
+        annotee:"images/domine_quinque2.png",
+        legende:"passez votre souris sur l'image pour voir où se situent les différentes parties."
+    },
+    
+
+    
+    {
+        type:"separateur",
         id:"antiphonaire",
         content:"ANTIPHONAIRE"
     },
