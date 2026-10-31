@@ -108,7 +108,7 @@ siteData.types_de_pieces = [
         type:"text",
         content:`Le graduel, appelé aussi <em>Répons graduel</em>, est formé d'une première partie appelée le <em>Répons</em> et d'une seconde qui est le <em>Verset</em>. Son nom vient du fait
         que les chantres montaient sur les marches de l'ambon pour éxécuter ce chant. Au début du chant, vous pouvez voir la rubrique [icone=images/repons.png] qui est l'abbréviation (latine) 
-        de <strong>[couleur=#d96e28]R[/couleur]</strong>épons <strong>[couleur=#d96e28]G[/couleur]</strong>raduel.`
+        de <strong>[couleur=#d96e28]R[/couleur]épons [couleur=#d96e28]G[/couleur]raduel</strong>.`
     },
     {
         type:"imageCompare",
@@ -151,7 +151,8 @@ siteData.types_de_pieces = [
         remplacé par la quête. L'offertoire est composé d'une antienne qui peut-être assez longue mais surtout de deux versets chantés par le chantre soliste. Ces deux versets
         sont d'une composition virtuose, raffinée et expressive qui demande un savoir-faire très technique. Toutefois, les siècles passant, on a supprimé un verset puis les deux mais
         dans les manuscrits du Moyen Âge vous en trouverez encore deux (comme ici dans le graduel <em>Einsiedeln 121</em>). À la fin de chaque verset, le choeur doit reprendre la fin 
-        de l'antienne et pour ça, les notateurs ont placé un mot qui nous dit à quel endroit reprendre dans l'antienne quand on finit le verset.
+        de l'antienne et pour ça, les notateurs ont placé un mot qui nous dit à quel endroit reprendre dans l'antienne quand on finit le verset. Dans les graduels, il est reconnaissable 
+        facilement par l'abbréviation [icone=images/offertoire.png] qui sont les premières lettres du mot <strong>[couleur=#d96e28]Of[/couleur]fertoire</strong>
         `
     },
     {
