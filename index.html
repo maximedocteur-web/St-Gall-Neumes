@@ -835,6 +835,22 @@
                                 res = texteAvant + baliseIcone + texteApres;
                             } else { break; }
                         }
+                        // NOUVEAU : Mettre en couleur
+                        while (res.includes("[couleur=") && res.includes("[/couleur]")) {
+                            let indexDebut = res.indexOf("[couleur=");
+                            let indexFin = res.indexOf("[/couleur]");
+                            if (indexDebut !== -1 && indexFin !== -1 && indexDebut < indexFin) {
+                                let indexFinCrochet = res.indexOf("]", indexDebut);
+                                if (indexFinCrochet !== -1 && indexFinCrochet < indexFin) {
+                                    let texteAvant = res.substring(0, indexDebut);
+                                    let couleur = res.substring(indexDebut + 9, indexFinCrochet);
+                                    let texte = res.substring(indexFinCrochet + 1, indexFin);
+                                    let texteApres = res.substring(indexFin + 10);
+                                    let baliseCouleur = `<span style="color: ${couleur}; font-weight: 500;">${texte}</span>`;
+                                    res = texteAvant + baliseCouleur + texteApres;
+                                } else { break; }
+                            } else { break; }
+                        }
 
                         return res;
                     }
