@@ -14,7 +14,7 @@ siteData.types_de_pieces = [
     { niveau: 2, label: "Sanctus (Ordinaire)", id: "sanctus" },
     { niveau: 2, label: "Agnus Dei (Ordinaire)", id: "agnus_dei" },
     
-    { niveau: 1, label: "ANTIPHONAIRE", id: "detail" },
+    { niveau: 1, label: "ANTIPHONAIRE", id: "antiphonaire" },
     { niveau: 2, label: "Antienne", id: "antienne" },
     { niveau: 2, label: "Répons", id: "répons" },
     { niveau: 2, label: "Prose", id: "prose" }
