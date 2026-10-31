@@ -2,10 +2,22 @@ siteData.types_de_pieces = [
     { 
   type: "sommaire", 
   items: [
-    { niveau: 1, label: "Titre principal", id: "partie" },
-    { niveau: 2, label: "Sous-partie", id: "souspartie" },
-    { niveau: 3, label: "Petit détail", id: "detail" },
-    { niveau: 4, label: "Note annexe", id: "annexe" }
+    { niveau: 1, label: "GRADUEL", id: "graduel1" },
+    { niveau: 2, label: "Introït (Propre)", id: "introït" },
+    { niveau: 2, label: "Graduel (Propre)", id: "graduel2" },
+    { niveau: 2, label: "Alléluia (Propre)", id: "Alleluia" },
+    { niveau: 2, label: "Offertoire (Propre)", id: "offertoire" },
+    { niveau: 2, label: "Communion (Propre)", id: "communion" },
+    { niveau: 2, label: "Kyrie (Ordinaire)", id: "kyrie" },
+    { niveau: 2, label: "Gloria (Ordinaire)", id: "gloria" },
+    { niveau: 2, label: "Credo (Ordinaire)", id: "credo" },
+    { niveau: 2, label: "Sanctus (Ordinaire)", id: "sanctus" },
+    { niveau: 2, label: "Agnus Dei (Ordinaire)", id: "agnus_dei" },
+    
+    { niveau: 1, label: "ANTIPHONAIRE", id: "detail" },
+    { niveau: 2, label: "Antienne", id: "antienne" },
+    { niveau: 2, label: "Répons", id: "répons" },
+    { niveau: 2, label: "Prose", id: "prose" },
           ] 
     },
     {
@@ -19,7 +31,7 @@ siteData.types_de_pieces = [
     },
     {
         type:"separateur",
-        id:"partie",
+        id:"graduel1",
         content:"GRADUEL"
     },
     {
@@ -68,7 +80,7 @@ siteData.types_de_pieces = [
     },
     {
         type:"separateur",
-        id:"souspartie",
+        id:"introït",
         content:"Introït (Propre)"
     },
     {
@@ -89,7 +101,7 @@ siteData.types_de_pieces = [
     },
     {
         type:"separateur",
-        id:"souspartie",
+        id:"graduel2",
         content:"Graduel (Propre)"
     },
     {
@@ -106,7 +118,7 @@ siteData.types_de_pieces = [
     },
     {
         type:"separateur",
-        id:"souspartie",
+        id:"alleluia",
         content:"Alléluia (Propre)"
     },
     {
@@ -128,7 +140,7 @@ siteData.types_de_pieces = [
     },
     {
         type:"separateur",
-        id:"souspartie",
+        id:"offertoire",
         content:"Offertoire (Propre)"
     },
     {
@@ -143,7 +155,7 @@ siteData.types_de_pieces = [
     },
     {
         type:"separateur",
-        id:"souspartie",
+        id:"communion",
         content:"Communion (Propre)"
     },
     {
@@ -158,7 +170,7 @@ siteData.types_de_pieces = [
     },
     {
         type:"separateur",
-        id:"partie",
+        id:"antiphonaire",
         content:"ANTIPHONAIRE"
     },
     {
