@@ -103,5 +103,33 @@ siteData.types_de_pieces = [
         original:"images/confitebuntur.png",
         annotee:"images/confitebuntur2.png",
         legende:"passez votre souris sur l'image pour voir où se situent les différentes parties."
+    },
+    {
+        type:"separateur",
+        content:"Offertoire (Propre)"
+    },
+    {
+        type:"text",
+        content:`L'alleluia, appelé aussi <em>Répons graduel</em>, est formé d'une première partie appelée l'<em>Alleluia</em> et d'une seconde qui est le <em>Verset alléluiatique</em>.`
+    },
+    {
+        type:"imageCompare",
+        original:"images/iubilate.png",
+        annotee:"images/iubilate2.png",
+        legende:"passez votre souris sur l'image pour voir où se situent les différentes parties."
+    },
+    {
+        type:"separateur",
+        content:"Communion (Propre)"
+    },
+    {
+        type:"text",
+        content:`L'alleluia, appelé aussi <em>Répons graduel</em>, est formé d'une première partie appelée l'<em>Alleluia</em> et d'une seconde qui est le <em>Verset alléluiatique</em>.`
+    },
+    {
+        type:"imageCompare",
+        original:"images/domine_quinque.png",
+        annotee:"images/domine_quinque2.png",
+        legende:"passez votre souris sur l'image pour voir où se situent les différentes parties."
     }
 ]
