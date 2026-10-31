@@ -171,7 +171,7 @@ siteData.types_de_pieces = [
         content:`La communion est la dernière pièce du propre à être chantée. Elle est à gémétrie variable car elle doit s'étendre sur tout le long de la distribution des hosties aux communiants.
         Elle est composée d'une antienne et de versets de psaumes. L'antienne sera répétée comme un refrain après chaque verset et il y aura autant de verset que la distribution 
         des hosties l'exige. Quand la distribution touche à sa fin, on répète une dernière fois l'antienne. Cet type de pièce est facilement reconnaissable par l'abbréviation
-        [icone=images/communion.png] qui représentent les deux lettres du mot <strong>[couleur=]#d96e28]C[/couleur]o[couleur=#d96e28]m[/couleur]munion</strong>.
+        [icone=images/communion.png] qui représentent les deux lettres du mot <strong>[couleur=#d96e28]C[/couleur]o[couleur=#d96e28]m[/couleur]munion</strong>.
         `
     },
     {
