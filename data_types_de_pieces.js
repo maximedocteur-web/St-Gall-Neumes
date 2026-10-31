@@ -1,4 +1,13 @@
 siteData.types_de_pieces = [
+    { 
+  type: "sommaire", 
+  items: [
+    { niveau: 1, label: "Titre principal", id: "partie1" },
+    { niveau: 2, label: "Sous-partie", id: "souspartie" },
+    { niveau: 3, label: "Petit détail", id: "detail" },
+    { niveau: 4, label: "Note annexe", id: "annexe" }
+          ] 
+    },
     {
         type:"text",
         content:`Dans le chant grégorien, il exite plusieurs types de chant (qu'on appelle aussi <em>pièce</em>). On les regroupe pour simplifier en deux catégories et ces catégories différent
