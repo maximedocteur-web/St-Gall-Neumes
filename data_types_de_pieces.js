@@ -212,16 +212,60 @@ siteData.types_de_pieces = [
     },
     {
         type:"text",
-        content:`La communion est la dernière pièce du propre à être chantée. Elle est à gémétrie variable car elle doit s'étendre sur tout le long de la distribution des hosties aux communiants.
-        Elle est composée d'une antienne et de versets de psaumes. L'antienne sera répétée comme un refrain après chaque verset et il y aura autant de verset que la distribution 
-        des hosties l'exige. Quand la distribution touche à sa fin, on répète une dernière fois l'antienne.
+        content:`Le gloria est la seconde pièce de l'Ordinaire. 
         `
     },
     {
-        type:"imageCompare",
-        original:"images/domine_quinque.png",
-        annotee:"images/domine_quinque2.png",
-        legende:"passez votre souris sur l'image pour voir où se situent les différentes parties."
+        type:"bilingue",
+        latin:`Glória in excélsis Deo
+et in terra pax homínibus bonae voluntátis.
+Laudámus te,
+benedícimus te,
+adorámus te,
+glorificámus te,
+grátias ágimus tibi propter magnam glóriam tuam,
+Dómine Deus, Rex cæléstis,
+Deus Pater omnípotens.
+Dómine Fili Unigénite, Iesu Christe,
+Dómine Deus, Agnus Dei, Fílius Patris,
+qui tollis peccáta mundi, miserére nobis;
+qui tollis peccáta mundi
+súscipe deprecatiónem nostram,
+Qui sedes ad déxteram Patris,
+miserere nobis.
+Quóniam tu solus Sanctus,
+tu solus Dóminus,
+tu solus Altíssimus,
+Iesu Christe,
+cum Sancto Spíritu,
+in glória Dei Patris.
+Amen.`,
+        francais:`Gloire à Dieu au plus haut des cieux.
+Et sur terre, paix aux hommes de bonne volonté.
+Nous te louons.
+Nous te bénissons.
+Nous t'adorons.
+Nous te glorifions.
+Nous te rendons grâces pour ta grande gloire.
+Seigneur Dieu, Roi du Ciel,
+Dieu le Père tout-puissant.
+Seigneur, Fils unique, Jésus-Christ.
+Seigneur Dieu, Agneau de Dieu, Fils du Père.
+Toi qui enleve les péchés du monde, ait pitié de nous.
+Toi qui enleve les péchés du monde, agrée notre prière.
+Toi qui siége à la droite du Père, ait pitié de nous.
+Car toi seul est saint.
+Tu es seul es Seigneur.
+Vous êtes le seul
+Très Haut, Jésus-Christ.
+Avec le Saint-Esprit,
+dans la gloire de Dieu le Père.
+Amen.`
+    },
+    {
+        type:"image",
+        src:"images/gloria.png",
+        legende:"Un des <em>Gloria</em> avec des neumes de Saint-Gall."
     },
     {
         type:"separateur",
