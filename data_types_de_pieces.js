@@ -124,12 +124,12 @@ siteData.types_de_pieces = [
     {
         type:"text",
         content:`L'alléluia, est un type de chant dont la structure diffère un peu des autes pièces. Il y a dans un premier temps l'<em>Alléluia</em> proprement dit, c'est à dire juste le mot
-        qui est chanté puis un <em>verset alléluiatique</em>. Durant la messe, un soliste chante l'intonation du mot Alléluia puis le choeur reprend rechante le mot entier en y ajoutant la
+        qui est chanté puis un <em>verset alléluiatique</em>. Durant la messe, un soliste chante l'intonation du mot Alléluia puis le choeur rechante le mot entier en y ajoutant la
         longue guirlande de notes (qu'on apelle "<em>Mélisme</em>" ou "<em>Jubilus</em>) qui se fait sur le A final (Alléluiaaaaaaaaaaaaaaaaaaaa...). Ensuite, un soliste chante le <em>verset 
-        alléluiatique</em> et à la fin de se même verset, se trouve une portion de la mélodie se trouvant dans le mélisme précédemment chanté. Ce bout de mélisme est lui chanté par le solist et 
+        alléluiatique</em> et à la fin de ce même verset, se trouve une portion de la mélodie déjà chantée dans le mélisme précédemment. Ce bout de mélisme est lui chanté par le solist et 
         le choeur. Pour conclure, le choeur reprend le mot <em>Alléluia</em> en entier.<br><br>
-        Ce mélisme qui est composé d'une longue série de notes a eu un rôle capital dans le développement de nouvelles parties [lexique="logo" le Verbe, "-gène" qui créé, donc 
-        qui invente du texte]logogènes[/lexique] et [lexique="mélo" la mélodie, "-gène" qui créé, donc 
+        Ce mélisme qui est composé d'une longue série de notes a eu un rôle capital dans le développement de nouvelles parties [lexique=Logo- le Verbe, -gène qui créé, donc 
+        qui invente du texte]logogènes[/lexique] et [lexique=Mélo- la mélodie, -gène qui créé, donc 
         qui invente de la mélodie]mélogènes[/lexique] dans la liturgie.`
     },
     {
