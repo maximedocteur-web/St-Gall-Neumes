@@ -167,7 +167,10 @@ siteData.types_de_pieces = [
     },
     {
         type:"text",
-        content:`L'alleluia, appelé aussi <em>Répons graduel</em>, est formé d'une première partie appelée l'<em>Alleluia</em> et d'une seconde qui est le <em>Verset alléluiatique</em>.`
+        content:`La communion est la dernière pièce du propre à être chantée. Elle est à gémétrie variable car elle doit s'étendre sur tout le long de la distribution des hosties aux communiants.
+        Elle est composée d'une antienne et de versets de psaumes. L'antienne sera répétée comme un refrain après chaque verset et il y aura autant de verset que la distribution 
+        des hosties l'exige. Quand la distribution touche à sa fin, on répète une dernière fois l'antienne.
+        `
     },
     {
         type:"imageCompare",
