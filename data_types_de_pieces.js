@@ -285,8 +285,8 @@ siteData.types_de_pieces = [
         content:`L'antiphonaire est le livre de chants liturgiques qui contient le détail des pièces chantées pendant les offices.
         Pour nous aider dans le détail des pièces présentes durant les offices, nous allons nous aider d'un antiphonaire de Saint-Gall dit 
         "antiphonaire de Hartker" copié vers l'an 1000 et divisé en deux manuscrits 
-        (<a href="https://www.e-codices.ch/en/csg/0390/156/0/" target-_blanck">390</a> et 
-        <a href="https://www.e-codices.ch/en/csg/0391/33/0/" target-_blanck">391</a>).
+        (<a href="https://www.e-codices.ch/en/csg/0390/156/0/" target="_blanck" class="underline text-amber-700 hover:text-amber-700"><em>390</em></a> et 
+        <a href="https://www.e-codices.ch/en/csg/0391/33/0/" target="_blanck" class="underline text-amber-700 hover:text-amber-700"><em>391</em></a>).
         `
     },
 ]
