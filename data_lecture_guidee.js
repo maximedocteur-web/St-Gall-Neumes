@@ -1,7 +1,7 @@
 siteData.lecture_guidee = [
     {
     titre: "Communion. Dicit Dominus [Ensiedeln, cod. 121, p.59]",
-    audioGlobal: "audio/puer_natus.mp3",  // Optionnel
+    /*audioGlobal: "audio/puer_natus.mp3",  // Optionnel*/
     imageGlobale: "images/exemple5.png", // L'image de ton manuscrit
     zones: [
         { nom: "pes épisémé", x: 16.2, y: 4.4, w: 4.5, h: 6.0 },
@@ -86,7 +86,7 @@ siteData.lecture_guidee = [
     },
     {
         titre: "Communion. Aufer a me [Ensiedeln, cod. 121, p.331]",
-        audioGlobal: "audio/panem_de_caelo.mp3",  
+        /*audioGlobal: "audio/panem_de_caelo.mp3",*/  
         imageGlobale: "images/aufer_a_me.png",
         zones: [
         { nom: "pes épisémé", x: 17.7, y: 12.1, w: 4.1, h: 7.1 },
@@ -139,7 +139,7 @@ siteData.lecture_guidee = [
     },
     {
         titre: "Communion. Panem de caelo [Ensiedeln, cod. 121, p.324]",
-        audioGlobal: "audio/panem_de_caelo.mp3",  
+        /*audioGlobal: "audio/panem_de_caelo.mp3",*/  
         imageGlobale: "images/panem_de.png",
         zones: [
         { nom: "virga épisémée", x: 16.6, y: 12.1, w: 4.0, h: 5.5 },
@@ -187,7 +187,7 @@ siteData.lecture_guidee = [
     },
     {
         titre: "Communion. Honora Dominum [Ensiedeln, cod. 121, p.322]",
-        audioGlobal: "audio/panem_de_caelo.mp3",  
+        /*audioGlobal: "audio/panem_de_caelo.mp3",*/  
         imageGlobale: "images/honora_dominum.png",
         zones: [
         { nom: "tractulus", x: 15.4, y: 11.1, w: 1.8, h: 3.5 },
@@ -262,7 +262,7 @@ siteData.lecture_guidee = [
     },
     {
         titre: "Alleluia. Dextera Dei [Ensiedeln, cod. 121, p.351]",
-        audioGlobal: "audio/panem_de_caelo.mp3",  
+        /*audioGlobal: "audio/panem_de_caelo.mp3", */ 
         imageGlobale: "images/dextera_dei.png",
         zones: [
         { nom: "virga", x: 14.2, y: 23.2, w: 2.4, h: 7.8 },
@@ -302,7 +302,7 @@ siteData.lecture_guidee = [
     },
     {
         titre: "Répons. Dixit Joseph [Saint-Gall, cod. 390, p.156]",
-        audioGlobal: "audio/panem_de_caelo.mp3",  
+        /*audioGlobal: "audio/panem_de_caelo.mp3",  */
         imageGlobale: "images/dixit_joseph.png",
         zones: [
         { nom: "pes", x: 9.0, y: 11.5, w: 2.2, h: 6.5 },
@@ -429,7 +429,7 @@ siteData.lecture_guidee = [
     },
     {
         titre: "Offertoire. Oravi Deum [Einsiedeln, cod. 121, p.327]",
-        audioGlobal: "audio/panem_de_caelo.mp3",  
+        /*audioGlobal: "audio/panem_de_caelo.mp3",  */
         imageGlobale: "images/oravi_deum.png",
         zones: [
         { nom: "levate", x: 13.9, y: 4.4, w: 2.6, h: 4.0 },
