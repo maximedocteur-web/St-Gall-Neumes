@@ -128,8 +128,8 @@ siteData.types_de_pieces = [
         longue guirlande de notes (qu'on apelle "<em>Mélisme</em>" ou "<em>Jubilus</em>) qui se fait sur le A final (Alléluiaaaaaaaaaaaaaaaaaaaa...). Ensuite, un soliste chante le <em>verset 
         alléluiatique</em> et à la fin de ce même verset, se trouve une portion de la mélodie déjà chantée dans le mélisme précédemment. Ce bout de mélisme est lui chanté par le solist et 
         le choeur. Pour conclure, le choeur reprend le mot <em>Alléluia</em> en entier.<br><br>
-        Ce mélisme qui est composé d'une longue série de notes a eu un rôle capital dans le développement de nouvelles parties [lexique=Logo- le Verbe, -gène qui créé, donc 
-        qui invente du texte]logogènes[/lexique] et [lexique=Mélo- la mélodie, -gène qui créé, donc 
+        Ce mélisme qui est composé d'une longue série de notes a eu un rôle capital dans le développement de nouvelles parties [lexique=Logo- le Verbe, -gène qui crée, donc 
+        qui invente du texte]logogènes[/lexique] et [lexique=Mélo- la mélodie, -gène qui crée, donc 
         qui invente de la mélodie]mélogènes[/lexique] dans la liturgie.`
     },
     {
