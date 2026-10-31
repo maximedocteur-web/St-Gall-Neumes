@@ -17,7 +17,7 @@ siteData.types_de_pieces = [
     { niveau: 1, label: "ANTIPHONAIRE", id: "detail" },
     { niveau: 2, label: "Antienne", id: "antienne" },
     { niveau: 2, label: "Répons", id: "répons" },
-    { niveau: 2, label: "Prose", id: "prose" },
+    { niveau: 2, label: "Prose", id: "prose" }
           ] 
     },
     {
