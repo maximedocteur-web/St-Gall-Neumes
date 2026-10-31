@@ -2,7 +2,7 @@ siteData.types_de_pieces = [
     { 
   type: "sommaire", 
   items: [
-    { niveau: 1, label: "Titre principal", id: "partie1" },
+    { niveau: 1, label: "Titre principal", id: "partie" },
     { niveau: 2, label: "Sous-partie", id: "souspartie" },
     { niveau: 3, label: "Petit détail", id: "detail" },
     { niveau: 4, label: "Note annexe", id: "annexe" }
@@ -19,6 +19,7 @@ siteData.types_de_pieces = [
     },
     {
         type:"separateur",
+        id:"partie",
         content:"GRADUEL"
     },
     {
@@ -67,6 +68,7 @@ siteData.types_de_pieces = [
     },
     {
         type:"separateur",
+        id:"souspartie",
         content:"Introït (Propre)"
     },
     {
@@ -87,6 +89,7 @@ siteData.types_de_pieces = [
     },
     {
         type:"separateur",
+        id:"souspartie",
         content:"Graduel (Propre)"
     },
     {
@@ -103,6 +106,7 @@ siteData.types_de_pieces = [
     },
     {
         type:"separateur",
+        id:"souspartie",
         content:"Alléluia (Propre)"
     },
     {
@@ -124,6 +128,7 @@ siteData.types_de_pieces = [
     },
     {
         type:"separateur",
+        id:"souspartie",
         content:"Offertoire (Propre)"
     },
     {
@@ -138,6 +143,7 @@ siteData.types_de_pieces = [
     },
     {
         type:"separateur",
+        id:"souspartie",
         content:"Communion (Propre)"
     },
     {
@@ -152,6 +158,7 @@ siteData.types_de_pieces = [
     },
     {
         type:"separateur",
+        id:"partie",
         content:"ANTIPHONAIRE"
     },
     {
