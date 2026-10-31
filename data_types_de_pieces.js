@@ -131,7 +131,7 @@ siteData.types_de_pieces = [
         Ce mélisme qui est composé d'une longue série de notes a eu un rôle capital dans le développement de nouvelles parties [lexique=Logo- le Verbe, -gène qui crée, donc 
         qui invente du texte]logogènes[/lexique] et [lexique=Mélo- la mélodie, -gène qui crée, donc 
         qui invente de la mélodie]mélogènes[/lexique] dans la liturgie. En effet, les longs mélismes de l'Alléluia, normalement chanté sur un "aaa" vont se voir imposer des nouvelles portions
-        de texte qui sont évidemment en rapport avec le sujet de l'Alleluia de ce messe. Cette nouvelel création `
+        de texte qui sont évidemment en rapport avec le sujet de l'Alleluia de ce messe.`
     },
     {
         type:"imageCompare",
@@ -152,7 +152,7 @@ siteData.types_de_pieces = [
         sont d'une composition virtuose, raffinée et expressive qui demande un savoir-faire très technique. Toutefois, les siècles passant, on a supprimé un verset puis les deux mais
         dans les manuscrits du Moyen Âge vous en trouverez encore deux (comme ici dans le graduel <em>Einsiedeln 121</em>). À la fin de chaque verset, le choeur doit reprendre la fin 
         de l'antienne et pour ça, les notateurs ont placé un mot qui nous dit à quel endroit reprendre dans l'antienne quand on finit le verset. Dans les graduels, il est reconnaissable 
-        facilement par l'abbréviation [icone=images/offertoire.png] qui sont les premières lettres du mot <strong>[couleur=#d96e28]Of[/couleur]fertoire</strong>
+        facilement par l'abbréviation [icone=images/offertoire.png] qui sont les premières lettres du mot <strong>[couleur=#d96e28]Of[/couleur]fertoire</strong>.
         `
     },
     {
@@ -170,7 +170,8 @@ siteData.types_de_pieces = [
         type:"text",
         content:`La communion est la dernière pièce du propre à être chantée. Elle est à gémétrie variable car elle doit s'étendre sur tout le long de la distribution des hosties aux communiants.
         Elle est composée d'une antienne et de versets de psaumes. L'antienne sera répétée comme un refrain après chaque verset et il y aura autant de verset que la distribution 
-        des hosties l'exige. Quand la distribution touche à sa fin, on répète une dernière fois l'antienne.
+        des hosties l'exige. Quand la distribution touche à sa fin, on répète une dernière fois l'antienne. Cet type de pièce est facilement reconnaissable par l'abbréviation
+        [icone=images/communion.png] qui représentent les deux lettres du mot <strong>[couleur=]#d96e28]C[/couleur]o[couleur=#d96e28]m[/couleur]munion</strong>.
         `
     },
     {
