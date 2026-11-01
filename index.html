@@ -162,7 +162,6 @@
                             <p class="text-sm text-stone-600 leading-relaxed">Quels sont les types de pièces que l'on trouve dans le chant grégorien.</p>
                         </div>
 
-                        <!-- MODIFIÉ POUR POINTER SUR LE NOUVEAU HUB NOTATIONS -->
                         <div onclick="showPage('notations-hub')" class="w-full bg-white p-5 rounded-lg shadow-sm border border-stone-200 hover:border-amber-400 hover:bg-amber-50/30 hover:-translate-y-0.5 hover:shadow-md cursor-pointer transition-all duration-300 group">
                             <h3 class="text-lg font-serif font-bold text-stone-900 group-hover:text-amber-800 transition mb-1">Les notations</h3>
                             <p class="text-sm text-stone-600 leading-relaxed">Un petit coup d'oeil sur les différentes notations qui coexistent dans le chant grégorien.</p>
@@ -467,10 +466,7 @@
     <script src="data_monocorde.js"></script>
     <script src="data_neumes.js"></script>
     <script src="data_notations.js"></script>
-    
-    <!-- L'APPEL DE TON TOUT NOUVEAU FICHIER EST JUSTE ICI -->
     <script src="data_explications_notations.js"></script>
-    
     <script src="data_psalmodies.js"></script>
     <script src="data_quizz.js"></script>
     <script src="data_se_reperer.js"></script>
@@ -570,6 +566,7 @@
                 resultEl.className = "text-rose-700 font-medium mt-2";
             }
         }
+
         // ==========================================
         // FONCTIONS POUR L'IMAGE VOLANTE
         // ==========================================
@@ -593,6 +590,123 @@
         }
 
         // =========================================================
+        // NOUVEAU : FONCTION GLOBALE DE TRADUCTION DES BALISES
+        // =========================================================
+        function formaterBalises(texte) {
+            if (!texte) return "";
+            let res = String(texte);
+            
+            // Liens internes
+            while (res.includes("[lien=") && res.includes("[/lien]")) {
+                let indexDebut = res.indexOf("[lien=");
+                let indexFin = res.indexOf("[/lien]");
+                if (indexDebut !== -1 && indexFin !== -1 && indexDebut < indexFin) {
+                    let indexFinCrochet = res.indexOf("]", indexDebut);
+                    if (indexFinCrochet !== -1 && indexFinCrochet < indexFin) {
+                        let texteAvant = res.substring(0, indexDebut);
+                        let pageCible = res.substring(indexDebut + 6, indexFinCrochet);
+                        let texteLien = res.substring(indexFinCrochet + 1, indexFin);
+                        let texteApres = res.substring(indexFin + 7);
+                        let boutonHTML = '<a onclick="showPage(\'' + pageCible + '\')" class="text-amber-700 font-bold hover:text-amber-900 hover:underline cursor-pointer transition-colors">' + texteLien + '</a>';
+                        res = texteAvant + boutonHTML + texteApres;
+                    } else { break; }
+                } else { break; }
+            }
+
+            // Lien E-codices
+            while (res.includes("[p.") && res.includes("]")) {
+                let indexDebut = res.indexOf("[p.");
+                let indexFin = res.indexOf("]", indexDebut);
+                if (indexDebut !== -1 && indexFin !== -1 && indexFin > indexDebut) {
+                    let texteAvant = res.substring(0, indexDebut);
+                    let pageId = res.substring(indexDebut + 3, indexFin);
+                    let texteApres = res.substring(indexFin + 1);
+                    let lienEcodices = '<a href="https://www.e-codices.unifr.ch/fr/sbe/0121/' + pageId + '/0/" target="_blank" class="ml-2 text-sm text-amber-700 hover:text-amber-900 underline font-medium">p.' + pageId + '</a>';
+                    res = texteAvant + lienEcodices + texteApres;
+                } else { break; }
+            }
+            
+            // Infobulle Lexique
+            while (res.includes("[lexique=") && res.includes("[/lexique]")) {
+                let indexDebut = res.indexOf("[lexique=");
+                let indexFin = res.indexOf("[/lexique]");
+                if (indexDebut !== -1 && indexFin !== -1 && indexDebut < indexFin) {
+                    let indexFinCrochet = res.indexOf("]", indexDebut);
+                    if (indexFinCrochet !== -1 && indexFinCrochet < indexFin) {
+                        let texteAvant = res.substring(0, indexDebut);
+                        let definition = res.substring(indexDebut + 9, indexFinCrochet);
+                        let mot = res.substring(indexFinCrochet + 1, indexFin);
+                        let texteApres = res.substring(indexFin + 10);
+                        let baliseLexique = `<span title="${definition}" class="cursor-help border-b-2 border-dotted border-amber-600 text-amber-800 font-medium">${mot}</span>`;
+                        res = texteAvant + baliseLexique + texteApres;
+                    } else { break; }
+                } else { break; }
+            }
+
+            // Icône dans le texte
+            while (res.includes("[icone=") && res.includes("]")) {
+                let indexDebut = res.indexOf("[icone=");
+                let indexFin = res.indexOf("]", indexDebut);
+                if (indexDebut !== -1 && indexFin !== -1) {
+                    let texteAvant = res.substring(0, indexDebut);
+                    let cheminImg = res.substring(indexDebut + 7, indexFin);
+                    let texteApres = res.substring(indexFin + 1);
+                    let baliseIcone = `<img src="${cheminImg}" class="inline-block h-6 w-auto mx-1 align-middle" alt="icone">`;
+                    res = texteAvant + baliseIcone + texteApres;
+                } else { break; }
+            }
+
+            // Mettre en couleur
+            while (res.includes("[couleur=") && res.includes("[/couleur]")) {
+                let indexDebut = res.indexOf("[couleur=");
+                let indexFin = res.indexOf("[/couleur]");
+                if (indexDebut !== -1 && indexFin !== -1 && indexDebut < indexFin) {
+                    let indexFinCrochet = res.indexOf("]", indexDebut);
+                    if (indexFinCrochet !== -1 && indexFinCrochet < indexFin) {
+                        let texteAvant = res.substring(0, indexDebut);
+                        let couleur = res.substring(indexDebut + 9, indexFinCrochet);
+                        let texte = res.substring(indexFinCrochet + 1, indexFin);
+                        let texteApres = res.substring(indexFin + 10);
+                        let baliseCouleur = `<span style="color: ${couleur}; font-weight: 500;">${texte}</span>`;
+                        res = texteAvant + baliseCouleur + texteApres;
+                    } else { break; }
+                } else { break; }
+            }
+
+            // Mini-bouton Audio inline
+            while (res.includes("[son=") && res.includes("]")) {
+                let indexDebut = res.indexOf("[son=");
+                let indexFin = res.indexOf("]", indexDebut);
+                if (indexDebut !== -1 && indexFin !== -1) {
+                    let texteAvant = res.substring(0, indexDebut);
+                    let cheminAudio = res.substring(indexDebut + 5, indexFin);
+                    let texteApres = res.substring(indexFin + 1);
+                    let baliseSon = `<button onclick="new Audio('${cheminAudio}').play()" class="inline-flex items-center justify-center w-6 h-6 bg-amber-100 text-amber-800 rounded-full hover:bg-amber-200 hover:scale-110 transition-all mx-1 align-middle focus:outline-none shadow-sm" title="Écouter"><svg class="w-3 h-3 ml-0.5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" fill-rule="evenodd"></path></svg></button>`;
+                    res = texteAvant + baliseSon + texteApres;
+                } else { break; }
+            }
+
+            // Image volante au survol
+            while (res.includes("[apercu=") && res.includes("[/apercu]")) {
+                let indexDebut = res.indexOf("[apercu=");
+                let indexFin = res.indexOf("[/apercu]");
+                if (indexDebut !== -1 && indexFin !== -1 && indexDebut < indexFin) {
+                    let indexFinCrochet = res.indexOf("]", indexDebut);
+                    if (indexFinCrochet !== -1 && indexFinCrochet < indexFin) {
+                        let texteAvant = res.substring(0, indexDebut);
+                        let urlImage = res.substring(indexDebut + 8, indexFinCrochet);
+                        let mot = res.substring(indexFinCrochet + 1, indexFin);
+                        let texteApres = res.substring(indexFin + 9);
+                        let baliseApercu = `<span onmouseenter="afficherImageVolante(event, '${urlImage}')" onmousemove="deplacerImageVolante(event)" onmouseleave="cacherImageVolante()" class="font-bold text-stone-900 cursor-help border-b-2 border-dotted border-stone-400 hover:text-amber-700 hover:border-amber-700 transition-colors">${mot}</span>`;
+                        res = texteAvant + baliseApercu + texteApres;
+                    } else { break; }
+                } else { break; }
+            }
+
+            return res;
+        }
+
+        // =========================================================
         // FONCTION UNIVERSELLE ULTRA-ROBUSTE
         // =========================================================
         function genererPageDynamique(containerId, donneesArray) {
@@ -612,37 +726,7 @@
                     if (!texte) return "";
                     let res = String(texte);
                     
-                    // Liens internes
-                    while (res.includes("[lien=") && res.includes("[/lien]")) {
-                        let indexDebut = res.indexOf("[lien=");
-                        let indexFin = res.indexOf("[/lien]");
-                        if (indexDebut !== -1 && indexFin !== -1 && indexDebut < indexFin) {
-                            let indexFinCrochet = res.indexOf("]", indexDebut);
-                            if (indexFinCrochet !== -1 && indexFinCrochet < indexFin) {
-                                let texteAvant = res.substring(0, indexDebut);
-                                let pageCible = res.substring(indexDebut + 6, indexFinCrochet);
-                                let texteLien = res.substring(indexFinCrochet + 1, indexFin);
-                                let texteApres = res.substring(indexFin + 7);
-                                let boutonHTML = '<a onclick="showPage(\'' + pageCible + '\')" class="text-amber-700 font-bold hover:text-amber-900 hover:underline cursor-pointer transition-colors">' + texteLien + '</a>';
-                                res = texteAvant + boutonHTML + texteApres;
-                            } else { break; }
-                        } else { break; }
-                    }
-
-                    // Lien E-codices
-                    while (res.includes("[p.") && res.includes("]")) {
-                        let indexDebut = res.indexOf("[p.");
-                        let indexFin = res.indexOf("]", indexDebut);
-                        if (indexDebut !== -1 && indexFin !== -1 && indexFin > indexDebut) {
-                            let texteAvant = res.substring(0, indexDebut);
-                            let pageId = res.substring(indexDebut + 3, indexFin);
-                            let texteApres = res.substring(indexFin + 1);
-                            let lienEcodices = '<a href="https://www.e-codices.unifr.ch/fr/sbe/0121/' + pageId + '/0/" target="_blank" class="ml-2 text-sm text-amber-700 hover:text-amber-900 underline font-medium">p.' + pageId + '</a>';
-                            res = texteAvant + lienEcodices + texteApres;
-                        } else { break; }
-                    }
-
-                    // Notes de bas de page
+                    // Notes de bas de page (Spécifique aux cours, donc on les laisse ici)
                     while (res.includes("[note]") && res.includes("[/note]")) {
                         let indexDebut = res.indexOf("[note]");
                         let indexFin = res.indexOf("[/note]");
@@ -658,85 +742,8 @@
                         } else { break; }
                     }
                     
-                    // Infobulle Lexique
-                    while (res.includes("[lexique=") && res.includes("[/lexique]")) {
-                        let indexDebut = res.indexOf("[lexique=");
-                        let indexFin = res.indexOf("[/lexique]");
-                        if (indexDebut !== -1 && indexFin !== -1 && indexDebut < indexFin) {
-                            let indexFinCrochet = res.indexOf("]", indexDebut);
-                            if (indexFinCrochet !== -1 && indexFinCrochet < indexFin) {
-                                let texteAvant = res.substring(0, indexDebut);
-                                let definition = res.substring(indexDebut + 9, indexFinCrochet);
-                                let mot = res.substring(indexFinCrochet + 1, indexFin);
-                                let texteApres = res.substring(indexFin + 10);
-                                let baliseLexique = `<span title="${definition}" class="cursor-help border-b-2 border-dotted border-amber-600 text-amber-800 font-medium">${mot}</span>`;
-                                res = texteAvant + baliseLexique + texteApres;
-                            } else { break; }
-                        } else { break; }
-                    }
-
-                    // Icône dans le texte
-                    while (res.includes("[icone=") && res.includes("]")) {
-                        let indexDebut = res.indexOf("[icone=");
-                        let indexFin = res.indexOf("]", indexDebut);
-                        if (indexDebut !== -1 && indexFin !== -1) {
-                            let texteAvant = res.substring(0, indexDebut);
-                            let cheminImg = res.substring(indexDebut + 7, indexFin);
-                            let texteApres = res.substring(indexFin + 1);
-                            let baliseIcone = `<img src="${cheminImg}" class="inline-block h-6 w-auto mx-1 align-middle" alt="icone">`;
-                            res = texteAvant + baliseIcone + texteApres;
-                        } else { break; }
-                    }
-
-                    // Mettre en couleur
-                    while (res.includes("[couleur=") && res.includes("[/couleur]")) {
-                        let indexDebut = res.indexOf("[couleur=");
-                        let indexFin = res.indexOf("[/couleur]");
-                        if (indexDebut !== -1 && indexFin !== -1 && indexDebut < indexFin) {
-                            let indexFinCrochet = res.indexOf("]", indexDebut);
-                            if (indexFinCrochet !== -1 && indexFinCrochet < indexFin) {
-                                let texteAvant = res.substring(0, indexDebut);
-                                let couleur = res.substring(indexDebut + 9, indexFinCrochet);
-                                let texte = res.substring(indexFinCrochet + 1, indexFin);
-                                let texteApres = res.substring(indexFin + 10);
-                                let baliseCouleur = `<span style="color: ${couleur}; font-weight: 500;">${texte}</span>`;
-                                res = texteAvant + baliseCouleur + texteApres;
-                            } else { break; }
-                        } else { break; }
-                    }
-                    // Image volante au survol
-                    while (res.includes("[apercu=") && res.includes("[/apercu]")) {
-                        let indexDebut = res.indexOf("[apercu=");
-                        let indexFin = res.indexOf("[/apercu]");
-                        if (indexDebut !== -1 && indexFin !== -1 && indexDebut < indexFin) {
-                            let indexFinCrochet = res.indexOf("]", indexDebut);
-                            if (indexFinCrochet !== -1 && indexFinCrochet < indexFin) {
-                                let texteAvant = res.substring(0, indexDebut);
-                                let urlImage = res.substring(indexDebut + 8, indexFinCrochet);
-                                let mot = res.substring(indexFinCrochet + 1, indexFin);
-                                let texteApres = res.substring(indexFin + 9);
-                                
-                                // Le mot sera en gras (font-bold), avec de petits pointillés en dessous pour indiquer qu'on peut le survoler
-                                let baliseApercu = `<span onmouseenter="afficherImageVolante(event, '${urlImage}')" onmousemove="deplacerImageVolante(event)" onmouseleave="cacherImageVolante()" class="font-bold text-stone-900 cursor-help border-b-2 border-dotted border-stone-400 hover:text-amber-700 hover:border-amber-700 transition-colors">${mot}</span>`;
-                                res = texteAvant + baliseApercu + texteApres;
-                            } else { break; }
-                        } else { break; }
-                    }
-
-                    // Mini-bouton Audio inline
-                    while (res.includes("[son=") && res.includes("]")) {
-                        let indexDebut = res.indexOf("[son=");
-                        let indexFin = res.indexOf("]", indexDebut);
-                        if (indexDebut !== -1 && indexFin !== -1) {
-                            let texteAvant = res.substring(0, indexDebut);
-                            let cheminAudio = res.substring(indexDebut + 5, indexFin);
-                            let texteApres = res.substring(indexFin + 1);
-                            let baliseSon = `<button onclick="new Audio('${cheminAudio}').play()" class="inline-flex items-center justify-center w-6 h-6 bg-amber-100 text-amber-800 rounded-full hover:bg-amber-200 hover:scale-110 transition-all mx-1 align-middle focus:outline-none shadow-sm" title="Écouter"><svg class="w-3 h-3 ml-0.5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" fill-rule="evenodd"></path></svg></button>`;
-                            res = texteAvant + baliseSon + texteApres;
-                        } else { break; }
-                    }
-
-                    return res;
+                    // ON APPELLE LE TRADUCTEUR GLOBAL POUR TOUTES LES AUTRES BALISES
+                    return formaterBalises(res);
                 }
 
                 container.innerHTML = "";
@@ -968,8 +975,10 @@
                     
                     htmlTr += `<td class="p-3 border-r border-stone-200 text-stone-600">${partie.folios}</td>`;
                     htmlTr += `<td class="p-3 border-r border-stone-200 font-bold text-stone-800">${partie.notation}</td>`;
-                    htmlTr += `<td class="p-3 border-r border-stone-200 text-stone-600">${partie.variante}</td>`;
-                    htmlTr += `<td class="p-3 border-r border-stone-200 text-xs text-stone-500">${partie.remarques}</td>`;
+                    
+                    // ICI: ON APPLIQUE LE FORMATEUR POUR QUE LES BALISES MARCHENT AUSSI DANS LE TABLEAU
+                    htmlTr += `<td class="p-3 border-r border-stone-200 text-stone-600">${formaterBalises(partie.variante)}</td>`;
+                    htmlTr += `<td class="p-3 border-r border-stone-200 text-xs text-stone-500">${formaterBalises(partie.remarques)}</td>`;
                     
                     let lienHtml = partie.lien;
                     if (lienHtml.includes('[lien=')) {
@@ -1052,7 +1061,8 @@
                             html += `<img src="${n.image}" alt="${n.nom}" class="h-24 object-contain my-2 rounded">`;
                         }
 
-                        html += `<p class="text-sm text-stone-600 whitespace-pre-line text-justify">${n.description}</p>`;
+                        // ICI: ON APPLIQUE LE FORMATEUR POUR LES NEUMES
+                        html += `<p class="text-sm text-stone-600 whitespace-pre-line text-justify">${formaterBalises(n.description)}</p>`;
                         card.innerHTML = html;
 
                         if(n.categorie === 'simples' && simplesContainer) simplesContainer.appendChild(card);
@@ -1069,7 +1079,10 @@
                         const div = document.createElement('div');
                         div.className = "border-b border-stone-100 pb-4 last:border-0";
                         let lHtml = `<h3 class="font-bold text-amber-800 text-lg mb-1">${l.sigle}</h3>`;
-                        lHtml += `<p class="text-stone-600 text-sm mb-2 text-justify">${l.texte}</p>`;
+                        
+                        // ICI: ON APPLIQUE LE FORMATEUR POUR LES LETTRES
+                        lHtml += `<p class="text-stone-600 text-sm mb-2 text-justify">${formaterBalises(l.texte)}</p>`;
+                        
                         if(l.image) {
                             lHtml += `<img src="${l.image}" alt="${l.sigle}" class="h-16 object-contain rounded my-2">`;
                         }
@@ -1238,10 +1251,7 @@
             genererPageDynamique('historique-contenu', siteData.historique);
             genererPageDynamique('manuscrits-contenu', siteData.se_reperer || siteData.seReperer);
             genererPageDynamique('types-pieces-contenu', siteData.types_de_pieces || siteData.typesPieces);
-            
-            // L'appel au NOUVEAU fichier d'explications est bien là :
             genererPageDynamique('notations-explications-contenu', siteData.explications_notations);
-            
             genererPageDynamique('modes-contenu', siteData.modes);
             genererPageDynamique('psalmodies-contenu', siteData.psalmodies);
             genererPageDynamique('monocorde-contenu', siteData.monocorde);
