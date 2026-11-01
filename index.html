@@ -442,6 +442,11 @@
         </main>
     </div>
 
+    <!-- BOÎTE VOLANTE POUR LES IMAGES -->
+    <div id="image-volante" class="pointer-events-none fixed hidden z-[100] bg-white p-2 rounded-lg shadow-xl border border-stone-200 transition-opacity duration-150">
+        <img id="image-volante-src" src="" alt="Aperçu" class="max-w-[250px] max-h-[250px] object-contain rounded">
+    </div>
+
     <!-- Pied de page -->
     <footer class="bg-stone-900 text-stone-400 py-6 mt-16 text-center text-sm relative z-10">
         <p>Fait par Maxime Docteur, doctorant à Montpellier (France)</p>
@@ -565,6 +570,27 @@
                 resultEl.className = "text-rose-700 font-medium mt-2";
             }
         }
+        // ==========================================
+        // FONCTIONS POUR L'IMAGE VOLANTE
+        // ==========================================
+        function afficherImageVolante(e, url) {
+            const box = document.getElementById('image-volante');
+            const img = document.getElementById('image-volante-src');
+            img.src = url;
+            box.style.display = 'block';
+            box.style.left = (e.clientX + 15) + 'px';
+            box.style.top = (e.clientY + 15) + 'px';
+        }
+        function deplacerImageVolante(e) {
+            const box = document.getElementById('image-volante');
+            box.style.left = (e.clientX + 15) + 'px';
+            box.style.top = (e.clientY + 15) + 'px';
+        }
+        function cacherImageVolante() {
+            const box = document.getElementById('image-volante');
+            box.style.display = 'none';
+            document.getElementById('image-volante-src').src = ''; // Vide l'image pour éviter les bugs visuels
+        }
 
         // =========================================================
         // FONCTION UNIVERSELLE ULTRA-ROBUSTE
@@ -675,6 +701,24 @@
                                 let texteApres = res.substring(indexFin + 10);
                                 let baliseCouleur = `<span style="color: ${couleur}; font-weight: 500;">${texte}</span>`;
                                 res = texteAvant + baliseCouleur + texteApres;
+                            } else { break; }
+                        } else { break; }
+                    }
+                    // Image volante au survol
+                    while (res.includes("[apercu=") && res.includes("[/apercu]")) {
+                        let indexDebut = res.indexOf("[apercu=");
+                        let indexFin = res.indexOf("[/apercu]");
+                        if (indexDebut !== -1 && indexFin !== -1 && indexDebut < indexFin) {
+                            let indexFinCrochet = res.indexOf("]", indexDebut);
+                            if (indexFinCrochet !== -1 && indexFinCrochet < indexFin) {
+                                let texteAvant = res.substring(0, indexDebut);
+                                let urlImage = res.substring(indexDebut + 8, indexFinCrochet);
+                                let mot = res.substring(indexFinCrochet + 1, indexFin);
+                                let texteApres = res.substring(indexFin + 9);
+                                
+                                // Le mot sera en gras (font-bold), avec de petits pointillés en dessous pour indiquer qu'on peut le survoler
+                                let baliseApercu = `<span onmouseenter="afficherImageVolante(event, '${urlImage}')" onmousemove="deplacerImageVolante(event)" onmouseleave="cacherImageVolante()" class="font-bold text-stone-900 cursor-help border-b-2 border-dotted border-stone-400 hover:text-amber-700 hover:border-amber-700 transition-colors">${mot}</span>`;
+                                res = texteAvant + baliseApercu + texteApres;
                             } else { break; }
                         } else { break; }
                     }
