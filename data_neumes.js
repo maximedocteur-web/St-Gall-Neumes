@@ -85,9 +85,9 @@ siteData.neumes = [
         {
             nom: "Scandicus",
             categorie: "simples",
-            description: "<strong>3 notes</strong>, mouvement : ascendant/ascendant. Ce neume représente trois notes, la seconde étant plus élevée (plus aigue) que la première "+
+            description: "<strong>3 notes</strong>, mouvement : ascendant/ascendant. Ce neume représente trois/quatre notes, la seconde étant plus élevée (plus aigue) que la première "+
             "et la troisième plus elevée (plus aigue) que la deuxième mais on ne sait pas de combien elles sont plus élevées (une tierce ? une quarte ? une octave ? rien ne l'indique "+
-            "dans sa graphie). Les deux images sont des graphies standard, une a deux punctums et une à trois. Il existe une grande variété de graphies où l'on peut remplacer un ou des punctums "+
+            "dans sa graphie). Les deux images sont des graphies standard, une a deux punctums [son=audio/scandicus2.mp3] et une à trois [son=audio/scandicus3.mp3]. Il existe une grande variété de graphies où l'on peut remplacer un ou des punctums "+
             "par des tractulus (voire des tractulus épisémés) et où la virga finale peut être sous toutes les formes indiquées précédemment (voir VIRGA)",
             images:[ 
                 "images/scandicus_1.png",
