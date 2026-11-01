@@ -307,9 +307,42 @@
                 <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Types de Pièces</h2>
                 <div id="types-pieces-contenu" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 text-stone-700 text-justify leading-relaxed"></div>
             </section>
+            <!-- PAGE RÉPERTOIRE DES NOTATIONS -->
             <section id="page-notations" class="page-section space-y-6 relative z-10">
-                <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Les Notations</h2>
-                <div id="notations-contenu" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 text-stone-700 text-justify leading-relaxed"></div>
+                <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Répertoire de Notations</h2>
+                
+                <!-- Moteur de recherche multicritères -->
+                <div class="bg-white p-5 rounded-lg border border-stone-200 shadow-sm flex flex-col md:flex-row gap-4 items-center mb-6">
+                    <div class="flex-grow w-full relative">
+                        <svg class="w-5 h-5 absolute left-3 top-1/2 -translate-y-1/2 text-stone-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                        <input type="text" id="recherche-notations" onkeyup="filtrerNotations()" placeholder="Rechercher... (ex: XIe Saint-Gall Carrée)" class="w-full pl-10 p-2.5 border border-stone-300 rounded-md focus:ring-2 focus:ring-amber-700 focus:outline-none text-sm">
+                    </div>
+                    <div class="text-sm font-medium text-stone-500 whitespace-nowrap bg-stone-100 px-4 py-2 rounded-md" id="compteur-notations">0 document(s)</div>
+                </div>
+
+                <!-- Tableau de données -->
+                <div class="overflow-x-auto bg-white rounded-lg shadow-sm border border-stone-200">
+                    <table class="w-full text-left border-collapse text-sm min-w-[1100px]">
+                        <thead class="bg-stone-900 text-stone-100 font-serif border-b border-stone-300">
+                            <tr>
+                                <th class="p-3 font-medium tracking-wide">Ville</th>
+                                <th class="p-3 font-medium tracking-wide">Lieu</th>
+                                <th class="p-3 font-medium tracking-wide">Cote</th>
+                                <th class="p-3 font-medium tracking-wide">Date</th>
+                                <th class="p-3 font-medium tracking-wide">Origine</th>
+                                <th class="p-3 font-medium tracking-wide text-amber-400">Type</th>
+                                <th class="p-3 font-medium tracking-wide">Folios/Partie</th>
+                                <th class="p-3 font-medium tracking-wide">Notation</th>
+                                <th class="p-3 font-medium tracking-wide">Variante</th>
+                                <th class="p-3 font-medium tracking-wide">Remarques</th>
+                                <th class="p-3 font-medium tracking-wide">Lien</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbody-notations" class="text-stone-800 divide-y divide-stone-200">
+                            <!-- Rempli automatiquement par JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
             </section>
             <section id="page-je-debute" class="page-section space-y-6 relative z-10">
                 <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Je débute</h2>
@@ -1028,6 +1061,122 @@
                     console.error("Erreur de rendu pour " + containerId, error);
                 }
             }
+            // ==========================================
+        // MOTEUR DU TABLEAU DES NOTATIONS
+        // ==========================================
+        let manuscritsAnalyse = []; // Stockage global pour le filtre
+
+        function initialiserTableauNotations() {
+            if (!siteData.donneesNotationsBrutes) return;
+
+            const lignes = siteData.donneesNotationsBrutes.split('\n');
+            const balises = siteData.balisesNotations || {};
+            let msCourant = null;
+
+            // Fonction pour traduire une balise si elle existe
+            const traduire = (texte) => {
+                const t = (texte || '').trim();
+                return balises[t] ? balises[t] : t;
+            };
+
+            // 1. Décodage du texte brut en objet structuré
+            lignes.forEach(ligne => {
+                ligne = ligne.trim();
+                if (!ligne || ligne.startsWith('//')) return;
+
+                if (ligne.startsWith('-')) {
+                    // Sous-ligne (nouvelle notation pour le même manuscrit)
+                    const cols = ligne.substring(1).split(';');
+                    if (msCourant && cols.length >= 5) {
+                        msCourant.parties.push({
+                            folios: traduire(cols[0]), notation: traduire(cols[1]),
+                            variante: traduire(cols[2]), remarques: traduire(cols[3]), lien: traduire(cols[4])
+                        });
+                    }
+                } else {
+                    // Nouvelle ligne principale
+                    const cols = ligne.split(';');
+                    if (cols.length >= 11) {
+                        msCourant = {
+                            ville: traduire(cols[0]), lieu: traduire(cols[1]), cote: traduire(cols[2]),
+                            date: traduire(cols[3]), origine: traduire(cols[4]), type: traduire(cols[5]),
+                            parties: [{
+                                folios: traduire(cols[6]), notation: traduire(cols[7]),
+                                variante: traduire(cols[8]), remarques: traduire(cols[9]), lien: traduire(cols[10])
+                            }]
+                        };
+                        manuscritsAnalyse.push(msCourant);
+                    }
+                }
+            });
+
+            afficherTableauNotations(manuscritsAnalyse);
+        }
+
+        // 2. Affichage et fusion des cellules (rowspan)
+        function afficherTableauNotations(manuscrits) {
+            const tbody = document.getElementById('tbody-notations');
+            const compteur = document.getElementById('compteur-notations');
+            if (!tbody) return;
+
+            tbody.innerHTML = '';
+            compteur.textContent = manuscrits.length + " document(s)";
+
+            manuscrits.forEach((ms, msIndex) => {
+                const rowspan = ms.parties.length;
+                const couleurLigne = msIndex % 2 === 0 ? 'bg-white' : 'bg-stone-50/50';
+
+                ms.parties.forEach((partie, indexPartie) => {
+                    let htmlTr = `<tr class="${couleurLigne} hover:bg-amber-50/30 transition-colors">`;
+                    
+                    // Colonnes fusionnées (générées uniquement sur la 1ère sous-ligne)
+                    if (indexPartie === 0) {
+                        htmlTr += `<td class="p-3 border-r border-stone-200 align-top" rowspan="${rowspan}">${ms.ville}</td>`;
+                        htmlTr += `<td class="p-3 border-r border-stone-200 align-top" rowspan="${rowspan}">${ms.lieu}</td>`;
+                        htmlTr += `<td class="p-3 border-r border-stone-200 align-top font-bold text-stone-900" rowspan="${rowspan}">${ms.cote}</td>`;
+                        htmlTr += `<td class="p-3 border-r border-stone-200 align-top" rowspan="${rowspan}">${ms.date}</td>`;
+                        htmlTr += `<td class="p-3 border-r border-stone-200 align-top" rowspan="${rowspan}">${ms.origine}</td>`;
+                        htmlTr += `<td class="p-3 border-r border-stone-200 align-top bg-amber-50/30 font-medium text-amber-900" rowspan="${rowspan}">${ms.type}</td>`;
+                    }
+                    
+                    // Colonnes spécifiques à la sous-partie
+                    htmlTr += `<td class="p-3 border-r border-stone-200 text-stone-600">${partie.folios}</td>`;
+                    htmlTr += `<td class="p-3 border-r border-stone-200 font-bold text-stone-800">${partie.notation}</td>`;
+                    htmlTr += `<td class="p-3 border-r border-stone-200 text-stone-600">${partie.variante}</td>`;
+                    htmlTr += `<td class="p-3 border-r border-stone-200 text-xs text-stone-500">${partie.remarques}</td>`;
+                    
+                    // Formatage automatique des liens
+                    let lienHtml = partie.lien;
+                    if (lienHtml.includes('[lien=')) {
+                        lienHtml = lienHtml.replace(/\[lien=(.*?)\]/, '<a onclick="showPage(\'$1\')" class="text-amber-700 hover:text-amber-900 hover:underline cursor-pointer font-bold">Ouvrir</a>');
+                    } else if (lienHtml.startsWith('http')) {
+                        lienHtml = `<a href="${lienHtml}" target="_blank" class="text-amber-700 hover:text-amber-900 hover:underline font-bold">Lien ↗</a>`;
+                    }
+                    htmlTr += `<td class="p-3">${lienHtml}</td></tr>`;
+                    
+                    tbody.innerHTML += htmlTr;
+                });
+            });
+        }
+
+        // 3. Filtrage en temps réel avec mots multiples ("XIe Saint-Gall")
+        function filtrerNotations() {
+            const input = document.getElementById('recherche-notations').value.toLowerCase();
+            const motsCles = input.split(' ').filter(mot => mot.length > 0);
+
+            const resultats = manuscritsAnalyse.filter(ms => {
+                // On regroupe tout le texte du manuscrit et de ses sous-parties
+                const texteGlobal = [
+                    ms.ville, ms.lieu, ms.cote, ms.date, ms.origine, ms.type,
+                    ...ms.parties.map(p => `${p.folios} ${p.notation} ${p.variante} ${p.remarques}`)
+                ].join(' ').toLowerCase();
+
+                // Le manuscrit est gardé si TOUS les mots-clés tapés s'y trouvent
+                return motsCles.every(mot => texteGlobal.includes(mot));
+            });
+
+            afficherTableauNotations(resultats);
+        }
 
             // --- APPEL DE TOUTES LES PAGES ---
             genererPageDynamique('lettres-apprendre-contenu', siteData.lettresApprendre || siteData.en_apprendre_plus);
