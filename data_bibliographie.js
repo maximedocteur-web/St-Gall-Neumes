@@ -7,7 +7,7 @@ siteData.bibliographie = [
     une notation ancienne).<br><br>
     
     Il est possible d'avoir la même chose mais uniquement pour les offertoires. En effet, le graduale Triplex ne donne pas les deux versets d'offertoire.
-    Pour les trouver avec les deux notations, Solesmes a édité dans les années 70 les [apercu=images/offertoires_neumes.png]<strong><em>Offertoires Neumés</em></strong>[/apercu]. cet ouvrage n'est pas réédité
+    Pour les trouver avec les deux notations, Solesmes a édité dans les années 70 les [apercu=images/offertoires_neumes.jpg]<strong><em>Offertoires Neumés</em></strong>[/apercu]. cet ouvrage n'est pas réédité
     et vous ne pourrez le trouver que d'occasion.
 `
 
