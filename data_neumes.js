@@ -159,8 +159,8 @@ siteData.neumes = [
         {
             nom: "oriscus",
             categorie: "ornementaux",
-            description: "C'est un ornement à lui tout seul qui peut se présenter seul ou en composition lorsqu'il se toruve accolé à d'autres neumes. Par exemple, lorsqu'on le fait suivre"+
-            "par une virga (image2), on l'apelle <strong>pes quassus</strong> ou on peut aussi bien le trouver collé à une clivis (épisémée dans le cas ici présenté dans l'image3).",
+            description: "C'est un ornement à lui tout seul [son=audio/oriscus.mp3] qui peut se présenter seul ou en composition lorsqu'il se trouve accolé à d'autres neumes. Par exemple, lorsqu'on le fait suivre"+
+            "par une virga (image2 [son=audio/oriscus2.mp3]), on l'apelle <strong>pes quassus</strong> ou on peut aussi bien le trouver collé à une clivis (épisémée dans le cas ici présenté dans l'image3 [son=audio/oriscus3.mp3]).",
             images: [
                 "images/oriscus.png",
                 "images/pes_quassus.png",
@@ -172,7 +172,7 @@ siteData.neumes = [
             categorie: "ornementaux",
             description: "Neume ornementé qui peut avoir deux graphies. Pour faire TRÈS simple, on peut découper ce neume en trois parties, une virga, une vague et un punctum. Quand ces trois"+
             " éléments sont réunis, le pressus est dit <strong>maior</strong> (grand) et si il manque la virga au début, il est dit <strong>minor</strong> (petit). Dans la première image, vous"+
-            " avez un pressus minor et dans la seconde image un pressus maior. La virga et le punctum ont tous deux leur rôle habituel et l'ornemente st en fait cette vague. Quand le pressus est"+
+            " avez un pressus minor [son=audio/pressus_minor.mp3] et dans la seconde image un pressus maior [son=audio/pressus_maior.mp3]. La virga et le punctum ont tous deux leur rôle habituel et l'ornemente st en fait cette vague. Quand le pressus est"+
             " minor, on enchaîne l'ornement directement à la fin du neume qui le précède et on fait le punctum."+
             "Quand il est maior, on prend le temps de bien faire la virga puis l'ornement et le punctum.",
             images: [
@@ -184,15 +184,15 @@ siteData.neumes = [
             nom: "Virga strata",
             categorie: "ornementaux",
             description: "Bien que ce neume ressemble beaucoup au <em>pressus maior</em>, il a perdu son punctum final et son ornementation s'en trouve modifiée. On peut le voir comme une"+
-            " virga avec un ornement final.",
+            " virga avec un ornement final. [son=audio/virga_strata.mp3]",
             image: "images/virga_strata.png"
         },
         {
             nom: "apostropha",
             categorie: "ornementaux",
-            description: "Une apostropha (la <em>gifle</em> en latin), est une seule note représentée par une virgule qui est légèrement tremblée (image 1) mais elle peut aussi être représentée"+
-            " par paire ou par triplette. Par paire c'est une <strong>distropha</strong> (image 2) et par triplette une <strong>tristropha</strong> (image 4). Il arrive que la dernière note"+
-            " puisse être plus longue (image 3) ou liquescente (image 5). Peut importe le nombre de virgules, ils faut toutes qu'elles aient ce léger tremblement. Il arrive que l'on retrouve"+
+            description: "Une apostropha (la <em>gifle</em> en latin), est une seule note représentée par une virgule qui est légèrement tremblée (image 1 [son=audio/apostropha.mp3]) mais elle peut aussi être représentée"+
+            " par paire ou par triplette. Par paire c'est une <strong>distropha</strong> (image 2 [son=audio/distropha.mp3]) et par triplette une <strong>tristropha</strong> (image 4 [son=audio/tristropha.mp3]). Il arrive que la dernière note"+
+            " puisse être plus longue (image 3 [son=audio/distropha2.mp3]) ou liquescente (image 5 [son=audio/tristropha3.mp3]). Peut importe le nombre de virgules, ils faut toutes qu'elles aient ce léger tremblement. Il arrive que l'on retrouve"+
             " plusieurs de ces petits paquets les uns à la suite des autres.",
             images: [
                 "images/apostropha.png",
@@ -210,8 +210,8 @@ siteData.neumes = [
             " que sa graphie indique une note, la deuxième plus aigue et la troisième plus grave que la deuxième, comme sa graphie le laisse penser. Aussi, c'est un neume polymorphe qui peut avoir"+
             " plein de graphies différentes avec des punctums, des tractulus, des épisèmes, des adjonctions d'un, deux ou trois punctums avant l'ornement. Dans ces cas, il faut consédérer que c'est"+
             " tout le groupe de neume qui doit s'sxécuter dans la dynamique du trigon et il ne faut donc pas considérer que l'on pourrait avoir deux punctums+un trigon mais plutôt chanter un "+
-            " trigon pré-bi-punctis. Sa graphie standard est à trois punctums (image 1). On peut remplacer la dernière note par un tractulus (image 2), voire en ajouter un de plus (image 3)."+
-            " Ensuite, on peut avoir des trigons avec plus de punctums ascendants (image 4) ou descendant (image 5). Le tout, c'est de garder la dynamique ornementale du trigon sur toute sa longueur.",
+            " trigon pré-bi-punctis. Sa graphie standard est à trois punctums (image 1 [son=audio/trigon1.mp3]). On peut remplacer la dernière note par un tractulus (image 2[son=audio/trigon2.mp3]), voire en ajouter un de plus (image 3[son=audio/trigon3.mp3])."+
+            " Ensuite, on peut avoir des trigons avec plus de punctums ascendants (image 4[son=audio/trigon4.mp3]) ou descendant (image 5[son=audio/trigon5.mp3]). Le tout, c'est de garder la dynamique ornementale du trigon sur toute sa longueur.",
             images: [
                 "images/trigon.png",
                 "images/trigon5.png",
