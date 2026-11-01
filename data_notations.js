@@ -26,4 +26,15 @@ Barcelone ; Bibl. Orfeo Catala ; 12 ;; graduel ;; aq ; nnac ;; https://mdc.csuc.
 
 Bordeaux ; Arch. Départ. ; G 902 ; 11 ; Collégiale Saint-Emilion ; ant ;; aq ; nnac;office des morts ; https://archives.gironde.fr/ark:/25651/vta896c30bd450dabd4/daogrp/0#id:931416351?gallery=true&center=1346.000,-922.000&zoom=7&rotation=0.000&brightness=100.00&contrast=100.00
 
+sg;ba;cod.390;990-1000;sg;antiphonaire;;sg;primaire;moitié d'antiphonaire, autre moitié dans 391; https://www.e-codices.ch/en/csg/0390/11
+
+sg;ba;cod.391;990-1000;sg;antiphonaire;;sg;primaire;moitié d'antiphonaire, autre moitié dans 390; https://www.e-codices.ch/en/csg/0391/11
+
+ein;ba;cod.121;990-1000;ein;graduel;;sg;primaire;Graduel et séquences de Notker; https://www.e-codices.unifr.ch/fr/sbe/0121/5
+
+Porrentruy;Bibl. cantonale Jurass.;cod.18;avant 1160-1170;Abbaye de Bellelay;graduel;;messine;neumatique sur lignes;; https://www.e-codices.unifr.ch/en/bcj/0018/11
+
+
+
+
 `
