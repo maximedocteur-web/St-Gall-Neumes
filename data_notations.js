@@ -20,10 +20,10 @@ siteData.donneesNotationsBrutes = `
 
 Albi ; Méd. P. Amalric; 15 (olim 152); 1112; ; ant; 164r-170v; aq; nnac; défunts,Lazare, Baudile; https://cecilia.mediatheques.grand-albigeois.fr/viewer/121/?offset=19#page=1&viewer=picture&o=&n=0&q=
 
-PAR ; BNF ; Lat. 12044 ; XIIe s. ; Saint-Maur-des-Fossés ; ANT ; fol. 1-6 ; SGA ; in campo aperto ; Ajout tardif ; [lien=analyse]
- - fol. 7-34 ; CAR ; sur 4 lignes rouges ; Main principale ; https://gallica.bnf.fr
- 
-SG ; SGB ; 359 ; IXe s. ; Saint-Gall ; GRA ; complet ; SGA ; ; Cantatorium ; [lien=analyse]
+Azurara;Santa Casa de M. Arch.;MM6;1213;;missel;;aq;nnac;;https://pemdatabase.eu/gallery-item/22280
 
-MET ; Médiathèque ; ms. 351 ; XIe s. ; Metz ; ANT ; fol. 1-100 ; MES ; in campo aperto ; Tonénaire ; 
-`;
+Barcelone;Bibl. Orfeo Catala; 12;;graduel;;aq;nnac;;https://mdc.csuc.cat/digital/collection/MMautors/id/587/rec/10
+
+Bordeaux;Arch. Départ.;G 902;11;Collégiale Saint-Emilion;ant;;aq;nnac;office des morts;https://archives.gironde.fr/ark:/25651/vta896c30bd450dabd4/daogrp/0#id:931416351?gallery=true&center=1346.000,-922.000&zoom=7&rotation=0.000&brightness=100.00&contrast=100.00
+
+Braga;
