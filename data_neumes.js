@@ -37,10 +37,10 @@ siteData.neumes = [
         {
             nom: "Clivis",
             categorie: "simples",
-            description: "<strong>2 notes</strong>, mouvement : descendant. Ce neume représente deux notes, la seconde étant plus basse (plus grave) que la première "+
+            description: "<strong>2 notes</strong>, mouvement : descendant. Ce neume représente deux notes, la seconde étant plus basse (plus grave) que la première [son=audio/clivis1.mp3] "+
             "mais on ne sait pas de combien elle est plus basse (une tierce ? une quarte ? une octave ?), rien ne l'indique "+
             "dans sa graphie. Vous pouvez voir dans la seconde image, sa forme épisémée qui revient très souvent. Ce petit "+
-            "chapeau posé sur le neume indique que la première note est deux fois plus longue que la seconde.",
+            "chapeau posé sur le neume indique que la première note est deux fois plus longue que la seconde [son=audio/clivis2.mp3].",
             images: [
                 "images/clivis.png",
                 "images/clivis_episeme.png"
