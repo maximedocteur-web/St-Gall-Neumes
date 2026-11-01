@@ -78,7 +78,7 @@ siteData.neumes = [
             categorie: "simples",
             description: "<strong>3 notes</strong>, mouvement : descendant/ascendant. Ce neume représente trois notes, la seconde étant plus basse (plus grave) que la première "+
             "et la troisième plus elevée (plus aigue) que la deuxième mais on ne sait pas de combien elle est plus élevée (une tierce ? une quarte ? une octave ? rien ne l'indique "+
-            "dans sa graphie). Son image ici présente est sa graphie standard. Il arrive que la dernière note soit épisémée, dans ce cas, la virga finale porte un trait horizontal "+
+            "dans sa graphie). Son image ici présente est sa graphie standard [son=audio/porrectus.mp3]. Il arrive que la dernière note soit épisémée, dans ce cas, la virga finale porte un trait horizontal "+
             "à son sommet. Dans notre lecture actuelle des neumes, les deux première notes sont plus rapides que la dernière selon le schéma : <strong>1/2</strong> ; <strong>1/2</strong> ; <strong>1</strong> .",
             image: "images/porrectus.png"
         },
