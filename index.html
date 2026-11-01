@@ -462,6 +462,10 @@
     <script src="data_monocorde.js"></script>
     <script src="data_neumes.js"></script>
     <script src="data_notations.js"></script>
+    
+    <!-- L'APPEL DE TON TOUT NOUVEAU FICHIER EST JUSTE ICI -->
+    <script src="data_explications_notations.js"></script>
+    
     <script src="data_psalmodies.js"></script>
     <script src="data_quizz.js"></script>
     <script src="data_se_reperer.js"></script>
@@ -485,8 +489,8 @@
             let targetPage = pageName;
             if (pageName === 'lettres-apprendre' || pageName === 'lettres-catalogue') {
                 targetPage = pageName;
-            } else if (pageName === 'lettres-hub') {
-                targetPage = 'lettres-hub';
+            } else if (pageName === 'lettres-hub' || pageName === 'notations-hub') {
+                targetPage = pageName;
             }
 
             const targetSection = document.getElementById('page-' + targetPage);
@@ -1191,8 +1195,8 @@
             genererPageDynamique('manuscrits-contenu', siteData.se_reperer || siteData.seReperer);
             genererPageDynamique('types-pieces-contenu', siteData.types_de_pieces || siteData.typesPieces);
             
-            // NOUVEAU: Appel de la page d'explication des notations
-            genererPageDynamique('notations-explications-contenu', siteData.notations);
+            // L'appel au NOUVEAU fichier d'explications est bien là :
+            genererPageDynamique('notations-explications-contenu', siteData.explications_notations);
             
             genererPageDynamique('modes-contenu', siteData.modes);
             genererPageDynamique('psalmodies-contenu', siteData.psalmodies);
