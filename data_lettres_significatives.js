@@ -54,5 +54,17 @@ siteData.lettres = [
         sigle: "x ((e)Xpectare)",
         texte: "???.",
         image: "images/x.png"
+    },
+    {
+        signe:"len (Leniter)",
+        texte:`??? trop peu d'informations au sujet de sa signification`,
+        image:"images/len.png"
+        
+    },
+    {
+        signe:"gu (GUttur)",
+        texte:`<span style="color: #e60004;">g</span>. <strong>Ut in gutture gradatim garruletur genuine gratulatur.</strong><br><br>`,
+        image:"images/gu.png"
+        
     }
 ]
