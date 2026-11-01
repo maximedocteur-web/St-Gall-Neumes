@@ -307,6 +307,7 @@
                 <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Types de Pièces</h2>
                 <div id="types-pieces-contenu" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 text-stone-700 text-justify leading-relaxed"></div>
             </section>
+
             <!-- PAGE RÉPERTOIRE DES NOTATIONS -->
             <section id="page-notations" class="page-section space-y-6 relative z-10">
                 <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Répertoire de Notations</h2>
@@ -344,6 +345,7 @@
                     </table>
                 </div>
             </section>
+
             <section id="page-je-debute" class="page-section space-y-6 relative z-10">
                 <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Je débute</h2>
                 <div id="je-debute-contenu" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 text-stone-700 text-justify leading-relaxed"></div>
@@ -529,6 +531,395 @@
             }
         }
 
+        // =========================================================
+        // FONCTION UNIVERSELLE ULTRA-ROBUSTE
+        // =========================================================
+        function genererPageDynamique(containerId, donneesArray) {
+            try {
+                const container = document.getElementById(containerId);
+                if (!container || !donneesArray) return; 
+                
+                let data = donneesArray;
+                if (!Array.isArray(donneesArray)) {
+                    data = [donneesArray];
+                }
+
+                let tableauNotes = [];
+                let compteurNotes = 1;
+
+                function formaterTexte(texte) {
+                    if (!texte) return "";
+                    let res = String(texte);
+                    
+                    // Liens internes
+                    while (res.includes("[lien=") && res.includes("[/lien]")) {
+                        let indexDebut = res.indexOf("[lien=");
+                        let indexFin = res.indexOf("[/lien]");
+                        if (indexDebut !== -1 && indexFin !== -1 && indexDebut < indexFin) {
+                            let indexFinCrochet = res.indexOf("]", indexDebut);
+                            if (indexFinCrochet !== -1 && indexFinCrochet < indexFin) {
+                                let texteAvant = res.substring(0, indexDebut);
+                                let pageCible = res.substring(indexDebut + 6, indexFinCrochet);
+                                let texteLien = res.substring(indexFinCrochet + 1, indexFin);
+                                let texteApres = res.substring(indexFin + 7);
+                                let boutonHTML = '<a onclick="showPage(\'' + pageCible + '\')" class="text-amber-700 font-bold hover:text-amber-900 hover:underline cursor-pointer transition-colors">' + texteLien + '</a>';
+                                res = texteAvant + boutonHTML + texteApres;
+                            } else { break; }
+                        } else { break; }
+                    }
+
+                    // Lien E-codices
+                    while (res.includes("[p.") && res.includes("]")) {
+                        let indexDebut = res.indexOf("[p.");
+                        let indexFin = res.indexOf("]", indexDebut);
+                        if (indexDebut !== -1 && indexFin !== -1 && indexFin > indexDebut) {
+                            let texteAvant = res.substring(0, indexDebut);
+                            let pageId = res.substring(indexDebut + 3, indexFin);
+                            let texteApres = res.substring(indexFin + 1);
+                            let lienEcodices = '<a href="https://www.e-codices.unifr.ch/fr/sbe/0121/' + pageId + '/0/" target="_blank" class="ml-2 text-sm text-amber-700 hover:text-amber-900 underline font-medium">p.' + pageId + '</a>';
+                            res = texteAvant + lienEcodices + texteApres;
+                        } else { break; }
+                    }
+
+                    // Notes de bas de page
+                    while (res.includes("[note]") && res.includes("[/note]")) {
+                        let indexDebut = res.indexOf("[note]");
+                        let indexFin = res.indexOf("[/note]");
+                        if (indexDebut !== -1 && indexFin !== -1 && indexDebut < indexFin) {
+                            let texteAvant = res.substring(0, indexDebut);
+                            let texteNote = res.substring(indexDebut + 6, indexFin);
+                            let texteApres = res.substring(indexFin + 7);
+                            let num = compteurNotes;
+                            tableauNotes.push(texteNote);
+                            compteurNotes++;
+                            let appel = '<sup id="appel-' + containerId + '-' + num + '" class="ml-0.5"><a href="#note-' + containerId + '-' + num + '" class="text-amber-700 font-bold text-xs hover:text-amber-900 transition-colors">' + num + '</a></sup>';
+                            res = texteAvant + appel + texteApres;
+                        } else { break; }
+                    }
+                    
+                    // Infobulle Lexique
+                    while (res.includes("[lexique=") && res.includes("[/lexique]")) {
+                        let indexDebut = res.indexOf("[lexique=");
+                        let indexFin = res.indexOf("[/lexique]");
+                        if (indexDebut !== -1 && indexFin !== -1 && indexDebut < indexFin) {
+                            let indexFinCrochet = res.indexOf("]", indexDebut);
+                            if (indexFinCrochet !== -1 && indexFinCrochet < indexFin) {
+                                let texteAvant = res.substring(0, indexDebut);
+                                let definition = res.substring(indexDebut + 9, indexFinCrochet);
+                                let mot = res.substring(indexFinCrochet + 1, indexFin);
+                                let texteApres = res.substring(indexFin + 10);
+                                let baliseLexique = `<span title="${definition}" class="cursor-help border-b-2 border-dotted border-amber-600 text-amber-800 font-medium">${mot}</span>`;
+                                res = texteAvant + baliseLexique + texteApres;
+                            } else { break; }
+                        } else { break; }
+                    }
+
+                    // Icône dans le texte
+                    while (res.includes("[icone=") && res.includes("]")) {
+                        let indexDebut = res.indexOf("[icone=");
+                        let indexFin = res.indexOf("]", indexDebut);
+                        if (indexDebut !== -1 && indexFin !== -1) {
+                            let texteAvant = res.substring(0, indexDebut);
+                            let cheminImg = res.substring(indexDebut + 7, indexFin);
+                            let texteApres = res.substring(indexFin + 1);
+                            let baliseIcone = `<img src="${cheminImg}" class="inline-block h-6 w-auto mx-1 align-middle" alt="icone">`;
+                            res = texteAvant + baliseIcone + texteApres;
+                        } else { break; }
+                    }
+
+                    // Mettre en couleur
+                    while (res.includes("[couleur=") && res.includes("[/couleur]")) {
+                        let indexDebut = res.indexOf("[couleur=");
+                        let indexFin = res.indexOf("[/couleur]");
+                        if (indexDebut !== -1 && indexFin !== -1 && indexDebut < indexFin) {
+                            let indexFinCrochet = res.indexOf("]", indexDebut);
+                            if (indexFinCrochet !== -1 && indexFinCrochet < indexFin) {
+                                let texteAvant = res.substring(0, indexDebut);
+                                let couleur = res.substring(indexDebut + 9, indexFinCrochet);
+                                let texte = res.substring(indexFinCrochet + 1, indexFin);
+                                let texteApres = res.substring(indexFin + 10);
+                                let baliseCouleur = `<span style="color: ${couleur}; font-weight: 500;">${texte}</span>`;
+                                res = texteAvant + baliseCouleur + texteApres;
+                            } else { break; }
+                        } else { break; }
+                    }
+
+                    // Mini-bouton Audio inline
+                    while (res.includes("[son=") && res.includes("]")) {
+                        let indexDebut = res.indexOf("[son=");
+                        let indexFin = res.indexOf("]", indexDebut);
+                        if (indexDebut !== -1 && indexFin !== -1) {
+                            let texteAvant = res.substring(0, indexDebut);
+                            let cheminAudio = res.substring(indexDebut + 5, indexFin);
+                            let texteApres = res.substring(indexFin + 1);
+                            let baliseSon = `<button onclick="new Audio('${cheminAudio}').play()" class="inline-flex items-center justify-center w-6 h-6 bg-amber-100 text-amber-800 rounded-full hover:bg-amber-200 hover:scale-110 transition-all mx-1 align-middle focus:outline-none shadow-sm" title="Écouter"><svg class="w-3 h-3 ml-0.5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" fill-rule="evenodd"></path></svg></button>`;
+                            res = texteAvant + baliseSon + texteApres;
+                        } else { break; }
+                    }
+
+                    return res;
+                }
+
+                container.innerHTML = "";
+
+                data.forEach((bloc) => {
+                    if (bloc.type === 'text') {
+                        container.innerHTML += `<p class="mb-6">${formaterTexte(bloc.content)}</p>`;
+                    }
+                    else if (bloc.type === 'titre') {
+                        let ancre = bloc.id ? `id="${bloc.id}"` : '';
+                        container.innerHTML += `<h3 ${ancre} class="text-xl font-serif font-bold text-stone-900 mt-8 mb-4 scroll-mt-28">${formaterTexte(bloc.content)}</h3>`;
+                    }
+                    else if (bloc.type === 'separateur') {
+                        let ancre = bloc.id ? `id="${bloc.id}"` : '';
+                        container.innerHTML += `
+                            <div ${ancre} class="mt-12 mb-8 text-center scroll-mt-28">
+                                <hr class="border-stone-300 mb-6">
+                                <h2 class="text-2xl md:text-3xl font-serif font-bold text-amber-800">${formaterTexte(bloc.content)}</h2>
+                            </div>
+                        `;
+                    }
+                    else if (bloc.type === 'sommaire') {
+                        let sommaireHtml = `<div class="bg-stone-50 border border-stone-200 p-6 rounded-lg my-8 shadow-sm max-w-2xl">`;
+                        sommaireHtml += `<h3 class="font-serif font-bold text-stone-900 text-xl mb-4 border-b border-stone-200 pb-2">Sommaire</h3>`;
+                        sommaireHtml += `<ul class="space-y-1.5">`;
+                        
+                        if (bloc.items && Array.isArray(bloc.items)) {
+                            bloc.items.forEach(item => {
+                                let styleClass = '';
+                                if (item.niveau === 1) {
+                                    styleClass = 'font-bold text-amber-900 mt-3 pt-2';
+                                } else if (item.niveau === 2) {
+                                    styleClass = 'ml-6 text-stone-800 font-medium border-l-2 border-amber-200 pl-3';
+                                } else if (item.niveau === 3) {
+                                    styleClass = 'ml-12 text-stone-600 text-sm border-l-2 border-stone-200 pl-3';
+                                } else if (item.niveau >= 4) {
+                                    styleClass = 'ml-16 text-stone-500 text-sm italic border-l-2 border-stone-200 pl-3';
+                                }
+                                
+                                sommaireHtml += `<li class="${styleClass}">
+                                    <a href="#${item.id}" class="hover:text-amber-600 hover:underline transition-colors block">${item.label}</a>
+                                </li>`;
+                            });
+                        }
+                        sommaireHtml += `</ul></div>`;
+                        container.innerHTML += sommaireHtml;
+                    }
+                    else if (bloc.type === 'image') {
+                        container.innerHTML += `
+                            <div class="my-6 text-center">
+                                <img src="${bloc.src}" alt="Illustration" class="w-full md:w-[700px] h-auto object-contain mx-auto rounded shadow-sm border border-stone-200 bg-stone-50 p-2">
+                                <p class="text-xs text-stone-500 mt-2 italic">${bloc.legende || ''}</p>
+                            </div>
+                        `;
+                    }
+                    else if (bloc.type === 'galerie') {
+                        let imagesHtml = '';
+                        bloc.images.forEach(img => {
+                            imagesHtml += `<img src="${img}" alt="Pièce" class="h-24 w-auto object-contain rounded border border-stone-200 shadow-sm bg-white p-1">`;
+                        });
+                        container.innerHTML += `
+                            <div class="my-6 flex flex-wrap justify-center gap-4">
+                                ${imagesHtml}
+                            </div>
+                        `;
+                    }
+                    else if (bloc.type === 'imageCompare') {
+                        container.innerHTML += `
+                            <div class="my-6 text-center">
+                                <div class="relative w-full md:w-[700px] mx-auto rounded shadow-sm border border-stone-200 bg-stone-50 p-2 group cursor-pointer">
+                                    <img src="${bloc.annotee}" alt="Manuscrit annoté" class="absolute top-2 left-2 right-2 bottom-2 w-[calc(100%-1rem)] h-[calc(100%-1rem)] object-contain rounded">
+                                    <img src="${bloc.original}" alt="Manuscrit original" class="relative z-10 w-full h-auto object-contain rounded bg-stone-50 transition-opacity duration-500 group-hover:opacity-0">
+                                </div>
+                                <p class="text-xs text-stone-500 mt-2 italic">${bloc.legende || ''}</p>
+                            </div>
+                        `;
+                    }
+                    else if (bloc.type === 'encadre') {
+                        container.innerHTML += `
+                            <div class="bg-amber-100 border-l-4 border-amber-600 p-5 rounded-r-lg my-6 shadow-sm">
+                                ${bloc.titre ? `<h4 class="font-bold text-amber-900 mb-2">${bloc.titre}</h4>` : ''}
+                                <p class="text-amber-900 leading-relaxed">${formaterTexte(bloc.content)}</p>
+                            </div>
+                        `;
+                    }
+                    else if (bloc.type === 'citation') {
+                        container.innerHTML += `
+                            <blockquote class="italic text-stone-700 border-l-4 border-stone-300 pl-4 py-2 my-6 bg-stone-50 rounded-r text-justify">
+                                « ${formaterTexte(bloc.content)} »
+                                ${bloc.auteur ? `<footer class="mt-2 text-sm font-bold text-stone-500">— ${bloc.auteur}</footer>` : ''}
+                            </blockquote>
+                        `;
+                    }
+                    else if (bloc.type === 'bilingue') {
+                        container.innerHTML += `
+                            <div class="my-6 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 bg-white p-6 rounded-lg shadow-sm border border-stone-200">
+                                <div class="text-stone-700 italic border-l-4 border-amber-700 pl-4 text-justify">
+                                    ${formaterTexte(bloc.latin)}
+                                </div>
+                                <div class="text-stone-700 md:border-l border-stone-200 md:pl-8 text-justify">
+                                    ${formaterTexte(bloc.francais)}
+                                </div>
+                            </div>
+                        `;
+                    }
+                    else if (bloc.type === 'youtube') {
+                        container.innerHTML += `
+                            <div class="my-8 max-w-3xl mx-auto shadow-md rounded-lg overflow-hidden border border-stone-200">
+                                <iframe class="w-full aspect-video" src="https://www.youtube.com/embed/${bloc.id}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            </div>
+                        `;
+                    }
+                    else if (bloc.type === 'accordeon') {
+                        const couleurTitre = bloc.couleurTitre ? bloc.couleurTitre : '#d97706';
+                        const htmlTraduction = bloc.traduction ? `<div class="text-sm md:text-base font-normal mt-1 opacity-90">${bloc.traduction}</div>` : '';
+                        const contenuFormate = formaterTexte(bloc.contenu);
+
+                        container.innerHTML += `
+                            <details class="group mb-4 bg-white rounded-lg shadow-sm border border-stone-200">
+                                <summary class="list-none cursor-pointer p-4 font-serif hover:bg-stone-50 transition flex justify-between items-center outline-none [&::-webkit-details-marker]:hidden" style="color: ${couleurTitre};">
+                                    <div>
+                                        <div class="font-bold text-xl md:text-2xl">${bloc.titre}</div>
+                                        ${htmlTraduction}
+                                    </div>
+                                    <span class="text-stone-400 group-open:rotate-180 transition-transform duration-300 text-xl ml-4">▼</span>
+                                </summary>
+                                <div class="p-6 border-t border-stone-100 text-stone-700 leading-relaxed bg-stone-50/50">
+                                    ${contenuFormate}
+                                </div>
+                            </details>
+                        `;
+                    }
+                });
+
+                if (tableauNotes.length > 0) {
+                    let htmlNotes = `
+                        <div class="mt-12 pt-6 border-t border-stone-200">
+                            <h4 class="font-serif font-bold text-lg text-stone-900 mb-4">Notes et références</h4>
+                            <ol class="space-y-2 text-sm text-stone-600 list-decimal list-inside">
+                    `;
+                    tableauNotes.forEach((note, index) => {
+                        const num = index + 1;
+                        htmlNotes += `
+                            <li id="note-${containerId}-${num}" class="leading-relaxed">
+                                <span class="inline">${note}</span>
+                                <a href="#appel-${containerId}-${num}" class="text-amber-700 font-bold hover:underline ml-2" title="Retourner au texte">^</a>
+                            </li>
+                        `;
+                    });
+                    htmlNotes += `</ol></div>`;
+                    container.innerHTML += htmlNotes;
+                }
+            } catch(error) {
+                console.error("Erreur de rendu pour " + containerId, error);
+            }
+        }
+
+        // ==========================================
+        // MOTEUR DU TABLEAU DES NOTATIONS
+        // ==========================================
+        let manuscritsAnalyse = []; // Stockage global pour le filtre
+
+        function initialiserTableauNotations() {
+            if (!siteData.donneesNotationsBrutes) return;
+
+            const lignes = siteData.donneesNotationsBrutes.split('\n');
+            const balises = siteData.balisesNotations || {};
+            let msCourant = null;
+
+            const traduire = (texte) => {
+                const t = (texte || '').trim();
+                return balises[t] ? balises[t] : t;
+            };
+
+            lignes.forEach(ligne => {
+                ligne = ligne.trim();
+                if (!ligne || ligne.startsWith('//')) return;
+
+                if (ligne.startsWith('-')) {
+                    const cols = ligne.substring(1).split(';');
+                    if (msCourant && cols.length >= 5) {
+                        msCourant.parties.push({
+                            folios: traduire(cols[0]), notation: traduire(cols[1]),
+                            variante: traduire(cols[2]), remarques: traduire(cols[3]), lien: traduire(cols[4])
+                        });
+                    }
+                } else {
+                    const cols = ligne.split(';');
+                    if (cols.length >= 11) {
+                        msCourant = {
+                            ville: traduire(cols[0]), lieu: traduire(cols[1]), cote: traduire(cols[2]),
+                            date: traduire(cols[3]), origine: traduire(cols[4]), type: traduire(cols[5]),
+                            parties: [{
+                                folios: traduire(cols[6]), notation: traduire(cols[7]),
+                                variante: traduire(cols[8]), remarques: traduire(cols[9]), lien: traduire(cols[10])
+                            }]
+                        };
+                        manuscritsAnalyse.push(msCourant);
+                    }
+                }
+            });
+
+            afficherTableauNotations(manuscritsAnalyse);
+        }
+
+        function afficherTableauNotations(manuscrits) {
+            const tbody = document.getElementById('tbody-notations');
+            const compteur = document.getElementById('compteur-notations');
+            if (!tbody) return;
+
+            tbody.innerHTML = '';
+            compteur.textContent = manuscrits.length + " document(s)";
+
+            manuscrits.forEach((ms, msIndex) => {
+                const rowspan = ms.parties.length;
+                const couleurLigne = msIndex % 2 === 0 ? 'bg-white' : 'bg-stone-50/50';
+
+                ms.parties.forEach((partie, indexPartie) => {
+                    let htmlTr = `<tr class="${couleurLigne} hover:bg-amber-50/30 transition-colors">`;
+                    
+                    if (indexPartie === 0) {
+                        htmlTr += `<td class="p-3 border-r border-stone-200 align-top" rowspan="${rowspan}">${ms.ville}</td>`;
+                        htmlTr += `<td class="p-3 border-r border-stone-200 align-top" rowspan="${rowspan}">${ms.lieu}</td>`;
+                        htmlTr += `<td class="p-3 border-r border-stone-200 align-top font-bold text-stone-900" rowspan="${rowspan}">${ms.cote}</td>`;
+                        htmlTr += `<td class="p-3 border-r border-stone-200 align-top" rowspan="${rowspan}">${ms.date}</td>`;
+                        htmlTr += `<td class="p-3 border-r border-stone-200 align-top" rowspan="${rowspan}">${ms.origine}</td>`;
+                        htmlTr += `<td class="p-3 border-r border-stone-200 align-top bg-amber-50/30 font-medium text-amber-900" rowspan="${rowspan}">${ms.type}</td>`;
+                    }
+                    
+                    htmlTr += `<td class="p-3 border-r border-stone-200 text-stone-600">${partie.folios}</td>`;
+                    htmlTr += `<td class="p-3 border-r border-stone-200 font-bold text-stone-800">${partie.notation}</td>`;
+                    htmlTr += `<td class="p-3 border-r border-stone-200 text-stone-600">${partie.variante}</td>`;
+                    htmlTr += `<td class="p-3 border-r border-stone-200 text-xs text-stone-500">${partie.remarques}</td>`;
+                    
+                    let lienHtml = partie.lien;
+                    if (lienHtml.includes('[lien=')) {
+                        lienHtml = lienHtml.replace(/\[lien=(.*?)\]/, '<a onclick="showPage(\'$1\')" class="text-amber-700 hover:text-amber-900 hover:underline cursor-pointer font-bold">Ouvrir</a>');
+                    } else if (lienHtml.startsWith('http')) {
+                        lienHtml = `<a href="${lienHtml}" target="_blank" class="text-amber-700 hover:text-amber-900 hover:underline font-bold">Lien ↗</a>`;
+                    }
+                    htmlTr += `<td class="p-3">${lienHtml}</td></tr>`;
+                    
+                    tbody.innerHTML += htmlTr;
+                });
+            });
+        }
+
+        function filtrerNotations() {
+            const input = document.getElementById('recherche-notations').value.toLowerCase();
+            const motsCles = input.split(' ').filter(mot => mot.length > 0);
+
+            const resultats = manuscritsAnalyse.filter(ms => {
+                const texteGlobal = [
+                    ms.ville, ms.lieu, ms.cote, ms.date, ms.origine, ms.type,
+                    ...ms.parties.map(p => `${p.folios} ${p.notation} ${p.variante} ${p.remarques}`)
+                ].join(' ').toLowerCase();
+                return motsCles.every(mot => texteGlobal.includes(mot));
+            });
+
+            afficherTableauNotations(resultats);
+        }
+
         // ==========================================
         // INITIALISATION DES DONNÉES
         // ==========================================
@@ -614,17 +1005,13 @@
                 let analyseData = siteData.lecture_guidee || siteData.analyseChant;
                 if (analyseData) {
                     const wrapper = document.getElementById('analyse-wrapper');
-                    // On crée une mémoire globale pour couper le son précédent si on va trop vite
                     window.sonEnCours = null;
 
                     if (wrapper) {
                         wrapper.innerHTML = ""; 
-                        
                         let listeAnalyses = Array.isArray(analyseData) ? analyseData : [analyseData];
 
                         listeAnalyses.forEach((data) => {
-                            
-                            // SI C'EST UN SÉPARATEUR
                             if (data.type === 'separateur') {
                                 const sepBlock = document.createElement('div');
                                 sepBlock.className = "mt-12 mb-8 text-center";
@@ -636,7 +1023,6 @@
                                 return; 
                             }
 
-                            // SINON, C'EST UNE IMAGE DE LECTURE GUIDÉE CLASSIQUE
                             const block = document.createElement('div');
                             block.className = "bg-white p-8 rounded-lg shadow-sm border border-stone-200 space-y-6";
 
@@ -678,11 +1064,10 @@
                                 const tooltip = block.querySelector('.interactive-tooltip');
 
                                 data.zones.forEach((zone) => {
-                                    // PRÉCHARGEMENT AUDIO INVISIBLE
                                     let zoneAudio = null;
                                     if (zone.audio) {
                                         zoneAudio = new Audio(zone.audio);
-                                        zoneAudio.preload = "auto"; // Ordonne au navigateur de télécharger le son immédiatement
+                                        zoneAudio.preload = "auto";
                                     }
 
                                     const hotspot = document.createElement('div');
@@ -696,14 +1081,11 @@
                                         tooltip.textContent = zone.nom;
                                         tooltip.style.opacity = '1';
 
-                                        // DÉCLENCHEMENT DU SON
                                         if (zoneAudio) {
                                             if (window.sonEnCours) {
-                                                // Coupe le son du neume précédent si on va très vite
                                                 window.sonEnCours.pause();
                                                 window.sonEnCours.currentTime = 0; 
                                             }
-                                            // Joue le nouveau son
                                             zoneAudio.play().catch(e => console.log("Lecture bloquée par le navigateur", e));
                                             window.sonEnCours = zoneAudio;
                                         }
@@ -719,7 +1101,6 @@
 
                                     hotspot.addEventListener('mouseleave', () => {
                                         tooltip.style.opacity = '0';
-                                        // Le son continue de jouer jusqu'au bout, à moins que la souris ne touche un autre neume.
                                     });
 
                                     container.appendChild(hotspot);
@@ -773,417 +1154,11 @@
                 }
             } catch(e) { console.error("Erreur Fichiers:", e); }
 
-            // =========================================================
-            // 6. FONCTION UNIVERSELLE ULTRA-ROBUSTE (Mise à jour finale)
-            // =========================================================
-            function genererPageDynamique(containerId, donneesArray) {
-                try {
-                    const container = document.getElementById(containerId);
-                    if (!container || !donneesArray) return; 
-                    
-                    let data = donneesArray;
-                    if (!Array.isArray(donneesArray)) {
-                        data = [donneesArray];
-                    }
-
-                    let tableauNotes = [];
-                    let compteurNotes = 1;
-
-                    function formaterTexte(texte) {
-                        if (!texte) return "";
-                        let res = String(texte);
-                        
-                        // Liens internes
-                        while (res.includes("[lien=") && res.includes("[/lien]")) {
-                            let indexDebut = res.indexOf("[lien=");
-                            let indexFin = res.indexOf("[/lien]");
-                            if (indexDebut !== -1 && indexFin !== -1 && indexDebut < indexFin) {
-                                let indexFinCrochet = res.indexOf("]", indexDebut);
-                                if (indexFinCrochet !== -1 && indexFinCrochet < indexFin) {
-                                    let texteAvant = res.substring(0, indexDebut);
-                                    let pageCible = res.substring(indexDebut + 6, indexFinCrochet);
-                                    let texteLien = res.substring(indexFinCrochet + 1, indexFin);
-                                    let texteApres = res.substring(indexFin + 7);
-                                    let boutonHTML = '<a onclick="showPage(\'' + pageCible + '\')" class="text-amber-700 font-bold hover:text-amber-900 hover:underline cursor-pointer transition-colors">' + texteLien + '</a>';
-                                    res = texteAvant + boutonHTML + texteApres;
-                                } else { break; }
-                            } else { break; }
-                        }
-
-                        // Lien E-codices
-                        while (res.includes("[p.") && res.includes("]")) {
-                            let indexDebut = res.indexOf("[p.");
-                            let indexFin = res.indexOf("]", indexDebut);
-                            if (indexDebut !== -1 && indexFin !== -1 && indexFin > indexDebut) {
-                                let texteAvant = res.substring(0, indexDebut);
-                                let pageId = res.substring(indexDebut + 3, indexFin);
-                                let texteApres = res.substring(indexFin + 1);
-                                let lienEcodices = '<a href="https://www.e-codices.unifr.ch/fr/sbe/0121/' + pageId + '/0/" target="_blank" class="ml-2 text-sm text-amber-700 hover:text-amber-900 underline font-medium">p.' + pageId + '</a>';
-                                res = texteAvant + lienEcodices + texteApres;
-                            } else { break; }
-                        }
-
-                        // Notes de bas de page
-                        while (res.includes("[note]") && res.includes("[/note]")) {
-                            let indexDebut = res.indexOf("[note]");
-                            let indexFin = res.indexOf("[/note]");
-                            if (indexDebut !== -1 && indexFin !== -1 && indexDebut < indexFin) {
-                                let texteAvant = res.substring(0, indexDebut);
-                                let texteNote = res.substring(indexDebut + 6, indexFin);
-                                let texteApres = res.substring(indexFin + 7);
-                                let num = compteurNotes;
-                                tableauNotes.push(texteNote);
-                                compteurNotes++;
-                                let appel = '<sup id="appel-' + containerId + '-' + num + '" class="ml-0.5"><a href="#note-' + containerId + '-' + num + '" class="text-amber-700 font-bold text-xs hover:text-amber-900 transition-colors">' + num + '</a></sup>';
-                                res = texteAvant + appel + texteApres;
-                            } else { break; }
-                        }
-                        
-                        // NOUVEAU : Infobulle Lexique
-                        while (res.includes("[lexique=") && res.includes("[/lexique]")) {
-                            let indexDebut = res.indexOf("[lexique=");
-                            let indexFin = res.indexOf("[/lexique]");
-                            if (indexDebut !== -1 && indexFin !== -1 && indexDebut < indexFin) {
-                                let indexFinCrochet = res.indexOf("]", indexDebut);
-                                if (indexFinCrochet !== -1 && indexFinCrochet < indexFin) {
-                                    let texteAvant = res.substring(0, indexDebut);
-                                    let definition = res.substring(indexDebut + 9, indexFinCrochet);
-                                    let mot = res.substring(indexFinCrochet + 1, indexFin);
-                                    let texteApres = res.substring(indexFin + 10);
-                                    let baliseLexique = `<span title="${definition}" class="cursor-help border-b-2 border-dotted border-amber-600 text-amber-800 font-medium">${mot}</span>`;
-                                    res = texteAvant + baliseLexique + texteApres;
-                                } else { break; }
-                            } else { break; }
-                        }
-
-                        // NOUVEAU : Icône dans le texte
-                        while (res.includes("[icone=") && res.includes("]")) {
-                            let indexDebut = res.indexOf("[icone=");
-                            let indexFin = res.indexOf("]", indexDebut);
-                            if (indexDebut !== -1 && indexFin !== -1) {
-                                let texteAvant = res.substring(0, indexDebut);
-                                let cheminImg = res.substring(indexDebut + 7, indexFin);
-                                let texteApres = res.substring(indexFin + 1);
-                                let baliseIcone = `<img src="${cheminImg}" class="inline-block h-6 w-auto mx-1 align-middle" alt="icone">`;
-                                res = texteAvant + baliseIcone + texteApres;
-                            } else { break; }
-                        }
-                        // NOUVEAU : Mettre en couleur
-                        while (res.includes("[couleur=") && res.includes("[/couleur]")) {
-                            let indexDebut = res.indexOf("[couleur=");
-                            let indexFin = res.indexOf("[/couleur]");
-                            if (indexDebut !== -1 && indexFin !== -1 && indexDebut < indexFin) {
-                                let indexFinCrochet = res.indexOf("]", indexDebut);
-                                if (indexFinCrochet !== -1 && indexFinCrochet < indexFin) {
-                                    let texteAvant = res.substring(0, indexDebut);
-                                    let couleur = res.substring(indexDebut + 9, indexFinCrochet);
-                                    let texte = res.substring(indexFinCrochet + 1, indexFin);
-                                    let texteApres = res.substring(indexFin + 10);
-                                    let baliseCouleur = `<span style="color: ${couleur}; font-weight: 500;">${texte}</span>`;
-                                    res = texteAvant + baliseCouleur + texteApres;
-                                } else { break; }
-                            } else { break; }
-                        }
-                        // NOUVEAU : Mini-bouton Audio inline
-                        while (res.includes("[son=") && res.includes("]")) {
-                            let indexDebut = res.indexOf("[son=");
-                            let indexFin = res.indexOf("]", indexDebut);
-                            if (indexDebut !== -1 && indexFin !== -1) {
-                                let texteAvant = res.substring(0, indexDebut);
-                                let cheminAudio = res.substring(indexDebut + 5, indexFin);
-                                let texteApres = res.substring(indexFin + 1);
-                                // Crée un petit bouton rond cliquable avec une icône "Play"
-                                let baliseSon = `<button onclick="new Audio('${cheminAudio}').play()" class="inline-flex items-center justify-center w-6 h-6 bg-amber-100 text-amber-800 rounded-full hover:bg-amber-200 hover:scale-110 transition-all mx-1 align-middle focus:outline-none shadow-sm" title="Écouter"><svg class="w-3 h-3 ml-0.5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" fill-rule="evenodd"></path></svg></button>`;
-                                res = texteAvant + baliseSon + texteApres;
-                            } else { break; }
-                        }
-
-                        return res;
-                    }
-
-                    container.innerHTML = "";
-
-                    data.forEach((bloc) => {
-                        if (bloc.type === 'text') {
-                            container.innerHTML += `<p class="mb-6">${formaterTexte(bloc.content)}</p>`;
-                        }
-                        else if (bloc.type === 'titre') {
-                            // On ajoute scroll-mt-28 pour que le titre ne soit pas caché sous le menu fixe quand on clique sur le lien !
-                            let ancre = bloc.id ? `id="${bloc.id}"` : '';
-                            container.innerHTML += `<h3 ${ancre} class="text-xl font-serif font-bold text-stone-900 mt-8 mb-4 scroll-mt-28">${formaterTexte(bloc.content)}</h3>`;
-                        }
-                        else if (bloc.type === 'separateur') {
-                            let ancre = bloc.id ? `id="${bloc.id}"` : '';
-                            container.innerHTML += `
-                                <div ${ancre} class="mt-12 mb-8 text-center scroll-mt-28">
-                                    <hr class="border-stone-300 mb-6">
-                                    <h2 class="text-2xl md:text-3xl font-serif font-bold text-amber-800">${formaterTexte(bloc.content)}</h2>
-                                </div>
-                            `;
-                        }
-                        // NOUVEAU : LE SOMMAIRE
-                        else if (bloc.type === 'sommaire') {
-                            let sommaireHtml = `<div class="bg-stone-50 border border-stone-200 p-6 rounded-lg my-8 shadow-sm max-w-2xl">`;
-                            sommaireHtml += `<h3 class="font-serif font-bold text-stone-900 text-xl mb-4 border-b border-stone-200 pb-2">Sommaire</h3>`;
-                            sommaireHtml += `<ul class="space-y-1.5">`;
-                            
-                            if (bloc.items && Array.isArray(bloc.items)) {
-                                bloc.items.forEach(item => {
-                                    let styleClass = '';
-                                    // GESTION DES 4 NIVEAUX DE DÉCALAGE
-                                    if (item.niveau === 1) {
-                                        styleClass = 'font-bold text-amber-900 mt-3 pt-2';
-                                    } else if (item.niveau === 2) {
-                                        styleClass = 'ml-6 text-stone-800 font-medium border-l-2 border-amber-200 pl-3';
-                                    } else if (item.niveau === 3) {
-                                        styleClass = 'ml-12 text-stone-600 text-sm border-l-2 border-stone-200 pl-3';
-                                    } else if (item.niveau >= 4) {
-                                        styleClass = 'ml-16 text-stone-500 text-sm italic border-l-2 border-stone-200 pl-3';
-                                    }
-                                    
-                                    sommaireHtml += `<li class="${styleClass}">
-                                        <a href="#${item.id}" class="hover:text-amber-600 hover:underline transition-colors block">${item.label}</a>
-                                    </li>`;
-                                });
-                            }
-                            sommaireHtml += `</ul></div>`;
-                            container.innerHTML += sommaireHtml;
-                        }
-                        else if (bloc.type === 'image') {
-                            container.innerHTML += `
-                                <div class="my-6 text-center">
-                                    <img src="${bloc.src}" alt="Illustration" class="w-full md:w-[700px] h-auto object-contain mx-auto rounded shadow-sm border border-stone-200 bg-stone-50 p-2">
-                                    <p class="text-xs text-stone-500 mt-2 italic">${bloc.legende || ''}</p>
-                                </div>
-                            `;
-                        }
-                        else if (bloc.type === 'galerie') {
-                            let imagesHtml = '';
-                            bloc.images.forEach(img => {
-                                imagesHtml += `<img src="${img}" alt="Pièce" class="h-24 w-auto object-contain rounded border border-stone-200 shadow-sm bg-white p-1">`;
-                            });
-                            container.innerHTML += `
-                                <div class="my-6 flex flex-wrap justify-center gap-4">
-                                    ${imagesHtml}
-                                </div>
-                            `;
-                        }
-                        else if (bloc.type === 'imageCompare') {
-                            container.innerHTML += `
-                                <div class="my-6 text-center">
-                                    <div class="relative w-full md:w-[700px] mx-auto rounded shadow-sm border border-stone-200 bg-stone-50 p-2 group cursor-pointer">
-                                        <img src="${bloc.annotee}" alt="Manuscrit annoté" class="absolute top-2 left-2 right-2 bottom-2 w-[calc(100%-1rem)] h-[calc(100%-1rem)] object-contain rounded">
-                                        <img src="${bloc.original}" alt="Manuscrit original" class="relative z-10 w-full h-auto object-contain rounded bg-stone-50 transition-opacity duration-500 group-hover:opacity-0">
-                                    </div>
-                                    <p class="text-xs text-stone-500 mt-2 italic">${bloc.legende || ''}</p>
-                                </div>
-                            `;
-                        }
-                        // NOUVEAU : Encadré
-                        else if (bloc.type === 'encadre') {
-                            container.innerHTML += `
-                                <div class="bg-amber-100 border-l-4 border-amber-600 p-5 rounded-r-lg my-6 shadow-sm">
-                                    ${bloc.titre ? `<h4 class="font-bold text-amber-900 mb-2">${bloc.titre}</h4>` : ''}
-                                    <p class="text-amber-900 leading-relaxed">${formaterTexte(bloc.content)}</p>
-                                </div>
-                            `;
-                        }
-                        // NOUVEAU : Citation
-                        else if (bloc.type === 'citation') {
-                            container.innerHTML += `
-                                <blockquote class="italic text-stone-700 border-l-4 border-stone-300 pl-4 py-2 my-6 bg-stone-50 rounded-r text-justify">
-                                    « ${formaterTexte(bloc.content)} »
-                                    ${bloc.auteur ? `<footer class="mt-2 text-sm font-bold text-stone-500">— ${bloc.auteur}</footer>` : ''}
-                                </blockquote>
-                            `;
-                        }
-                        // NOUVEAU : Bloc Bilingue
-                        else if (bloc.type === 'bilingue') {
-                            container.innerHTML += `
-                                <div class="my-6 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 bg-white p-6 rounded-lg shadow-sm border border-stone-200">
-                                    <div class="text-stone-700 italic border-l-4 border-amber-700 pl-4 text-justify">
-                                        ${formaterTexte(bloc.latin)}
-                                    </div>
-                                    <div class="text-stone-700 md:border-l border-stone-200 md:pl-8 text-justify">
-                                        ${formaterTexte(bloc.francais)}
-                                    </div>
-                                </div>
-                            `;
-                        }
-                        else if (bloc.type === 'youtube') {
-                            container.innerHTML += `
-                                <div class="my-8 max-w-3xl mx-auto shadow-md rounded-lg overflow-hidden border border-stone-200">
-                                    <iframe class="w-full aspect-video" src="https://www.youtube.com/embed/${bloc.id}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                                </div>
-                            `;
-                        }
-                        else if (bloc.type === 'accordeon') {
-                            const couleurTitre = bloc.couleurTitre ? bloc.couleurTitre : '#d97706';
-                            const htmlTraduction = bloc.traduction ? `<div class="text-sm md:text-base font-normal mt-1 opacity-90">${bloc.traduction}</div>` : '';
-                            const contenuFormate = formaterTexte(bloc.contenu);
-
-                            container.innerHTML += `
-                                <details class="group mb-4 bg-white rounded-lg shadow-sm border border-stone-200">
-                                    <summary class="list-none cursor-pointer p-4 font-serif hover:bg-stone-50 transition flex justify-between items-center outline-none [&::-webkit-details-marker]:hidden" style="color: ${couleurTitre};">
-                                        <div>
-                                            <div class="font-bold text-xl md:text-2xl">${bloc.titre}</div>
-                                            ${htmlTraduction}
-                                        </div>
-                                        <span class="text-stone-400 group-open:rotate-180 transition-transform duration-300 text-xl ml-4">▼</span>
-                                    </summary>
-                                    <div class="p-6 border-t border-stone-100 text-stone-700 leading-relaxed bg-stone-50/50">
-                                        ${contenuFormate}
-                                    </div>
-                                </details>
-                            `;
-                        }
-                    });
-
-                    if (tableauNotes.length > 0) {
-                        let htmlNotes = `
-                            <div class="mt-12 pt-6 border-t border-stone-200">
-                                <h4 class="font-serif font-bold text-lg text-stone-900 mb-4">Notes et références</h4>
-                                <ol class="space-y-2 text-sm text-stone-600 list-decimal list-inside">
-                        `;
-                        tableauNotes.forEach((note, index) => {
-                            const num = index + 1;
-                            htmlNotes += `
-                                <li id="note-${containerId}-${num}" class="leading-relaxed">
-                                    <span class="inline">${note}</span>
-                                    <a href="#appel-${containerId}-${num}" class="text-amber-700 font-bold hover:underline ml-2" title="Retourner au texte">^</a>
-                                </li>
-                            `;
-                        });
-                        htmlNotes += `</ol></div>`;
-                        container.innerHTML += htmlNotes;
-                    }
-                } catch(error) {
-                    console.error("Erreur de rendu pour " + containerId, error);
-                }
-            }
-            // ==========================================
-        // MOTEUR DU TABLEAU DES NOTATIONS
-        // ==========================================
-        let manuscritsAnalyse = []; // Stockage global pour le filtre
-
-        function initialiserTableauNotations() {
-            if (!siteData.donneesNotationsBrutes) return;
-
-            const lignes = siteData.donneesNotationsBrutes.split('\n');
-            const balises = siteData.balisesNotations || {};
-            let msCourant = null;
-
-            // Fonction pour traduire une balise si elle existe
-            const traduire = (texte) => {
-                const t = (texte || '').trim();
-                return balises[t] ? balises[t] : t;
-            };
-
-            // 1. Décodage du texte brut en objet structuré
-            lignes.forEach(ligne => {
-                ligne = ligne.trim();
-                if (!ligne || ligne.startsWith('//')) return;
-
-                if (ligne.startsWith('-')) {
-                    // Sous-ligne (nouvelle notation pour le même manuscrit)
-                    const cols = ligne.substring(1).split(';');
-                    if (msCourant && cols.length >= 5) {
-                        msCourant.parties.push({
-                            folios: traduire(cols[0]), notation: traduire(cols[1]),
-                            variante: traduire(cols[2]), remarques: traduire(cols[3]), lien: traduire(cols[4])
-                        });
-                    }
-                } else {
-                    // Nouvelle ligne principale
-                    const cols = ligne.split(';');
-                    if (cols.length >= 11) {
-                        msCourant = {
-                            ville: traduire(cols[0]), lieu: traduire(cols[1]), cote: traduire(cols[2]),
-                            date: traduire(cols[3]), origine: traduire(cols[4]), type: traduire(cols[5]),
-                            parties: [{
-                                folios: traduire(cols[6]), notation: traduire(cols[7]),
-                                variante: traduire(cols[8]), remarques: traduire(cols[9]), lien: traduire(cols[10])
-                            }]
-                        };
-                        manuscritsAnalyse.push(msCourant);
-                    }
-                }
-            });
-
-            afficherTableauNotations(manuscritsAnalyse);
-        }
-
-        // 2. Affichage et fusion des cellules (rowspan)
-        function afficherTableauNotations(manuscrits) {
-            const tbody = document.getElementById('tbody-notations');
-            const compteur = document.getElementById('compteur-notations');
-            if (!tbody) return;
-
-            tbody.innerHTML = '';
-            compteur.textContent = manuscrits.length + " document(s)";
-
-            manuscrits.forEach((ms, msIndex) => {
-                const rowspan = ms.parties.length;
-                const couleurLigne = msIndex % 2 === 0 ? 'bg-white' : 'bg-stone-50/50';
-
-                ms.parties.forEach((partie, indexPartie) => {
-                    let htmlTr = `<tr class="${couleurLigne} hover:bg-amber-50/30 transition-colors">`;
-                    
-                    // Colonnes fusionnées (générées uniquement sur la 1ère sous-ligne)
-                    if (indexPartie === 0) {
-                        htmlTr += `<td class="p-3 border-r border-stone-200 align-top" rowspan="${rowspan}">${ms.ville}</td>`;
-                        htmlTr += `<td class="p-3 border-r border-stone-200 align-top" rowspan="${rowspan}">${ms.lieu}</td>`;
-                        htmlTr += `<td class="p-3 border-r border-stone-200 align-top font-bold text-stone-900" rowspan="${rowspan}">${ms.cote}</td>`;
-                        htmlTr += `<td class="p-3 border-r border-stone-200 align-top" rowspan="${rowspan}">${ms.date}</td>`;
-                        htmlTr += `<td class="p-3 border-r border-stone-200 align-top" rowspan="${rowspan}">${ms.origine}</td>`;
-                        htmlTr += `<td class="p-3 border-r border-stone-200 align-top bg-amber-50/30 font-medium text-amber-900" rowspan="${rowspan}">${ms.type}</td>`;
-                    }
-                    
-                    // Colonnes spécifiques à la sous-partie
-                    htmlTr += `<td class="p-3 border-r border-stone-200 text-stone-600">${partie.folios}</td>`;
-                    htmlTr += `<td class="p-3 border-r border-stone-200 font-bold text-stone-800">${partie.notation}</td>`;
-                    htmlTr += `<td class="p-3 border-r border-stone-200 text-stone-600">${partie.variante}</td>`;
-                    htmlTr += `<td class="p-3 border-r border-stone-200 text-xs text-stone-500">${partie.remarques}</td>`;
-                    
-                    // Formatage automatique des liens
-                    let lienHtml = partie.lien;
-                    if (lienHtml.includes('[lien=')) {
-                        lienHtml = lienHtml.replace(/\[lien=(.*?)\]/, '<a onclick="showPage(\'$1\')" class="text-amber-700 hover:text-amber-900 hover:underline cursor-pointer font-bold">Ouvrir</a>');
-                    } else if (lienHtml.startsWith('http')) {
-                        lienHtml = `<a href="${lienHtml}" target="_blank" class="text-amber-700 hover:text-amber-900 hover:underline font-bold">Lien ↗</a>`;
-                    }
-                    htmlTr += `<td class="p-3">${lienHtml}</td></tr>`;
-                    
-                    tbody.innerHTML += htmlTr;
-                });
-            });
-        }
-
-        // 3. Filtrage en temps réel avec mots multiples ("XIe Saint-Gall")
-        function filtrerNotations() {
-            const input = document.getElementById('recherche-notations').value.toLowerCase();
-            const motsCles = input.split(' ').filter(mot => mot.length > 0);
-
-            const resultats = manuscritsAnalyse.filter(ms => {
-                // On regroupe tout le texte du manuscrit et de ses sous-parties
-                const texteGlobal = [
-                    ms.ville, ms.lieu, ms.cote, ms.date, ms.origine, ms.type,
-                    ...ms.parties.map(p => `${p.folios} ${p.notation} ${p.variante} ${p.remarques}`)
-                ].join(' ').toLowerCase();
-
-                // Le manuscrit est gardé si TOUS les mots-clés tapés s'y trouvent
-                return motsCles.every(mot => texteGlobal.includes(mot));
-            });
-
-            afficherTableauNotations(resultats);
-        }
-
-            // --- APPEL DE TOUTES LES PAGES ---
+            // --- APPEL DE TOUTES LES PAGES CLASSIQUES ---
             genererPageDynamique('lettres-apprendre-contenu', siteData.lettresApprendre || siteData.en_apprendre_plus);
             genererPageDynamique('historique-contenu', siteData.historique);
             genererPageDynamique('manuscrits-contenu', siteData.se_reperer || siteData.seReperer);
             genererPageDynamique('types-pieces-contenu', siteData.types_de_pieces || siteData.typesPieces);
-            genererPageDynamique('notations-contenu', siteData.notations);
             genererPageDynamique('modes-contenu', siteData.modes);
             genererPageDynamique('psalmodies-contenu', siteData.psalmodies);
             genererPageDynamique('monocorde-contenu', siteData.monocorde);
@@ -1194,6 +1169,9 @@
             genererPageDynamique('manuscrit-carre-contenu', siteData.manuscrit_carre || siteData.manuscritCarre);
             genererPageDynamique('carre-manuscrit-contenu', siteData.carre_manuscrit || siteData.carreManuscrit);
             genererPageDynamique('je-debute-contenu', siteData.je_debute || siteData.jeDebute);
+
+            // --- INITIALISATION DU NOUVEAU TABLEAU DES NOTATIONS ---
+            initialiserTableauNotations();
             
         });
     </script>
