@@ -1,8 +1,8 @@
 siteData.balisesNotations = {
     // Villes
-    "par": "Paris", "sg": "Saint-Gall", "ein": "Einsiedeln", "metz": "Metz",
+    "par": "Paris", "sg": "Saint-Gall", "ein": "Einsiedeln", "metz": "Metz", "bra":"Braga",
     // Lieux
-    "bnf": "Bibliothèque nationale de France", "ba": "Bibliothèque abbatiale",
+    "bnf": "Bibliothèque nationale de France", "ba": "Bibliothèque abbatiale","ardis":"Archives du District",
     // Types
     "ant": "Antiphonaire", "grad": "Graduel", "brev": "Bréviaire", "miss": "Missel",
     //Dates
@@ -18,12 +18,11 @@ siteData.balisesNotations = {
 siteData.donneesNotationsBrutes = `
 // Ville ; Lieu ; Cote ; Date ; Origine ; Type ; Folios ; Notation ; Variante ; Remarques ; Lien
 
-Albi ; Méd. P. Amalric; 15 (olim 152); 1112; ; ant; 164r-170v; aq; nnac; défunts,Lazare, Baudile; https://cecilia.mediatheques.grand-albigeois.fr/viewer/121/?offset=19#page=1&viewer=picture&o=&n=0&q=
+Albi ; Méd. P. Amalric ; 15 (olim 152) ; 1112 ; ; ant ; 164r-170v ; aq ; nnac ; défunts,Lazare, Baudile ; https://cecilia.mediatheques.grand-albigeois.fr/viewer/121/?offset=19#page=1&viewer=picture&o=&n=0&q=
 
-Azurara;Santa Casa de M. Arch.;MM6;1213;;missel;;aq;nnac;;https://pemdatabase.eu/gallery-item/22280
+Azurara ; Santa Casa de M. Arch.; MM6 ; 1213 ;; missel ;; aq ;nnac ;; https://pemdatabase.eu/gallery-item/22280
 
-Barcelone;Bibl. Orfeo Catala; 12;;graduel;;aq;nnac;;https://mdc.csuc.cat/digital/collection/MMautors/id/587/rec/10
+Barcelone ; Bibl. Orfeo Catala ; 12 ;; graduel ;; aq ; nnac ;; https://mdc.csuc.cat/digital/collection/MMautors/id/587/rec/10
 
-Bordeaux;Arch. Départ.;G 902;11;Collégiale Saint-Emilion;ant;;aq;nnac;office des morts;https://archives.gironde.fr/ark:/25651/vta896c30bd450dabd4/daogrp/0#id:931416351?gallery=true&center=1346.000,-922.000&zoom=7&rotation=0.000&brightness=100.00&contrast=100.00
+Bordeaux ; Arch. Départ. ; G 902 ; 11 ; Collégiale Saint-Emilion ; ant ;; aq ; nnac;office des morts ; https://archives.gironde.fr/ark:/25651/vta896c30bd450dabd4/daogrp/0#id:931416351?gallery=true&center=1346.000,-922.000&zoom=7&rotation=0.000&brightness=100.00&contrast=100.00
 
-Braga;
