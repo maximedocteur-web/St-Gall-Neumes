@@ -206,7 +206,7 @@ siteData.neumes = [
             " que sa graphie indique une note, la deuxième plus aigue et la troisième plus grave que la deuxième, comme sa graphie le laisse penser. Aussi, c'est un neume polymorphe qui peut avoir"+
             " plein de graphies différentes avec des punctums, des tractulus, des épisèmes, des adjonctions d'un, deux ou trois punctums avant l'ornement. Dans ces cas, il faut consédérer que c'est"+
             " tout le groupe de neume qui doit s'sxécuter dans la dynamique du trigon et il ne faut donc pas considérer que l'on pourrait avoir deux punctums+un trigon mais plutôt chanter un "+
-            " trigon pré-bi-punctis. Sa graphie standard est à trois punctums (image 1). On peut remplacer la dernière note par un tractulus (image 2), voire en ajouter un en plus (image 3)."+
+            " trigon pré-bi-punctis. Sa graphie standard est à trois punctums (image 1). On peut remplacer la dernière note par un tractulus (image 2), voire en ajouter un de plus (image 3)."+
             " Ensuite, on peut avoir des trigons avec plus de punctums ascendants (image 4) ou descendant (image 5). Le tout, c'est de garder la dynamique ornementale du trigon sur toute sa longueur.",
             images: [
                 "images/trigon.png",
