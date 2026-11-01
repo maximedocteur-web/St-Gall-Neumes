@@ -147,7 +147,11 @@ siteData.neumes = [
             nom: "Salicus",
             categorie: "ornementaux",
             description: "Neume ornementé en trois partie, un punctum, le signe ornemental et une virga.",
-            image: "images/salicus.png"
+            images: [
+                "images/salicus.png",
+                "images/salicus2.png",
+                "images/salicus3.png"
+                ]
         },
         {
             nom: "oriscus",
