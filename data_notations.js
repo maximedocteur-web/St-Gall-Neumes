@@ -26,3 +26,4 @@ Barcelone ; Bibl. Orfeo Catala ; 12 ;; graduel ;; aq ; nnac ;; https://mdc.csuc.
 
 Bordeaux ; Arch. Départ. ; G 902 ; 11 ; Collégiale Saint-Emilion ; ant ;; aq ; nnac;office des morts ; https://archives.gironde.fr/ark:/25651/vta896c30bd450dabd4/daogrp/0#id:931416351?gallery=true&center=1346.000,-922.000&zoom=7&rotation=0.000&brightness=100.00&contrast=100.00
 
+`
