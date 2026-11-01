@@ -68,7 +68,7 @@
                     <button class="px-3 py-1.5 rounded-md transition text-stone-700 hover:bg-stone-100 cursor-default">Sémiologie ▾</button>
                     <div class="hidden group-hover:block absolute left-0 mt-0 pt-2 w-64 z-50">
                         <div class="bg-white border border-stone-200 rounded-md shadow-lg overflow-hidden py-1">
-                            <a onclick="showPage('notations')" class="block cursor-pointer px-4 py-2 text-sm text-stone-700 hover:bg-amber-50 hover:text-amber-800">Les notations</a>
+                            <a onclick="showPage('notations-hub')" class="block cursor-pointer px-4 py-2 text-sm text-stone-700 hover:bg-amber-50 hover:text-amber-800">Les notations</a>
                             <a onclick="showPage('neumes')" class="block cursor-pointer px-4 py-2 text-sm text-stone-700 hover:bg-amber-50 hover:text-amber-800">Les Neumes</a>
                             <a onclick="showPage('lettres-hub')" class="block cursor-pointer px-4 py-2 text-sm text-stone-700 hover:bg-amber-50 hover:text-amber-800">Lettres significatives</a>
                         </div>
@@ -162,7 +162,8 @@
                             <p class="text-sm text-stone-600 leading-relaxed">Quels sont les types de pièces que l'on trouve dans le chant grégorien.</p>
                         </div>
 
-                        <div onclick="showPage('notations')" class="w-full bg-white p-5 rounded-lg shadow-sm border border-stone-200 hover:border-amber-400 hover:bg-amber-50/30 hover:-translate-y-0.5 hover:shadow-md cursor-pointer transition-all duration-300 group">
+                        <!-- MODIFIÉ POUR POINTER SUR LE NOUVEAU HUB NOTATIONS -->
+                        <div onclick="showPage('notations-hub')" class="w-full bg-white p-5 rounded-lg shadow-sm border border-stone-200 hover:border-amber-400 hover:bg-amber-50/30 hover:-translate-y-0.5 hover:shadow-md cursor-pointer transition-all duration-300 group">
                             <h3 class="text-lg font-serif font-bold text-stone-900 group-hover:text-amber-800 transition mb-1">Les notations</h3>
                             <p class="text-sm text-stone-600 leading-relaxed">Un petit coup d'oeil sur les différentes notations qui coexistent dans le chant grégorien.</p>
                         </div>
@@ -241,6 +242,74 @@
                 </div>
             </section>
 
+            <!-- NOUVEAU HUB NOTATIONS -->
+            <section id="page-notations-hub" class="page-section space-y-6 relative z-10">
+                <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Les Notations</h2>
+                <p class="text-stone-600">Choisissez l'une des sections ci-dessous pour explorer les différentes notations du chant grégorien :</p>
+                <div class="grid md:grid-cols-2 gap-6 pt-4">
+                    <div onclick="showPage('notations-explications')" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 hover:border-amber-700 cursor-pointer transition space-y-3 text-center group">
+                        <div class="w-12 h-12 bg-amber-50 text-amber-800 rounded-full flex items-center justify-center mx-auto group-hover:bg-amber-700 group-hover:text-white transition font-serif font-bold text-lg">📝</div>
+                        <h3 class="text-xl font-serif font-bold text-stone-900 group-hover:text-amber-800 transition">Données et explications</h3>
+                        <p class="text-sm text-stone-600">Découvrez les différentes notations, leurs origines et leurs spécificités.</p>
+                    </div>
+                    <div onclick="showPage('notations-tableau')" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 hover:border-amber-700 cursor-pointer transition space-y-3 text-center group">
+                        <div class="w-12 h-12 bg-amber-50 text-amber-800 rounded-full flex items-center justify-center mx-auto group-hover:bg-amber-700 group-hover:text-white transition font-serif font-bold text-lg">🗂️</div>
+                        <h3 class="text-xl font-serif font-bold text-stone-900 group-hover:text-amber-800 transition">Tableau de références</h3>
+                        <p class="text-sm text-stone-600">Consultez le répertoire interactif détaillé des notations par manuscrit, avec filtres de recherche.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- NOUVELLE PAGE EXPLICATIONS NOTATIONS -->
+            <section id="page-notations-explications" class="page-section space-y-6 relative z-10">
+                <div class="flex items-center justify-between border-b-2 border-amber-700 pb-2">
+                    <h2 class="text-2xl font-serif font-bold text-stone-900">Données et explications</h2>
+                    <button onclick="showPage('notations-hub')" class="text-sm text-amber-700 hover:underline font-medium">&larr; Retour au choix</button>
+                </div>
+                <div id="notations-explications-contenu" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 text-stone-700 text-justify leading-relaxed"></div>
+            </section>
+
+            <!-- PAGE TABLEAU DES NOTATIONS -->
+            <section id="page-notations-tableau" class="page-section space-y-6 relative z-10">
+                <div class="flex items-center justify-between border-b-2 border-amber-700 pb-2">
+                    <h2 class="text-2xl font-serif font-bold text-stone-900">Répertoire de Notations</h2>
+                    <button onclick="showPage('notations-hub')" class="text-sm text-amber-700 hover:underline font-medium">&larr; Retour au choix</button>
+                </div>
+                
+                <!-- Moteur de recherche multicritères -->
+                <div class="bg-white p-5 rounded-lg border border-stone-200 shadow-sm flex flex-col md:flex-row gap-4 items-center mb-6">
+                    <div class="flex-grow w-full relative">
+                        <svg class="w-5 h-5 absolute left-3 top-1/2 -translate-y-1/2 text-stone-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                        <input type="text" id="recherche-notations" onkeyup="filtrerNotations()" placeholder="Rechercher... (ex: XIe Saint-Gall Carrée)" class="w-full pl-10 p-2.5 border border-stone-300 rounded-md focus:ring-2 focus:ring-amber-700 focus:outline-none text-sm">
+                    </div>
+                    <div class="text-sm font-medium text-stone-500 whitespace-nowrap bg-stone-100 px-4 py-2 rounded-md" id="compteur-notations">0 document(s)</div>
+                </div>
+
+                <!-- Tableau de données -->
+                <div class="overflow-x-auto bg-white rounded-lg shadow-sm border border-stone-200">
+                    <table class="w-full text-left border-collapse text-sm min-w-[1100px]">
+                        <thead class="bg-stone-900 text-stone-100 font-serif border-b border-stone-300">
+                            <tr>
+                                <th class="p-3 font-medium tracking-wide">Ville</th>
+                                <th class="p-3 font-medium tracking-wide">Lieu</th>
+                                <th class="p-3 font-medium tracking-wide">Cote</th>
+                                <th class="p-3 font-medium tracking-wide">Date</th>
+                                <th class="p-3 font-medium tracking-wide">Origine</th>
+                                <th class="p-3 font-medium tracking-wide text-amber-400">Type</th>
+                                <th class="p-3 font-medium tracking-wide">Folios/Partie</th>
+                                <th class="p-3 font-medium tracking-wide">Notation</th>
+                                <th class="p-3 font-medium tracking-wide">Variante</th>
+                                <th class="p-3 font-medium tracking-wide">Remarques</th>
+                                <th class="p-3 font-medium tracking-wide">Lien</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbody-notations" class="text-stone-800 divide-y divide-stone-200">
+                            <!-- Rempli automatiquement par JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
             <!-- PAGE NEUMES -->
             <section id="page-neumes" class="page-section space-y-6 relative z-10">
                 <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Catalogue des Neumes</h2>
@@ -307,45 +376,7 @@
                 <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Types de Pièces</h2>
                 <div id="types-pieces-contenu" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 text-stone-700 text-justify leading-relaxed"></div>
             </section>
-
-            <!-- PAGE RÉPERTOIRE DES NOTATIONS -->
-            <section id="page-notations" class="page-section space-y-6 relative z-10">
-                <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Répertoire de Notations</h2>
-                
-                <!-- Moteur de recherche multicritères -->
-                <div class="bg-white p-5 rounded-lg border border-stone-200 shadow-sm flex flex-col md:flex-row gap-4 items-center mb-6">
-                    <div class="flex-grow w-full relative">
-                        <svg class="w-5 h-5 absolute left-3 top-1/2 -translate-y-1/2 text-stone-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
-                        <input type="text" id="recherche-notations" onkeyup="filtrerNotations()" placeholder="Rechercher... (ex: XIe Saint-Gall Carrée)" class="w-full pl-10 p-2.5 border border-stone-300 rounded-md focus:ring-2 focus:ring-amber-700 focus:outline-none text-sm">
-                    </div>
-                    <div class="text-sm font-medium text-stone-500 whitespace-nowrap bg-stone-100 px-4 py-2 rounded-md" id="compteur-notations">0 document(s)</div>
-                </div>
-
-                <!-- Tableau de données -->
-                <div class="overflow-x-auto bg-white rounded-lg shadow-sm border border-stone-200">
-                    <table class="w-full text-left border-collapse text-sm min-w-[1100px]">
-                        <thead class="bg-stone-900 text-stone-100 font-serif border-b border-stone-300">
-                            <tr>
-                                <th class="p-3 font-medium tracking-wide">Ville</th>
-                                <th class="p-3 font-medium tracking-wide">Lieu</th>
-                                <th class="p-3 font-medium tracking-wide">Cote</th>
-                                <th class="p-3 font-medium tracking-wide">Date</th>
-                                <th class="p-3 font-medium tracking-wide">Origine</th>
-                                <th class="p-3 font-medium tracking-wide text-amber-400">Type</th>
-                                <th class="p-3 font-medium tracking-wide">Folios/Partie</th>
-                                <th class="p-3 font-medium tracking-wide">Notation</th>
-                                <th class="p-3 font-medium tracking-wide">Variante</th>
-                                <th class="p-3 font-medium tracking-wide">Remarques</th>
-                                <th class="p-3 font-medium tracking-wide">Lien</th>
-                            </tr>
-                        </thead>
-                        <tbody id="tbody-notations" class="text-stone-800 divide-y divide-stone-200">
-                            <!-- Rempli automatiquement par JavaScript -->
-                        </tbody>
-                    </table>
-                </div>
-            </section>
-
+            
             <section id="page-je-debute" class="page-section space-y-6 relative z-10">
                 <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Je débute</h2>
                 <div id="je-debute-contenu" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 text-stone-700 text-justify leading-relaxed"></div>
@@ -1159,6 +1190,10 @@
             genererPageDynamique('historique-contenu', siteData.historique);
             genererPageDynamique('manuscrits-contenu', siteData.se_reperer || siteData.seReperer);
             genererPageDynamique('types-pieces-contenu', siteData.types_de_pieces || siteData.typesPieces);
+            
+            // NOUVEAU: Appel de la page d'explication des notations
+            genererPageDynamique('notations-explications-contenu', siteData.notations);
+            
             genererPageDynamique('modes-contenu', siteData.modes);
             genererPageDynamique('psalmodies-contenu', siteData.psalmodies);
             genererPageDynamique('monocorde-contenu', siteData.monocorde);
