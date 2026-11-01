@@ -39,7 +39,7 @@ siteData.neumes = [
             categorie: "simples",
             description: "<strong>2 notes</strong>, mouvement : descendant. Ce neume représente deux notes, la seconde étant plus basse (plus grave) que la première [son=audio/clivis1.mp3] "+
             "mais on ne sait pas de combien elle est plus basse (une tierce ? une quarte ? une octave ?), rien ne l'indique "+
-            "dans sa graphie. Vous pouvez voir dans la seconde image, sa forme épisémée qui revient très souvent. Ce petit "+
+            "dans sa graphie. Vous pouvez voir dans la seconde image, sa forme épisémée qui revient très souvent. Sur la seconde image, le petit "+
             "chapeau posé sur le neume indique que la première note est deux fois plus longue que la seconde [son=audio/clivis2.mp3].",
             images: [
                 "images/clivis.png",
@@ -51,8 +51,8 @@ siteData.neumes = [
             categorie: "simples",
             description: "<strong>2 notes</strong>, mouvement : ascendant. Ce neume représente deux notes, la seconde étant plus élevée (plus aigue) que la première"+
             " mais on ne sait pas de combien elle est plus élevée (une tierce ? une quarte ? une octave ?), rien ne l'indique"+
-            " dans sa graphie. La première image est sa graphie standard, les trois autres images représentent ses graphies épisémées : la seconde image"+
-            " montre la version <strong>long-court</strong>, la troisième <strong>court-long</strong>, la quatrième <strong>long-long</strong>.",
+            " dans sa graphie. La première image est sa graphie standard [son=audio/pes1.mp3], les trois autres images représentent ses graphies épisémées : la seconde image"+
+            " montre la version <strong>long-court</strong> [son=audio/pes2.mp3], la troisième <strong>court-long</strong> [son=audio/pes3.mp3], la quatrième <strong>long-long</strong> [son=audio/pes4.mp3].",
             images: [
                 "images/pes.png",
                 "images/pes_episeme1.png",
@@ -66,8 +66,8 @@ siteData.neumes = [
             description: "<strong>3 notes</strong>, mouvement : ascendant/descendant. Ce neume représente trois notes, "+
             "la deuxième étant plus élevée (plus aigue) que la première et la troisième plus basse (grave) que la deuxième "+
             "mais on ne sait pas de combien elles sont plus élevées/basses (une tierce ? une quarte ? une octave ? rien ne l'indique "+ 
-            "dans sa graphie). La première image est sa graphie standard, la seconde image représente sa version épisémée où les trois "+
-            "notes sont longues.",
+            "dans sa graphie). La première image est sa graphie standard [son=audio/torculus.mp3], la seconde image représente sa version épisémée où les trois "+
+            "notes sont longues. [son=audio/torculus2.mp3]",
             images: [
                 "images/torculus.png",
                 "images/torculus_episeme.png"
@@ -110,34 +110,34 @@ siteData.neumes = [
             nom: "Torculus resupinus",
             categorie: "simples",
             description: "<strong>4 notes</strong>, mouvement : ascendant/descendant/ascendant. Ce neume représente quatre notes, c'est simplement un torculus avec une virga finale qui est placée"+
-            " plus aigue par rapport à la dernière note du torculus (donc 4e note plus élevée que la 3e note).",
+            " plus aigue par rapport à la dernière note du torculus (donc 4e note plus élevée que la 3e note) [son=audio/torculus_resupinus.mp3].",
             image: "images/torculus_resupinus.png"
         },
         {
             nom: "Porrectus flexus",
             categorie: "simples",
             description: "<strong>4 notes</strong>, mouvement : descendant/ascendant/descendant. Ce neume représente quatre notes, c'est simplement un porrectus avec une quatrième note qui est placée"+
-            " plus graves par rapport à la dernière note du porrectus (donc 4e note plus grave que la 3e note)",
+            " plus graves par rapport à la dernière note du porrectus (donc 4e note plus grave que la 3e note) [son=audio/porrectus_flexus.mp3]",
             image: "images/porrectus_flexus.png"
         },
         {
             nom: "Pes sub-bipunctis",
             categorie: "simples",
             description: "<strong>4 notes</strong>, mouvement : ascendant/descendant/descendant. Ce neume représente quatre notes, c'est simplement un pes suivi de deux punctums qui sont plus"+
-            " graves par rapport à la deuxième note (3e note plus basse que la 2e et 4e plus basse que la 3e)",
+            " graves par rapport à la deuxième note (3e note plus basse que la 2e et 4e plus basse que la 3e) [son=audio/pes_sub_bi_punctis.mp3]",
             image: "images/pes_sub_bipunctis.png"
         },
         {
             nom: "Scandicus flexus",
             categorie: "simples",
             description: "<strong>4 notes</strong>, mouvement : ascendant/ascendant/descendant. Ce neume représente quatre notes, c'est simplement une clivis précédée de deux punctums (ou plus)"+ 
-            "mais son nom a voulu conserver le scandicus, ainsi, on peut aussi le comprendre comme un scandicus avec une note qui redescend après celui-ci.",
+            "mais son nom a voulu conserver le scandicus, ainsi, on peut aussi le comprendre comme un scandicus avec une note qui redescend après celui-ci [son=audio/scandicus_flexus.mp3].",
             image: "images/scandicus_flexus.png"
         },
         {
             nom: "Quilisma",
             categorie: "ornementaux",
-            description: "C'est un neume ornementé qui peut avoir deux ou trois boucles.",
+            description: "C'est un neume ornementé qui peut avoir deux [son=audio/quilisma2.mp3] ou trois boucles [son=audio/quilisma3.mp3].",
             images: [
                 "images/quilisma.png",
                 "images/quilisma3.png"
@@ -146,9 +146,9 @@ siteData.neumes = [
         {
             nom: "Salicus",
             categorie: "ornementaux",
-            description: "C'est un neume qui graphiquement est organisé en trois partie et où la partie centrale porte toujours l'ornement représenté soit sous la forme d'un petit-pont (image 1), soit"+
+            description: "C'est un neume qui graphiquement est organisé en trois partie et où la partie centrale porte toujours l'ornement représenté soit sous la forme d'un petit-pont (image 1 [son=audio/salicus.mp3]), soit"+
             " d'une vaguelette (image 2). Tout en bas, on y trouve généralement un punctum mais il est aussi possible de trouver un tractulus. Pour sa partie haute, on y trouve généralement une virga"+
-            " simple (qui peut être épisémée) ou un autre neume ajouté comme une clivis (image 3). La forme en petit-pont ou en vaguelette change l'ornement mais il est encore difficile d'identifier exactement"+
+            " simple (qui peut être épisémée) ou un autre neume ajouté comme une clivis (image 3 [son=audio/salicus3.mp3]). La forme en petit-pont ou en vaguelette change l'ornement mais il est encore difficile d'identifier exactement"+
             " ce à quoi ces deux ornements distincts doivent ressembler.",
             images: [
                 "images/salicus.png",
