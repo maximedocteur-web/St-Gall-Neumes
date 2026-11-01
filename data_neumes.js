@@ -193,5 +193,22 @@ siteData.neumes = [
                 "images/tristropha.png",
                 "images/tristropha_liquescente.png"
             ]
+        },
+        {
+            nom:"trigon",
+            categorie:"ornementaux",
+            description:"Dans sa forme standard, le trigon est considéré comme un groupe de trois notes. (<strong>ATTENTION!</strong>) La <em>Sémiologie grégorienne</em> de Dom Cardine (les"+
+            " neumes selon la méthode de Solesmes) le trigon est considéré comme trois notes mais dont les deux premières sont à l'unisson et la troisième plus grave mais nosu considérons plutôt"+
+            " que sa graphie indique une note, la deuxième plus aigue et la troisième plus grave que la deuxième, comme sa graphie le laisse penser. Aussi, c'est un neume polymorphe qui peut avoir"+
+            " plein de graphies différentes avec des punctums, des tractulus, des épisèmes, des adjonctions d'un, deux ou trois punctums avant l'ornement. Dans ces cas, il faut consédérer que c'est"+
+            " tout le groupe de neume qui doit s'sxécuter dans la dynamique du trigon et il ne faut donc pas considérer que l'on pourrait avoir deux punctums+un trigon mais plutôt chanter un "+
+            " trigon pré-bi-punctis.",
+            images: [
+                "images/trigon.png",
+                "images/trigon2.png",
+                "images/trigon3.png",
+                "images/trigon4.png",
+                "images/trigon5.png"
+            ]
         }
 ]
