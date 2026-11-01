@@ -146,7 +146,10 @@ siteData.neumes = [
         {
             nom: "Salicus",
             categorie: "ornementaux",
-            description: "Neume ornementé en trois partie, un punctum, le signe ornemental et une virga.",
+            description: "C'est un neume qui graphiquement est organisé en trois partie et où la partie centrale porte toujours l'ornement représenté soit sous la forme d'un petit-pont (image 1), soit"+
+            " d'une vaguelette (image 2). Tout en bas, on y trouve généralement un punctum mais il est aussi possible de trouver un tractulus. Pour sa partie haute, on y trouve généralement un virga"+
+            " simple (qui peut être épisémée) ou un aute neume ajouté comme une clivis (image 3). La forme en petit-pont ou en vaguelette change l'ornement mais il est encore difficile de d'identifier exactement"+
+            " ce à quoi ces deux ornements distincts doivent ressembler.",
             images: [
                 "images/salicus.png",
                 "images/salicus2.png",
@@ -180,7 +183,8 @@ siteData.neumes = [
         {
             nom: "Virga strata",
             categorie: "ornementaux",
-            description: "Ascension de trois notes ou plus, comportant une pression sur l'avant-dernière note.",
+            description: "Bien que ce neume ressemble beaucoup au <em>pressus maior</em>, il a perdu son punctum final et son ornementation s'en trouve modifié. On peut le voir comme une"+
+            " virga avec un ornement final.",
             image: "images/virga_strata.png"
         },
         {
