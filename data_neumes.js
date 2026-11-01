@@ -66,7 +66,7 @@ siteData.neumes = [
             description: "<strong>3 notes</strong>, mouvement : ascendant/descendant. Ce neume représente trois notes, "+
             "la deuxième étant plus élevée (plus aigue) que la première et la troisième plus basse (grave) que la deuxième "+
             "mais on ne sait pas de combien elles sont plus élevées/basses (une tierce ? une quarte ? une octave ? rien ne l'indique "+ 
-            "dans sa graphie). La première image est sa graphie standard [son=audio/torculus.mp3], la seconde image représente sa version épisémée où les trois "+
+            "dans sa graphie). La première image est sa graphie standard [son=audio/torculus1.mp3], la seconde image représente sa version épisémée où les trois "+
             "notes sont longues. [son=audio/torculus2.mp3]",
             images: [
                 "images/torculus.png",
