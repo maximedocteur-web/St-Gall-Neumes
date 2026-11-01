@@ -211,7 +211,7 @@ siteData.neumes = [
             " plein de graphies différentes avec des punctums, des tractulus, des épisèmes, des adjonctions d'un, deux ou trois punctums avant l'ornement. Dans ces cas, il faut consédérer que c'est"+
             " tout le groupe de neume qui doit s'sxécuter dans la dynamique du trigon et il ne faut donc pas considérer que l'on pourrait avoir deux punctums+un trigon mais plutôt chanter un "+
             " trigon pré-bi-punctis. Sa graphie standard est à trois punctums (image 1 [son=audio/trigon1.mp3]). On peut remplacer la dernière note par un tractulus (image 2[son=audio/trigon2.mp3]), voire en ajouter un de plus (image 3[son=audio/trigon3.mp3])."+
-            " Ensuite, on peut avoir des trigons avec plus de punctums ascendants (image 4[son=audio/trigon4.mp3]) ou descendant (image 5[son=audio/trigon5.mp3]). Le tout, c'est de garder la dynamique ornementale du trigon sur toute sa longueur.",
+            " Ensuite, on peut avoir des trigons avec plus de punctums ascendants (image 4[son=audio/trigon4.mp3]) ou descendant (image 5). Le tout, c'est de garder la dynamique ornementale du trigon sur toute sa longueur.",
             images: [
                 "images/trigon.png",
                 "images/trigon5.png",
