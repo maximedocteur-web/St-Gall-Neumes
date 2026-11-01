@@ -274,16 +274,26 @@ Amen.`
     },
     {
         type:"text",
-        content:`La communion est la dernière pièce du propre à être chantée. Elle est à gémétrie variable car elle doit s'étendre sur tout le long de la distribution des hosties aux communiants.
-        Elle est composée d'une antienne et de versets de psaumes. L'antienne sera répétée comme un refrain après chaque verset et il y aura autant de verset que la distribution 
-        des hosties l'exige. Quand la distribution touche à sa fin, on répète une dernière fois l'antienne.
+        content:`Le Credo possède un statut particulier puisqu'il est la profession de foi du catholicisme. Chanté à l'époque médiévale, il ne l'est plus aujourd'hui que dans certains cas assez
+        marginaux. 
         `
     },
     {
-        type:"imageCompare",
-        original:"images/domine_quinque.png",
-        annotee:"images/domine_quinque2.png",
-        legende:"passez votre souris sur l'image pour voir où se situent les différentes parties."
+        type:"bilingue",
+        latin:`Credo in unum Deum, Patrem omnipoténtem, factόrem cæli et terræ, visibílium όmnium, et invisibílium.
+Et in unum Dόminum Iesum Christum, Fílium Dei unigénitum. Et ex Patre natum ante όmnia sæcula. Deum de Deo, lumen de lúmine, Deum verum de Deo vero. Génitum, non factum, 
+consubstantiálem Patri : per quem όmnia facta sunt. Qui propter nos hόmines, et propter nostram salútem descéndit de cælis. Et incarnátus est de Spíritu Sancto ex María Vírgine : 
+et homo factus est. Crucifíxus étiam pro nobis : sub Pόntio Piláto passus, et sepúltus est. Et resurréxit tértia die, secúndum Scriptúras. Et ascéndit in cælum : sedet ad déxteram 
+Patris. Et íterum ventúrus est cum glόria iudicáre vivos, et mόrtuos : cuius regni non erit finis.
+Et in Spíritum Sanctum, Dόminum, et vivificántem : qui ex Patre, Filiόque procédit. Qui cum Patre, et Filio simul adorátur, et conglorificátur : qui locútus est per Prophétas.
+Et unam, sanctam, cathόlicam et apostόlicam Ecclésiam. Confíteor unum baptísma in remissiόnem peccatόrum. Et expécto resurrectiόnem mortuόrum. Et vitam ventúri sǽculi. Amen.`,
+        francais:`Je crois en un seul Dieu, le Père tout-puissant, créateur du ciel et de la terre, de l'univers visible et invisible.
+Je crois en un seul Seigneur, Jésus-Christ, le Fils unique de Dieu, né du Père avant tous les siècles ; il est Dieu, né de Dieu, lumière, née de la lumière, vrai Dieu, né du vrai Dieu. 
+Engendré, non pas créé, consubstantiel au Père, et par lui tout a été fait. Pour nous les hommes, et pour notre salut, il descendit du ciel ; par l'Esprit-Saint, il a pris chair de la 
+Vierge Marie, et s'est fait homme. Crucifié pour nous sous Ponce Pilate, il souffrit sa passion et fut mis au tombeau. Il ressuscita le troisième jour, conformément aux Écritures, et 
+il monta au ciel ; il est assis à la droite du Père. Il reviendra dans la gloire, pour juger les vivants et les morts; et son règne n'aura pas de fin.
+Je crois en l'Esprit Saint, qui est Seigneur et qui donne la vie ; il procède du Père et du Fils. Avec le Père et le Fils, il reçoit même adoration et même gloire ; il a parlé par les prophètes.
+Je crois en l'Église, Une, sainte, catholique et apostolique. Je reconnais un seul baptême pour le pardon des péchés. J'attends la résurrection des morts, et la vie du monde à venir. Amen.`
     },
     {
         type:"separateur",
@@ -292,15 +302,25 @@ Amen.`
     },
     {
         type:"text",
-        content:`La communion est la dernière pièce du propre à être chantée. Elle est à gémétrie variable car elle doit s'étendre sur tout le long de la distribution des hosties aux communiants.
-        Elle est composée d'une antienne et de versets de psaumes. L'antienne sera répétée comme un refrain après chaque verset et il y aura autant de verset que la distribution 
-        des hosties l'exige. Quand la distribution touche à sa fin, on répète une dernière fois l'antienne.
+        content:`Le Sanctus est le quatrième chant de l'Ordinaire.
         `
     },
     {
-        type:"imageCompare",
-        original:"images/domine_quinque.png",
-        annotee:"images/domine_quinque2.png",
+      type:"bilingue",
+        latin:`Sanctus, Sanctus, Sanctus Dóminus Deus Sábaoth.
+Pleni sunt caeli et terra glória tua.
+Hosánna in excélsis.
+Benedíctus qui venit in nómine Dómini.
+Hosánna in excélsis.`,
+        francais:`Saint ! Saint ! Saint, le Seigneur, Dieu de l'univers !
+Le ciel et la terre sont remplis de ta gloire.
+Hosanna au plus haut des cieux !
+Béni soit celui qui vient au nom du Seigneur.
+Hosanna au plus haut des cieux !`
+    },
+    {
+        type:"image",
+        src:"images/sanctus.png",
         legende:"passez votre souris sur l'image pour voir où se situent les différentes parties."
     },
     {
