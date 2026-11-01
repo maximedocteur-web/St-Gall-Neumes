@@ -211,9 +211,9 @@ siteData.neumes = [
             images: [
                 "images/trigon.png",
                 "images/trigon5.png",
+                "images/trigon2.png",
                 "images/trigon4.png",
-                "images/trigon5.png",
-                "images/trigon2.png"
+                "images/trigon3.png"
             ]
         }
 ]
