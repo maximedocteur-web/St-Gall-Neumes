@@ -321,7 +321,7 @@ Hosanna au plus haut des cieux !`
     {
         type:"image",
         src:"images/sanctus.png",
-        legende:"passez votre souris sur l'image pour voir où se situent les différentes parties."
+        legende:"Saint-Gall, cod. 388, p.473. XIIe-XIVe s."
     },
     {
         type:"separateur",
@@ -330,16 +330,22 @@ Hosanna au plus haut des cieux !`
     },
     {
         type:"text",
-        content:`La communion est la dernière pièce du propre à être chantée. Elle est à gémétrie variable car elle doit s'étendre sur tout le long de la distribution des hosties aux communiants.
-        Elle est composée d'une antienne et de versets de psaumes. L'antienne sera répétée comme un refrain après chaque verset et il y aura autant de verset que la distribution 
-        des hosties l'exige. Quand la distribution touche à sa fin, on répète une dernière fois l'antienne.
+        content:`L'Agnus Dei est le dernier chant de l'Ordinaire.
         `
     },
     {
-        type:"imageCompare",
-        original:"images/domine_quinque.png",
-        annotee:"images/domine_quinque2.png",
-        legende:"passez votre souris sur l'image pour voir où se situent les différentes parties."
+        type:"bilingue",
+        latin:`Agnus Dei, qui tollis peccata mundi, parce nobis Domine.
+Agnus Dei, qui tollis peccata mundi, exaudi nos Domine.
+Agnus Dei, qui tollis peccata mundi, miserere nobis.`,
+        francais:`Agneau de Dieu, qui enlèves les péchés du monde, prends pitié de nous.
+Agneau de Dieu, qui enlèves les péchés du monde, prends pitié de nous.
+Agneau de Dieu, qui enlèves les péchés du monde, donne-nous la paix.`
+    },
+    {
+        type:"image",
+        src:"images/agnus_dei.png",
+        legende:"Saint-Gall, cod. 380, p.101. Milieu XIe s."
     },
     {
         type:"separateur",
