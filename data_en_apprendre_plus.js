@@ -62,10 +62,10 @@
             type: "text",
             content: `Il faut donc aujourd'hui essayer de comprendre quel geste vocal Notker a voulu
             transcrire par ces phrases, si ce n'est hermétiques, au moins mystérieuses. Les flux croisés d'indices nous
-            permettent de donner une interprétion correcte de quelques lettres mais la plupart de celles-ci restent encore mutiques.
+            permettent de donner une interprétation correcte de quelques lettres mais la plupart de celles-ci restent encore mutiques.
             Pourtant, chaque lettre possède une essence interprétative et si il arrive fréquemment de trouver deux, trois voire quatre
             lettres sur un seul neume c'est que chaque nuance, chaque inflexion de la voix, était prise en compte par le notateur. 
-            L'importance de ces lettres est d'autant plus frappante quand on se rapelle qu'à Saint-Gall, la notation nous transmet un 
+            L'importance de ces lettres est d'autant plus frappante quand on se rappelle qu'à Saint-Gall, la notation nous transmet un 
             style, une manière de faire, de prononcer, d'accentuer, de moduler et tant que nous n'aurons pas une vue assez précise sur
             l'interprétation des ces lettres, nous aurons du mal à nous projeter dans la bouche d'un chantre suisse du IXe siècle. 
             `
