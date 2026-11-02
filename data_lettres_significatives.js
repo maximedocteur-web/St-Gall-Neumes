@@ -61,14 +61,14 @@ siteData.lettres = [
     },
     {
         sigle: "len (Leniter)",
-        texte: "_ doucement, paisiblement (très énigmatique quant à l'éxécution).",
+        texte: "_ Doucement, paisiblement (très énigmatique quant à l'éxécution).",
         image: "images/len.png"
         
     },
     {
         sigle: "gu (GUttur)",
         texte: `<span style="color: #e60004;">g</span>. <strong>Ut in gutture gradatim garruletur genuine gratulatur.</strong><br><br>
-        _ le son doit se produire dans la gorge, provenir de la gorge, rouler dans la gorge (très énigmatique quant à l'éxécution).`,
+        _ Le son doit se produire dans la gorge, provenir de la gorge, rouler dans la gorge (très énigmatique quant à l'éxécution).`,
         image: "images/gu.png"
     }
 ]
