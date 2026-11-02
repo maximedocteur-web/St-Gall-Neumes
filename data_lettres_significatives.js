@@ -17,13 +17,14 @@ siteData.lettres = [
     },
     { 
         sigle: "m (Mediocriter)",
-        texte: `<span style="color: #e60004;">m</span>. <strong>Mediocriter melodiam moderari mendicando memorat.</strong><br>Nuance modérée.<br><br>
+        texte: `<span style="color: #e60004;">m</span>. <strong>Mediocriter melodiam moderari mendicando memorat.</strong><br><br>
         _ Cette lettre significative `,
         image: "images/m.png"
     },
     { 
         sigle: "e (Equaliter)",
-        texte: `La note sur laquelle est posée cette lettre est à la même hauteur que la précédente.
+        texte: `<span style="color: #e60004;">e</span>. <strong>Ut equaliter sonetur eloquitur.</strong><br><br>
+        _ La note sur laquelle est posée cette lettre est à la même hauteur que la précédente.
         Exemple : si la note précédente est un Ré, cette note sera aussi un Ré, si la note
         précédente est un La, cette note sera aussi un La. Si une ligne part de la lettre et continue sur plusieurs
         neumes sans discontinuité, alors tous ces neumes sont sur la même haute que la note précédent le neume
@@ -32,12 +33,14 @@ siteData.lettres = [
     },
     { 
         sigle: "p (Pressio)",
-        texte: "???.",
+        texte: `<span style="color: #e60004;">p</span>. <strong>Pressionem vel prensionem predicat.</strong><br><br>
+        _ Mettre plus de pression, plus poussé pendant un instant (reste énigmatique...)`,
         image: "images/ppressio.png"
     },
     { 
         sigle: "st (STatim)",
-        texte: "???.",
+        texte: `<span style="color: #e60004;">p</span>. <strong>Pressionem vel prensionem predicat.</strong><br><br>
+        _ Aussitôt coller la fin du neume précédent au début du neume qui suit.`,
         image: "images/st.png"
     },
     { 
@@ -56,15 +59,14 @@ siteData.lettres = [
         image: "images/x.png"
     },
     {
-        signe:"len (Leniter)",
-        texte:`??? trop peu d'informations au sujet de sa signification`,
-        image:"images/len.png"
+        sigle: "len (Leniter)",
+        texte: "??? trop peu d'informations au sujet de sa signification",
+        image: "images/len.png"
         
     },
     {
-        signe:"gu (GUttur)",
-        texte:`<span style="color: #e60004;">g</span>. <strong>Ut in gutture gradatim garruletur genuine gratulatur.</strong><br><br>`,
-        image:"images/gu.png"
-        
+        sigle: "gu (GUttur)",
+        texte: `<span style="color: #e60004;">g</span>. <strong>Ut in gutture gradatim garruletur genuine gratulatur.</strong><br><br>`,
+        image: "images/gu.png"
     }
 ]
