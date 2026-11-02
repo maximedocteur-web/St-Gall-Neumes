@@ -7,9 +7,9 @@ siteData.modes = [
     type:"text",
     content:`<strong>Discipulis</strong> : Maître, qu'est ce qu'un mode ?<br><br>
     <strong>Magister</strong> : Un mode, c'est une manière de se déplacer sur une échelle. Mais laisse moi reprendre depuis le début.<br><br>
-    Tout d'abord, il y a des notes. Imagine une droite sur laquelle on a réparti les notes depuis les graves, jusqu'aux aigues en gardant
+    Tout d'abord, il y a des notes. Imagine une droite sur laquelle on a réparti les notes depuis les graves, jusqu'aux aiguës en gardant
     l'ordre dans lequel elles se suivent, c'est-à-dire : Sol-La-Si-Do-Ré-Mi-Fa-Sol-La-Si-Do-Ré(etc.).<br><br>
-    Au début de la droite, voilà les notes les plus graves, c'est la voix de l'ogre, extrêment grave et si on monte un peu sur cette
+    Au début de la droite, voilà les notes les plus graves, c'est la voix de l'ogre, extrêmement grave et si on monte un peu sur cette
     droite, on arrive à la voix de l'homme. Si on continue de monter, on arrive à la voix de femme et tout en haut, on arrive à la
     voix de l'enfant.`
   },
@@ -21,7 +21,7 @@ siteData.modes = [
   {
     type:"text",
     content:`À partir de ces notes, on va former des <strong>échelles</strong>. C'est un nom parfaitement choisi puisqu'à l'image d'une échelle,
-    on va disposer nos notes par échellons, les unes à la suite des autres. Le chant grégorien fonctionne sur <strong>quatre échelles</strong> : 
+    on va disposer nos notes par échelons, les unes à la suite des autres. Le chant grégorien fonctionne sur <strong>quatre échelles</strong> : 
     <strong>une échelle de Ré</strong>, <strong>une échelle de Mi</strong>, <strong>une échelle de Fa</strong>, <strong>une échelle de Sol</strong> 
     et chaque échelle possède un nombre fini de notes.<br>`
   },
@@ -33,7 +33,7 @@ siteData.modes = [
   {  
     type:"text",
     content:`Pour l'échelle de Ré,
-    on cosidère que pour faire simple, l'échelle va du Ré, jusqu'au Ré plus aigu, donc Ré-Mi-Fa-Sol-La-Si-Do-Ré, pour l'échelle de Mi, ça va de Mi 
+    on considère que pour faire simple, l'échelle va du Ré, jusqu'au Ré plus aigu, donc Ré-Mi-Fa-Sol-La-Si-Do-Ré, pour l'échelle de Mi, ça va de Mi 
     jusqu'au Mi plus aigu et ainsi de suite pour les quatre échelles. Donc, pour résumé, nous nous retrouvons avec :<br><br>
     échelle de Ré : Ré-Mi-Fa-Sol-La-Si-Do-Ré<br>
     échelle de Mi : Mi-Fa-Sol-La-Si-Do-Ré-Mi<br>
@@ -50,10 +50,10 @@ siteData.modes = [
     content:`Voici donc les échelles qui sont utilisées dans le chant grégorien, mais ces échelles ne sont pas encore des modes... Un mode, c'est l'art et la manière
     de se mouvoir sur cette échelle.<br><br>
     <strong>D.</strong> : Ha, alors les notes j'ai compris, les échelles aussi, mais pour les modes il va me falloir un peu plus d'explications...<br><br>
-    <strong>M.</strong> : Retien bien cette définition : <strong>le mode, c'est l'art et la manière de se mouvoir sur l'échelle</strong>. Pour synthétiser mon propos, nous avons d'abord
-    tout un paquet de notes à notre disposition. Ensuite, on mets ces notes bout-à-bout pour créer des échelles, or, le chant grégorien à conserver quatre de celles-ci. Enfin,
+    <strong>M.</strong> : Retient bien cette définition : <strong>le mode, c'est l'art et la manière de se mouvoir sur l'échelle</strong>. Pour synthétiser mon propos, nous avons d'abord
+    tout un paquet de notes à notre disposition. Ensuite, on met ces notes bout-à-bout pour créer des échelles, or, le chant grégorien à conserver quatre de celles-ci. Enfin,
     nous avons les modes, qui sont basés sur échelles mais qui nous apportent la manière d'aller et venir, de bas en haut et de haut en bas, sur ces quatre échelles. Toute l'essence du mode
-    repose sur les relations qu'entretiennent la note du mode, qu'on apelle aussi tonique, avec les autres notes de l'échelle. C'est exactement ce que décrit un traité musical du début du Xe siècle,
+    repose sur les relations qu'entretiennent la note du mode, qu'on appelle aussi tonique, avec les autres notes de l'échelle. C'est exactement ce que décrit un traité musical du début du Xe siècle,
     la <em>Musica Enchiriadis</em>, où il est dit que chaque mode est "régi/dirigé" par le degré grave qui lui communique une qualité, un caractère, une propriété[note]Jacques Viret, <em>Le Chant Grégorien, des
     origines à nos jours</em>, deuxième édition, Paris, Eyrolles, 2017, p.91[/note].`
   }
