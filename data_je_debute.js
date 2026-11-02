@@ -147,7 +147,7 @@ siteData.je_debute = [
   {
     type:"text",
    content:`<strong>M.</strong> : Tout comme le texte se lit de gauche à droite, les neumes se lisent aussi de gauche à droite et leur enchainement est divisé par syllabe.
-   . Il peut y avoir un ou plusieurs neumes sur chaque syllabe. Regarde ici, j'ai regroupé les neumes ppar les syllabes où ils doivent être chantés. <br>`
+   . Il peut y avoir un ou plusieurs neumes sur chaque syllabe. Regarde ici, j'ai regroupé les neumes avec les syllabes où ils doivent être chantés. <br>`
   },
   {
     type:"image",
