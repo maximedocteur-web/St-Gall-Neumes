@@ -61,7 +61,7 @@ siteData.lettres = [
     },
     {
         sigle: "len (Leniter)",
-        texte: "`_ doucement, paisiblement (très énigmatique quant à l'éxécution).",
+        texte: "_ doucement, paisiblement (très énigmatique quant à l'éxécution).",
         image: "images/len.png"
         
     },
