@@ -17,7 +17,7 @@ siteData.lettres = [
     { 
         sigle: "m (Mediocriter)",
         texte: `<span style="color: #e60004;">m</span>. <strong>Mediocriter melodiam moderari mendicando memorat.</strong><br><br>
-        _ modéré, modérément, moyennement (reste énigmatique quant à l'éxécution...) `,
+        _ Modéré, modérément, moyennement (reste énigmatique quant à l'éxécution...) `,
         image: "images/m.png"
     },
     { 
@@ -45,29 +45,31 @@ siteData.lettres = [
     { 
         sigle: "i (Inferius)",
         texte: `<span style="color: #e60004;">i</span>. <strong>Iusum vel inferius insinuat, gravitudinemque pro g. interdum indicat.</strong><br><br>
-        _ inférieur, en dessous, en dessous que ce la logique du neume voudrait.`,
+        _ Inférieur, en dessous, en dessous que ce la logique du neume voudrait.`,
         image: "images/i.png"
     },
     { 
         sigle: "s (Sursum)",
         texte: `<span style="color: #e60004;">s</span>. <strong>Susum vel sursum scandere sibilat.</strong><br><br>
-        _ s'élever "en sifflant" (très énigmatique quand l'éxécution).`,
+        _ S'élever "en sifflant" (très énigmatique quant à l'éxécution).`,
         image: "images/s.png"
     },
     { 
         sigle: "x ((e)Xpectare)",
-        texte: "???.",
+        texte: `<span style="color: #e60004;">s</span>. <strong>Susum vel sursum scandere sibilat.</strong><br><br>
+        _ S'élever "en sifflant" (très énigmatique quant à l'éxécution).`,
         image: "images/x.png"
     },
     {
         sigle: "len (Leniter)",
-        texte: "??? trop peu d'informations au sujet de sa signification",
+        texte: "`_ doucement, paisiblement (très énigmatique quant à l'éxécution).",
         image: "images/len.png"
         
     },
     {
         sigle: "gu (GUttur)",
-        texte: `<span style="color: #e60004;">g</span>. <strong>Ut in gutture gradatim garruletur genuine gratulatur.</strong><br><br>`,
+        texte: `<span style="color: #e60004;">g</span>. <strong>Ut in gutture gradatim garruletur genuine gratulatur.</strong><br><br>
+        _ le son doit se produire dans la gorge, provenir de la gorge, rouler dans la gorge (très énigmatique quant à l'éxécution).`,
         image: "images/gu.png"
     }
 ]
