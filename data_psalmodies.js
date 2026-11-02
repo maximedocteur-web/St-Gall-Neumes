@@ -6,10 +6,10 @@ siteData.psalmodies = [
   },
     {
     type:"text",
-    content:`Dans la tradition du chant grégorien, la  lecture et la récitation des psaumes a une importance capitale. À l'époque médiévale, pour qu'un jeune garçon puisse commencer
+    content:`Dans la tradition du chant grégorien, la  lecture et la récitation des psaumes ont une importance capitale. À l'époque médiévale, pour qu'un jeune garçon puisse commencer
     son apprentissage de chantre, il lui fallait avoir en mémoire les textes des 150 psaumes. Psaume vient du grec ancien <em>psalmos</em> qui peut désigner un chant accompagné 
     d'un instrument ou une musique jouée au psaltérion. Ces psaumes sont attribués au roi David qui les aurait composés. Chacun de ces psaumes comporte plusieurs versets, pour schématiser,
-    plusieurs phrases qui, mises bout à bout, forment le psaume. Ces derniers sont toujours appelés par leurs  incipit, par exemple, le psaumen n°1 est <em>Beatus vir</em> et quand il est prit
+    plusieurs phrases qui, mises bout à bout, forment le psaume. Ces derniers sont toujours appelés par leurs  incipit, par exemple, le psaume n°1 est <em>Beatus vir</em> et quand il est prit
     dans sa totalité ça donne :<br><br>
     "<em><strong>1. Beatus vir qui non abiit in consilio impiorum, et in via peccatorum non stetit, et in cathedra pestilentiæ non sedit ;<br>
     2.sed in lege Domini voluntas ejus, et in lege ejus meditabitur die ac nocte.<br>
@@ -19,7 +19,7 @@ siteData.psalmodies = [
     6. quoniam novit Dominus viam justorum, et iter impiorum peribit.</strong></em>"<br><br>
     Originellement, ces psaumes sont en hébreu (certains passages en araméen), ils ont été traduit ensuite en latin.<br><br>
     La chant des psaumes n'est pas fait d'envolées virtuoses mais d'une récitation scandée qui doit suivre des règles très précises.<br><br>
-    Les psaumes sont souvent accompagnés d'un autre chant que l'on apelle l'<strong>Antienne</strong> et qui vient englober le psaume; l'antienne est chantée en premier puis à la fin de l'antienne,
+    Les psaumes sont souvent accompagnés d'un autre chant que l'on appelle l'<strong>Antienne</strong> et qui vient englober le psaume; l'antienne est chantée en premier puis à la fin de l'antienne,
     on chante le psaume. Il arrive que l'on chante l'antienne, versets 1 et 2 du psaume, l'antienne, versets 3 et 4 du psaume, l'antienne etc., voire l'antienne après chaque verset, mais dans un 
     premier temps, il vaut mieux faire l'antienne, tous les versets du psaume et l'antienne à nouveau. Lors de certains rituels particulièrement long, il est possible de mettre différents psaumes, 
     exemple :<br><br>
@@ -38,9 +38,9 @@ siteData.psalmodies = [
         pour débuter qui est la <strong>Formule d'intonation</strong>, une portion de mélodie au milieu qui est 
         la <strong>Médiante</strong> et une portion finale qui termine le verset
         qui est la <strong>Terminaison</strong>.<br><br>
-        D'un mode à l'autre, ces trois formules mélodiques changent mais généralement et subitilité remarquable, à l'intérieur même
+        D'un mode à l'autre, ces trois formules mélodiques changent mais généralement et subtilité remarquable, à l'intérieur même
         d'un mode, il existe plusieurs <strong>Terminaisons</strong>. C'est d'ailleurs ce qu'indique les manuscrits : il y a souvent
-        marqué <em>Ps.<e/em> (qui veut dire psaume), un mot ou deux qui est le psaume choisit pour être chanté et par dessus cinq 
+        marqué <em>Ps.<e/em> (qui veut dire psaume), un mot ou deux qui est le psaume choisi pour être chanté et par-dessus cinq 
         ou six notes qui indiquent la <strong>Terminaison</strong> choisie dans le mode pour ce psaume.<br><br>
         `
     },
