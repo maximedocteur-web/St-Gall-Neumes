@@ -6,7 +6,7 @@ siteData.psalmodies = [
   },
     {
     type:"text",
-    content:`Dans la tradition du chant grégorien, la  lecture et la récitaiton des psaumes a une importance capitale. À l'époque médiévale, pour qu'un jeune garçon puisse commencer
+    content:`Dans la tradition du chant grégorien, la  lecture et la récitation des psaumes a une importance capitale. À l'époque médiévale, pour qu'un jeune garçon puisse commencer
     son apprentissage de chantre, il lui fallait avoir en mémoire les textes des 150 psaumes. Psaume vient du grec ancien <em>psalmos</em> qui peut désigner un chant accompagné 
     d'un instrument ou une musique jouée au psaltérion. Ces psaumes sont attribués au roi David qui les aurait composés. Chacun de ces psaumes comporte plusieurs versets, pour schématiser,
     plusieurs phrases qui, mises bout à bout, forment le psaume. Ces derniers sont toujours appelés par leurs  incipit, par exemple, le psaumen n°1 est <em>Beatus vir</em> et quand il est prit
@@ -34,8 +34,8 @@ siteData.psalmodies = [
     },
     { 
         type: "text", 
-        content: `Les psaumes peuvent se chanter dans tous les modes mélodiques, c'est-à-dire huit modes. Un psaume comporte une mélodie
-        pour débuter qui est al <strong>Formule d'intonation</strong>, une portion de mélodie au milieu qui est 
+        content: `Les psaumes peuvent se chanter dans tous les huit modes mélodiques. Un psaume comporte une mélodie
+        pour débuter qui est la <strong>Formule d'intonation</strong>, une portion de mélodie au milieu qui est 
         la <strong>Médiante</strong> et une portion finale qui termine le verset
         qui est la <strong>Terminaison</strong>.<br><br>
         D'un mode à l'autre, ces trois formules mélodiques changent mais généralement et subitilité remarquable, à l'intérieur même
