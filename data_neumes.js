@@ -4,9 +4,9 @@ siteData.neumes = [
         nom: "Punctum",
         categorie: "simples",
         description: "<strong>1 note</strong>. Il est normalement employé en composition,"+
-        "c'est-à-dire qu'on le trouve dans d'autres neumes plus complexes. Il n'est, me semble-t-il jamais utilisé seul,"+
-        "c'est à dire que l'on est sensé le trouver uniquement dans d'autres neumes mais jamais tout seul,"+
-        "il n'a pas d'autonomie en tant que neume. Il ne possède pas de forme avec épisème car en cas d'alongement"+
+        "c'est-à-dire qu'on le trouve dans d'autres neumes plus complexes. Il n'est, me semble-t-il, jamais utilisé seul,"+
+        "c'est à dire que l'on est censé le trouver uniquement dans d'autres neumes mais jamais tout seul,"+
+        "il n'a pas d'autonomie en tant que neume. Il ne possède pas de forme avec épisème car en cas d'alongement "+
         "de la note dans un neume en composition, on lui préférera le tractulus, voire le tractulus épisémé.",
         image: "images/punctum.png"
     },
@@ -16,7 +16,7 @@ siteData.neumes = [
             description: "<strong>1 note</strong>. Il est employé seul ou en composition,"+
             " c'est-à-dire qu'on peut aussi le trouver dans d'autres neumes plus complexes. Il possède une forme"+
             " épisémée qui allonge sa valeur du simple au double. La dernière graphie où il est en forme de C renversé"+
-            " est la forme qu'il prend lorqu'il est liquescent.",
+            " est la forme qu'il prend lorsqu'il est liquescent.",
             images: [
                 "images/tractulus.png",
                 "images/tractulus_episeme.png",
@@ -64,7 +64,7 @@ siteData.neumes = [
             nom: "Torculus",
             categorie: "simples",
             description: "<strong>3 notes</strong>, mouvement : ascendant/descendant. Ce neume représente trois notes, "+
-            "la deuxième étant plus élevée (plus aigue) que la première et la troisième plus basse (grave) que la deuxième "+
+            "la deuxième étant plus élevée (plus aiguë) que la première et la troisième plus basse (grave) que la deuxième "+
             "mais on ne sait pas de combien elles sont plus élevées/basses (une tierce ? une quarte ? une octave ? rien ne l'indique "+ 
             "dans sa graphie). La première image est sa graphie standard [son=audio/torculus1.mp3], la seconde image représente sa version épisémée où les trois "+
             "notes sont longues. [son=audio/torculus2.mp3]",
@@ -77,17 +77,17 @@ siteData.neumes = [
             nom: "Porrectus",
             categorie: "simples",
             description: "<strong>3 notes</strong>, mouvement : descendant/ascendant. Ce neume représente trois notes, la seconde étant plus basse (plus grave) que la première "+
-            "et la troisième plus elevée (plus aigue) que la deuxième mais on ne sait pas de combien elle est plus élevée (une tierce ? une quarte ? une octave ? rien ne l'indique "+
+            "et la troisième plus élevée (plus aiguë) que la deuxième mais on ne sait pas de combien elle est plus élevée (une tierce ? une quarte ? une octave ? rien ne l'indique "+
             "dans sa graphie). Son image ici présente est sa graphie standard [son=audio/porrectus.mp3]. Il arrive que la dernière note soit épisémée, dans ce cas, la virga finale porte un trait horizontal "+
-            "à son sommet. Dans notre lecture actuelle des neumes, les deux première notes sont plus rapides que la dernière selon le schéma : <strong>1/2</strong> ; <strong>1/2</strong> ; <strong>1</strong> .",
+            "à son sommet. Dans notre lecture actuelle des neumes, les deux premières notes sont plus rapides que la dernière selon le schéma : <strong>1/2</strong> ; <strong>1/2</strong> ; <strong>1</strong> .",
             image: "images/porrectus.png"
         },
         {
             nom: "Scandicus",
             categorie: "simples",
-            description: "<strong>3 notes</strong>, mouvement : ascendant/ascendant. Ce neume représente trois/quatre notes, la seconde étant plus élevée (plus aigue) que la première "+
-            "et la troisième plus elevée (plus aigue) que la deuxième mais on ne sait pas de combien elles sont plus élevées (une tierce ? une quarte ? une octave ? rien ne l'indique "+
-            "dans sa graphie). Les deux images sont des graphies standard, une a deux punctums [son=audio/scandicus2.mp3] et une à trois [son=audio/scandicus3.mp3]. Il existe une grande variété de graphies où l'on peut remplacer un ou des punctums "+
+            description: "<strong>3 notes</strong>, mouvement : ascendant/ascendant. Ce neume représente trois/quatre notes, la seconde étant plus élevée (plus aiguë) que la première "+
+            "et la troisième plus élevée (plus aiguë) que la deuxième mais on ne sait pas de combien elles sont plus élevées (une tierce ? une quarte ? une octave ? rien ne l'indique "+
+            "dans sa graphie). Les deux images sont des graphies standard, une à deux punctums [son=audio/scandicus2.mp3] et une à trois [son=audio/scandicus3.mp3]. Il existe une grande variété de graphies où l'on peut remplacer un ou des punctums "+
             "par des tractulus (voire des tractulus épisémés) et où la virga finale peut être sous toutes les formes indiquées précédemment (voir VIRGA)",
             images:[ 
                 "images/scandicus_1.png",
@@ -110,7 +110,7 @@ siteData.neumes = [
             nom: "Torculus resupinus",
             categorie: "simples",
             description: "<strong>4 notes</strong>, mouvement : ascendant/descendant/ascendant. Ce neume représente quatre notes, c'est simplement un torculus avec une virga finale qui est placée"+
-            " plus aigue par rapport à la dernière note du torculus (donc 4e note plus élevée que la 3e note) [son=audio/torculus_resupinus.mp3].",
+            " plus aiguë par rapport à la dernière note du torculus (donc 4e note plus élevée que la 3e note) [son=audio/torculus_resupinus.mp3].",
             image: "images/torculus_resupinus.png"
         },
         {
@@ -146,7 +146,7 @@ siteData.neumes = [
         {
             nom: "Salicus",
             categorie: "ornementaux",
-            description: "C'est un neume qui graphiquement est organisé en trois partie et où la partie centrale porte toujours l'ornement représenté soit sous la forme d'un petit-pont (image 1 [son=audio/salicus.mp3]), soit"+
+            description: "C'est un neume qui graphiquement est organisé en trois parties et où la partie centrale porte toujours l'ornement représenté soit sous la forme d'un petit-pont (image 1 [son=audio/salicus.mp3]), soit"+
             " d'une vaguelette (image 2). Tout en bas, on y trouve généralement un punctum mais il est aussi possible de trouver un tractulus. Pour sa partie haute, on y trouve généralement une virga"+
             " simple (qui peut être épisémée) ou un autre neume ajouté comme une clivis (image 3 [son=audio/salicus3.mp3]). La forme en petit-pont ou en vaguelette change l'ornement mais il est encore difficile d'identifier exactement"+
             " ce à quoi ces deux ornements distincts doivent ressembler.",
@@ -160,7 +160,7 @@ siteData.neumes = [
             nom: "oriscus",
             categorie: "ornementaux",
             description: "C'est un ornement à lui tout seul [son=audio/oriscus.mp3] qui peut se présenter seul ou en composition lorsqu'il se trouve accolé à d'autres neumes. Par exemple, lorsqu'on le fait suivre"+
-            "par une virga (image2 [son=audio/oriscus2.mp3]), on l'apelle <strong>pes quassus</strong> ou on peut aussi bien le trouver collé à une clivis (épisémée dans le cas ici présenté dans l'image3 [son=audio/oriscus3.mp3]).",
+            " par une virga (image2 [son=audio/oriscus2.mp3]), on l'appelle <strong>pes quassus</strong> ou on peut aussi bien le trouver collé à une clivis (épisémée dans le cas ici présenté dans l'image3 [son=audio/oriscus3.mp3]).",
             images: [
                 "images/oriscus.png",
                 "images/pes_quassus.png",
@@ -171,8 +171,8 @@ siteData.neumes = [
             nom: "Pressus",
             categorie: "ornementaux",
             description: "Neume ornementé qui peut avoir deux graphies. Pour faire TRÈS simple, on peut découper ce neume en trois parties, une virga, une vague et un punctum. Quand ces trois"+
-            " éléments sont réunis, le pressus est dit <strong>maior</strong> (grand) et si il manque la virga au début, il est dit <strong>minor</strong> (petit). Dans la première image, vous"+
-            " avez un pressus minor [son=audio/pressus_minor.mp3] et dans la seconde image un pressus maior [son=audio/pressus_maior.mp3]. La virga et le punctum ont tous deux leur rôle habituel et l'ornemente st en fait cette vague. Quand le pressus est"+
+            " éléments sont réunis, le pressus est dit <strong>maior</strong> (grand) et s'il manque la virga au début, il est dit <strong>minor</strong> (petit). Dans la première image, vous"+
+            " avez un pressus minor [son=audio/pressus_minor.mp3] et dans la seconde image un pressus maior [son=audio/pressus_maior.mp3]. La virga et le punctum ont tous deux leur rôle habituel et l'ornemente est en fait cette vague. Quand le pressus est"+
             " minor, on enchaîne l'ornement directement à la fin du neume qui le précède et on fait le punctum."+
             "Quand il est maior, on prend le temps de bien faire la virga puis l'ornement et le punctum.",
             images: [
@@ -192,7 +192,7 @@ siteData.neumes = [
             categorie: "ornementaux",
             description: "Une apostropha (la <em>gifle</em> en latin), est une seule note représentée par une virgule qui est légèrement tremblée (image 1 [son=audio/apostropha.mp3]) mais elle peut aussi être représentée"+
             " par paire ou par triplette. Par paire c'est une <strong>distropha</strong> (image 2 [son=audio/distropha.mp3]) et par triplette une <strong>tristropha</strong> (image 4 [son=audio/tristropha.mp3]). Il arrive que la dernière note"+
-            " puisse être plus longue (image 3 [son=audio/distropha2.mp3]) ou liquescente (image 5 [son=audio/tristropha3.mp3]). Peut importe le nombre de virgules, ils faut toutes qu'elles aient ce léger tremblement. Il arrive que l'on retrouve"+
+            " puisse être plus longue (image 3 [son=audio/distropha2.mp3]) ou liquescente (image 5 [son=audio/tristropha3.mp3]). Peu importe le nombre de virgules, il faut toutes qu'elles aient ce léger tremblement. Il arrive que l'on retrouve"+
             " plusieurs de ces petits paquets les uns à la suite des autres.",
             images: [
                 "images/apostropha.png",
@@ -206,10 +206,10 @@ siteData.neumes = [
             nom:"trigon",
             categorie:"ornementaux",
             description:"Dans sa forme standard, le trigon est considéré comme un groupe de trois notes. (<strong>ATTENTION!</strong>) La <em>Sémiologie grégorienne</em> de Dom Cardine (les"+
-            " neumes selon la méthode de Solesmes) le trigon est considéré comme trois notes mais dont les deux premières sont à l'unisson et la troisième plus grave mais nosu considérons plutôt"+
-            " que sa graphie indique une note, la deuxième plus aigue et la troisième plus grave que la deuxième, comme sa graphie le laisse penser. Aussi, c'est un neume polymorphe qui peut avoir"+
-            " plein de graphies différentes avec des punctums, des tractulus, des épisèmes, des adjonctions d'un, deux ou trois punctums avant l'ornement. Dans ces cas, il faut consédérer que c'est"+
-            " tout le groupe de neume qui doit s'sxécuter dans la dynamique du trigon et il ne faut donc pas considérer que l'on pourrait avoir deux punctums+un trigon mais plutôt chanter un "+
+            " neumes selon la méthode de Solesmes) le trigon est considéré comme trois notes mais dont les deux premières sont à l'unisson et la troisième plus grave mais nous considérons plutôt"+
+            " que sa graphie indique une note, la deuxième plus aiguë et la troisième plus grave que la deuxième, comme sa graphie le laisse penser. Aussi, c'est un neume polymorphe qui peut avoir"+
+            " plein de graphies différentes avec des punctums, des tractulus, des épisèmes, des adjonctions d'un, deux ou trois punctums avant l'ornement. Dans ces cas, il faut considérer que c'est"+
+            " tout le groupe de neume qui doit s'exécuter dans la dynamique du trigon et il ne faut donc pas considérer que l'on pourrait avoir deux punctums+un trigon mais plutôt chanter un "+
             " trigon pré-bi-punctis. Sa graphie standard est à trois punctums (image 1 [son=audio/trigon1.mp3]). On peut remplacer la dernière note par un tractulus (image 2[son=audio/trigon2.mp3]), voire en ajouter un de plus (image 3[son=audio/trigon3.mp3])."+
             " Ensuite, on peut avoir des trigons avec plus de punctums ascendants (image 4[son=audio/trigon4.mp3]) ou descendant (image 5). Le tout, c'est de garder la dynamique ornementale du trigon sur toute sa longueur.",
             images: [
