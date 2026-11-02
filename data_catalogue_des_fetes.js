@@ -68,8 +68,8 @@ siteData.catalogue_des_fetes = [
         contenu: `
             <strong>Introït :</strong> Rorate caeli de super [p.9]<br><br>
             <strong>Graduel :</strong> Tollite portas principes vestras [p.10]<br><br>
-            ATTENTION ! Un aute graduel. <strong>Graduel :</strong> Prope est Dominus omnibus[p.10]<br><br>
-            ATTENTION ! Pas d'alleluia ici.<br><br>
+            ATTENTION ! Un autre graduel. <strong>Graduel :</strong> Prope est Dominus omnibus[p.10]<br><br>
+            ATTENTION ! Pas d'alléluia ici.<br><br>
             <strong>Offertoire :</strong> Confortamini et iam nolite [p.11]<br>V. Tunc aperientur oculi<br>V. Audite itaque domus David<br><br>
             ATTENTION ! Un autre offertoire. <strong>Offertoire :</strong> Ave Maria gratia plena [p.12]<br>V. Quo modo in me fiet<br>V. Ideoque quod nascetur<br><br>
             <strong>Communion :</strong> Ecce virgo concipiet [p.13]
@@ -83,7 +83,7 @@ siteData.catalogue_des_fetes = [
         contenu: `
             <strong>Introït :</strong> Prope esto Domine [p.13]<br><br>
             <strong>Graduel :</strong> Ostende nobis Domine [p.13]<br><br>
-            ATTENTION ! Pas d'Alleluia ici<br><br>
+            ATTENTION ! Pas d'Alléluia ici<br><br>
             <strong>Offertoire :</strong> Deus tu convertens [p.14]<br>V. XXX <br>V. XXX<br>ATTENTION ! Il n'est noté ici que par son incipit, pour voir la pièce entière rdv [p.3]<br><br>
             <strong>Communion :</strong> Ecce Dominus veniet [p.14]
         `
@@ -99,7 +99,7 @@ siteData.catalogue_des_fetes = [
             ATTENTION ! Un autre graduel.<strong> Graduel :</strong> In sole posuit tabernaculum [p.15]<br><br>
             ATTENTION ! Un autre graduel.<strong> Graduel :</strong> Domine Deus virtutum [p.15]<br><br>
             ATTENTION ! Un autre graduel.<strong> Graduel :</strong> Excita Domine potentiam tuam [p.16]<br><br>
-            ATTENTION ! Pas d'alleluia ici.<br><br>
+            ATTENTION ! Pas d'alléluia ici.<br><br>
             ATTENTION ! Pas d'offertoire ici.<br><br>
             ATTENTION ! Pas de Communion ici.
         `
@@ -180,7 +180,7 @@ siteData.catalogue_des_fetes = [
             <strong>Alléluia :</strong> Video caelos apertos [p.34]<br><br>
             <strong>Offertoire :</strong> In virtute tua Domine [p.34]<br>V. Vitam peciit et tribuisti<br>V. Magna est gloria eius<br><br>
             ATTENTION ! Un autre offertoire.<br><strong>Offertoire :</strong> Elegerunt apostoli Stephanum [p.35]<br>V. Viderunt faciem eius<br>V. Positis autem genibus<br><br>
-            ATTENTION ! Pas d'alleluia ici.<br><br>
+            ATTENTION ! Pas d'alléluia ici.<br><br>
             <strong>Communion :</strong> Video caelos apertos [p.36]
         `
     },
@@ -192,7 +192,7 @@ siteData.catalogue_des_fetes = [
         contenu: `
             <strong>Introït :</strong> Ego autem sicut oliva [p.37]<br><br>
             <strong>Graduel :</strong> Justus ut palma florebunt [p.37]<br><br>
-            ATTENTION ! pas d'alleluia ici.<br><br>
+            ATTENTION ! pas d'alléluia ici.<br><br>
             <strong>Offertoire :</strong> Gloria et honore coronasti [p.38]<br>V. Domine Dominus noster<br>V. Quid est homo quod<br><br>
             <strong>Communion :</strong> Magna est gloria eius [p.39]
         `
@@ -218,7 +218,7 @@ siteData.catalogue_des_fetes = [
         contenu: `
             <strong>Introït :</strong> Exore infantium Deus [p.41]<br><br>
             <strong>Graduel :</strong> Anima nostra sicut passer [p.42]<br><br>
-            ATTENTION ! Pas d'alleluia ici.<br><br>
+            ATTENTION ! Pas d'alléluia ici.<br><br>
             <strong>Offertoire :</strong> Anima nostra sicut passer [p.42]<br>V. Nisi quod Dominus erat<br>V. Torrentem pertransivit<br><br>
             <strong>Communion :</strong> Vox in rama audita est ploratus [p.43]
         `
@@ -231,7 +231,7 @@ siteData.catalogue_des_fetes = [
         contenu: `
             <strong>Introït :</strong> Sacerdotes tui Domine [p.44]<br><br>
             <strong>Graduel :</strong> Ecce sacerdos magnus [p.44]<br><br>
-            ATTENTION ! Pas d'alleluia ici.<br><br>
+            ATTENTION ! Pas d'alléluia ici.<br><br>
             <strong>Offertoire :</strong> In veni David servum [p.44]<br>V. Potens es Domine et veritas<br>V. Veritas mea et misericordia<br><br>
             <strong>Communion :</strong> Beatus servus quem [p.46]
         `
@@ -244,7 +244,7 @@ siteData.catalogue_des_fetes = [
         contenu: `
             <strong>Introït :</strong> Vultum tuum deprecabuntur [p.46]<br><br>
             <strong>Graduel :</strong> Diffusa est gratia [p.46]<br><br>
-            ATTENTION ! Pas d'alleluia ici.<br><br>
+            ATTENTION ! Pas d'alléluia ici.<br><br>
             <strong>Offertoire :</strong> ur regi virgines [p.47]<br>V. Eructuavit cor meum<br>(un seul verset noté ici)<br><br>
             <strong>Communion :</strong> Simile est regnum caelorum [p.48]
         `
@@ -296,7 +296,7 @@ siteData.catalogue_des_fetes = [
         contenu: `
             <strong>Introït :</strong> Os iusti meditabitur sapientiam [p.55]<br><br>
             <strong>Graduel :</strong> Juravit Dominus et non [p.56]<br><br>
-            ATTENTION ! Il n'y a pas d'alleluia ici. <br><br>
+            ATTENTION ! Il n'y a pas d'alléluia ici. <br><br>
             <strong>Offertoire :</strong> Gloria et honore [p.56] <br>V. XXX <br>V. XXX<br> ATTENTION ! Il n'est noté ici que par son incipit, pour voir la pièce entière rdv [p.38]<br><br>
             <strong>Communion :</strong> Posuisiti Domine in capite [p.56]
         `
@@ -322,7 +322,7 @@ siteData.catalogue_des_fetes = [
         contenu: `
             <strong>Introït :</strong> Statuit ei Dominus [p.59]<br><br>
             <strong>Graduel :</strong> In veni David servum [p.60]<br><br>
-            ATTENTION ! Pas d'alleluia ici.<br><br>
+            ATTENTION ! Pas d'alléluia ici.<br><br>
             <strong>Offertoire :</strong> Veritas mea et misericordia [p.60]<br>V. Posui adiutorium<br>V. Misericordiam meam<br><br>
             <strong>Communion :</strong> Domine quinque talenta [p.61]
         `
@@ -335,7 +335,7 @@ siteData.catalogue_des_fetes = [
         contenu: `
             <strong>Introït :</strong> Loquebar de testimoniis [p.62]<br><br>
             <strong>Graduel :</strong> Species tua et pulchritudine [p.62]<br><br>
-            ATTENTION ! Pas d'alleluia ici. <br><br>
+            ATTENTION ! Pas d'alléluia ici. <br><br>
             <strong>Offertoire :</strong> Filiae regum in honore [p.62]<br>V. Eructuavit cor meum<br>V. Virga recta est<br><br>
             <strong>Communion :</strong> Feci iudicium et iustitiam [p.63]
         `
@@ -348,7 +348,7 @@ siteData.catalogue_des_fetes = [
         contenu: `
             <strong>Introït :</strong> Intret in conspectu tuo [p.63]<br><br>
             <strong>Graduel :</strong> Gloriosus Deus in sanctis [p.64]<br><br>
-            ATTENTION ! Pas d'alleluia ici<br><br>
+            ATTENTION ! Pas d'alléluia ici<br><br>
             <strong>Offertoire :</strong> Laetamini in Domino [p.64]<br>V. Beati quorum remisse<br>V. Pro hac oravit ad te<br><br>
             <strong>Communion :</strong> Multitudo languentium [p.65]
         `
@@ -361,7 +361,7 @@ siteData.catalogue_des_fetes = [
         contenu: `
             <strong>Introït :</strong> Me expectaverunt peccatores [p.66]<br><br>
             <strong>Graduel :</strong> Diffusa est gratia [p.66]<br><br>ATTENTION ! Il n'est noté ici que par son incipit, pour voir la pièce entière rdv [p.46]
-            ATTENTION ! Pas d'alleluia ici. <br><br>
+            ATTENTION ! Pas d'alléluia ici. <br><br>
             <strong>Offertoire :</strong> Offerentur [p.66]<br>V. XXX<br>V. XXX<br><br>ATTENTION ! Il n'est noté ici que par son incipit, pour voir la pièce entière rdv [p.47]
             <strong>Communion :</strong> Quinque prudentes virgines [p.66]
         `
@@ -387,7 +387,7 @@ siteData.catalogue_des_fetes = [
         contenu: `
             <strong>Introït :</strong> Laetabitur iustus in Domino [p.69]<br><br>
             <strong>Graduel :</strong> Posuisti Domine super caput [p.69]<br><br>
-            ATTENTION ! Pas d'alleluia ici.<br><br>
+            ATTENTION ! Pas d'alléluia ici.<br><br>
             <strong>Offertoire :</strong> Gloria et honore [p.70]<br>V. XXX<br>V. XXX<br>ATTENTION ! Il n'est noté ici que par son incipit, pour voir la pièce entière rdv [p.38]<br><br>
             <strong>Communion :</strong> Qui vult venire post me [p.70]
         `
@@ -400,9 +400,9 @@ siteData.catalogue_des_fetes = [
         contenu: `
             <strong>Introït :</strong> Vultum tuum [p.70] <br>ATTENTION ! Il n'est noté ici que par son incipit, pour voir la pièce entière rdv [p.46]<br><br>
             <strong>Graduel :</strong> Specie tua [p.70]<br>ATTENTION ! Il n'est noté ici que par son incipit, pour voir la pièce entière rdv [p.62]<br><br>
-            ATTENTION ! Pas d'alleluia ici.<br><br>
+            ATTENTION ! Pas d'alléluia ici.<br><br>
             <strong>Offertoire :</strong> Diffusa est gratia [p.70]<br>V. Specie tua et pulchritudine <br>V. Eructavit cor<br><br>
-            <strong>Communion :</strong> Simile est regnum caelorum [p.71]<br>ATTENTION ! Il n'est noté ici que par son incipit, pour voir la pièce entière rdv [p.48]
+            <strong>Communion :</strong> Simile est regnum caelorum [p.71]<br>ATTENTION ! Elle n'est notée ici que par son incipit, pour voir la pièce entière rdv [p.48]
         `
     },
     {
@@ -430,7 +430,7 @@ siteData.catalogue_des_fetes = [
         contenu: `
             <strong>Introït :</strong> Gaudeamus omnes in Domino [p.75]<br><br>
             <strong>Graduel :</strong> Adjuvabit eam Deus [p.75]<br><br>
-            ATTENTION ! Ici c'est un TRAIT qui remplace l'Alleluia<br><strong>Trait :</strong> Qui seminant in lacrimis [p.76]<br><br>
+            ATTENTION ! Ici c'est un TRAIT qui remplace l'Alléluia<br><strong>Trait :</strong> Qui seminant in lacrimis [p.76]<br><br>
             <strong>Offertoire :</strong> Offerentur [p.76]<br>V. XXX<br>V. XXX<br>ATTENTION ! Il n'est noté ici que par son incipit, pour voir la pièce entière rdv [p.6]<br><br> 
             <strong>Communion :</strong> Qui me dignatus est ab omni plaga [p.76]
         `
@@ -443,9 +443,9 @@ siteData.catalogue_des_fetes = [
         contenu: `
             <strong>Introït :</strong> In virtute tua Domine [p.77]<br><br>
             <strong>Graduel :</strong> Beatus vir qui timet [p.77]<br><br>
-            ATTENTION ! Ici c'est un TRAIT qui remplace l'Alleluia<br><strong>Trait :</strong> Desiderium anime eius tribu [p.78]<br><br>
+            ATTENTION ! Ici c'est un TRAIT qui remplace l'Alléluia<br><strong>Trait :</strong> Desiderium anime eius tribu [p.78]<br><br>
             <strong>Offertoire :</strong> In virtute tua [p.78]<br>V. XXX<br>V. XXX<br>ATTENTION ! Il n'est noté ici que par son incipit, pour voir la pièce entière rdv [p.34]<br><br>
-            <strong>Communion :</strong> Magna est [p.78]<br>ATTENTION ! Il n'est noté ici que par son incipit, pour voir la pièce entière rdv [p.39]
+            <strong>Communion :</strong> Magna est [p.78]<br>ATTENTION ! Elle n'est notée ici que par son incipit, pour voir la pièce entière rdv [p.39]
         `
     },
     {
@@ -456,7 +456,7 @@ siteData.catalogue_des_fetes = [
         contenu: `
             <strong>Introït :</strong> Sacerdotes Dei benedicite [p.78]<br><br>
             <strong>Graduel :</strong> Juravit Dominus [p.79]<br>ATTENTION ! Il n'est noté ici que par son incipit, pour voir la pièce entière rdv [p.56]<br><br>
-            ATTENTION ! Ici c'est un TRAIT qui remplace l'Alleluia<br><strong>Trait :</strong> Beatus vir qui timet Dominum [p.79]<br><br>
+            ATTENTION ! Ici c'est un TRAIT qui remplace l'Alléluia<br><strong>Trait :</strong> Beatus vir qui timet Dominum [p.79]<br><br>
             <strong>Offertoire :</strong> Veritas mea [p.79]<br>V. XXX<br>V. XXX<br>Il n'est noté ici que par son incipit, pour voir la pièce entière rdv [p.56]<br><br>
             <strong>Communion :</strong> Fidelis servus et prudens [p.79]
         `
@@ -469,7 +469,7 @@ siteData.catalogue_des_fetes = [
         contenu: `
             <strong>Introït :</strong> Vultum tuum [p.80]<br>Il n'est noté ici que par son incipit, pour voir la pièce entière rdv [p.46]<br><br>
             <strong>Graduel :</strong> Diffusa est [p.80]<br>Il n'est noté ici que par son incipit, pour voir la pièce entière rdv [p.46]<br><br>
-           ATTENTION ! Ici c'est un TRAIT qui remplace l'Alleluia<br><strong>Trait :</strong> Audi filia et vide [p.80]<br><br>
+           ATTENTION ! Ici c'est un TRAIT qui remplace l'Alléluia<br><strong>Trait :</strong> Audi filia et vide [p.80]<br><br>
             <strong>Offertoire :</strong> Ave Maria [p.81]<br>V. XXX<br>V. XXX<br>Il n'est noté ici que par son incipit, pour voir la pièce entière rdv [p.12]<br><br>
             <strong>Communion :</strong> Ecce virgo [p.81]
         `
@@ -482,7 +482,7 @@ siteData.catalogue_des_fetes = [
         contenu: `
             <strong>Introït :</strong> Circumdederunt me gemitus [p.81]<br><br>
             <strong>Graduel :</strong> Adjutor inoportunitatibus [p.81]<br><br>
-            ATTENTION ! Ici c'est un TRAIT qui remplace l'Alleluia<br><strong>Trait :</strong> De profundis clamavi ad te Domine [p.82]<br><br>
+            ATTENTION ! Ici c'est un TRAIT qui remplace l'Alléluia<br><strong>Trait :</strong> De profundis clamavi ad te Domine [p.82]<br><br>
             <strong>Offertoire :</strong> Bonum est confiteri Domino [p.83]<br>V. Quam magnificata sunt opera<br>V. Ecce inimici tui Domine<br> V.Exaltabitur sicut unicornis<br><br>
             <strong>Communion :</strong> Illumina faciem tuam [p.84]
         `
@@ -495,7 +495,7 @@ siteData.catalogue_des_fetes = [
         contenu: `
             <strong>Introït :</strong> Exsurge quare obdormis [p.84]<br><br>
             <strong>Graduel :</strong> Sciant gentes quoniam nomen [p.85]<br><br>
-            ATTENTION ! Ici c'est un TRAIT qui remplace l'Alleluia<br><strong>Trait :</strong> Commovisti Domine terram [p.85]<br><br>
+            ATTENTION ! Ici c'est un TRAIT qui remplace l'Alléluia<br><strong>Trait :</strong> Commovisti Domine terram [p.85]<br><br>
             <strong>Offertoire :</strong> Perfice gressus meos [p.86]<br>V. Exaudi Domine iustitiam<br>V. Custodime Domine ut pupillam<br> V. Ego autem cum iusticia<br><br>
             <strong>Communion :</strong> Introïbo ad altare Dei [p.87]
         `
@@ -508,7 +508,7 @@ siteData.catalogue_des_fetes = [
         contenu: `
             <strong>Introït :</strong> Esto mihi in Deum protectorem [p.88]<br><br>
             <strong>Graduel :</strong> Tu es Deus qui facit mirabilia [p.88]<br><br>
-            ATTENTION ! Ici c'est un TRAIT qui remplace l'Alleluia<br><strong>Trait :</strong>Iubilate Domino omnis terra [p.89]<br><br>
+            ATTENTION ! Ici c'est un TRAIT qui remplace l'Alléluia<br><strong>Trait :</strong>Iubilate Domino omnis terra [p.89]<br><br>
             <strong>Offertoire :</strong> Benedictus es Domine doce me [p.89]<br>V. Beati immaculati un via<br>V. In via testimoniorum<br> V. Viam iniquitatis Domine<br><br>
             <strong>Communion :</strong> Manducaverunt et saturari sunt [p.91]
         `
@@ -525,7 +525,7 @@ siteData.catalogue_des_fetes = [
             (Puis "Ad missam" (à la messe))<br><br>
             <strong>Introït :</strong> Misereris omnium Domine et nihil [p.93]<br><br>
             <strong>Graduel :</strong> Miserere mei Deus [p.93]<br><br>
-            Pas d'alleluia ici.<br><br>
+            Pas d'alléluia ici.<br><br>
             <strong>Offertoire :</strong> Exaltabo te Domine quoniam [p.94]<br>V. Domine abstraxisti <br>V. Ego autem dixi <br><br>
             <strong>Communion :</strong> Qui meditabitur in lege Domini [p.95]
         `
@@ -538,7 +538,7 @@ siteData.catalogue_des_fetes = [
         contenu: `
             <strong>Introït :</strong> Dum clamarem ad Diminum [p.95]<br><br>
             <strong>Graduel :</strong> Facta cogitatum tuum [p.96]<br><br>
-            Pas d'alleluia ici.<br><br>
+            Pas d'alléluia ici.<br><br>
             <strong>Offertoire :</strong> Ad te Domine levavi [p.96]<br>Il n'est noté ici que par son incipit, pour voir la pièce entière rdv [p.1]<br><br>
             <strong>Communion :</strong> Acceptabit sacrificium iustitiae [p.97]
         `
@@ -551,7 +551,7 @@ siteData.catalogue_des_fetes = [
         contenu: `
             <strong>Introït :</strong> Audivit Dominus [p.97]<br><br>
             <strong>Graduel :</strong> Unam petii a Domino [p.97]<br><br>
-            Pas d'alleluia ici.<br><br>
+            Pas d'alléluia ici.<br><br>
             <strong>Offertoire :</strong> Domine vivifica me [p.98]<br>V. Ea cum servo tuo<br>V. Da mihi intellectum<br><br>
             <strong>Communion :</strong> Servite Domino in timore [p.98]
         `
@@ -564,7 +564,7 @@ siteData.catalogue_des_fetes = [
         contenu: `
             <strong>Introït :</strong> Invocavit me et ego [p.99]<br><br>
             <strong>Graduel :</strong> Angelis suis mandabit [p.99]<br><br>
-            ATTENTION ! Ici c'est un TRAIT qui remplace l'Alleluia<br><strong>Trait :</strong> Qui habitat in adiutorio altissimi [p.100]<br><br>
+            ATTENTION ! Ici c'est un TRAIT qui remplace l'Alléluia<br><strong>Trait :</strong> Qui habitat in adiutorio altissimi [p.100]<br><br>
             <strong>Offertoire :</strong> Scapulis sui obumbrabit [p.102]<br>V. Dicet Domino suceptor<br>V. Quoniam angelis suis<br> V. Super aspidem et basilicum<br><br>
             <strong>Communion :</strong> Scapulis suis obumbrabit [p.103]
         `
@@ -577,7 +577,7 @@ siteData.catalogue_des_fetes = [
         contenu: `
             <strong>Introït :</strong> Sicut oculi servorum [p.104]<br><br>
             <strong>Graduel :</strong> Protector noster aspice [p.104]<br><br>
-            ATTENTION ! Pas d'alleluia ici.br><br>
+            ATTENTION ! Pas d'alléluia ici.br><br>
             <strong>Offertoire :</strong> Revela oculos meos [p.105]<br>V. Legem pone mihi Domine<br>V. Veniant super me miserationes<br><br>
             <strong>Communion :</strong> Voce mea ad Dominum [p.105]
         `
@@ -590,7 +590,7 @@ siteData.catalogue_des_fetes = [
         contenu: `
             <strong>Introït :</strong> Domine refugium factus [p.106]<br><br>
             <strong>Graduel :</strong> Dirigatur oratio mea [p.106]<br><br>
-            ATTENTION ! Pas d'alleluia ici.br><br>
+            ATTENTION ! Pas d'alléluia ici.br><br>
             <strong>Offertoire :</strong> In te speravi Domine [p.106]<br>V. Illumina faciem tuam<br>V. Quam magna multitudo<br><br>
             <strong>Communion :</strong> Cum invocarem te [p.107]
         `
@@ -605,6 +605,7 @@ siteData.catalogue_des_fetes = [
             <strong>Graduel :</strong> Tribulationes cordis mei [p.108]<br><br>
             ATTENTION : un autre graduel ici :<br>
             <strong>Graduel :</strong> De necessitatibus meis [p. 108]
+            ATTENTION ! Pas d'alléluia ici.br><br>
             <strong>Offertoire :</strong> Meditabar in mandatis tuis [p.109]<br>V. Pars mea Domine<br>V. Miserere mei <br><br>
             <strong>Communion :</strong> Intellege clamorem meum [p.109]
         `
@@ -617,7 +618,7 @@ siteData.catalogue_des_fetes = [
         contenu: `
             <strong>Introït :</strong> Confessio et pulchritudo [p.110]<br><br>
             <strong>Graduel :</strong> Custodi me Domine [p.111]<br><br>
-            ATTENTION ! Pas d'alleluia ici.<br><br>
+            ATTENTION ! Pas d'alléluia ici.<br><br>
             <strong>Offertoire :</strong> Immittit angelus Domini [p.111]<br>V. Benedicam Domino<br>V. In Domino laudabitur<br> V. Accedite ad eum<br><br>
             <strong>Communion :</strong> Panis quem ego [p.112]
         `
