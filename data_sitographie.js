@@ -29,17 +29,5 @@ siteData.sitographie = [
     content: `<strong>GregoBase</strong> : Site où l'on peut trouver les versions en notation carrée des pièces grégoriennes 
     : <a href="https://gregobase.selapa.net" target="_blanck" 
     class="underline text-amber-700 hover:text-amber-700"><em>cliquez ici</em></a>`
-  },
-  {
-    type :"text",
-    content: `<strong>MMMO (Medieval Music Manuscripts Online)</strong> : site qui répertorie beaucoup de manuscrits de chant grégorien
-    et de polyphonies : <a href="https://musmed.eu" target="_blanck" 
-    class="underline text-amber-700 hover:text-amber-700"><em>cliquez ici</em></a>`
-  },
-  {
-    type :"text",
-    content: `<strong>MMMO (Medieval Music Manuscripts Online)</strong> : site qui répertorie beaucoup de manuscrits de chant grégorien
-    et de polyphonies : <a href="https://musmed.eu" target="_blanck" 
-    class="underline text-amber-700 hover:text-amber-700"><em>cliquez ici</em></a>`
-  },
+  }
 ]
