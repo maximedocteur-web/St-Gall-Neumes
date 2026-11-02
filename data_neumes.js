@@ -139,8 +139,8 @@ siteData.neumes = [
             categorie: "ornementaux",
             description: "C'est un neume ornementé qui peut avoir deux [son=audio/quilisma2.mp3] ou trois boucles [son=audio/quilisma3.mp3].",
             images: [
-                "images/quilisma.png",
-                "images/quilisma3.png"
+                "images/quilisma3.png",
+                "images/quilisma.png"
                 ]
         },
         {
