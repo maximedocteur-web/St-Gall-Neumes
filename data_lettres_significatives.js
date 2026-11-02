@@ -6,7 +6,6 @@ siteData.lettres = [
         _ Cette lettre singnificative indique que l'on doit être plus rapide, c'est-à-dire diviser une ou toutes les valeurs rythmiques normales du neumes pour le faire plus rapidement.`
     },
     { 
-        
         image: "images/t.png",
         sigle: "t (Tenete)",
         texte: `<span style="color: #e60004;">t</span>. <strong>Trahere vel tenere debere testatur.</strong><br><br>
@@ -18,7 +17,7 @@ siteData.lettres = [
     { 
         sigle: "m (Mediocriter)",
         texte: `<span style="color: #e60004;">m</span>. <strong>Mediocriter melodiam moderari mendicando memorat.</strong><br><br>
-        _ Cette lettre significative `,
+        _ modéré, modérément, moyennement (reste énigmatique quant à l'éxécution...) `,
         image: "images/m.png"
     },
     { 
@@ -34,7 +33,7 @@ siteData.lettres = [
     { 
         sigle: "p (Pressio)",
         texte: `<span style="color: #e60004;">p</span>. <strong>Pressionem vel prensionem predicat.</strong><br><br>
-        _ Mettre plus de pression, plus poussé pendant un instant (reste énigmatique...)`,
+        _ Mettre plus de pression, plus poussé pendant un instant (reste énigmatique quant à l'éxécution...)`,
         image: "images/ppressio.png"
     },
     { 
@@ -45,12 +44,14 @@ siteData.lettres = [
     },
     { 
         sigle: "i (Inferius)",
-        texte: "???.",
+        texte: `<span style="color: #e60004;">i</span>. <strong>Iusum vel inferius insinuat, gravitudinemque pro g. interdum indicat.</strong><br><br>
+        _ inférieur, en dessous, en dessous que ce la logique du neume voudrait.`,
         image: "images/i.png"
     },
     { 
         sigle: "s (Sursum)",
-        texte: "???.",
+        texte: `<span style="color: #e60004;">s</span>. <strong>Susum vel sursum scandere sibilat.</strong><br><br>
+        _ s'élever "en sifflant" (très énigmatique quand l'éxécution).`,
         image: "images/s.png"
     },
     { 
