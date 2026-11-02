@@ -361,4 +361,44 @@ Agneau de Dieu, qui enlèves les péchés du monde, donne-nous la paix.`
         <a href="https://www.e-codices.ch/en/csg/0391/33/0/" target="_blanck" class="underline text-amber-700 hover:text-amber-700"><em>391</em></a>).
         `
     },
+    {
+        type:"separateur",
+        id:"antienne",
+        content:"Antienne"
+    },
+    {
+        type:"text",
+        content:`L'Antienne est un des types de pièces fondamentaux dans le chant grégorien.
+        `
+    },
+    {
+        type:"image",
+        src:"images/agnus_dei.png",
+        legende:"Saint-Gall, cod. 380, p.101. Milieu XIe s."
+    },
+    {
+        type:"separateur",
+        id:"repons",
+        content:"Répons"
+    },
+    {
+        type:"text",
+        content:`Le répons est un des types de pièces fondamentaux dans le chant grégorien.
+        `
+    },
+    {
+        type:"image",
+        src:"images/agnus_dei.png",
+        legende:"Saint-Gall, cod. 380, p.101. Milieu XIe s."
+    },
+    {
+        type:"separateur",
+        id:"autres",
+        content:"AUTRES"
+    },
+    {
+        type:"text",
+        content:`En dehors de ces pièces, il existe d'autres compositions qui font aussi partie des liturgies de l'église catholique.
+        `
+    }
 ]
