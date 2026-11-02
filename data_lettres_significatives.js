@@ -38,8 +38,7 @@ siteData.lettres = [
     },
     { 
         sigle: "st (STatim)",
-        texte: `<span style="color: #e60004;">p</span>. <strong>Pressionem vel prensionem predicat.</strong><br><br>
-        _ Aussitôt coller la fin du neume précédent au début du neume qui suit.`,
+        texte: `_ Aussitôt coller la fin du neume précédent au début du neume qui suit.`,
         image: "images/st.png"
     },
     { 
@@ -56,8 +55,8 @@ siteData.lettres = [
     },
     { 
         sigle: "x ((e)Xpectare)",
-        texte: `<span style="color: #e60004;">s</span>. <strong>Susum vel sursum scandere sibilat.</strong><br><br>
-        _ S'élever "en sifflant" (très énigmatique quant à l'éxécution).`,
+        texte: `<span style="color: #e60004;">x</span>. <strong>Quamvis latina perse verba non inchoet, tamen expectare expetit.</strong><br><br>
+        _ On coupe totalement le son, on coupe nettement et franchement la production du son.`,
         image: "images/x.png"
     },
     {
