@@ -54,7 +54,7 @@ siteData.modes = [
     tout un paquet de notes à notre disposition. Ensuite, on mets ces notes bout-à-bout pour créer des échelles, or, le chant grégorien à conserver quatre de celles-ci. Enfin,
     nous avons les modes, qui sont basés sur échelles mais qui nous apportent la manière d'aller et venir, de bas en haut et de haut en bas, sur ces quatre échelles. Toute l'essence du mode
     repose sur les relations qu'entretiennent la note du mode, qu'on apelle aussi tonique, avec les autres notes de l'échelle. C'est exactement ce que décrit un traité musical du début du Xe siècle,
-    la <em>Musica Enchiriadis</em>, où il est dit que chaque mode est "régi/dirigé" par le degré grave qui lui communique une qualité, un caractère, une propriété[note]Jacques Viret, Le Chant Grégorien, des
-    origines à nos jours, deuxième édition, Paris, Eyrolles, 2017, p.91[/note].`
+    la <em>Musica Enchiriadis</em>, où il est dit que chaque mode est "régi/dirigé" par le degré grave qui lui communique une qualité, un caractère, une propriété[note]Jacques Viret, <em>Le Chant Grégorien, des
+    origines à nos jours</em>, deuxième édition, Paris, Eyrolles, 2017, p.91[/note].`
   }
 ]
