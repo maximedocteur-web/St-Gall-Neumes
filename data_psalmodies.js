@@ -34,14 +34,23 @@ siteData.psalmodies = [
     },
     { 
         type: "text", 
-        content: `Les psaumes peuvent se chanter dans tous les huit modes mélodiques. Un psaume comporte une mélodie
-        pour débuter qui est la <strong>Formule d'intonation</strong>, une portion de mélodie au milieu qui est 
-        la <strong>Médiante</strong> et une portion finale qui termine le verset
-        qui est la <strong>Terminaison</strong>.<br><br>
-        D'un mode à l'autre, ces trois formules mélodiques changent mais généralement et subtilité remarquable, à l'intérieur même
-        d'un mode, il existe plusieurs <strong>Terminaisons</strong>. C'est d'ailleurs ce qu'indique les manuscrits : il y a souvent
-        marqué <em>Ps.<e/em> (qui veut dire psaume), un mot ou deux qui est le psaume choisi pour être chanté et par-dessus cinq 
-        ou six notes qui indiquent la <strong>Terminaison</strong> choisie dans le mode pour ce psaume.<br><br>
+        content: `Les psaumes peuvent se chanter dans les huit modes mélodiques. Un psaume comporte :<br><br>
+        _ <strong>L'intonation</strong> : une formule mélodique qui débute le psaume
+        _ <strong>La Médiante</strong> : une formule mélodique au milieu du psaume
+        _ <strong>La Terminaison</strong> : une formule mélodique pour terminer le verset.
+        (_ <strong>La Flexe</strong> utilisé dans des cas particuliers, voir plus bas)
+        <br><br>
+        <strong>INTONATION</strong>.<br>
+        _ L'intonation est toujours la même selon le mode choisi. Par exemple, il y a une intonation qui sert pour tous les psaumes du 1er mode,
+        une intonation qui sert pour tous les psaumes du 2e mode, une intonation qui sert pour tous les psaumes du 3e mode etc.<br><br>
+        <strong>LA MÉDIANTE</strong><br>
+        _ La médiante est toujours la même selon le mode choisi. Par exemple, il y a une médiante qui sert pour tous les psaumes du 1er mode,
+        une médiante qui sert pour tous les psaumes du 2e mode, une médiante qui sert pour tous les psaumes du 3e mode etc.
+        <br><br>
+        <strong>TERMINAISON</strong><br>
+        Pour la terminaison, c'est beaucoup plus subtil... Il existe plusieurs terminaison différentes pour chaque mode. Ainsi, dans les manuscrits, les notes qui se trouvent 
+        au-dessus du psaume désigne la formule mélodique utilisée pour la terminaison du psaume chanté. 
+        <br><br>
         `
     },
     {
