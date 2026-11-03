@@ -44,4 +44,10 @@ siteData.psalmodies = [
         ou six notes qui indiquent la <strong>Terminaison</strong> choisie dans le mode pour ce psaume.<br><br>
         `
     },
+    {
+        type:"imageCompare",
+        original:"images/beatus.png",
+        annotee:"images/beatus2.png",
+        legende:"Passez votre souris pour voir où est l'antienne et où est le psaume dans cette notation aquitaine."
+    }
 ];
