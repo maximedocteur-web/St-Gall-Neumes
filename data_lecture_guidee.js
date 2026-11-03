@@ -67,7 +67,7 @@ siteData.lecture_guidee = [
         { nom: "virga", x: 19.3, y: 76.6, w: 4.0, h: 5.5 },
         { nom: "virga épisémée", x: 27.7, y: 75.7, w: 4.0, h: 5.5 },
         { nom: "virga", x: 37.1, y: 77.1, w: 4.0, h: 5.5 },
-        { nom: "vriga", x: 48.6, y: 78.3, w: 4.0, h: 5.5 },
+        { nom: "virga", x: 48.6, y: 78.3, w: 4.0, h: 5.5 },
         { nom: "tractulus", x: 52.0, y: 79.1, w: 4.0, h: 5.5 },
         { nom: "virga", x: 59.3, y: 77.9, w: 4.0, h: 5.5 },
         { nom: "pes épisémé", x: 64.3, y: 78.8, w: 4.0, h: 5.5 },
