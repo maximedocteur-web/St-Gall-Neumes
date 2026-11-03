@@ -35,9 +35,9 @@ siteData.psalmodies = [
     { 
         type: "text", 
         content: `Les psaumes peuvent se chanter dans les huit modes mélodiques. Un psaume comporte :<br><br>
-        _ <strong>L'intonation</strong> : une formule mélodique qui débute le psaume
-        _ <strong>La Médiante</strong> : une formule mélodique au milieu du psaume
-        _ <strong>La Terminaison</strong> : une formule mélodique pour terminer le verset.
+        _ <strong>L'intonation</strong> : une formule mélodique qui débute le psaume<br>
+        _ <strong>La Médiante</strong> : une formule mélodique au milieu du psaume<br>
+        _ <strong>La Terminaison</strong> : une formule mélodique pour terminer le verset.<br>
         (_ <strong>La Flexe</strong> utilisé dans des cas particuliers, voir plus bas)
         <br><br>
         <strong>INTONATION</strong>.<br>
