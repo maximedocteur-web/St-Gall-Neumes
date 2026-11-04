@@ -48,7 +48,7 @@ siteData.psalmodies = [
         une médiante qui sert pour tous les psaumes du 2e mode, une médiante qui sert pour tous les psaumes du 3e mode etc.
         <br><br>
         <strong>TERMINAISON</strong><br>
-        Pour la terminaison, c'est beaucoup plus subtil... Il existe plusieurs terminaison différentes pour chaque mode. Ainsi, dans les manuscrits, les notes qui se trouvent 
+        _ Pour la terminaison, c'est beaucoup plus subtil... Il existe plusieurs terminaison différentes pour chaque mode. Ainsi, dans les manuscrits, les notes qui se trouvent 
         au-dessus du psaume désigne la formule mélodique utilisée pour la terminaison du psaume chanté. 
         <br><br>
         `
