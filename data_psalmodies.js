@@ -55,8 +55,8 @@ siteData.psalmodies = [
     },
     {
         type:"imageCompare",
-        original:"images/beatus.png",
-        annotee:"images/beatus2.png",
+        original:"images/beatus_quem.png",
+        annotee:"images/beatus_quem2.png",
         legende:"Passez votre souris pour voir où est l'antienne et où est le psaume dans cette notation aquitaine."
     }
 ];
