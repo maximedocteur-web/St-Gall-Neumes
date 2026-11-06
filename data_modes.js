@@ -47,7 +47,8 @@ siteData.modes = [
   },
   {
     type:"text",
-    content:`Voici donc les échelles qui sont utilisées dans le chant grégorien, mais ces échelles ne sont pas encore des modes... Un mode, c'est l'art et la manière
+    content:`C'est une vision qui reste assez simpliste des échelles et nous verrons que dans les faits, les chants vont chercher un peu plus haut et un peu plus bas dans les échelles...<br><br>
+    Voici donc les échelles qui sont utilisées dans le chant grégorien, mais ces échelles ne sont pas encore des modes... Un mode, c'est l'art et la manière
     de se mouvoir sur cette échelle.<br><br>
     <strong>D.</strong> : Ha, alors les notes j'ai compris, les échelles aussi, mais pour les modes il va me falloir un peu plus d'explications...<br><br>
     <strong>M.</strong> : Retient bien cette définition : <strong>le mode, c'est l'art et la manière de se mouvoir sur l'échelle</strong>. Pour synthétiser mon propos, nous avons d'abord
