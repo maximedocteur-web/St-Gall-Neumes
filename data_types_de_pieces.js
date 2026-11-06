@@ -371,17 +371,20 @@ Agneau de Dieu, qui enlèves les péchés du monde, donne-nous la paix.`
     {
         type:"text",
         content:`L'Antienne est une pièce fondamentale dans le chant grégorien. L'organisation repose sur la psalmodie d'un ou de plusieurs psaumes. Or, on a créé une petite
-        portions de chant supplémentaire qui encadre la récitation du psaume. Donc une antienne, c'est une portion de chant (plus ou moins courte); la récitation d'un psaume,
+        portions de chant supplémentaire qui encadre la récitation du psaume. Donc une antienne, c'est une portion de chant (plus ou moins courte, que par abus de langage on
+        appelle aussi l'antienne), la récitation d'un psaume,
         puis à nouveau la même portion de chant que l'on a au début. Il arrive qu'à certaines occasions, on  récite pas tout le psaume avant de revenir à la partie du début,
         mais que l'on rechante la première portion tous les deux ou trois versets du psaume. Pour la psalmodie, allez voir dans la salle [lien=psalmodies]Psalmodies[/lien]. Dans
         les manuscrits (et les imprimés), les antiennes sont notées dans leur forme complète mais le psaume n'est jamais noté en entier, juste les premiers mots pour savoir duquel
-        il s'agit. Normalement, on connaît les psaumes de tête mais sinon, on peut toujours trouver les psaumes en entier dans un  livre de chant liturgique que l'on appelle le "Psautier".
+        il s'agit. Normalement, on connaît les psaumes de tête mais sinon, on peut toujours trouver les psaumes en entier dans un  livre de chant liturgique que l'on appelle le "Psautier"
+        Pour la trouver dans l'antiphonaire de St-Gall, elle est représentée par [icone=images/antienne1.png], abréviation de <strong>[couleur=#d96e28]A[/couleur]ntienne</strong>.
         `
     },
     {
-        type:"image",
-        src:"images/beatus_quem.png",
-        legende:"Saint-Gall, cod. 380, p.101. Milieu XIe s."
+        type:"imageCompare",
+        original:"images/beatus_quem.png",
+        annotee:"images/beatus_quem2.png",
+        legende:"Passez votre souris pour voir où est l'antienne et où est le psaume dans cette notation aquitaine."
     },
     {
         type:"separateur",
@@ -390,7 +393,9 @@ Agneau de Dieu, qui enlèves les péchés du monde, donne-nous la paix.`
     },
     {
         type:"text",
-        content:`Le répons est un des types de pièces fondamentaux dans le chant grégorien.
+        content:`Le répons est aussi une pièce fondamentale dans le chant grégorien. Il possède une structure tripartite. Tout d'abord, il y a une portion de chant, puis un verset et enfin,
+        on reprend la première portion de chant mais pas dans son entièreté. L'endroit où l'on doit reprendre est indiqué juste après le verset. La portion qui précède le verset est appelé
+        aussi "le répons" par abus de langage. Pour le trouver dans l'antiphonaire, il est représenté par [icone=images/repons1.png], abréviation de <strong>[couleur=#d96e28]R[/couleur]épons</strong>.
         `
     },
     {
