@@ -370,12 +370,17 @@ Agneau de Dieu, qui enlèves les péchés du monde, donne-nous la paix.`
     },
     {
         type:"text",
-        content:`L'Antienne est une pièce fondamentale dans le chant grégorien.
+        content:`L'Antienne est une pièce fondamentale dans le chant grégorien. L'organisation repose sur la psalmodie d'un ou de plusieurs psaumes. Or, on a créé une petite
+        portions de chant supplémentaire qui encadre la récitation du psaume. Donc une antienne, c'est une portion de chant (plus ou moins courte); la récitation d'un psaume,
+        puis à nouveau la même portion de chant que l'on a au début. Il arrive qu'à certaines occasions, on  récite pas tout le psaume avant de revenir à la partie du début,
+        mais que l'on rechante la première portion tous les deux ou trois versets du psaume. Pour la psalmodie, allez voir dans la salle [lien=psalmodies]Psalmodies[/lien]. Dans
+        les manuscrits (et les imprimés), les antiennes sont notées dans leur forme complète mais le psaume n'est jamais noté en entier, juste les premiers mots pour savoir duquel
+        il s'agit. Normalement, on connaît les psaumes de tête mais sinon, on peut toujours trouver les psaumes en entier dans un  livre de chant liturgique que l'on appelle le "Psautier".
         `
     },
     {
         type:"image",
-        src:"images/agnus_dei.png",
+        src:"images/beatus_quem.png",
         legende:"Saint-Gall, cod. 380, p.101. Milieu XIe s."
     },
     {
@@ -392,7 +397,7 @@ Agneau de Dieu, qui enlèves les péchés du monde, donne-nous la paix.`
         type:"image",
         src:"images/agnus_dei.png",
         legende:"Saint-Gall, cod. 380, p.101. Milieu XIe s."
-    },
+    }/*,
     {
         type:"separateur",
         id:"autres",
@@ -402,5 +407,5 @@ Agneau de Dieu, qui enlèves les péchés du monde, donne-nous la paix.`
         type:"text",
         content:`En dehors de ces pièces, il existe d'autres compositions qui font aussi partie des liturgies de l'église catholique.
         `
-    }
+    }*/
 ]
