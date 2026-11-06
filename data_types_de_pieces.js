@@ -18,8 +18,8 @@ siteData.types_de_pieces = [
     { niveau: 2, label: "Antienne", id: "antienne" },
     { niveau: 2, label: "Répons", id: "repons" },
 
-    { niveau: 1, label: "AUTRES", id: "autres" },
-    { niveau: 2, label: "Prose", id: "prose" }
+    /*{ niveau: 1, label: "AUTRES", id: "autres" },
+    { niveau: 2, label: "Prose", id: "prose" }*/
           ] 
     },
     {
