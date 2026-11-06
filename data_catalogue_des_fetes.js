@@ -638,7 +638,7 @@ siteData.catalogue_des_fetes = [
     },
     {
         type: "accordeon",
-        titre: "",
+        titre: "EN COURS DE RÉDACTION !",
         couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
         traduction: "",
         contenu: `
