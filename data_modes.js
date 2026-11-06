@@ -57,5 +57,9 @@ siteData.modes = [
     repose sur les relations qu'entretiennent la note du mode, qu'on appelle aussi tonique, avec les autres notes de l'échelle. C'est exactement ce que décrit un traité musical du début du Xe siècle,
     la <em>Musica Enchiriadis</em>, où il est dit que chaque mode est "régi/dirigé" par le degré grave qui lui communique une qualité, un caractère, une propriété[note]Jacques Viret, <em>Le Chant Grégorien, des
     origines à nos jours</em>, deuxième édition, Paris, Eyrolles, 2017, p.91[/note].`
+  },
+  {
+    type:"text",
+    content:"<em> EN COURS DE RÉDACTION...</em>"
   }
 ]
