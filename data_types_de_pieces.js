@@ -93,7 +93,7 @@ siteData.types_de_pieces = [
         temps que mets le clergé à traverser la nef (temps qui diffère si la célébration se passe dans une église de 20 mètres ou dans une cathédrale de 150 mètres), on peut mettre plusieurs
         versets de psaume pour faire durer le chant. Dans le graduel Einsiedeln 121, il n'y a pas de rubrique mentionnant le début de l'introït par ce que sa position est assez explicite. En effet,
         il est placé juste après la rubrique indiquant le début de la célébration, ce qui en fait, <em>de facto</em>, l'introït, première pièce chantée de la messe. Par contre, à la fin de la pièce,
-        vous devriez trouver une indication abrégée <strong>PS.</strong> qui signifie le début du psaume associé à l'antienne qui se trouve juste avant.`
+        vous trouvez [icone=images/psaume.png] qui est une indication abrégée <strong>PS.</strong> qui signifie "psaume" et qui nous indique quel est le psaume associé à l'antienne qui se trouve juste avant.`
     },
     {
         type:"imageCompare",
