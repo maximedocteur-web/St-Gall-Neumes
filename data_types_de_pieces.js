@@ -384,7 +384,7 @@ Agneau de Dieu, qui enlèves les péchés du monde, donne-nous la paix.`
         type:"imageCompare",
         original:"images/beatus_quem.png",
         annotee:"images/beatus_quem2.png",
-        legende:"Passez votre souris pour voir où est l'antienne et où est le psaume dans cette notation aquitaine."
+        legende:"Passez votre souris pour voir où est l'antienne et où est le psaume (notation carrée du XVIe siècle)."
     },
     {
         type:"separateur",
@@ -399,9 +399,10 @@ Agneau de Dieu, qui enlèves les péchés du monde, donne-nous la paix.`
         `
     },
     {
-        type:"image",
-        src:"images/agnus_dei.png",
-        legende:"Saint-Gall, cod. 380, p.101. Milieu XIe s."
+        type:"imageCompare",
+        original:"images/servuus.png",
+        annotee:"images/servuus2.png",
+        legende:"Passez votre souris pour voir où est le répons, le verset et la reprise."
     }/*,
     {
         type:"separateur",
