@@ -154,7 +154,8 @@ siteData.types_de_pieces = [
         sont d'une composition virtuose, raffinée et expressive qui demande un savoir-faire très technique. Toutefois, les siècles passant, on a supprimé un verset puis les deux mais
         dans les manuscrits du Moyen Âge vous en trouverez encore deux (comme ici dans le graduel <em>Einsiedeln 121</em>). À la fin de chaque verset, le choeur doit reprendre la fin 
         de l'antienne et pour ça, les notateurs ont placé un mot qui nous dit à quel endroit reprendre dans l'antienne quand on finit le verset. Dans les graduels, il est reconnaissable 
-        facilement par l'abréviation [icone=images/offertoire.png] qui sont les premières lettres du mot <strong>[couleur=#d96e28]Of[/couleur]fertoire</strong>.
+        facilement par l'abréviation [icone=images/offertoire.png] qui sont les premières lettres du mot <strong>[couleur=#d96e28]Of[/couleur]fertoire</strong> et on peut aussi voir l'abbréviation
+        du verset [icone=images/verset.png] qui est un "<strong>V</strong>" ou "<strong>VR</strong>" avec une vague au-dessus, symbole de l'abréviation.
         `
     },
     {
