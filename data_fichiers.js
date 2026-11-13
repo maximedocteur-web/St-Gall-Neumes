@@ -10,5 +10,9 @@ siteData.fichiers = [
     { 
         nom: "Répons. Maria Magdalenae (pdf)", 
         url: "fichiers/maria_magdalenae.pdf" 
-    }
+    },
+    { 
+        nom: "Communion. Dicit Dominus implete (image)", 
+        url: "fichiers/dicit_dominus.png" 
+    },
 ];
