@@ -56,10 +56,27 @@ siteData.modes = [
     nous avons les modes, qui sont basés sur échelles mais qui nous apportent la manière d'aller et venir, de bas en haut et de haut en bas, sur ces quatre échelles. Toute l'essence du mode
     repose sur les relations qu'entretiennent la note du mode, qu'on appelle aussi tonique, avec les autres notes de l'échelle. C'est exactement ce que décrit un traité musical du début du Xe siècle,
     la <em>Musica Enchiriadis</em>, où il est dit que chaque mode est "régi/dirigé" par le degré grave qui lui communique une qualité, un caractère, une propriété[note]Jacques Viret, <em>Le Chant Grégorien, des
-    origines à nos jours</em>, deuxième édition, Paris, Eyrolles, 2017, p.91[/note].`
+    origines à nos jours</em>, deuxième édition, Paris, Eyrolles, 2017, p.91[/note].
+    Il existe huit modes dans le chant grégorien.
+    `
   },
   {
+        type:"separateur",
+        content:"LES MODES GRÉGORIENS"
+    },
+  {
     type:"text",
-    content:"<em> EN COURS DE RÉDACTION...</em>"
+    content:`Pour ce qui est du chant grégorien, il y a huit modes et toutes les chants sont rangées dans un de ces modes. 
+    Au niveau théorique, un mode est soit <strong>authente</strong>, soit <strong>plagal</strong>.<br><br>
+    Un mode <strong>authente</strong> (modes authentes au pluriel) est un mode qui adore particulièrement la quinte en 
+    partant de la finale du mode et qui aime monter au dela de cette quinte, généralement jusqu'à l'octave.<br><br>
+    Un mode <strong>plagal</strong> (modes plagaux au pluriel) adore généralement la quarte et aime descendre bien en dessous
+    de la finale du mode, une quarte en dessous, voire une quinte dans certains cas (retenez ceci pour l'instant...).<br><br>
+    Pour définir nos modes, il nous faut une note de référence à partir de laquelle on va définir notre échelle. En grégorien,
+    il existe quatre notes de référence pour développer nos modes : <strong>Ré, Mi, Fa <strong>et</strong> <strong>Sol</strong>.
+    Pour chacune de ces finales, il y a une version authente du mode et une version plagale. Ainsi, nous avons comme modes :<br><br>
+    <strong>Ré authente<br>Ré plagal<br>Mi authente<br>Mi plagal<br>Fa authente<br>Fa plagal<br>Sol authente<br>Sol plagal</strong>.
+    <br><br>
+    `
   }
 ]
