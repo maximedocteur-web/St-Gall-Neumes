@@ -461,10 +461,6 @@ siteData.lecture_guidee = [
         { nom: "sursum", x: 72.4, y: 83.1, w: 2.4, h: 4.9 }
     ]
     },
-    { 
-        type: "separateur",
-        content: "Lettres significatives" 
-    },
     {
         titre: "Répons. Maria Magdalenae [St-Gall, cod. 391, p.31]",
         /*audioGlobal: "audio/panem_de_caelo.mp3",  */
@@ -558,6 +554,10 @@ siteData.lecture_guidee = [
         { nom: "virga liquescente", x: 75.9, y: 85.8, w: 3.1, h: 2.1 },
         { nom: "clivis épisémée", x: 79.3, y: 85.9, w: 3.7, h: 2.3 }
     ]
+    },
+    { 
+        type: "separateur",
+        content: "Lettres significatives" 
     },
     {
         titre: "Daniel intellege [Einsiedeln, cod. 121, p.328]",  
