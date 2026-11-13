@@ -66,7 +66,7 @@ siteData.modes = [
     },
   {
     type:"text",
-    content:`Pour ce qui est du chant grégorien, il y a huit modes et toutes les chants sont rangées dans un de ces modes. 
+    content:`Pour ce qui est du chant grégorien, il y a huit modes et tous les chants sont rangés dans un de ces modes. 
     Au niveau théorique, un mode est soit <strong>authente</strong>, soit <strong>plagal</strong>.<br><br>
     Un mode <strong>authente</strong> (modes authentes au pluriel) est un mode qui adore particulièrement la quinte en 
     partant de la finale du mode et qui aime monter au dela de cette quinte, généralement jusqu'à l'octave.<br><br>
