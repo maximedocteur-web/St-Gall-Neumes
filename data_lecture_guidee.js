@@ -465,7 +465,7 @@ siteData.lecture_guidee = [
         titre: "Répons. Maria Magdalenae [St-Gall, cod. 391, p.31]",
         /*audioGlobal: "audio/panem_de_caelo.mp3",  */
         imageGlobale: "images/maria.png",
-        zones: zones: [
+        zones: [
         { nom: "tractulus", x: 19.1, y: 13.9, w: 2.3, h: 0.9 },
         { nom: "virga épisémée", x: 23.5, y: 13.1, w: 3.5, h: 2.3 },
         { nom: "pes", x: 26.2, y: 13.2, w: 2.9, h: 2.5 },
