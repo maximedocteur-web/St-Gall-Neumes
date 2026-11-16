@@ -628,30 +628,6 @@
             box.style.display = 'none';
             document.getElementById('image-volante-src').src = ''; // Vide l'image pour éviter les bugs visuels
         }
-        
-        // ==========================================
-        // CACHE AUDIO GLOBAL (Zéro latence)
-        // ==========================================
-        const audioCache = {};
-
-        function prechargerAudioNotes(listeFichiers) {
-            listeFichiers.forEach(chemin => {
-                if (!audioCache[chemin]) {
-                    const audio = new Audio(chemin);
-                    audio.preload = "auto";
-                    audioCache[chemin] = audio;
-                }
-            });
-            console.log("✅ Fichiers audio préchargés en cache !");
-        }
-
-        function jouerAudioCache(chemin) {
-            if (audioCache[chemin]) {
-                audioCache[chemin].pause();
-                audioCache[chemin].currentTime = 0;
-                audioCache[chemin].play().catch(e => console.log("Lecture bloquée", e));
-            }
-        }
 
         // =========================================================
         // NOUVEAU : FONCTION GLOBALE DE TRADUCTION DES BALISES
