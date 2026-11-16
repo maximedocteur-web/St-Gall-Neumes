@@ -498,6 +498,30 @@
     <!-- 3. SCRIPT PRINCIPAL -->
     <script>
         // ==========================================
+        // CACHE AUDIO GLOBAL (Zéro latence)
+        // ==========================================
+        const audioCache = {};
+
+        function prechargerAudioNotes(listeFichiers) {
+            listeFichiers.forEach(chemin => {
+                if (!audioCache[chemin]) {
+                    const audio = new Audio(chemin);
+                    audio.preload = "auto";
+                    audioCache[chemin] = audio;
+                }
+            });
+            console.log("✅ Fichiers audio préchargés en cache !");
+        }
+
+        function jouerAudioCache(chemin) {
+            if (audioCache[chemin]) {
+                audioCache[chemin].pause();
+                audioCache[chemin].currentTime = 0; // Remet au début instantanément
+                audioCache[chemin].play().catch(e => console.log("Lecture bloquée par le navigateur", e));
+            }
+        }
+
+        // ==========================================
         // FONCTIONS DE NAVIGATION (GLOBALES)
         // ==========================================
         function showPage(pageName) {
