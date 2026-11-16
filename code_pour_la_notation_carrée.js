@@ -1,11 +1,9 @@
 window.mesZones = window.mesZones || [];
 
-document.querySelectorAll('.interactive-container').forEach(container => {
-    // Si tu relances le script, on enlève l'ancien calque pour ne pas faire de doublons
+document.querySelectorAll('.interactive-container, [id^="interactive-container-carre"]').forEach(container => {
     const oldOverlay = container.querySelector('.draw-overlay');
     if (oldOverlay) oldOverlay.remove();
 
-    // On crée un calque transparent par-dessus l'image pour dessiner
     const overlay = document.createElement('div');
     overlay.className = 'draw-overlay';
     overlay.style.position = 'absolute';
@@ -78,13 +76,27 @@ document.querySelectorAll('.interactive-container').forEach(container => {
         }
 
         setTimeout(() => {
-            let nom = prompt("Nom de la note ? (ex: Do, Ré, Mi, Sib... - Laissez vide pour annuler)");
+            // On te demande maintenant LE CODE du fichier audio
+            let codeNote = prompt("Entrez le code de la note (ex: do1a, re2e, sibou...) - Laissez vide pour annuler :");
             
-            if (nom) {
-                // On formate le nom de fichier audio automatiquement en minuscules (ex: "sib" -> "sib.mp3")
-                let audioNom = nom.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+            if (codeNote) {
+                codeNote = codeNote.toLowerCase().trim();
                 
-                window.mesZones.push(`        { nom: "${nom}", x: ${centerX.toFixed(1)}, y: ${centerY.toFixed(1)}, w: ${pctW.toFixed(1)}, h: ${pctH.toFixed(1)}, audio: "audio/notes/${audioNom}.mp3" }`);
+                // Le script déduit automatiquement le joli nom à afficher
+                let nomAffiche = "";
+                if (codeNote.startsWith("do")) nomAffiche = "Do";
+                else if (codeNote.startsWith("re")) nomAffiche = "Ré";
+                else if (codeNote.startsWith("mi")) nomAffiche = "Mi";
+                else if (codeNote.startsWith("fa")) nomAffiche = "Fa";
+                else if (codeNote.startsWith("sol")) nomAffiche = "Sol";
+                else if (codeNote.startsWith("sib")) nomAffiche = "Sib";
+                else if (codeNote.startsWith("si")) nomAffiche = "Si";
+                else if (codeNote.startsWith("la")) nomAffiche = "La";
+                else nomAffiche = codeNote; // Sécurité si tu tapes autre chose
+                
+                // Il génère la ligne prête à être copiée avec le bon nom ET le bon fichier
+                window.mesZones.push(`        { nom: "${nomAffiche}", x: ${centerX.toFixed(1)}, y: ${centerY.toFixed(1)}, w: ${pctW.toFixed(1)}, h: ${pctH.toFixed(1)}, audio: "audio/notes/${codeNote}.mp3" }`);
+                
                 console.clear();
                 console.log("    zones: [\n" + window.mesZones.join(",\n") + "\n    ]");
             } else {
@@ -93,4 +105,4 @@ document.querySelectorAll('.interactive-container').forEach(container => {
         }, 10);
     });
 });
-console.log("✅ OUTIL DE CADRAGE DES NOTES ACTIVÉ ! Glissez-déposez sur les notes de la partition.");
+console.log("✅ OUTIL DE CADRAGE DES NOTES ACTIVÉ !");
