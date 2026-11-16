@@ -71,6 +71,8 @@
                             <a onclick="showPage('notations-hub')" class="block cursor-pointer px-4 py-2 text-sm text-stone-700 hover:bg-amber-50 hover:text-amber-800">Les notations</a>
                             <a onclick="showPage('neumes')" class="block cursor-pointer px-4 py-2 text-sm text-stone-700 hover:bg-amber-50 hover:text-amber-800">Les Neumes</a>
                             <a onclick="showPage('lettres-hub')" class="block cursor-pointer px-4 py-2 text-sm text-stone-700 hover:bg-amber-50 hover:text-amber-800">Lettres significatives</a>
+                            <a onclick="showPage('apprentissage-notation-carree')" class="block cursor-pointer px-4 py-2 text-sm text-stone-700 hover:bg-amber-50 hover:text-amber-800">Apprentissage notation carrée</a>
+                            <a onclick="showPage('lecture-notation-carree')" class="block cursor-pointer px-4 py-2 text-sm text-stone-700 hover:bg-amber-50 hover:text-amber-800">Lecture notation carrée</a>
                         </div>
                     </div>
                 </div>
@@ -428,6 +430,18 @@
                 <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Quiz de Reconnaissance</h2>
                 <div class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 space-y-6" id="quiz-box"></div>
             </section>
+            
+            <!-- PAGE APPRENTISSAGE NOTATION CARREE -->
+            <section id="page-apprentissage-notation-carree" class="page-section space-y-6 relative z-10">
+                <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Apprentissage de la Notation Carrée</h2>
+                <div id="apprentissage-notation-carree-contenu" class="bg-white p-8 rounded-lg shadow-sm border border-stone-200 text-stone-700 text-justify leading-relaxed"></div>
+            </section>
+
+            <!-- PAGE LECTURE INTERACTIVE NOTATION CARREE -->
+            <section id="page-lecture-notation-carree" class="page-section space-y-6 relative z-10">
+                <h2 class="text-2xl font-serif font-bold text-stone-900 border-b-2 border-amber-700 pb-2">Lecture Interactive - Notation Carrée</h2>
+                <div id="lecture-notation-carree-wrapper" class="space-y-12"></div>
+            </section>
 
             <!-- PAGE FICHIERS -->
             <section id="page-fichiers" class="page-section space-y-6 relative z-10">
@@ -478,6 +492,8 @@
     <script src="data_carre_manuscrit.js"></script>
     <script src="data_je_debute.js"></script>
     <script src="data_fichiers.js"></script>
+    <script src="data_apprentissage_notation_carree.js"></script>
+    <script src="data_lecture_notation_carree.js"></script>
 
     <!-- 3. SCRIPT PRINCIPAL -->
     <script>
@@ -1262,6 +1278,7 @@
             genererPageDynamique('manuscrit-carre-contenu', siteData.manuscrit_carre || siteData.manuscritCarre);
             genererPageDynamique('carre-manuscrit-contenu', siteData.carre_manuscrit || siteData.carreManuscrit);
             genererPageDynamique('je-debute-contenu', siteData.je_debute || siteData.jeDebute);
+            genererPageDynamique('apprentissage-notation-carree-contenu', siteData.apprentissage_notation_carree || siteData.apprentissageNotationCarree);
 
             // --- INITIALISATION DU NOUVEAU TABLEAU DES NOTATIONS ---
             initialiserTableauNotations();
