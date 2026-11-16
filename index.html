@@ -1173,9 +1173,9 @@
                                 data.zones.forEach(z => { if (z.audio) audiosAPrecharger.push(z.audio); });
                             }
                         });
-                        prechargerAudioNotes(audiosAPrecharger);
+                        if(audiosAPrecharger.length > 0) prechargerAudioNotes(audiosAPrecharger);
 
-                        listeCarre.forEach((data) => {
+                        listeCarre.forEach((data, indexCarre) => {
                             const block = document.createElement('div');
                             block.className = "bg-white p-8 rounded-lg shadow-sm border border-stone-200 space-y-6";
 
@@ -1190,9 +1190,9 @@
                                 html += `
                                     <div>
                                         ${data.zones ? `<p class="text-stone-600 mb-4 font-medium">Passez votre souris sur les notes de la partition pour voir leur nom et entendre leur hauteur :</p>` : ''}
-                                        <div class="interactive-container-carre relative inline-block w-full shadow-md border border-stone-200 cursor-crosshair rounded bg-stone-50">
+                                        <div id="interactive-container-carre-${indexCarre}" class="relative inline-block w-full shadow-md border border-stone-200 cursor-crosshair rounded bg-stone-50">
                                             <img src="${data.imageGlobale}" class="w-full h-auto block rounded">
-                                            <div class="interactive-tooltip-carre pointer-events-none absolute opacity-0 bg-stone-900 text-white text-sm font-bold px-3 py-1.5 rounded shadow-lg transition-opacity duration-200 z-50 transform -translate-x-1/2 -translate-y-full">
+                                            <div id="interactive-tooltip-carre-${indexCarre}" class="pointer-events-none absolute opacity-0 bg-stone-900 text-white text-sm font-bold px-3 py-1.5 rounded shadow-lg transition-opacity duration-200 z-50 transform -translate-x-1/2 -translate-y-full">
                                                 Nom
                                             </div>
                                         </div>
@@ -1204,8 +1204,8 @@
                             wrapperCarre.appendChild(block);
 
                             if(data.imageGlobale && data.zones) {
-                                const container = block.querySelector('.interactive-container-carre');
-                                const tooltip = block.querySelector('.interactive-tooltip-carre');
+                                const container = document.getElementById(`interactive-container-carre-${indexCarre}`);
+                                const tooltip = document.getElementById(`interactive-tooltip-carre-${indexCarre}`);
 
                                 data.zones.forEach((zone) => {
                                     const hotspot = document.createElement('div');
@@ -1216,7 +1216,7 @@
                                     hotspot.className = "absolute border-2 border-transparent hover:border-amber-500 hover:bg-amber-500/20 transition-all rounded";
 
                                     hotspot.addEventListener('mouseenter', () => {
-                                        tooltip.textContent = `${zone.nom}`;
+                                        tooltip.textContent = zone.nom;
                                         tooltip.style.opacity = '1';
                                         if (zone.audio) jouerAudioCache(zone.audio);
                                     });
@@ -1238,7 +1238,6 @@
                     }
                 }
             } catch(e) { console.error("Erreur Notation Carrée:", e); }
-
             // 4. QUIZ
             try {
                 const quizBox = document.getElementById('quiz-box');
