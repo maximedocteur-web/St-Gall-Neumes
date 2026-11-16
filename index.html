@@ -628,6 +628,30 @@
             box.style.display = 'none';
             document.getElementById('image-volante-src').src = ''; // Vide l'image pour éviter les bugs visuels
         }
+        
+        // ==========================================
+        // CACHE AUDIO GLOBAL (Zéro latence)
+        // ==========================================
+        const audioCache = {};
+
+        function prechargerAudioNotes(listeFichiers) {
+            listeFichiers.forEach(chemin => {
+                if (!audioCache[chemin]) {
+                    const audio = new Audio(chemin);
+                    audio.preload = "auto";
+                    audioCache[chemin] = audio;
+                }
+            });
+            console.log("✅ Fichiers audio préchargés en cache !");
+        }
+
+        function jouerAudioCache(chemin) {
+            if (audioCache[chemin]) {
+                audioCache[chemin].pause();
+                audioCache[chemin].currentTime = 0;
+                audioCache[chemin].play().catch(e => console.log("Lecture bloquée", e));
+            }
+        }
 
         // =========================================================
         // NOUVEAU : FONCTION GLOBALE DE TRADUCTION DES BALISES
@@ -1132,29 +1156,26 @@
                 }
             } catch(e) { console.error("Erreur Lettres:", e); }
 
-            // 3. ANALYSE CHANT (Lecture Guidée Interactive Multi-images + Audio Zéro Latence)
+            // --- LECTURE INTERACTIVE NOTATION CARRÉE ---
             try {
-                let analyseData = siteData.lecture_guidee || siteData.analyseChant;
-                if (analyseData) {
-                    const wrapper = document.getElementById('analyse-wrapper');
-                    window.sonEnCours = null;
+                let carreData = siteData.lecture_notation_carree;
+                if (carreData) {
+                    const wrapperCarre = document.getElementById('lecture-notation-carree-wrapper');
+                
+                    if (wrapperCarre) {
+                        wrapperCarre.innerHTML = "";
+                        let listeCarre = Array.isArray(carreData) ? carreData : [carreData];
 
-                    if (wrapper) {
-                        wrapper.innerHTML = ""; 
-                        let listeAnalyses = Array.isArray(analyseData) ? analyseData : [analyseData];
-
-                        listeAnalyses.forEach((data) => {
-                            if (data.type === 'separateur') {
-                                const sepBlock = document.createElement('div');
-                                sepBlock.className = "mt-12 mb-8 text-center";
-                                sepBlock.innerHTML = `
-                                    <hr class="border-stone-300 mb-6">
-                                    <h2 class="text-2xl md:text-3xl font-serif font-bold text-amber-800">${data.content}</h2>
-                                `;
-                                wrapper.appendChild(sepBlock);
-                                return; 
+                        let audiosAPrecharger = [];
+                        listeCarre.forEach(data => {
+                            if (data.audioGlobal) audiosAPrecharger.push(data.audioGlobal);
+                            if (data.zones) {
+                                data.zones.forEach(z => { if (z.audio) audiosAPrecharger.push(z.audio); });
                             }
+                        });
+                        prechargerAudioNotes(audiosAPrecharger);
 
+                        listeCarre.forEach((data) => {
                             const block = document.createElement('div');
                             block.className = "bg-white p-8 rounded-lg shadow-sm border border-stone-200 space-y-6";
 
@@ -1165,22 +1186,13 @@
                                 </div>
                             `;
 
-                            if(data.audioGlobal) {
-                                html += `
-                                    <div>
-                                        <p class="text-sm font-medium text-stone-700 mb-2">Écouter l'extrait :</p>
-                                        <audio controls class="w-full" src="${data.audioGlobal}"></audio>
-                                    </div>
-                                `;
-                            }
-
                             if(data.imageGlobale) {
                                 html += `
                                     <div>
-                                        ${data.zones ? `<p class="text-stone-600 mb-4 font-medium">Passez votre souris sur les neumes de l'image pour voir leur nom et écouter l'extrait :</p>` : ''}
-                                        <div class="interactive-container relative inline-block w-full shadow-md border border-stone-200 cursor-crosshair rounded bg-stone-50">
-                                            <img src="${data.imageGlobale}" class="w-full h-auto block rounded manuscrit-img">
-                                            <div class="interactive-tooltip pointer-events-none absolute opacity-0 bg-stone-900 text-white text-sm font-bold px-3 py-1.5 rounded shadow-lg transition-opacity duration-200 z-50 transform -translate-x-1/2 -translate-y-full">
+                                        ${data.zones ? `<p class="text-stone-600 mb-4 font-medium">Passez votre souris sur les notes de la partition pour voir leur nom et entendre leur hauteur :</p>` : ''}
+                                        <div class="interactive-container-carre relative inline-block w-full shadow-md border border-stone-200 cursor-crosshair rounded bg-stone-50">
+                                            <img src="${data.imageGlobale}" class="w-full h-auto block rounded">
+                                            <div class="interactive-tooltip-carre pointer-events-none absolute opacity-0 bg-stone-900 text-white text-sm font-bold px-3 py-1.5 rounded shadow-lg transition-opacity duration-200 z-50 transform -translate-x-1/2 -translate-y-full">
                                                 Nom
                                             </div>
                                         </div>
@@ -1189,19 +1201,13 @@
                             }
 
                             block.innerHTML = html;
-                            wrapper.appendChild(block);
+                            wrapperCarre.appendChild(block);
 
                             if(data.imageGlobale && data.zones) {
-                                const container = block.querySelector('.interactive-container');
-                                const tooltip = block.querySelector('.interactive-tooltip');
+                                const container = block.querySelector('.interactive-container-carre');
+                                const tooltip = block.querySelector('.interactive-tooltip-carre');
 
                                 data.zones.forEach((zone) => {
-                                    let zoneAudio = null;
-                                    if (zone.audio) {
-                                        zoneAudio = new Audio(zone.audio);
-                                        zoneAudio.preload = "auto";
-                                    }
-
                                     const hotspot = document.createElement('div');
                                     hotspot.style.left = (zone.x - (zone.w / 2)) + '%';
                                     hotspot.style.top = (zone.y - (zone.h / 2)) + '%';
@@ -1210,25 +1216,15 @@
                                     hotspot.className = "absolute border-2 border-transparent hover:border-amber-500 hover:bg-amber-500/20 transition-all rounded";
 
                                     hotspot.addEventListener('mouseenter', () => {
-                                        tooltip.textContent = zone.nom;
+                                        tooltip.textContent = `${zone.nom}`;
                                         tooltip.style.opacity = '1';
-
-                                        if (zoneAudio) {
-                                            if (window.sonEnCours) {
-                                                window.sonEnCours.pause();
-                                                window.sonEnCours.currentTime = 0; 
-                                            }
-                                            zoneAudio.play().catch(e => console.log("Lecture bloquée par le navigateur", e));
-                                            window.sonEnCours = zoneAudio;
-                                        }
+                                        if (zone.audio) jouerAudioCache(zone.audio);
                                     });
 
                                     hotspot.addEventListener('mousemove', (e) => {
                                         const rect = container.getBoundingClientRect();
-                                        const mouseX = e.clientX - rect.left;
-                                        const mouseY = e.clientY - rect.top;
-                                        tooltip.style.left = mouseX + 'px';
-                                        tooltip.style.top = (mouseY - 15) + 'px'; 
+                                        tooltip.style.left = (e.clientX - rect.left) + 'px';
+                                        tooltip.style.top = (e.clientY - rect.top - 15) + 'px'; 
                                     });
 
                                     hotspot.addEventListener('mouseleave', () => {
@@ -1241,7 +1237,7 @@
                         });
                     }
                 }
-            } catch(e) { console.error("Erreur Analyse:", e); }
+            } catch(e) { console.error("Erreur Notation Carrée:", e); }
 
             // 4. QUIZ
             try {
