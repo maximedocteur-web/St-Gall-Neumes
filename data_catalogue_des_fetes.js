@@ -411,11 +411,11 @@ siteData.catalogue_des_fetes = [
         couleurTitre: "#ff4f15", // Un beau rouge foncé par exemple !
         traduction: " Purification de la Sainte Marie",
         contenu: `
-            <strong>Antienne :</strong> Responsum accepit Simeon [p.71]<br><br>
+            <strong>Antienne :</strong> Responsum accepit Simeon [p.71][46]<br><br>
             <strong>Antienne :</strong> Ave gratia plena Dei genitrix [p.72]<br><br>
-            <strong>Antienne :</strong> Adorna thalamum tuum [p.72]<br><br>
+            <strong>Antienne :</strong> Adorna thalamum tuum [p.72][16354]<br><br>
             (Puis "Ad missam" (à la messe))<br><br>
-            <strong>Introït :</strong> Suscepimus Deus misericordiam [p.73]<br><br>
+            <strong>Introït :</strong> Suscepimus Deus misericordiam [p.73][20641]<br><br>
             <strong>Graduel :</strong> Suscepimus Deus misericordiam [p.74]<br><br>
             <strong>Alléluia :</strong> Adorabo ad [p.74]<br>ATTENTION ! Il n'est noté ici que par son incipit, pour voir la pièce entière rdv [p.352]<br><br> 
             <strong>Offertoire :</strong> Diffusa est gratia [p.74]<br>V. XXX<br>V. XXX<br>ATTENTION ! Il n'est noté ici que par son incipit, pour voir la pièce entière rdv [p.70]<br><br> 
