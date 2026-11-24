@@ -416,10 +416,10 @@ siteData.catalogue_des_fetes = [
             <strong>Antienne :</strong> Adorna thalamum tuum [p.72][16354]<br><br>
             (Puis "Ad missam" (à la messe))<br><br>
             <strong>Introït :</strong> Suscepimus Deus misericordiam [p.73][20641]<br><br>
-            <strong>Graduel :</strong> Suscepimus Deus misericordiam [p.74]<br><br>
-            <strong>Alléluia :</strong> Adorabo ad [p.74]<br>ATTENTION ! Il n'est noté ici que par son incipit, pour voir la pièce entière rdv [p.352]<br><br> 
-            <strong>Offertoire :</strong> Diffusa est gratia [p.74]<br>V. XXX<br>V. XXX<br>ATTENTION ! Il n'est noté ici que par son incipit, pour voir la pièce entière rdv [p.70]<br><br> 
-            <strong>Communion :</strong> responsum accepit Simeon [p.74]
+            <strong>Graduel :</strong> Suscepimus Deus misericordiam [p.74][50]<br><br>
+            <strong>Alléluia :</strong> Adorabo ad [p.74]<br>ATTENTION ! Il n'est noté ici que par son incipit, pour voir la pièce entière rdv [p.352][242]<br><br> 
+            <strong>Offertoire :</strong> Diffusa est gratia [p.74]<br>V. XXX<br>V. XXX<br>ATTENTION ! Il n'est noté ici que par son incipit, pour voir la pièce entière rdv [p.70][177]<br><br> 
+            <strong>Communion :</strong> responsum accepit Simeon [p.74][803]
         `
     },
     {
