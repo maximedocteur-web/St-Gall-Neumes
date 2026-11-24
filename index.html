@@ -665,6 +665,9 @@
                     res = texteAvant + lienEcodices + texteApres;
                 } else { break; }
             }
+
+            // Lien GregoBase (ex: [1542])
+            res = res.replace(/\[(\d+)\]/g, '<a href="https://gregobase.selapa.net/chant.php?id=$1" target="_blank" class="ml-2 text-sm text-blue-600 hover:text-blue-800 underline font-bold">GregoBase</a>');
             
             // Infobulle Lexique
             while (res.includes("[lexique=") && res.includes("[/lexique]")) {
